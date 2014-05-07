@@ -1,0 +1,25 @@
+Development
+=============
+
+
+1. REST API
+2. Admin web panel ==> manage ......
+
+
+user
+    user_id
+    username
+    email
+    firstname
+    lastname
+    address
+    city
+    state
+    country
+    create
+
+image
+
+    image_id
+    name
+    path
