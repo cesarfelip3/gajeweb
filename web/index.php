@@ -13,6 +13,8 @@ require_once (__DIR__ . "/config.php");
 
 $app = new Silex\Application();
 
+// handling errors
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 $app->error(function (\Exception $e, $code) {
@@ -26,10 +28,15 @@ $app->error(function (\Exception $e, $code) {
     return new Response($message);
 });
 
+// define global value for app
+
 $app["debug"] = true;
 $app['asset.host'] = 'http://localhost/image/';
 
 $app->register(new Silex\Provider\DoctrineServiceProvider(), $dbconfig);
+
+// modules ==> controller ==> model
+//
 
 $basename = "/gajeweb";
 $api_v1 = "api/v1/";
@@ -48,7 +55,7 @@ foreach ($router_api as $router => $id) {
 
         return "hello router = " . $id;
 
-    }
+    });
 }
 
 $app->before(function (Request $request) {
