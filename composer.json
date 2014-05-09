@@ -54,9 +54,9 @@
     },
     "autoload": {
         "psr-0": { "Silex": "src/" },
-        "psr-1": { "Model": "src/Model" },
-        "psr-2": { "Admin": "src/Admin" },
-        "psr-3": { "Api": "src/APi" }
+        "psr-0": { "Model": "src/Model" },
+        "psr-0": { "Admin": "src/Admin" },
+        "psr-0": { "Api": "src/APi" }
     },
     "extra": {
         "branch-alias": {
