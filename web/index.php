@@ -12,7 +12,7 @@ require_once (__DIR__ . "/../vendor/autoload.php");
 
 $app = new Silex\Application();
 
-$app->get ("/gaje/blog", function () {
+$app->get ("/blog", function () {
 
     echo "hello world";
     exit;
