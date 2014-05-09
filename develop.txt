@@ -6,20 +6,8 @@ Development
 2. Admin web panel ==> manage ......
 
 
-user
-    user_id
-    username
-    email
-    firstname
-    lastname
-    address
-    city
-    state
-    country
-    create
+REST API
+=============
 
-image
+1. we put images to different folder
 
-    image_id
-    name
-    path
