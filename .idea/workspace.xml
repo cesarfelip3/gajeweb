@@ -26,7 +26,7 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="12" selection-start="776" selection-end="776" vertical-scroll-proportion="0.76724136" vertical-offset="152" max-vertical-offset="1080">
+            <state line="23" column="2" selection-start="470" selection-end="470" vertical-scroll-proportion="0.43103448" vertical-offset="152" max-vertical-offset="1080">
               <folding>
                 <marker date="1399660838000" expanded="true" signature="608:646" placeholder="SELECT * FRO..image..." />
               </folding>
@@ -476,7 +476,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="12" selection-start="776" selection-end="776" vertical-scroll-proportion="0.76724136" vertical-offset="152" max-vertical-offset="1080">
+        <state line="23" column="2" selection-start="470" selection-end="470" vertical-scroll-proportion="0.43103448" vertical-offset="152" max-vertical-offset="1080">
           <folding>
             <marker date="1399660838000" expanded="true" signature="608:646" placeholder="SELECT * FRO..image..." />
           </folding>
