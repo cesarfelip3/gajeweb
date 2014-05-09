@@ -2,7 +2,9 @@
 
 namespace Model;
 
-class User {
+use \Model\Model;
+
+class User extends Model {
 
     public function createUser ()
     {

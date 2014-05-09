@@ -49,13 +49,8 @@ $router_api = array (
     $api_v1 . "image/upload/{{$id}}" => $id,
 );
 
-use Model\Image;
 use Model\Model;
-
 Model::$DB = $app['db'];
-$image = new Image ();
-print_r ($image);
-exit;
 
 foreach ($router_api as $router => $id) {
     $app->get ($basename . "/" . $router, function ($id) use ($app) {

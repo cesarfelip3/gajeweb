@@ -2,7 +2,7 @@
 
 namespace Model;
 
-use \Model;
+use \Model\Model;
 
 class Image extends Model {
 
