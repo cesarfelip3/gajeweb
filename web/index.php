@@ -17,6 +17,8 @@ $app = new Silex\Application();
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+
+/*
 $app->error(function (\Exception $e, $code) {
     switch ($code) {
         case 404:
@@ -26,7 +28,7 @@ $app->error(function (\Exception $e, $code) {
             $message = 'We are sorry, but something went terribly wrong.';
     }
     return new Response($message);
-});
+});*/
 
 // define global value for app
 
@@ -43,12 +45,21 @@ $api_v1 = "api/v1/";
 
 $id= 'id';
 $router_api = array (
+    $api_v1 . "test/{{$id}}" => $id,
     $api_v1 . "image/upload/{{$id}}" => $id,
 );
 
-foreach ($router_api as $router => $id) {
-    $app->post ($basename . "/" . $router, function ($id) use ($app) {
+use Model\Image;
+use Model\Model;
 
+Model::$DB = $app['db'];
+
+foreach ($router_api as $router => $id) {
+    $app->get ($basename . "/" . $router, function ($id) use ($app) {
+
+        $image = new Image ();
+        print_r ($image);
+        exit;
 
         $sql = "SELECT * FROM image WHERE image_id = ?";
         $post = $app['db']->fetchAssoc($sql, array((int) 0));
