@@ -53,13 +53,14 @@ use Model\Image;
 use Model\Model;
 
 Model::$DB = $app['db'];
+$image = new Image ();
+print_r ($image);
+exit;
 
 foreach ($router_api as $router => $id) {
     $app->get ($basename . "/" . $router, function ($id) use ($app) {
 
-        $image = new Image ();
-        print_r ($image);
-        exit;
+
 
         $sql = "SELECT * FROM image WHERE image_id = ?";
         $post = $app['db']->fetchAssoc($sql, array((int) 0));

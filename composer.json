@@ -53,7 +53,10 @@
         "symfony/form": ">=2.3,<2.6-dev"
     },
     "autoload": {
-        "psr-0": { "Silex": "src/" }
+        "psr-0": { "Silex": "src/" },
+        "psr-1": { "Model": "src/Model" },
+        "psr-2": { "Admin": "src/Admin" },
+        "psr-3": { "Api": "src/APi" }
     },
     "extra": {
         "branch-alias": {
