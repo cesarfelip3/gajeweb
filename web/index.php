@@ -36,7 +36,7 @@ $app['asset.host'] = 'http://localhost/image/';
 $app->register(new Silex\Provider\DoctrineServiceProvider(), $dbconfig);
 
 // modules ==> controller ==> model
-//
+// how to define modules ?
 
 $basename = "/gajeweb";
 $api_v1 = "api/v1/";
