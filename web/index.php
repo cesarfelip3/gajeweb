@@ -35,7 +35,9 @@ $app->error(function (\Exception $e, $code) {
 $app["debug"] = true;
 $app['asset.host'] = 'http://localhost/image/';
 
-$app->register(new Silex\Provider\DoctrineServiceProvider(), $dbconfig);
+$app->register(new Silex\Provider\DoctrineServiceProvider(), $config["db"]);
+
+$app->register(new Silex\Provider\HttpCacheServiceProvider(), $config["cache"]);
 
 // modules ==> controller ==> model
 // how to define modules ?
@@ -43,32 +45,31 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), $dbconfig);
 $basename = "/gajeweb";
 $api_v1 = "api/v1/";
 
-$id= 'id';
-$router_api = array (
-    $api_v1 . "test/{{$id}}" => $id,
-    $api_v1 . "image/upload/{{$id}}" => $id,
-);
-
 use Model\Model;
 Model::$DB = $app['db'];
 
-foreach ($router_api as $router => $id) {
-    $app->get ($basename . "/" . $router, function ($id) use ($app) {
+// user / add
 
+$api = $app["controllers_factory"];
 
+$api->get ("user/add", function () use ($app) {
 
-        $sql = "SELECT * FROM image WHERE image_id = ?";
-        $post = $app['db']->fetchAssoc($sql, array((int) 0));
-
-        return "hello router = " . $id;
-
-    });
-}
-
-$app->before(function (Request $request) {
-    // ...
+    return "user/add";
 });
 
+// image / post
+
+$api->post ("image/upload/{userId}", function ($userId) use ($app) {
+
+    return "image/upload/{userId}";
+});
+
+$api->before (function (Request $request) {
+
+    return null;
+});
+
+$app->mount($basename . "/" . $api_v1, $api);
 $app->run();
 
 

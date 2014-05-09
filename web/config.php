@@ -1,7 +1,8 @@
 <?php
 
+// database
 
-$dbconfig = array (
+$config["db"] = array (
 
     "db.options" => array (
         "driver" => "pdo_mysql",
@@ -12,4 +13,10 @@ $dbconfig = array (
         "dbname" => "gajeapp",
         // "charset" => "",
     )
+);
+
+// cache
+
+$config["cache"] = array (
+    'http_cache.cache_dir' => __DIR__ . '/cache/',
 );
