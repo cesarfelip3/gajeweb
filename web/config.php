@@ -20,3 +20,8 @@ $config["db"] = array (
 $config["cache"] = array (
     'http_cache.cache_dir' => __DIR__ . '/cache/',
 );
+
+// basename
+
+$config["basename"] = "/gajeweb";
+$config["router_apiv1"] = "api/v1/";
