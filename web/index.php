@@ -56,7 +56,24 @@ use Api\Controller;
 
 $api = $app["controllers_factory"];
 
-// auth, first it's valid app user, and then we gave them ....
+// http://www.thebuzzmedia.com/designing-a-secure-rest-api-without-oauth-authentication/
+// http://www.faqs.org/rfcs/rfc2104.html
+// client & server both has the private key, and client and server both has public key too
+// client will use private key to encrypt the message to an token (HASH)
+// server will use private key to decrypt the message to an token (HASH)
+
+// API key, API secret (salt) ==> client & server both now, all in code
+// public info == token = hash (info, API secret) + time() ==> its from who (API key) and what hash (info, API secret)
+
+// string hash_hmac ( string $algo , string $data , string $key [, bool $raw_output = false ] )
+// http://stackoverflow.com/questions/14516191/xcode-ios-hmac-sha-256-hashing
+
+// app domain ==>
+
+// there is no way to prevent API attack, if they copy everything in your network traffics...
+// we have to know its from some client, all information are from network traffics....
+// what if its same ? unless your used random API secret every time, and the network traffics changed every time...
+// otherwise you can't stop it
 
 $api->post ("auth", function (Request $request) use ($app) {
 
@@ -65,7 +82,7 @@ $api->post ("auth", function (Request $request) use ($app) {
     $token = $request->get ("token");
     $secrect = $request->get ("secrect");
     $appdomain = $request->get ("domain");
-        
+
 });
 
 $api->post ("user/add", function (Request $request) use ($app) {
