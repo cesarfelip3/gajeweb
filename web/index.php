@@ -34,7 +34,8 @@ $app->error(function (\Exception $e, $code) {
 
 $app["debug"] = true;
 $app['asset.host'] = 'http://localhost/image/';
-$app['upload.folder'] = __DIR__ . "/upload/";
+$app['upload.folder'] = realpath (__DIR__ . "/../upload/") . DIRECTORY_SEPARATOR;
+$app['upload.folder.image'] = $app["upload.folder"] . "image" . DIRECTORY_SEPARATOR;
 
 $app->register(new Silex\Provider\DoctrineServiceProvider(), $config["db"]);
 $app->register(new Silex\Provider\HttpCacheServiceProvider(), $config["cache"]);

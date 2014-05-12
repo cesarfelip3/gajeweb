@@ -6,7 +6,10 @@ use \Model\Model;
 
 class Image extends Model {
 
-    public function __construct ()
+
+    public $table = "image";
+    
+    public function __construct()
     {
         $this->db = self::$DB;
     }

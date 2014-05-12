@@ -9,6 +9,11 @@ class User extends Model
 
     public $table = "user";
 
+    public function __construct()
+    {
+        $this->db = self::$DB;
+    }
+
     public function createUser($data)
     {
 
