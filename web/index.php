@@ -45,6 +45,8 @@ $app->register(new Silex\Provider\HttpCacheServiceProvider(), $config["cache"]);
 $basename = $config["basename"];
 $api_v1 = $config["router_apiv1"];
 
+// http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/data-retrieval-and-manipulation.html#insert
+
 use Model\Model;
 Model::$DB = $app['db'];
 
@@ -88,6 +90,7 @@ $api->post ("auth", function (Request $request) use ($app) {
 $api->post ("user/add", function (Request $request) use ($app) {
 
     $controller = new Controller\UserController($request, $app);
+    $controller->addUser ();
 
     if ($ret == false) {
         $error = $controller->getError ();
