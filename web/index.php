@@ -8,8 +8,8 @@
 
 //
 
-require_once (__DIR__ . "/../vendor/autoload.php");
-require_once (__DIR__ . "/config.php");
+require_once(__DIR__ . "/../vendor/autoload.php");
+require_once(__DIR__ . "/config.php");
 
 $app = new Silex\Application();
 
@@ -34,7 +34,8 @@ $app->error(function (\Exception $e, $code) {
 
 $app["debug"] = true;
 $app['asset.host'] = 'http://localhost/image/';
-$app['upload.folder'] = realpath (__DIR__ . "/../upload/") . DIRECTORY_SEPARATOR;
+$app['upload.folder'] = realpath(__DIR__ . "/../../upload/") . DIRECTORY_SEPARATOR;
+
 $app['upload.folder.image'] = $app["upload.folder"] . "image" . DIRECTORY_SEPARATOR;
 
 $app->register(new Silex\Provider\DoctrineServiceProvider(), $config["db"]);
@@ -49,6 +50,7 @@ $api_v1 = $config["router_apiv1"];
 // http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/data-retrieval-and-manipulation.html#insert
 
 use Model\Model;
+
 Model::$DB = $app['db'];
 
 //==========================
@@ -78,23 +80,23 @@ $api = $app["controllers_factory"];
 // what if its same ? unless your used random API secret every time, and the network traffics changed every time...
 // otherwise you can't stop it
 
-$api->post ("auth", function (Request $request) use ($app) {
+$api->post("auth", function (Request $request) use ($app) {
 
     $controller = new Controller\AuthController($request, $app);
 
-    $token = $request->get ("token");
-    $secrect = $request->get ("secrect");
-    $appdomain = $request->get ("domain");
+    $token = $request->get("token");
+    $secrect = $request->get("secrect");
+    $appdomain = $request->get("domain");
 
 });
 
-$api->post ("user/add", function (Request $request) use ($app) {
+$api->post("user/add", function (Request $request) use ($app) {
 
     $controller = new Controller\UserController($request, $app);
-    $controller->addUser ();
+    $controller->addUser();
 
     if ($ret == false) {
-        $error = $controller->getError ();
+        $error = $controller->getError();
         $app->json($error, 404);
     }
 
@@ -102,19 +104,16 @@ $api->post ("user/add", function (Request $request) use ($app) {
 });
 
 // image / upload
-$api->post ("image/upload/{userId}", function (Request $request, $userId) use ($app) {
+$api->post("image/upload/{userId}", function (Request $request, $userId) use ($app) {
 
     $controller = new Controller\ImageController($request, $app);
-    $ret = $controller->handleUpload($app["upload.folder"], $userId);
+    $controller->handleUpload($app["upload.folder"], $userId);
 
-    if ($ret == false) {
-        $error = $controller->getError ();
-        $app->json($error, 404);
-    }
-    return "image/upload/{userId}";
+    $ret = null;
+    return $ret;
 });
 
-$api->before (function (Request $request) {
+$api->before(function (Request $request) {
 
     return null;
 });
@@ -128,25 +127,25 @@ $app->mount($basename . "/" . $api_v1, $api);
 // tests are here, but not right place I think
 
 $test = $app["controllers_factory"];
-$test->get ("upload/image", function () use ($app) {
-
+$test->get("upload/image", function () use ($app) {
 
     $file_name_with_full_path = realpath(__DIR__ . "/pi-512.png");
-    $post = array('extra_info' => '123456','fileinfo'=>'@' . $file_name_with_full_path);
+    $post = array('extra_info' => '123456', 'fileinfo' => '@' . $file_name_with_full_path);
 
     $target_url = "http://localhost/gajeweb/api/v1/image/upload/3";
 
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL,$target_url);
-    curl_setopt($ch, CURLOPT_POST,1);
+    curl_setopt($ch, CURLOPT_URL, $target_url);
+    curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-    $result=curl_exec ($ch);
-    curl_close ($ch);
+    $result = curl_exec($ch);
+    curl_close($ch);
 
-    print_r ($result);
+    //print_r ($result);
 
     exit;
 });
+
 
 $app->mount($basename . "/testcase/", $test);
 

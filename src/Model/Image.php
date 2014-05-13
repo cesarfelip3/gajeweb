@@ -8,7 +8,7 @@ class Image extends Model {
 
 
     public $table = "image";
-    
+
     public function __construct()
     {
         $this->db = self::$DB;
@@ -17,6 +17,12 @@ class Image extends Model {
     public function create ($userId, $data)
     {
 
+        $data["image_uuid"] = uniqid();
+        $data["user_uuid"] = $userId;
+        $data["create_date"] = time();
+        $data["modified_date"] = time ();
+
+        $this->db->insert($this->table, $data);
     }
 
     public function remove ($imageId)

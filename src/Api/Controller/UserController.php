@@ -44,4 +44,5 @@ class UserController extends BaseController {
         $user->createUser($data);
 
     }
+
 }

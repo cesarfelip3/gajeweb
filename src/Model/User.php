@@ -37,4 +37,9 @@ class User extends Model
         $this->db->delete('user', array('token' => $data["token"]));
     }
 
+    public function userExists ($userId)
+    {
+        return true;
+    }
+
 }

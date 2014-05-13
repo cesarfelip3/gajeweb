@@ -27,7 +27,7 @@ class BaseController {
         }
 
         if ($output) {
-            exit (json_encode($message));
+            $this->app->json ($message, 404);
         }
 
         return json_encode($output);
