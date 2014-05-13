@@ -39,7 +39,7 @@ class ImageController extends BaseController {
             $data["extension"] = pathinfo($file->getClientOriginalName(), PATHINFO_EXTENSION);
 
             $data["file_name"] = "image" . uniqid();
-            $data["file_path"] = $this->app["upload.folder.image"];
+            $data["file_path"] = $uploadFolder;
 
             if (file_exists($data["file_path"])) {
 
@@ -51,8 +51,8 @@ class ImageController extends BaseController {
                     $image = new Image();
                     if (!$image->create($userId, $data)) {
 
-
-
+                        $this->error["status"] = "failure";
+                        $this->error["message"] = "save image to db error";
                     }
                 }
 

@@ -107,7 +107,7 @@ $api->post("user/add", function (Request $request) use ($app) {
 $api->post("image/upload/{userId}", function (Request $request, $userId) use ($app) {
 
     $controller = new Controller\ImageController($request, $app);
-    $controller->handleUpload($app["upload.folder"], $userId);
+    $controller->handleUpload($app["upload.folder.image"], $userId);
 
     $ret = null;
     return $ret;

@@ -14,7 +14,7 @@ class Image extends Model {
         $this->db = self::$DB;
     }
 
-    public function create ($userId, $data)
+    public function save ($userId, $data)
     {
 
         $data["image_uuid"] = uniqid();
@@ -25,12 +25,12 @@ class Image extends Model {
         $this->db->insert($this->table, $data);
     }
 
-    public function remove ($imageId)
+    public function update ($imageId, $data)
     {
 
     }
 
-    public function edit ($imageId, $data)
+    public function remove ($imageId)
     {
 
     }
