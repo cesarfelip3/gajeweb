@@ -147,7 +147,7 @@ $test->get("upload/image", function () use ($app) {
 });
 
 
-$app->mount($basename . "/testcase/", $test);
+$app->mount($basename . "/" . $config["router_test"], $test);
 
 
 $app->run();

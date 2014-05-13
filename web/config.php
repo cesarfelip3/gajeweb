@@ -22,6 +22,8 @@ $config["cache"] = array (
 );
 
 // basename
+// route prefix
 
 $config["basename"] = "/gajeweb";
 $config["router_apiv1"] = "api/v1/";
+$config["router_test"] = "testcase/";

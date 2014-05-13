@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Category.php" afterPath="$PROJECT_DIR$/src/Model/Category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Model.php" afterPath="$PROJECT_DIR$/src/Model/Model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Tag.php" afterPath="$PROJECT_DIR$/src/Model/Tag.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config.php" afterPath="$PROJECT_DIR$/web/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.php" afterPath="$PROJECT_DIR$/web/index.php" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,10 +29,19 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="16" selection-start="3494" selection-end="3494" vertical-scroll-proportion="0.54310346" vertical-offset="2184" max-vertical-offset="3864">
+            <state line="147" column="0" selection-start="4319" selection-end="4319" vertical-scroll-proportion="1.3362069" vertical-offset="2288" max-vertical-offset="3864">
               <folding>
                 <element signature="e#312#357#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="11" selection-start="485" selection-end="496" vertical-scroll-proportion="-20.363636" vertical-offset="0" max-vertical-offset="816">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -55,18 +63,18 @@
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/develop.txt" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/web/config.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/AuthController.php" />
         <option value="$PROJECT_DIR$/data/gajeapp.sql" />
         <option value="$PROJECT_DIR$/src/Api/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/src/Model/User.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/BaseController.php" />
-        <option value="$PROJECT_DIR$/web/index.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/ImageController.php" />
         <option value="$PROJECT_DIR$/src/Model/Image.php" />
         <option value="$PROJECT_DIR$/src/Model/Tag.php" />
         <option value="$PROJECT_DIR$/src/Model/Category.php" />
         <option value="$PROJECT_DIR$/src/Model/Model.php" />
+        <option value="$PROJECT_DIR$/web/config.php" />
+        <option value="$PROJECT_DIR$/web/index.php" />
       </list>
     </option>
   </component>
@@ -556,11 +564,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4464" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="26" selection-start="449" selection-end="449" vertical-scroll-proportion="0.0" vertical-offset="624" max-vertical-offset="768" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="5" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="672" />
@@ -650,9 +653,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="11" selection-start="485" selection-end="496" vertical-scroll-proportion="-20.363636" vertical-offset="0" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="16" selection-start="3494" selection-end="3494" vertical-scroll-proportion="0.54310346" vertical-offset="2184" max-vertical-offset="3864">
+        <state line="147" column="0" selection-start="4319" selection-end="4319" vertical-scroll-proportion="1.3362069" vertical-offset="2288" max-vertical-offset="3864">
           <folding>
             <element signature="e#312#357#0" expanded="true" />
           </folding>
