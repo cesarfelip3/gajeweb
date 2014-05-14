@@ -2,7 +2,7 @@
 
 // database
 
-$config["db"] = array (
+$config["db_test"] = array (
 
     "db.options" => array (
         "driver" => "pdo_mysql",
@@ -10,6 +10,19 @@ $config["db"] = array (
         "port" => "3306",
         "user" => "root",
         "password" => "",
+        "dbname" => "gajeapp",
+        // "charset" => "",
+    )
+);
+
+$config["db"] = array (
+
+    "db.options" => array (
+        "driver" => "pdo_mysql",
+        "host" => "localhost",
+        "port" => "3306",
+        "user" => "gajeapp",
+        "password" => "9cNrrrKGWB6cUKsh",
         "dbname" => "gajeapp",
         // "charset" => "",
     )
