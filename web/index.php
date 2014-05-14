@@ -162,7 +162,7 @@ $test->get("user/add", function () use ($app) {
     $file_name_with_full_path = realpath(__DIR__ . "/pi-512.png");
     $post = array(
         'email' => '123456@abc.com',
-        'token' => 'dddadsfasdfasdfasdf'
+        'token' => 'bbad2323adfadsf'
     );
 
     $target_url = "http://localhost/gajeweb/api/v1/user/add";
