@@ -137,12 +137,12 @@ $app->mount($basename . "/" . $api_v1, $api);
 // tests are here, but not right place I think
 
 $test = $app["controllers_factory"];
-$test->get("image/upload", function () use ($app) {
+$test->get("image/upload/{userId}", function ($userId) use ($app) {
 
     $file_name_with_full_path = realpath(__DIR__ . "/pi-512.png");
     $post = array('extra_info' => '123456', 'fileinfo' => '@' . $file_name_with_full_path);
 
-    $target_url = "http://localhost/gajeweb/api/v1/image/upload/53738b30de0e2";
+    $target_url = "http://localhost/gajeweb/api/v1/image/upload/$userId";
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $target_url);
