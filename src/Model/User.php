@@ -22,6 +22,7 @@ class User extends Model
         $data["modified_date"] = time();
         $this->db->insert($this->table, $data);
 
+        return $data["user_uuid"];
     }
 
     public function updateUser($data)
