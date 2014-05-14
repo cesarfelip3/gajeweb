@@ -52,6 +52,10 @@ class User extends Model
     {
         $uuid = $this->db->fetchColumn("SELECT user_uuid FROM {$this->table} WHERE user_uuid=?", array ($userId));
 
+        print_r ($userId . ":");
+        print_r ($uuid);
+        exit;
+
         if (empty ($uuid)) {
             return false;
         }
