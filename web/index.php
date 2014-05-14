@@ -90,27 +90,37 @@ $api->post("auth", function (Request $request) use ($app) {
 
 });
 
+// tested
+
 $api->post("user/add", function (Request $request) use ($app) {
 
     $controller = new Controller\UserController($request, $app);
-    $controller->addUser();
+    $ret = $controller->addUser();
 
-    if ($ret == false) {
-        $error = $controller->getError();
-        $app->json($error, 404);
+    $status = 200;
+    if ($ret) {
+        $status = 200;
+    } else {
+        $status = 400;
     }
 
-    return "user/add";
+    return $app->json ($controller->getError(), $status);
 });
 
 // image / upload
 $api->post("image/upload/{userId}", function (Request $request, $userId) use ($app) {
 
     $controller = new Controller\ImageController($request, $app);
-    $controller->handleUpload($app["upload.folder.image"], $userId);
+    $ret = $controller->handleUpload($app["upload.folder.image"], $app->escape($userId));
 
-    $ret = null;
-    return $ret;
+    $status = 200;
+    if ($ret) {
+        $status = 200;
+    } else {
+        $status = 400;
+    }
+
+    return $app->json ($controller->getError(), $status);
 });
 
 $api->before(function (Request $request) {
@@ -127,25 +137,48 @@ $app->mount($basename . "/" . $api_v1, $api);
 // tests are here, but not right place I think
 
 $test = $app["controllers_factory"];
-$test->get("upload/image", function () use ($app) {
+$test->get("image/upload", function () use ($app) {
 
     $file_name_with_full_path = realpath(__DIR__ . "/pi-512.png");
     $post = array('extra_info' => '123456', 'fileinfo' => '@' . $file_name_with_full_path);
 
-    $target_url = "http://localhost/gajeweb/api/v1/image/upload/3";
+    $target_url = "http://localhost/gajeweb/api/v1/image/upload/53738b30de0e2";
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $target_url);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $result = curl_exec($ch);
     curl_close($ch);
 
-    //print_r ($result);
+    print_r ($result);
 
     exit;
 });
 
+$test->get("user/add", function () use ($app) {
+
+    $file_name_with_full_path = realpath(__DIR__ . "/pi-512.png");
+    $post = array(
+        'email' => '123456@abc.com',
+        'token' => 'dddadsfasdfasdfasdf'
+    );
+
+    $target_url = "http://localhost/gajeweb/api/v1/user/add";
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $target_url);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $result = curl_exec($ch);
+    curl_close($ch);
+
+    print_r ($result);
+
+    exit;
+});
 
 $app->mount($basename . "/" . $config["router_test"], $test);
 

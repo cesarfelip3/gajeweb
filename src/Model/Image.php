@@ -14,15 +14,16 @@ class Image extends Model {
         $this->db = self::$DB;
     }
 
-    public function save ($userId, $data)
+    public function save ($data)
     {
 
         $data["image_uuid"] = uniqid();
-        $data["user_uuid"] = $userId;
         $data["create_date"] = time();
         $data["modified_date"] = time ();
 
         $this->db->insert($this->table, $data);
+
+        return true;
     }
 
     public function update ($imageId, $data)

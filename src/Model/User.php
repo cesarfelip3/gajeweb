@@ -34,12 +34,29 @@ class User extends Model
 
     public function deleteUser ($data)
     {
-        $this->db->delete('user', array('token' => $data["token"]));
+        $this->db->delete($this->table, array('token' => $data["token"]));
+    }
+
+    public function userExistsByToken ($userId)
+    {
+        $uuid = $this->db->fetchColumn("SELECT user_uuid FROM {$this->table} WHERE token = ?", array ($userId));
+
+        if (empty ($uuid)) {
+            return false;
+        }
+
+        return $uuid;
     }
 
     public function userExists ($userId)
     {
-        return true;
+        $uuid = $this->db->fetchColumn("SELECT user_uuid FROM {$this->table} WHERE user_uuid=?", array ($userId));
+
+        if (empty ($uuid)) {
+            return false;
+        }
+
+        return $uuid;
     }
 
 }

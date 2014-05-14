@@ -22,47 +22,61 @@ class ImageController extends BaseController {
     public function handleUpload ($uploadFolder, $userId)
     {
 
+
         $file = $this->request->files->get("fileinfo");
         $user = new User();
 
-        if (!$user->userExists($userId)) {
+        $user_uuid = "";
+        if (false == ($user_uuid = $user->userExists($userId))) {
 
             $this->error["status"] = "failure";
-            $this->error["message"] = "user doen't exist for userId=" . $userId;
-            $this->json($this->error, true);
+            $this->error["message"] = "user not exist for userId=" . $userId;
+            return false;
         }
 
         if ($file->isValid()) {
 
             $data = array ();
             $data["mime"] = $file->getMimeType();
-            $data["extension"] = pathinfo($file->getClientOriginalName(), PATHINFO_EXTENSION);
+            $extension = pathinfo($file->getClientOriginalName(), PATHINFO_EXTENSION);
 
-            $data["file_name"] = "image" . uniqid();
+            $data["file_name"] = "image" . uniqid() . "." . $extension;
             $data["file_path"] = $uploadFolder;
+            $data["user_uuid"] = $user_uuid;
+
+            $data['name'] = $this->request->get("name", "Untitle image - " . mt_rand());
+            $data['description'] = $this->request->get("description", "Untitle image");
 
             if (file_exists($data["file_path"])) {
 
-                if (false == $file->move ($data["file_path"], $data["file_name"] . "." . $data["extension"])) {
+                if (false == $file->move ($data["file_path"], $data["file_name"])) {
                     $this->error["status"] = "failure";
                     $this->error["message"] = "move file error";
+                    return false;
                 } else {
 
+                    $size = getimagesize($data["file_path"] . $data["file_name"]);
+                    $data["width"] = $size[0];
+                    $data["height"] = $size[1];
+
                     $image = new Image();
-                    if (!$image->create($userId, $data)) {
+                    if (!$image->save ($data)) {
 
                         $this->error["status"] = "failure";
                         $this->error["message"] = "save image to db error";
+                        return false;
                     }
                 }
 
             } else {
                 $this->error["status"] = "failure";
                 $this->error["message"] = "upload folder not exist";
+                return false;
             }
         }
 
-        $this->json($this->error, true);
+        return true;
+
     }
 
 

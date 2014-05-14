@@ -24,14 +24,16 @@ class UserController extends BaseController {
         $token = $this->request->get ("token", "");
         $firstname = $this->request->get ("firstname", "");
         $lastname = $this->request->get ("lastname", "");
-        $username = $this->request->get ("fullname");
+        $username = $this->request->get ("username", "");
+        $fullname = $this->request->get ("fullname", "");
 
         $data = array (
             "email" => $email,
             "token" => $token,
             "firstname" => $firstname,
             "lastname" => $lastname,
-            "username" => $username
+            "username" => $username,
+            "fullname" => $fullname
         );
 
         if (empty ($token)) {
@@ -41,7 +43,12 @@ class UserController extends BaseController {
         }
 
         $user = new User();
-        $user->createUser($data);
+
+        if (!$user->userExistsByToken($token)) {
+            $user->createUser($data);
+        }
+
+        return true;
 
     }
 
