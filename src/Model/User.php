@@ -39,7 +39,7 @@ class User extends Model
 
     public function userExistsByToken ($userId)
     {
-        $uuid = $this->db->fetchColumn("SELECT user_uuid FROM {$this->table} WHERE token = ?", array ($userId));
+        $uuid = $this->db->fetchColumn("SELECT user_uuid FROM {$this->table} WHERE token=?", array ($userId));
 
         if (empty ($uuid)) {
             return false;
@@ -51,10 +51,6 @@ class User extends Model
     public function userExists ($userId)
     {
         $uuid = $this->db->fetchColumn("SELECT user_uuid FROM {$this->table} WHERE user_uuid=?", array ($userId));
-
-        print_r ($userId . ":");
-        print_r ($uuid);
-        exit;
 
         if (empty ($uuid)) {
             return false;
