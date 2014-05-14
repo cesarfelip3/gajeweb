@@ -45,7 +45,12 @@ class UserController extends BaseController {
         $user = new User();
 
         if (!$user->userExistsByToken($token)) {
-            $user->createUser($data);
+            $uuid = $user->createUser($data);
+            $this->error["data"]["user_uuid"] = $uuid;
+        } else {
+            $this->error["status"] = "failure";
+            $this->error["message"] = "User with token=$token already exist";
+            return false;
         }
 
         return true;
