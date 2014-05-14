@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.11.1deb2
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 09, 2014 at 06:09 AM
--- Server version: 5.5.37
--- PHP Version: 5.4.4-14+deb7u9
+-- Generation Time: May 14, 2014 at 06:14 PM
+-- Server version: 5.5.31
+-- PHP Version: 5.4.19
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `gajeapp`
 --
+CREATE DATABASE IF NOT EXISTS `gajeapp` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `gajeapp`;
 
 -- --------------------------------------------------------
 
