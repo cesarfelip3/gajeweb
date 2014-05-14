@@ -32,6 +32,7 @@ $app->error(function (\Exception $e, $code) {
 
 // define global value for app
 
+$app["test"] = true;
 $app["debug"] = true;
 $app['asset.host'] = 'http://localhost/image/';
 $app['upload.folder'] = realpath(__DIR__ . "/../../upload/") . DIRECTORY_SEPARATOR;
@@ -182,6 +183,9 @@ $test->get("user/add", function () use ($app) {
 
 $app->mount($basename . "/" . $config["router_test"], $test);
 
+if ($app["test"]) {
+    return $app;
+}
 
 $app->run();
 
