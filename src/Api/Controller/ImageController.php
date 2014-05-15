@@ -19,9 +19,8 @@ class ImageController extends BaseController {
         $this->response = new Response();
     }
 
-    public function handleUpload ($uploadFolder)
+    public function upload ($uploadFolder)
     {
-
 
         $userId = $this->request->get("id", "");
         if (empty ($userId)) {
@@ -84,6 +83,11 @@ class ImageController extends BaseController {
 
         return true;
 
+    }
+
+    public function updateInfo ()
+    {
+        
     }
 
 
