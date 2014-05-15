@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/User.php" afterPath="$PROJECT_DIR$/src/Model/User.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/Api/Controller/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,10 +56,10 @@
       <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="30" selection-start="171" selection-end="171" vertical-scroll-proportion="10.181818" vertical-offset="648" max-vertical-offset="1632">
+            <state line="17" column="5" selection-start="219" selection-end="219" vertical-scroll-proportion="-5.090909" vertical-offset="240" max-vertical-offset="1632">
               <folding>
-                <marker date="1400085368000" expanded="true" signature="886:936" placeholder="SELECT user_..." />
-                <marker date="1400085368000" expanded="true" signature="1140:1194" placeholder="SELECT user_..." />
+                <marker date="1400169378000" expanded="true" signature="883:933" placeholder="SELECT user_..." />
+                <marker date="1400169378000" expanded="true" signature="1137:1191" placeholder="SELECT user_..." />
               </folding>
             </state>
           </provider>
@@ -77,7 +77,7 @@
       <file leaf-file-name="UserController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Api/Controller/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="22" selection-start="557" selection-end="557" vertical-scroll-proportion="0.077586204" vertical-offset="408" max-vertical-offset="1488">
+            <state line="40" column="2" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.31034482" vertical-offset="576" max-vertical-offset="1560">
               <folding />
             </state>
           </provider>
@@ -127,7 +127,6 @@
         <option value="$PROJECT_DIR$/src/Model/Image.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/ImageController.php" />
         <option value="$PROJECT_DIR$/web/config.php" />
-        <option value="$PROJECT_DIR$/src/Model/User.php" />
         <option value="$PROJECT_DIR$/web/test.php" />
         <option value="$PROJECT_DIR$/phpunit.xml.dist" />
         <option value="$PROJECT_DIR$/tests/TestCase.php" />
@@ -135,6 +134,7 @@
         <option value="$PROJECT_DIR$/tests/bootstrap.php" />
         <option value="$PROJECT_DIR$/tests/WebTest.php" />
         <option value="$PROJECT_DIR$/web/index.php" />
+        <option value="$PROJECT_DIR$/src/Model/User.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/UserController.php" />
       </list>
     </option>
@@ -714,17 +714,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="30" selection-start="171" selection-end="171" vertical-scroll-proportion="10.181818" vertical-offset="648" max-vertical-offset="1632">
+        <state line="17" column="5" selection-start="219" selection-end="219" vertical-scroll-proportion="-5.090909" vertical-offset="240" max-vertical-offset="1632">
           <folding>
-            <marker date="1400085368000" expanded="true" signature="886:936" placeholder="SELECT user_..." />
-            <marker date="1400085368000" expanded="true" signature="1140:1194" placeholder="SELECT user_..." />
+            <marker date="1400169378000" expanded="true" signature="883:933" placeholder="SELECT user_..." />
+            <marker date="1400169378000" expanded="true" signature="1137:1191" placeholder="SELECT user_..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="22" selection-start="557" selection-end="557" vertical-scroll-proportion="0.077586204" vertical-offset="408" max-vertical-offset="1488">
+        <state line="40" column="2" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.31034482" vertical-offset="576" max-vertical-offset="1560">
           <folding />
         </state>
       </provider>

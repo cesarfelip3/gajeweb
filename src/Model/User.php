@@ -14,7 +14,7 @@ class User extends Model
         $this->db = self::$DB;
     }
 
-    public function createUser($data)
+    public function addUser($data)
     {
 
         $data["user_uuid"] = uniqid();
