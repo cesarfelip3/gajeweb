@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.php" afterPath="$PROJECT_DIR$/web/index.php" />
-    </list>
+    <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="" />
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,7 +26,7 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="190" column="0" selection-start="5229" selection-end="5229" vertical-scroll-proportion="0.45689654" vertical-offset="4136" max-vertical-offset="5448">
+            <state line="205" column="47" selection-start="5595" selection-end="5595" vertical-scroll-proportion="0.43103448" vertical-offset="4520" max-vertical-offset="5448">
               <folding>
                 <element signature="e#273#318#0" expanded="true" />
               </folding>
@@ -757,7 +755,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="190" column="0" selection-start="5229" selection-end="5229" vertical-scroll-proportion="0.45689654" vertical-offset="4136" max-vertical-offset="5448">
+        <state line="205" column="47" selection-start="5595" selection-end="5595" vertical-scroll-proportion="0.43103448" vertical-offset="4520" max-vertical-offset="5448">
           <folding>
             <element signature="e#273#318#0" expanded="true" />
           </folding>
