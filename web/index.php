@@ -18,17 +18,25 @@ $app = new Silex\Application();
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-/*
-$app->error(function (\Exception $e, $code) {
+
+$app->error(function (\Exception $e, $code) use ($app) {
     switch ($code) {
         case 404:
-            $message = 'The requested page could not be found.';
+            $message = "404 : " . $e->getMessage();
             break;
+        case 500:
+            $message = "500 : " . $e->getMessage();
         default:
-            $message = 'We are sorry, but something went terribly wrong.';
+            $message = 'xxx : ' . $e->getMessage();
     }
-    return new Response($message);
-});*/
+
+    $error = array (
+        "status" => "failure",
+        "message" => $message
+    );
+
+    return $app->json($error, $code);
+});
 
 // define global value for app
 
@@ -112,7 +120,22 @@ $api->post("user/add", function (Request $request) use ($app) {
 $api->post("image/upload/", function (Request $request) use ($app) {
 
     $controller = new Controller\ImageController($request, $app);
-    $ret = $controller->handleUpload($app["upload.folder.image"]);
+    $ret = $controller->upload($app["upload.folder.image"]);
+
+    $status = 200;
+    if ($ret) {
+        $status = 200;
+    } else {
+        $status = 400;
+    }
+
+    return $app->json ($controller->getError(), $status);
+});
+
+$api->post("image/update/", function (Request $request) use ($app) {
+
+    $controller = new Controller\ImageController($request, $app);
+    $ret = $controller->updateInfo();
 
     $status = 200;
     if ($ret) {
