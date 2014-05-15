@@ -183,9 +183,6 @@ $test->get("user/add", function () use ($app) {
 
 $app->mount($basename . "/" . $config["router_test"], $test);
 
-if ($app["test"]) {
-    return $app;
-}
 
 $app->run();
 
