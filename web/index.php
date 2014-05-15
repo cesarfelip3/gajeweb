@@ -9,7 +9,6 @@
 //
 
 require_once(__DIR__ . "/../vendor/autoload.php");
-require_once(__DIR__ . "/config.php");
 
 $app = new Silex\Application();
 
@@ -20,14 +19,17 @@ use Symfony\Component\HttpFoundation\Response;
 
 
 $app->error(function (\Exception $e, $code) use ($app) {
+
+    $message = $app->escape($e->getMessage());
+
     switch ($code) {
         case 404:
-            $message = "404 : " . $e->getMessage();
+            $message = "404 : " . $message;
             break;
         case 500:
-            $message = "500 : " . $e->getMessage();
+            $message = "500 : " . $message;
         default:
-            $message = 'xxx : ' . $e->getMessage();
+            $message = 'Unknow : ' . $message;
     }
 
     $error = array (
@@ -35,16 +37,25 @@ $app->error(function (\Exception $e, $code) use ($app) {
         "message" => $message
     );
 
+    if ($code > 500) {
+        $code = 500;
+    }
+
     return $app->json($error, $code);
 });
 
+//use Symfony\Component\Debug\ErrorHandler;
+//ErrorHandler::register();
+
+//use Symfony\Component\Debug\ExceptionHandler;
+//ExceptionHandler::register();
+
+require_once(__DIR__ . "/config.php");
 // define global value for app
 
-//$app["test"] = true;
 $app["debug"] = true;
 $app['asset.host'] = 'http://localhost/image/';
 $app['upload.folder'] = realpath(__DIR__ . "/../../upload/") . DIRECTORY_SEPARATOR;
-
 $app['upload.folder.image'] = $app["upload.folder"] . "image" . DIRECTORY_SEPARATOR;
 
 $app->register(new Silex\Provider\DoctrineServiceProvider(), $config["db"]);
@@ -205,8 +216,6 @@ $test->get("user/add", function () use ($app) {
 });
 
 $app->mount($basename . "/" . $config["router_test"], $test);
-
-
 $app->run();
 
 
