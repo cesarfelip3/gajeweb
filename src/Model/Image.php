@@ -14,7 +14,7 @@ class Image extends Model {
         $this->db = self::$DB;
     }
 
-    public function save ($data)
+    public function addImage ($data)
     {
 
         $data["image_uuid"] = uniqid();
@@ -26,37 +26,45 @@ class Image extends Model {
         return true;
     }
 
-    public function update ($imageId, $data)
+    public function updateImage ($data)
     {
 
+        $image_uuid = $data["image_uuid"];
+        unset($data["image_uuid"]);
+        $this->db->update($this->table, $data, array('image_uuid'=>$image_uuid));
     }
 
-    public function remove ($imageId)
+    public function deleteImage ($imageId)
     {
-
+        $this->db->delete($this->table, array('token' => $data["token"]));
     }
 
-    public function latest ($data)
+    public function imageExists ($imageId)
     {
+        $uuid = $this->db->fetchColumn("SELECT image_uuid FROM {$this->table} WHERE image_uuid=?", array ($imageId));
 
+        if (empty ($uuid)) {
+            return false;
+        }
+
+        return $uuid;
     }
 
-    public function getImagesByCategory ($categoryId)
+    // get images
+    public function getImages ($data)
     {
+        $page = $data["page"];
+        $pageSize = $data["page_size"];
+        $user_uuid = $data["user_uuid"];
 
-    }
+        $page = intval($page);
+        $pageSize = intval($pageSize);
+        $page = $page * $pageSize;
 
-    public function getImagesByTag ($tagId)
-    {
+        $limit = "$page, $pageSize";
+        $result = $this->db->fetchAssoc ("SELECT * FROM {$this->table} WHERE user_uuid=? LIMIT {$$limit} ORDER BY modified_date DESC");
 
-    }
-
-    public function getImagesByUser ($userId, $data)
-    {
-
-        // all images
-
-        // one category
+        return $result;
 
     }
 

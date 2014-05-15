@@ -50,7 +50,7 @@ class ImageController extends BaseController {
             $data["file_path"] = $uploadFolder;
             $data["user_uuid"] = $user_uuid;
 
-            $data['name'] = $this->request->get("name", "Untitle image - " . mt_rand());
+            $data['name'] = $this->request->get("name", "Untitle");
             $data['description'] = $this->request->get("description", "Untitle image");
 
             if (file_exists($data["file_path"])) {
@@ -66,7 +66,7 @@ class ImageController extends BaseController {
                     $data["height"] = $size[1];
 
                     $image = new Image();
-                    if (!$image->save ($data)) {
+                    if (!$image->addImage($data)) {
 
                         $this->error["status"] = "failure";
                         $this->error["message"] = "save image to db error";
@@ -87,7 +87,36 @@ class ImageController extends BaseController {
 
     public function updateInfo ()
     {
+        $image_uuid = $this->request->get("image_uuid", "");
 
+        if (empty ($image_uuid)) {
+
+            $this->error["status"] = "failure";
+            $this->error["message"] = "image id is empty";
+            return false;
+        }
+
+        $data = array ();
+        $data["name"] = $this->request->get("name", "Untitle");
+        $data["description"] = $this->request->get("description", "");
+        $data["image_uuid"] = $image_uuid;
+
+        $image = new Image();
+
+        if (!$image->imageExists($image_uuid)) {
+            $this->error["status"] = "failure";
+            $this->error["message"] = "image not exist";
+            return false;
+        }
+
+        if ($image->update($data)) {
+            $this->error["data"]["image_uuid"] = $image_uuid;
+            return $image_uuid;
+        }
+
+        $this->error["status"] = "failure";
+        $this->error["message"] = "update image error";
+        return false;
     }
 
 
