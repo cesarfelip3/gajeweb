@@ -87,7 +87,7 @@ class ImageController extends BaseController {
 
     public function updateInfo ()
     {
-        
+
     }
 
 
