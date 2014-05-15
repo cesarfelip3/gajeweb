@@ -19,9 +19,16 @@ class ImageController extends BaseController {
         $this->response = new Response();
     }
 
-    public function handleUpload ($uploadFolder, $userId)
+    public function handleUpload ($uploadFolder)
     {
 
+
+        $userId = $this->request->get("id", "");
+        if (empty ($userId)) {
+            $this->error["status"] = "failure";
+            $this->error["message"] = "userId is empty";
+            return false;
+        }
 
         $file = $this->request->files->get("fileinfo");
         $user = new User();
