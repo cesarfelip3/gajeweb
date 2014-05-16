@@ -72,7 +72,8 @@ class ImageController extends BaseController {
                     $data["height"] = $size[1];
 
                     $image = new Image();
-                    if (false != ($image_uuid = $image->addImage($data))) {
+                    $image_uuid = $image->addImage($data);
+                    if (empty ($image_uuid)) {
 
                         $this->error["status"] = "failure";
                         $this->error["message"] = "save image to db error";
