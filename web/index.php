@@ -68,6 +68,9 @@ $basename = $config["basename"];
 $api_v1 = $config["router_apiv1"];
 
 // http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/data-retrieval-and-manipulation.html#insert
+// http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/query-builder.html
+// http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/transactions.html
+http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/security.html
 
 use Model\Model;
 

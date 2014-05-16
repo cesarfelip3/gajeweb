@@ -9,5 +9,6 @@ Development
 REST API
 =============
 
-1. we put images to different folder
+http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/security.html
+@todo: secuirty of doctrine DQL
 
