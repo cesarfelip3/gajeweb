@@ -22,7 +22,7 @@ class ImageController extends BaseController {
     public function upload ($uploadFolder)
     {
 
-        $userId = $this->request->get("id", "");
+        $userId = $this->request->get("user_uuid", "");
         if (empty ($userId)) {
             $this->error["status"] = "failure";
             $this->error["message"] = "userId is empty";
