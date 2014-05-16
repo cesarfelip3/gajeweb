@@ -131,7 +131,7 @@ $api->post("user/add", function (Request $request) use ($app) {
 });
 
 // image / upload
-$api->post("image/upload/", function (Request $request) use ($app) {
+$api->post("image/upload", function (Request $request) use ($app) {
 
     $controller = new Controller\ImageController($request, $app);
     $ret = $controller->upload($app["upload.folder.image"]);
