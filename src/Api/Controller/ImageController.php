@@ -40,6 +40,12 @@ class ImageController extends BaseController {
             return false;
         }
 
+        if (empty ($file)) {
+            $this->error["status"] = "failure";
+            $this->error["message"] = "file handler not exist";
+            return false;
+        }
+
         if ($file->isValid()) {
 
             $data = array ();
