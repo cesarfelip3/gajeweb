@@ -23,7 +23,7 @@ class Image extends Model {
 
         $this->db->insert($this->table, $data);
 
-        return true;
+        return $data["image_uuid"];
     }
 
     public function updateImage ($data)
