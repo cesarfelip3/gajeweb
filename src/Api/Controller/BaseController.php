@@ -19,6 +19,7 @@ class BaseController {
         $this->error["status"] = "success";
         $this->error["message"] = empty ($message) ? "" : $message;
         $this->error["data"] = $data;
+        return true;
     }
 
     public function setFailed ($message, $data=array())
@@ -26,6 +27,7 @@ class BaseController {
         $this->error["status"] = "failure";
         $this->error["message"] = empty ($message) ? "" : $message;
         $this->error["data"] = $data;
+        return false;
     }
 
     public function getError ()

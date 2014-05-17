@@ -24,9 +24,7 @@ class ImageController extends BaseController {
 
         $userId = $this->request->get("user_uuid", "");
         if (empty ($userId)) {
-            $this->error["status"] = "failure";
-            $this->error["message"] = "userId is empty";
-            return false;
+            return $this->setFailed("userId is empty");
         }
 
         $file = $this->request->files->get("fileinfo");
@@ -35,15 +33,11 @@ class ImageController extends BaseController {
         $user_uuid = "";
         if (false == ($user_uuid = $user->userExists($userId))) {
 
-            $this->error["status"] = "failure";
-            $this->error["message"] = "user not exist for userId=" . $userId;
-            return false;
+            return $this->setFailed("user not exist for userId=" . $userId);
         }
 
         if (empty ($file)) {
-            $this->error["status"] = "failure";
-            $this->error["message"] = "file handler not exist";
-            return false;
+            return $this->setFailed("file handler not exist");
         }
 
         if ($file->isValid()) {
@@ -62,9 +56,7 @@ class ImageController extends BaseController {
             if (file_exists($data["file_path"])) {
 
                 if (false == $file->move ($data["file_path"], $data["file_name"])) {
-                    $this->error["status"] = "failure";
-                    $this->error["message"] = "move file error";
-                    return false;
+                    return $this->setFailed("move file error");
                 } else {
 
                     $size = getimagesize($data["file_path"] . $data["file_name"]);
@@ -75,16 +67,12 @@ class ImageController extends BaseController {
                     $image_uuid = $image->addImage($data);
                     if (empty ($image_uuid)) {
 
-                        $this->error["status"] = "failure";
-                        $this->error["message"] = "save image to db error";
-                        return false;
+                        return $this->setFailed("save image to db error");
                     }
                 }
 
             } else {
-                $this->error["status"] = "failure";
-                $this->error["message"] = "upload folder not exist";
-                return false;
+                return $this->setFailed("upload folder not exist");
             }
         }
 
@@ -112,9 +100,7 @@ class ImageController extends BaseController {
         $image = new Image();
 
         if (!$image->imageExists($image_uuid)) {
-            $this->error["status"] = "failure";
-            $this->error["message"] = "image not exist";
-            return false;
+            return $this->setFailed("image not exist");
         }
 
         if ($image->update($data)) {
@@ -122,9 +108,7 @@ class ImageController extends BaseController {
             return $image_uuid;
         }
 
-        $this->error["status"] = "failure";
-        $this->error["message"] = "update image error";
-        return false;
+        return $this->setFailed("update image error");
     }
 
 

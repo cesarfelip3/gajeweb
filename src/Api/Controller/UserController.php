@@ -38,9 +38,7 @@ class UserController extends BaseController
         );
 
         if (empty ($token)) {
-            $this->error["status"] = "failure";
-            $this->error["message"] = "invalid user ID";
-            return false;
+            return $this->setFailed("invalid user ID");
         }
 
         $user = new User();
@@ -49,9 +47,7 @@ class UserController extends BaseController
         if (!$uuid) {
             $uuid = $user->addUser($data);
             if (empty ($uuid)) {
-                $this->error["status"] = "failure";
-                $this->error["message"] = "add user wrong";
-                return false;
+                return $this->setFailed("add user wrong");
             }
         }
 
