@@ -14,6 +14,19 @@ class BaseController {
         "data" => array ()
     );
 
+    public function setSuccess ($message, $data=array())
+    {
+        $this->error["status"] = "success";
+        $this->error["message"] = empty ($message) ? "" : $message;
+        $this->error["data"] = $data;
+    }
+
+    public function setFailed ($message, $data=array())
+    {
+        $this->error["status"] = "failure";
+        $this->error["message"] = empty ($message) ? "" : $message;
+        $this->error["data"] = $data;
+    }
 
     public function getError ()
     {
