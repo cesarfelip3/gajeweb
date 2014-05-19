@@ -51,7 +51,7 @@ class Image extends Model {
     }
 
     // get images
-    public function getImages ($data)
+    public function getImagesByUser ($data)
     {
         $page = $data["page"];
         $pageSize = $data["page_size"];
@@ -62,10 +62,22 @@ class Image extends Model {
         $page = $page * $pageSize;
 
         $limit = "$page, $pageSize";
-        $result = $this->db->fetchAssoc ("SELECT * FROM {$this->table} WHERE user_uuid=? LIMIT {$$limit} ORDER BY modified_date DESC");
+        $result = $this->db->fetchAssoc ("SELECT * FROM {$this->table} WHERE user_uuid=? LIMIT {$limit} ORDER BY modified_date DESC");
 
         return $result;
 
+    }
+
+    public function getLatestImages()
+    {
+        $page = $data["page"];
+        $pageSize = $data["page_size"];
+
+        $sql = "SELECT * FROM {$this->table} LIMIT ?,? ORDER BY modified_date DESC";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindValue(1, $page * $pageSize);
+        $stmt->bindValue(2, $pageSize);
+        $stmt->exe
     }
 
 }

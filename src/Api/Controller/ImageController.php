@@ -111,6 +111,70 @@ class ImageController extends BaseController {
         return $this->setFailed("update image error");
     }
 
+    public function getLatestByUser ()
+    {
+        $user_uuid = $this->request->get ("user_uuid", "");
+        if (empty ($user_uuid)) {
+            return $this->setFailed("user uuid is empty");
+        }
+
+        $page = $this->request->get ("page", 0);
+        $pageSize = $this->request->get ("page_size", 25);
+
+        $data=array();
+        $data["page"] = intval($page);
+        $data["page_size"] = intval($pageSize);
+        $data["user_uuid"] = $user_uuid;
+
+        $image = new Image();
+
+        $image = $image->getImagesByUser($data);
+
+        if ($image == false) {
+            $this->setSuccess("Something wrong with db", array ("images"=>array()));
+        } else {
+
+            if (empty ($image)) {
+
+                $this->setSuccess("empty result from db", array ("images"=>array()));
+            } else {
+
+                $this->setSuccess("", array ("images"=>$image));
+            }
+        }
+
+        return true;
+    }
+
+    public function getLatest()
+    {
+        $page = $this->request->get ("page", 0);
+        $pageSize = $this->request->get ("page_size", 25);
+
+        $data=array();
+        $data["page"] = intval($page);
+        $data["page_size"] = intval($pageSize);
+        $data["user_uuid"] = $user_uuid;
+
+        $image = new Image();
+
+        $image = $image->getLatestImages($data);
+
+        if ($image == false) {
+            $this->setSuccess("Something wrong with db", array ("images"=>array()));
+        } else {
+
+            if (empty ($image)) {
+
+                $this->setSuccess("empty result from db", array ("images"=>array()));
+            } else {
+
+                $this->setSuccess("", array ("images"=>$image));
+            }
+        }
+
+        return true;
+    }
 
 
 }

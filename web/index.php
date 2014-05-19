@@ -130,6 +130,21 @@ $api->post("user/add", function (Request $request) use ($app) {
     return $app->json ($controller->getError(), $status);
 });
 
+$api->post("user/image/latest", function (Request $request) use ($app) {
+
+    $controller = new Controller\ImageController($request, $app);
+    $ret = $controller->getLatestByUser();
+
+    $status = 200;
+    if ($ret) {
+        $status = 200;
+    } else {
+        $status = 400;
+    }
+
+    return $app->json ($controller->getError(), $status);
+});
+
 // image / upload
 $api->post("image/upload", function (Request $request) use ($app) {
 
@@ -146,10 +161,25 @@ $api->post("image/upload", function (Request $request) use ($app) {
     return $app->json ($controller->getError(), $status);
 });
 
-$api->post("image/update/", function (Request $request) use ($app) {
+$api->post("image/update", function (Request $request) use ($app) {
 
     $controller = new Controller\ImageController($request, $app);
     $ret = $controller->updateInfo();
+
+    $status = 200;
+    if ($ret) {
+        $status = 200;
+    } else {
+        $status = 400;
+    }
+
+    return $app->json ($controller->getError(), $status);
+});
+
+$api->post("image/latest", function (Request $request) use ($app) {
+
+    $controller = new Controller\ImageController($request, $app);
+    $ret = $controller->getLatestByUser();
 
     $status = 200;
     if ($ret) {
@@ -175,6 +205,30 @@ $app->mount($basename . "/" . $api_v1, $api);
 // tests are here, but not right place I think
 
 $test = $app["controllers_factory"];
+
+$test->get("user/add", function () use ($app) {
+
+    $file_name_with_full_path = realpath(__DIR__ . "/pi-512.png");
+    $post = array(
+        'email' => '123456@abc.com',
+        'token' => 'bbad2323adfadsf'
+    );
+
+    $target_url = "http://localhost/gajeweb/api/v1/user/add";
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $target_url);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $result = curl_exec($ch);
+    curl_close($ch);
+
+    print_r ($result);
+
+    exit;
+});
+
 $test->get("image/upload/{userId}", function ($userId) use ($app) {
 
     $file_name_with_full_path = realpath(__DIR__ . "/pi-512.png");
@@ -195,15 +249,33 @@ $test->get("image/upload/{userId}", function ($userId) use ($app) {
     exit;
 });
 
-$test->get("user/add", function () use ($app) {
+
+$test->get("user/image/latest/{userId}", function ($userId) use ($app) {
 
     $file_name_with_full_path = realpath(__DIR__ . "/pi-512.png");
-    $post = array(
-        'email' => '123456@abc.com',
-        'token' => 'bbad2323adfadsf'
-    );
+    $post = array('page'=>0, 'page_size'=>50, 'user_uuid'=>$userId);
 
-    $target_url = "http://localhost/gajeweb/api/v1/user/add";
+    $target_url = "http://localhost/gajeweb/api/v1/user/image/latest";
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $target_url);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $result = curl_exec($ch);
+    curl_close($ch);
+
+    print_r ($result);
+
+    exit;
+});
+
+$test->get("image/latest", function ($userId) use ($app) {
+
+    $file_name_with_full_path = realpath(__DIR__ . "/pi-512.png");
+    $post = array('page'=>0, 'page_size'=>50);
+
+    $target_url = "http://localhost/gajeweb/api/v1/image/latest";
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $target_url);
