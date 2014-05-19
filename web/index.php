@@ -232,7 +232,7 @@ $test->get("user/add", function () use ($app) {
 $test->get("image/upload/{userId}", function ($userId) use ($app) {
 
     $file_name_with_full_path = realpath(__DIR__ . "/pi-512.png");
-    $post = array('extra_info' => '123456', 'user_uuid'=>$userId, 'fileinfo' => '@' . $file_name_with_full_path);
+    $post = array('user_uuid'=>$userId, 'fileinfo' => '@' . $file_name_with_full_path);
 
     $target_url = "http://localhost/gajeweb/api/v1/image/upload";
 

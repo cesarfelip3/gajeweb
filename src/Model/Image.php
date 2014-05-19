@@ -77,7 +77,7 @@ class Image extends Model {
         $stmt = $conn->prepare($sql);
         $stmt->bindValue(1, $page * $pageSize);
         $stmt->bindValue(2, $pageSize);
-        $stmt->exe
+        $stmt->execute();
     }
 
 }
