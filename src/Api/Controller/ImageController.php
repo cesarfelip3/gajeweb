@@ -154,7 +154,6 @@ class ImageController extends BaseController {
         $data=array();
         $data["page"] = intval($page);
         $data["page_size"] = intval($pageSize);
-        $data["user_uuid"] = $user_uuid;
 
         $image = new Image();
 

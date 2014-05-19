@@ -62,22 +62,38 @@ class Image extends Model {
         $page = $page * $pageSize;
 
         $limit = "$page, $pageSize";
-        $result = $this->db->fetchAssoc ("SELECT * FROM {$this->table} WHERE user_uuid=? LIMIT {$limit} ORDER BY modified_date DESC");
+        $result = $this->db->fetchAll ("SELECT `image_uuid`, `name`, `description`, `width`, `height`, `create_date`, `modified_date`, `file_name` FROM {$this->table} WHERE user_uuid=? ORDER BY modified_date DESC LIMIT {$limit} ", array ($user_uuid));
+
+        if (!empty ($result)) {
+
+            foreach ($result as &$item) {
+
+            }
+        }
 
         return $result;
 
     }
 
-    public function getLatestImages()
+    public function getLatestImages($data)
     {
         $page = $data["page"];
         $pageSize = $data["page_size"];
 
-        $sql = "SELECT * FROM {$this->table} LIMIT ?,? ORDER BY modified_date DESC";
-        $stmt = $conn->prepare($sql);
-        $stmt->bindValue(1, $page * $pageSize);
-        $stmt->bindValue(2, $pageSize);
+        $page = intval($page);
+        $pageSize = intval($pageSize);
+        $page = $page * $pageSize;
+
+        $limit = "$page, $pageSize";
+
+
+        $sql = "SELECT `image_uuid`, `name`, `description`, `width`, `height`, `create_date`, `modified_date`, `file_name` FROM {$this->table} ORDER BY modified_date DESC LIMIT {$limit}";
+        $stmt = $this->db->prepare($sql);
         $stmt->execute();
+
+        $result = $stmt->fetchAll();
+
+        return $result;
     }
 
 }

@@ -117,6 +117,7 @@ CREATE TABLE IF NOT EXISTS `image` (
   `mime` varchar(255) NOT NULL DEFAULT '',
   `type` varchar(32) NOT NULL DEFAULT '',
   `status` varchar(32) NOT NULL DEFAULT '',
+  `approved` int(11) NOT NULL DEFAULT '0',
   `width` int(11) NOT NULL DEFAULT '0',
   `height` int(11) NOT NULL DEFAULT '0',
   `file_name` varchar(255) NOT NULL DEFAULT '',

@@ -58,7 +58,7 @@ $app['asset.host'] = 'http://localhost/image/';
 $app['upload.folder'] = realpath(__DIR__ . "/../../upload/") . DIRECTORY_SEPARATOR;
 $app['upload.folder.image'] = $app["upload.folder"] . "image" . DIRECTORY_SEPARATOR;
 
-$app->register(new Silex\Provider\DoctrineServiceProvider(), $config["db"]);
+$app->register(new Silex\Provider\DoctrineServiceProvider(), $config["db_test"]);
 $app->register(new Silex\Provider\HttpCacheServiceProvider(), $config["cache"]);
 
 // modules ==> controller ==> model
@@ -67,10 +67,7 @@ $app->register(new Silex\Provider\HttpCacheServiceProvider(), $config["cache"]);
 $basename = $config["basename"];
 $api_v1 = $config["router_apiv1"];
 
-// http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/data-retrieval-and-manipulation.html#insert
-// http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/query-builder.html
-// http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/transactions.html
-http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/security.html
+
 
 use Model\Model;
 
@@ -179,7 +176,7 @@ $api->post("image/update", function (Request $request) use ($app) {
 $api->post("image/latest", function (Request $request) use ($app) {
 
     $controller = new Controller\ImageController($request, $app);
-    $ret = $controller->getLatestByUser();
+    $ret = $controller->getLatest();
 
     $status = 200;
     if ($ret) {
@@ -270,9 +267,8 @@ $test->get("user/image/latest/{userId}", function ($userId) use ($app) {
     exit;
 });
 
-$test->get("image/latest", function ($userId) use ($app) {
+$test->get("image/latest", function () use ($app) {
 
-    $file_name_with_full_path = realpath(__DIR__ . "/pi-512.png");
     $post = array('page'=>0, 'page_size'=>50);
 
     $target_url = "http://localhost/gajeweb/api/v1/image/latest";
@@ -286,6 +282,60 @@ $test->get("image/latest", function ($userId) use ($app) {
     curl_close($ch);
 
     print_r ($result);
+
+    exit;
+});
+
+$test->get("start", function () use ($app) {
+
+
+    $baseurl = "http://localhost/gajeweb/testcase/";
+
+    // add user
+    // upload image
+    $user_add = "user/add";
+    $image_upload = "image/upload/537a557dc128e";
+
+    // get latest from user
+    // get latest image
+    $user_image_latest = @"user/image/latest/537a557dc128e";
+    $image_latest = @"image/latest";
+
+    $router = array (
+        $user_add => 1,
+        //$image_upload => 1,
+        $user_image_latest => 0,
+        $image_latest => 0
+    );
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_POST, 0);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    foreach ($router as $route => $value) {
+
+        $target_url = $baseurl . $route;
+        curl_setopt($ch, CURLOPT_URL, $target_url);
+        curl_setopt($ch, CURLOPT_POST, 0);
+
+        $result = curl_exec($ch);
+
+        print_r ("\nURL = ");
+        print_r ($target_url);
+        print_r ("\nRESULT = ");
+
+        $pretty = json_encode(json_decode($result), JSON_PRETTY_PRINT);
+        if ($pretty == false) {
+            print_r ($result);
+        } else {
+            print_r ($pretty);
+        }
+
+        print_r ("\n");
+
+    }
+
+    curl_close($ch);
 
     exit;
 });
