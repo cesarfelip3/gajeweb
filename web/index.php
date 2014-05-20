@@ -219,15 +219,13 @@ $test->get("user/add", function () use ($app) {
 
     $target_url = "http://localhost/gajeweb/api/v1/user/add";
 
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $target_url);
-    curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $result = curl_exec($ch);
-    curl_close($ch);
+    require_once __DIR__ . '/test/Curl.class.php';
 
-    print_r($result);
+    $curl = new Curl();
+
+
+    $curl->post($target_url, $post);
+    print_r (json_encode($curl->response));
 
     exit;
 });
@@ -239,15 +237,12 @@ $test->get("image/upload/{userId}", function ($userId) use ($app) {
 
     $target_url = "http://localhost/gajeweb/api/v1/image/upload";
 
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $target_url);
-    curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $result = curl_exec($ch);
-    curl_close($ch);
+    require_once __DIR__ . '/test/Curl.class.php';
 
-    print_r($result);
+    $curl = new Curl();
+
+    $curl->post($target_url, $post);
+    print_r (json_encode($curl->response));
 
     exit;
 });
@@ -260,15 +255,13 @@ $test->get("user/image/latest/{userId}", function ($userId) use ($app) {
 
     $target_url = "http://localhost/gajeweb/api/v1/user/image/latest";
 
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $target_url);
-    curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $result = curl_exec($ch);
-    curl_close($ch);
+    require_once __DIR__ . '/test/Curl.class.php';
 
-    print_r($result);
+    $curl = new Curl();
+
+    $curl->post($target_url, $post);
+    print_r (json_encode($curl->response));
+
 
     exit;
 });
@@ -279,21 +272,23 @@ $test->get("image/latest", function () use ($app) {
 
     $target_url = "http://localhost/gajeweb/api/v1/image/latest";
 
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $target_url);
-    curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $result = curl_exec($ch);
-    curl_close($ch);
+    require_once __DIR__ . '/test/Curl.class.php';
 
-    print_r($result);
+    $curl = new Curl();
+
+    $curl->post($target_url, $post);
+    print_r (json_encode($curl->response));
 
     exit;
 });
 
+
 $test->get("start", function () use ($app) {
 
+
+    require_once __DIR__ . '/test/Curl.class.php';
+
+    $curl = new Curl();
 
     $baseurl = "http://localhost/gajeweb/testcase/";
 
@@ -314,24 +309,18 @@ $test->get("start", function () use ($app) {
         $image_latest => 0
     );
 
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_POST, 0);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-
     foreach ($router as $route => $value) {
 
         $target_url = $baseurl . $route;
-        curl_setopt($ch, CURLOPT_URL, $target_url);
-        curl_setopt($ch, CURLOPT_POST, 0);
 
-        $result = curl_exec($ch);
+        $curl->get ($target_url);
 
         print_r("\nURL = ");
         print_r($target_url);
         print_r("\nRESULT = ");
 
-        $pretty = json_encode(json_decode($result), JSON_PRETTY_PRINT);
+        $result = $curl->response;
+        $pretty = json_encode(json_decode($curl->response), JSON_PRETTY_PRINT);
         if ($pretty == false) {
             print_r($result);
         } else {
