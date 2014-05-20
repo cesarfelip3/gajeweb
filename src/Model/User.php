@@ -33,14 +33,14 @@ class User extends Model
         $this->db->update($this->table, $data, array('token' => $token));
     }
 
-    public function deleteUser ($data)
+    public function deleteUser($data)
     {
         $this->db->delete($this->table, array('token' => $data["token"]));
     }
 
-    public function userExistsByToken ($userId)
+    public function userExistsByToken($userId)
     {
-        $uuid = $this->db->fetchColumn("SELECT user_uuid FROM {$this->table} WHERE token=?", array ($userId));
+        $uuid = $this->db->fetchColumn("SELECT user_uuid FROM {$this->table} WHERE token=?", array($userId));
 
         if (empty ($uuid)) {
             return false;
@@ -49,15 +49,20 @@ class User extends Model
         return $uuid;
     }
 
-    public function userExists ($userId)
+    public function userExists($userId)
     {
-        $uuid = $this->db->fetchColumn("SELECT user_uuid FROM {$this->table} WHERE user_uuid=?", array ($userId));
+        $uuid = $this->db->fetchColumn("SELECT user_uuid FROM {$this->table} WHERE user_uuid=?", array($userId));
 
         if (empty ($uuid)) {
             return false;
         }
 
         return $uuid;
+    }
+
+    public static function table()
+    {
+        return "user";
     }
 
 }

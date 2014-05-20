@@ -86,8 +86,9 @@ class Image extends Model {
 
         $limit = "$page, $pageSize";
 
+        $userTable = User::table();
 
-        $sql = "SELECT `image_uuid`, `name`, `description`, `width`, `height`, `create_date`, `modified_date`, `file_name` FROM {$this->table} ORDER BY modified_date DESC LIMIT {$limit}";
+        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, usr.name AS username FROM {$this->table} img INNER JOIN $userTable usr ON img.user_uuid=usr_user_uuid  ORDER BY modified_date DESC LIMIT {$limit}";
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
 
