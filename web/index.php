@@ -262,7 +262,6 @@ $test->get("user/image/latest/{userId}", function ($userId) use ($app) {
     $curl->post($target_url, $post);
     print_r (json_encode($curl->response));
 
-
     exit;
 });
 
