@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.php" afterPath="$PROJECT_DIR$/web/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +28,7 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="0" selection-start="1587" selection-end="1587" vertical-scroll-proportion="0.37849462" vertical-offset="1056" max-vertical-offset="7722">
+            <state line="67" column="34" selection-start="1469" selection-end="1469" vertical-scroll-proportion="0.42580646" vertical-offset="1056" max-vertical-offset="7964">
               <folding />
             </state>
           </provider>
@@ -704,7 +703,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="1587" selection-end="1587" vertical-scroll-proportion="0.37849462" vertical-offset="1056" max-vertical-offset="7722">
+        <state line="67" column="34" selection-start="1469" selection-end="1469" vertical-scroll-proportion="0.42580646" vertical-offset="1056" max-vertical-offset="7964">
           <folding />
         </state>
       </provider>

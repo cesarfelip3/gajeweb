@@ -58,6 +58,17 @@ $app['upload.image.host'] = 'http://localhost/image/';
 $app['upload.folder'] = realpath(__DIR__ . "/../../upload/") . DIRECTORY_SEPARATOR;
 $app['upload.folder.image'] = $app["upload.folder"] . "image" . DIRECTORY_SEPARATOR;
 
+
+$os = php_uname ();
+$db = $config["db_test"];
+
+print_r ($os);
+exit;
+
+if (strtolower(substr($os,  0, 3))) {
+
+}
+
 $app->register(new Silex\Provider\DoctrineServiceProvider(), $config["db"]);
 $app->register(new Silex\Provider\HttpCacheServiceProvider(), $config["cache"]);
 
