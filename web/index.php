@@ -32,7 +32,7 @@ $app->error(function (\Exception $e, $code) use ($app) {
             $message = 'Unknow : ' . $message;
     }
 
-    $error = array (
+    $error = array(
         "status" => "failure",
         "message" => $message
     );
@@ -50,23 +50,22 @@ $app->error(function (\Exception $e, $code) use ($app) {
 //use Symfony\Component\Debug\ExceptionHandler;
 //ExceptionHandler::register();
 
-require_once(__DIR__ . "/config.php");
-// define global value for app
+$os = php_uname();
 
-$app["debug"] = true;
-$app['upload.image.host'] = 'http://localhost/image/';
-$app['upload.folder'] = realpath(__DIR__ . "/../../upload/") . DIRECTORY_SEPARATOR;
-$app['upload.folder.image'] = $app["upload.folder"] . "image" . DIRECTORY_SEPARATOR;
-
-
-$os = php_uname ();
-$db = $config["db"];
-
-if (strtolower(substr($os,  0, 3)) == "dar") {
-    $db = $config["db_test"];
+if (strtolower(substr($os, 0, 3)) == "dar") {
+    require_once(__DIR__ . "/config-test.php");
+} else {
+    require_once(__DIR__ . "/config.php");
 }
 
-$app->register(new Silex\Provider\DoctrineServiceProvider(), $db);
+// define global value for app
+
+$app["debug"] = $config["debug"];
+$app['upload.image.host'] = $config["upload.image.host"];
+$app['upload.folder'] = $config["upload.folder"];
+$app['upload.folder.image'] = $config["upload.folder.image"];
+
+$app->register(new Silex\Provider\DoctrineServiceProvider(), $config["db"]);
 $app->register(new Silex\Provider\HttpCacheServiceProvider(), $config["cache"]);
 
 // modules ==> controller ==> model
@@ -74,7 +73,6 @@ $app->register(new Silex\Provider\HttpCacheServiceProvider(), $config["cache"]);
 
 $basename = $config["basename"];
 $api_v1 = $config["router_apiv1"];
-
 
 
 use Model\Model;
@@ -132,7 +130,7 @@ $api->post("user/add", function (Request $request) use ($app) {
         $status = 400;
     }
 
-    return $app->json ($controller->getError(), $status);
+    return $app->json($controller->getError(), $status);
 });
 
 $api->post("user/image/latest", function (Request $request) use ($app) {
@@ -147,7 +145,7 @@ $api->post("user/image/latest", function (Request $request) use ($app) {
         $status = 400;
     }
 
-    return $app->json ($controller->getError(), $status);
+    return $app->json($controller->getError(), $status);
 });
 
 // image / upload
@@ -163,7 +161,7 @@ $api->post("image/upload", function (Request $request) use ($app) {
         $status = 400;
     }
 
-    return $app->json ($controller->getError(), $status);
+    return $app->json($controller->getError(), $status);
 });
 
 $api->post("image/update", function (Request $request) use ($app) {
@@ -178,7 +176,7 @@ $api->post("image/update", function (Request $request) use ($app) {
         $status = 400;
     }
 
-    return $app->json ($controller->getError(), $status);
+    return $app->json($controller->getError(), $status);
 });
 
 $api->post("image/latest", function (Request $request) use ($app) {
@@ -193,7 +191,7 @@ $api->post("image/latest", function (Request $request) use ($app) {
         $status = 400;
     }
 
-    return $app->json ($controller->getError(), $status);
+    return $app->json($controller->getError(), $status);
 });
 
 $api->before(function (Request $request) {
@@ -229,7 +227,7 @@ $test->get("user/add", function () use ($app) {
     $result = curl_exec($ch);
     curl_close($ch);
 
-    print_r ($result);
+    print_r($result);
 
     exit;
 });
@@ -237,7 +235,7 @@ $test->get("user/add", function () use ($app) {
 $test->get("image/upload/{userId}", function ($userId) use ($app) {
 
     $file_name_with_full_path = realpath(__DIR__ . "/pi-512.png");
-    $post = array('user_uuid'=>$userId, 'fileinfo' => '@' . $file_name_with_full_path);
+    $post = array('user_uuid' => $userId, 'fileinfo' => '@' . $file_name_with_full_path);
 
     $target_url = "http://localhost/gajeweb/api/v1/image/upload";
 
@@ -249,7 +247,7 @@ $test->get("image/upload/{userId}", function ($userId) use ($app) {
     $result = curl_exec($ch);
     curl_close($ch);
 
-    print_r ($result);
+    print_r($result);
 
     exit;
 });
@@ -258,7 +256,7 @@ $test->get("image/upload/{userId}", function ($userId) use ($app) {
 $test->get("user/image/latest/{userId}", function ($userId) use ($app) {
 
     $file_name_with_full_path = realpath(__DIR__ . "/pi-512.png");
-    $post = array('page'=>0, 'page_size'=>50, 'user_uuid'=>$userId);
+    $post = array('page' => 0, 'page_size' => 50, 'user_uuid' => $userId);
 
     $target_url = "http://localhost/gajeweb/api/v1/user/image/latest";
 
@@ -270,14 +268,14 @@ $test->get("user/image/latest/{userId}", function ($userId) use ($app) {
     $result = curl_exec($ch);
     curl_close($ch);
 
-    print_r ($result);
+    print_r($result);
 
     exit;
 });
 
 $test->get("image/latest", function () use ($app) {
 
-    $post = array('page'=>0, 'page_size'=>50);
+    $post = array('page' => 0, 'page_size' => 50);
 
     $target_url = "http://localhost/gajeweb/api/v1/image/latest";
 
@@ -289,7 +287,7 @@ $test->get("image/latest", function () use ($app) {
     $result = curl_exec($ch);
     curl_close($ch);
 
-    print_r ($result);
+    print_r($result);
 
     exit;
 });
@@ -309,7 +307,7 @@ $test->get("start", function () use ($app) {
     $user_image_latest = @"user/image/latest/537a557dc128e";
     $image_latest = @"image/latest";
 
-    $router = array (
+    $router = array(
         $user_add => 1,
         //$image_upload => 1,
         $user_image_latest => 0,
@@ -320,6 +318,7 @@ $test->get("start", function () use ($app) {
     curl_setopt($ch, CURLOPT_POST, 0);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
+
     foreach ($router as $route => $value) {
 
         $target_url = $baseurl . $route;
@@ -328,18 +327,18 @@ $test->get("start", function () use ($app) {
 
         $result = curl_exec($ch);
 
-        print_r ("\nURL = ");
-        print_r ($target_url);
-        print_r ("\nRESULT = ");
+        print_r("\nURL = ");
+        print_r($target_url);
+        print_r("\nRESULT = ");
 
         $pretty = json_encode(json_decode($result), JSON_PRETTY_PRINT);
         if ($pretty == false) {
-            print_r ($result);
+            print_r($result);
         } else {
-            print_r ($pretty);
+            print_r($pretty);
         }
 
-        print_r ("\n");
+        print_r("\n");
 
     }
 
