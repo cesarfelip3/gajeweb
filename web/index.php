@@ -54,11 +54,11 @@ require_once(__DIR__ . "/config.php");
 // define global value for app
 
 $app["debug"] = true;
-$app['asset.host'] = 'http://localhost/image/';
+$app['upload.image.host'] = 'http://localhost/image/';
 $app['upload.folder'] = realpath(__DIR__ . "/../../upload/") . DIRECTORY_SEPARATOR;
 $app['upload.folder.image'] = $app["upload.folder"] . "image" . DIRECTORY_SEPARATOR;
 
-$app->register(new Silex\Provider\DoctrineServiceProvider(), $config["db_test"]);
+$app->register(new Silex\Provider\DoctrineServiceProvider(), $config["db"]);
 $app->register(new Silex\Provider\HttpCacheServiceProvider(), $config["cache"]);
 
 // modules ==> controller ==> model

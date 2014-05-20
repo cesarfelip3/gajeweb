@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="" />
+    <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.php" afterPath="$PROJECT_DIR$/web/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,8 +29,21 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="297" column="0" selection-start="7653" selection-end="7653" vertical-scroll-proportion="0.077419356" vertical-offset="6440" max-vertical-offset="7722">
+            <state line="65" column="0" selection-start="1587" selection-end="1587" vertical-scroll-proportion="0.37849462" vertical-offset="1056" max-vertical-offset="7722">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Image.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Image.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="80" column="28" selection-start="1867" selection-end="1867" vertical-scroll-proportion="0.0" vertical-offset="1760" max-vertical-offset="2288">
+              <folding>
+                <marker date="1400527332000" expanded="true" signature="875:931" placeholder="SELECT image..." />
+                <marker date="1400527332000" expanded="true" signature="1413:1600" placeholder="SELECT `imag..." />
+                <marker date="1400527332000" expanded="true" signature="2041:2210" placeholder="SELECT `imag..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -35,7 +51,7 @@
       <file leaf-file-name="ImageController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="155" column="47" selection-start="4420" selection-end="4420" vertical-scroll-proportion="-13.967742" vertical-offset="2867" max-vertical-offset="3938">
+            <state line="155" column="47" selection-start="4420" selection-end="4420" vertical-scroll-proportion="0.0" vertical-offset="3410" max-vertical-offset="4048">
               <folding />
             </state>
           </provider>
@@ -157,6 +173,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -291,7 +308,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -631,9 +647,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/BaseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="5" selection-start="299" selection-end="849" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="825">
-          <folding />
-        </state>
+        <state line="17" column="5" selection-start="299" selection-end="849" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="825" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Model.php">
@@ -645,43 +659,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="24" selection-start="717" selection-end="717" vertical-scroll-proportion="-27.451612" vertical-offset="7" max-vertical-offset="1034">
-          <folding />
-        </state>
+        <state line="39" column="24" selection-start="717" selection-end="717" vertical-scroll-proportion="-27.451612" vertical-offset="7" max-vertical-offset="1034" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="29" selection-start="1037" selection-end="1037" vertical-scroll-proportion="-12.548388" vertical-offset="381" max-vertical-offset="1342">
-          <folding />
-        </state>
+        <state line="39" column="29" selection-start="1037" selection-end="1037" vertical-scroll-proportion="-12.548388" vertical-offset="381" max-vertical-offset="1342" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="25" selection-start="1009" selection-end="1009" vertical-scroll-proportion="-14.67742" vertical-offset="535" max-vertical-offset="1496">
-          <folding>
-            <marker date="1400169378000" expanded="true" signature="-1:-1" placeholder="SELECT user_..." />
-            <marker date="1400169378000" expanded="true" signature="-1:-1" placeholder="SELECT user_..." />
-          </folding>
-        </state>
+        <state line="45" column="25" selection-start="1009" selection-end="1009" vertical-scroll-proportion="-14.67742" vertical-offset="535" max-vertical-offset="1496" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/develop.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="6" selection-start="229" selection-end="348" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="506">
-          <folding />
-        </state>
+        <state line="14" column="6" selection-start="229" selection-end="348" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="506" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Image.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="34" selection-start="1984" selection-end="1984" vertical-scroll-proportion="-17.225807" vertical-offset="1314" max-vertical-offset="2354">
+        <state line="80" column="28" selection-start="1867" selection-end="1867" vertical-scroll-proportion="0.0" vertical-offset="1760" max-vertical-offset="2288">
           <folding>
-            <marker date="1400527332000" expanded="true" signature="-1:-1" placeholder="SELECT image..." />
-            <marker date="1400527332000" expanded="true" signature="-1:-1" placeholder="SELECT `imag..." />
-            <marker date="1400527332000" expanded="true" signature="-1:-1" placeholder="SELECT `imag..." />
+            <marker date="1400527332000" expanded="true" signature="875:931" placeholder="SELECT image..." />
+            <marker date="1400527332000" expanded="true" signature="1413:1600" placeholder="SELECT `imag..." />
+            <marker date="1400527332000" expanded="true" signature="2041:2210" placeholder="SELECT `imag..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="47" selection-start="4420" selection-end="4420" vertical-scroll-proportion="0.0" vertical-offset="3410" max-vertical-offset="4048">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -692,16 +702,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="47" selection-start="4420" selection-end="4420" vertical-scroll-proportion="-13.967742" vertical-offset="2867" max-vertical-offset="3938">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="297" column="0" selection-start="7653" selection-end="7653" vertical-scroll-proportion="0.077419356" vertical-offset="6440" max-vertical-offset="7722">
+        <state line="65" column="0" selection-start="1587" selection-end="1587" vertical-scroll-proportion="0.37849462" vertical-offset="1056" max-vertical-offset="7722">
           <folding />
         </state>
       </provider>
