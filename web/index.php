@@ -60,16 +60,13 @@ $app['upload.folder.image'] = $app["upload.folder"] . "image" . DIRECTORY_SEPARA
 
 
 $os = php_uname ();
-$db = $config["db_test"];
+$db = $config["db"];
 
-print_r ($os);
-exit;
-
-if (strtolower(substr($os,  0, 3))) {
-
+if (strtolower(substr($os,  0, 3)) == "dar") {
+    $db = $config["db_test"];
 }
 
-$app->register(new Silex\Provider\DoctrineServiceProvider(), $config["db"]);
+$app->register(new Silex\Provider\DoctrineServiceProvider(), $db);
 $app->register(new Silex\Provider\HttpCacheServiceProvider(), $config["cache"]);
 
 // modules ==> controller ==> model
