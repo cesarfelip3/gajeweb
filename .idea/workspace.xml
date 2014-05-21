@@ -55,7 +55,7 @@
       <file leaf-file-name="ImageController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="25" selection-start="2042" selection-end="2042" vertical-scroll-proportion="0.53362733" vertical-offset="1034" max-vertical-offset="4312">
+            <state line="72" column="65" selection-start="2227" selection-end="2227" vertical-scroll-proportion="0.70341784" vertical-offset="946" max-vertical-offset="4312">
               <folding>
                 <element signature="e#35#80#0" expanded="true" />
               </folding>
@@ -872,7 +872,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="25" selection-start="2042" selection-end="2042" vertical-scroll-proportion="0.53362733" vertical-offset="1034" max-vertical-offset="4312">
+        <state line="72" column="65" selection-start="2227" selection-end="2227" vertical-scroll-proportion="0.70341784" vertical-offset="946" max-vertical-offset="4312">
           <folding>
             <element signature="e#35#80#0" expanded="true" />
           </folding>
