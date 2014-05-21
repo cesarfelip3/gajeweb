@@ -68,7 +68,12 @@ class ImageController extends BaseController {
                     $image_uuid = $image->addImage($data);
 
                     $imagine = new Imagine\Gd\Imagine();
+                    print_r ($imagine);
+                    exit;
+
                     $image = $imagine->open($data["file_path"] . $data["file_name"]);
+
+
 
                     $image->crop(new Point(0, 0), new Box(280, 240))
                         ->save($data["file_path"] . pathinfo($data["file_name"], PATHINFO_BASENAME) . "_280x240." . pathinfo($data["file_name"], PATHINFO_EXTENSION));
