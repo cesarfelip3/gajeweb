@@ -53,6 +53,8 @@ class ImageController extends BaseController {
             $data['name'] = $this->request->get("name", "Untitle");
             $data['description'] = $this->request->get("description", "Untitle image");
 
+
+
             if (file_exists($data["file_path"])) {
 
                 if (false == $file->move ($data["file_path"], $data["file_name"])) {
@@ -62,7 +64,9 @@ class ImageController extends BaseController {
                     $size = getimagesize($data["file_path"] . $data["file_name"]);
                     $data["width"] = $size[0];
                     $data["height"] = $size[1];
-
+                    print_r ($data);
+                    print_r ($uploadFolder);
+                    exit;
                     $image = new Image();
                     $image_uuid = $image->addImage($data);
                     if (empty ($image_uuid)) {
