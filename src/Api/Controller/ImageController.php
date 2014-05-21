@@ -6,6 +6,7 @@ namespace Api\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+
 use Api\Controller\BaseController;
 use Model\Image;
 use Model\User;
@@ -67,15 +68,11 @@ class ImageController extends BaseController {
                     $image = new Image();
                     $image_uuid = $image->addImage($data);
 
-                    $imagine = new Imagine\Gd\Imagine();
-                    print_r ($imagine);
-                    exit;
+                    $imagine = new \Imagine\Gd\Imagine();
 
                     $image = $imagine->open($data["file_path"] . $data["file_name"]);
-
-
-
-                    $image->crop(new Point(0, 0), new Box(280, 240))
+                    $image->resize (new \Imagine\Image\Box(280, 240))
+                        ->crop(new \Imagine\Image\Point(0, 0), new \Imagine\Image\Box(280, 240))
                         ->save($data["file_path"] . pathinfo($data["file_name"], PATHINFO_BASENAME) . "_280x240." . pathinfo($data["file_name"], PATHINFO_EXTENSION));
 
                     if (empty ($image_uuid)) {
