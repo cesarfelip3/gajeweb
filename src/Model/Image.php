@@ -97,4 +97,26 @@ class Image extends Model {
         return $result;
     }
 
+    public function getImagesWithoutThumbnail($data)
+    {
+        $page = $data["page"];
+        $pageSize = $data["page_size"];
+
+        $page = intval($page);
+        $pageSize = intval($pageSize);
+        $page = $page * $pageSize;
+
+        $limit = "$page, $pageSize";
+
+        $userTable = User::table();
+
+        $sql = "SELECT img.image_uuid, img.width, img.height, img.file_path, img.file_name, usr.token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username FROM {$this->table} img INNER JOIN $userTable usr ON img.user_uuid=usr.user_uuid WHERE img.thumbnails=0 ORDER BY modified_date DESC";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+
+        $result = $stmt->fetchAll();
+
+        return $result;
+    }
+
 }

@@ -62,15 +62,15 @@ class ImageController extends BaseController {
                 } else {
 
                     $size = getimagesize($data["file_path"] . $data["file_name"]);
-                    $data["width"] = $size[0];
-                    $data["height"] = $size[1];
+                    $data["width"] = $width = $size[0];
+                    $data["height"] = $height = $size[1];
                     $image = new Image();
                     $image_uuid = $image->addImage($data);
 
                     $imagine = new \Imagine\Gd\Imagine();
 
                     $image = $imagine->open($data["file_path"] . $data["file_name"]);
-                    $image->resize (new \Imagine\Image\Box(280, (int)(280 * $data["height"] / $data["width"])))
+                    $image->resize (new \Imagine\Image\Box(280, 280 * $height / $width))
                         ->crop(new \Imagine\Image\Point(0, 0), new \Imagine\Image\Box(280, 185))
                         ->save($data["file_path"] . pathinfo($data["file_name"], PATHINFO_BASENAME) . "_280x240." . pathinfo($data["file_name"], PATHINFO_EXTENSION));
 
@@ -84,6 +84,9 @@ class ImageController extends BaseController {
                 return $this->setFailed("upload folder not exist");
             }
         } else {
+
+            // basically php.ini issue
+
             return $this->setFailed("invalid upload", array("result"=>$file));
         }
 
@@ -184,6 +187,42 @@ class ImageController extends BaseController {
         }
 
         return true;
+    }
+
+    // service ==> cron
+    // not tested yet
+
+    public function toThumbnails ()
+    {
+        $image = new Image();
+
+        $result = $image->getImagesWithoutThumbnail();
+
+        if (!empty ($result)) {
+
+            $imagine = new \Imagine\Gd\Imagine();
+
+            foreach ($result as $data) {
+
+                if (file_exists($data["file_path"] . $data["file_name"])) {
+
+                    $width = $data["width"];
+                    $heght = $data["height"];
+
+                    $thumbnail = $imagine->open($data["file_path"] . $data["file_name"]);
+                    $thumbnail->resize (new \Imagine\Image\Box(280, 280 * $height / $width))
+                        ->crop(new \Imagine\Image\Point(0, 0), new \Imagine\Image\Box(280, 185))
+                        ->save($data["file_path"] . pathinfo($data["file_name"], PATHINFO_BASENAME) . "_280x240." . pathinfo($data["file_name"], PATHINFO_EXTENSION));
+
+                    $data["thumbnails"] = 1;
+                    $image->updateImage($data);
+
+                }
+
+            }
+
+        }
+
     }
 
 
