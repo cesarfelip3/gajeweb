@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Image.php" afterPath="$PROJECT_DIR$/src/Model/Image.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Controller/ImageController.php" afterPath="$PROJECT_DIR$/src/Api/Controller/ImageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/gajeapp.sql" afterPath="$PROJECT_DIR$/data/gajeapp.sql" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,7 +55,7 @@
       <file leaf-file-name="ImageController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="192" column="21" selection-start="5608" selection-end="5608" vertical-scroll-proportion="0.5876516" vertical-offset="3713" max-vertical-offset="5192">
+            <state line="202" column="54" selection-start="5831" selection-end="5831" vertical-scroll-proportion="0.6361632" vertical-offset="3889" max-vertical-offset="5192">
               <folding>
                 <element signature="e#35#80#0" expanded="true" />
               </folding>
@@ -876,7 +874,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="21" selection-start="5608" selection-end="5608" vertical-scroll-proportion="0.5876516" vertical-offset="3713" max-vertical-offset="5192">
+        <state line="202" column="54" selection-start="5831" selection-end="5831" vertical-scroll-proportion="0.6361632" vertical-offset="3889" max-vertical-offset="5192">
           <folding>
             <element signature="e#35#80#0" expanded="true" />
           </folding>

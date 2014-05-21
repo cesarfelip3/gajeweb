@@ -67,7 +67,7 @@ class ImageController extends BaseController {
                     $image = new Image();
                     $image_uuid = $image->addImage($data);
 
-                    $imagine = new \Imagine\Gd\Imagine();
+                    $imagine = new \Imagine\Imagick\Imagine();
 
                     $image = $imagine->open($data["file_path"] . $data["file_name"]);
                     $image->resize (new \Imagine\Image\Box(280, 280 * $height / $width))
@@ -200,7 +200,7 @@ class ImageController extends BaseController {
 
         if (!empty ($result)) {
 
-            $imagine = new \Imagine\Gd\Imagine();
+            $imagine = new \Imagine\Imagick\Imagine();
 
             foreach ($result as $data) {
 
