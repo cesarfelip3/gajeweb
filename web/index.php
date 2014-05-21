@@ -303,7 +303,7 @@ $test->get("start", function () use ($app) {
 
     $router = array(
         $user_add => 1,
-        //$image_upload => 1,
+        $image_upload => 1,
         $user_image_latest => 0,
         $image_latest => 0
     );
