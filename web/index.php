@@ -294,11 +294,11 @@ $test->get("start", function () use ($app) {
     // add user
     // upload image
     $user_add = "user/add";
-    $image_upload = "image/upload/537a557dc128e"; //53739b9ca8183";
+    $image_upload = "image/upload/53739b9ca8183";
 
     // get latest from user
     // get latest image
-    $user_image_latest = @"user/image/latest/537a557dc128e";//53739b9ca8183";
+    $user_image_latest = @"user/image/latest/53739b9ca8183";
     $image_latest = @"image/latest";
 
     $router = array(
