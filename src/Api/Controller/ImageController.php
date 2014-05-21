@@ -84,9 +84,11 @@ class ImageController extends BaseController {
             } else {
                 return $this->setFailed("upload folder not exist");
             }
+        } else {
+            return $this->setFailed("invalid upload", array("result"=>$file));
         }
 
-        $this->error["data"]["image_uuid"] = $image_uuid;
+        $this->setSuccess("", array ("image_uuid"=>$image_uuid));
         return true;
 
     }
