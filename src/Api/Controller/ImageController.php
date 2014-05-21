@@ -66,6 +66,13 @@ class ImageController extends BaseController {
                     $data["height"] = $size[1];
                     $image = new Image();
                     $image_uuid = $image->addImage($data);
+
+                    $imagine = new Imagine\Gd\Imagine();
+                    $image = $imagine->open($data["file_path"], $data["file_name"]);
+
+                    $image->crop(new Point(0, 0), new Box(280, 240))
+                        ->save($data["file_path"] . pathinfo($data["file_name"], PATHINFO_BASENAME) . "_280x240." . pathinfo($data["file_name"], PATHINFO_EXTENSION));
+
                     if (empty ($image_uuid)) {
 
                         return $this->setFailed("save image to db error");
