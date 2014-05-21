@@ -55,7 +55,6 @@ class ImageController extends BaseController {
             $data['description'] = $this->request->get("description", "Untitle image");
 
 
-
             if (file_exists($data["file_path"])) {
 
                 if (false == $file->move ($data["file_path"], $data["file_name"])) {
@@ -71,8 +70,8 @@ class ImageController extends BaseController {
                     $imagine = new \Imagine\Gd\Imagine();
 
                     $image = $imagine->open($data["file_path"] . $data["file_name"]);
-                    $image->resize (new \Imagine\Image\Box(280, 240))
-                        ->crop(new \Imagine\Image\Point(0, 0), new \Imagine\Image\Box(280, 240))
+                    $image->resize (new \Imagine\Image\Box(280, 185))
+                        ->crop(new \Imagine\Image\Point(0, 0), new \Imagine\Image\Box(280, 185))
                         ->save($data["file_path"] . pathinfo($data["file_name"], PATHINFO_BASENAME) . "_280x240." . pathinfo($data["file_name"], PATHINFO_EXTENSION));
 
                     if (empty ($image_uuid)) {
