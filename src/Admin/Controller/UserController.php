@@ -18,6 +18,13 @@ class UserController extends BaseController
         $this->response = new Response();
     }
 
+    // to display all users in a list table, that's very common
+    // but what if one object related to another one
+    // we should think about that right?
+    // user ==> images
+
+    // user ==> name, email, created date, modified date, resources <image, .....>
+
     public function userList ()
     {
 
