@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/gajeapp.sql" afterPath="$PROJECT_DIR$/data/database.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Model/Category.php" afterPath="$PROJECT_DIR$/src/Model/Theme.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Model/Model.php" afterPath="$PROJECT_DIR$/src/Model/BaseModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Controller/AuthController.php" afterPath="$PROJECT_DIR$/src/Api/Controller/AuthController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Controller/BaseController.php" afterPath="$PROJECT_DIR$/src/Api/Controller/BaseController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/test/Curl.class.php" afterPath="$PROJECT_DIR$/web/test/Curl.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Image.php" afterPath="$PROJECT_DIR$/src/Model/Image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Controller/ImageController.php" afterPath="$PROJECT_DIR$/src/Api/Controller/ImageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Tag.php" afterPath="$PROJECT_DIR$/src/Model/Tag.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/User.php" afterPath="$PROJECT_DIR$/src/Model/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/test/Zebra_cURL.php" afterPath="$PROJECT_DIR$/web/test/Zebra_cURL.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config-test.php" afterPath="$PROJECT_DIR$/web/config-test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config.php" afterPath="$PROJECT_DIR$/web/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.php" afterPath="$PROJECT_DIR$/web/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/View/layout.default.twig" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Admin/View/layout.default.html" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Admin/View/index.html" afterPath="$PROJECT_DIR$/src/Admin/View/index2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Controller/IndexController.php" afterPath="$PROJECT_DIR$/src/Admin/Controller/IndexController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gaje.iws" />
@@ -42,7 +32,7 @@
       <file leaf-file-name="IndexController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/Controller/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="56" selection-start="550" selection-end="550" vertical-scroll-proportion="-15.272727" vertical-offset="0" max-vertical-offset="936">
+            <state line="16" column="26" selection-start="352" selection-end="352" vertical-scroll-proportion="-11.636364" vertical-offset="0" max-vertical-offset="936">
               <folding>
                 <element signature="e#36#81#0" expanded="true" />
               </folding>
@@ -50,13 +40,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.default.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Admin/View/layout.default.html">
+      <file leaf-file-name="layout.default.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Admin/View/layout.default.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="79" selection-start="2407" selection-end="2407" vertical-scroll-proportion="0.49427918" vertical-offset="912" max-vertical-offset="3888">
+            <state line="132" column="0" selection-start="7121" selection-end="7121" vertical-scroll-proportion="-5.908046" vertical-offset="2654" max-vertical-offset="3840">
               <folding>
                 <element signature="n#style#0;n#ul#1;n#div#1;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.twig" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Admin/View/index.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="0" selection-start="94" selection-end="94" vertical-scroll-proportion="0.12931034" vertical-offset="0" max-vertical-offset="928">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index2.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Admin/View/index2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="89" column="21" selection-start="0" selection-end="18161" vertical-scroll-proportion="-6.5454545" vertical-offset="1920" max-vertical-offset="10248">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -132,14 +140,16 @@
         <option value="$PROJECT_DIR$/web/config.php" />
         <option value="$PROJECT_DIR$/web/config-test.php" />
         <option value="$PROJECT_DIR$/web/index.php" />
-        <option value="$PROJECT_DIR$/src/Admin/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/src/Admin/View/layout.default.html" />
+        <option value="$PROJECT_DIR$/src/Admin/View/index.html" />
+        <option value="$PROJECT_DIR$/src/Admin/Controller/IndexController.php" />
+        <option value="$PROJECT_DIR$/src/Admin/View/index.twig" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="49" />
+    <option name="x" value="50" />
     <option name="y" value="22" />
     <option name="width" value="1871" />
     <option name="height" value="1058" />
@@ -399,6 +409,8 @@
     <property name="recentsLimit" value="5" />
     <property name="LayoutCode.rearrangeEntries" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
+    <property name="LayoutCode.rearrangeEntriesTwig" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -465,7 +477,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="22" width="1871" height="1058" extended-state="6" />
+    <frame x="50" y="22" width="1871" height="1058" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -505,11 +517,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Model/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Theme.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="288" />
@@ -764,13 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/View/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="18" selection-start="0" selection-end="18161" vertical-scroll-proportion="-10.909091" vertical-offset="0" max-vertical-offset="10248">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="20" selection-start="0" selection-end="749" vertical-scroll-proportion="-2.909091" vertical-offset="0" max-vertical-offset="1128">
@@ -799,21 +799,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/View/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="21" selection-start="0" selection-end="18161" vertical-scroll-proportion="-6.5454545" vertical-offset="1920" max-vertical-offset="10248">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Controller/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="56" selection-start="550" selection-end="550" vertical-scroll-proportion="-15.272727" vertical-offset="0" max-vertical-offset="936">
+        <state line="16" column="26" selection-start="352" selection-end="352" vertical-scroll-proportion="-11.636364" vertical-offset="0" max-vertical-offset="936">
           <folding>
             <element signature="e#36#81#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/View/layout.default.html">
+    <entry file="file://$PROJECT_DIR$/src/Admin/View/layout.default.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="79" selection-start="2407" selection-end="2407" vertical-scroll-proportion="0.49427918" vertical-offset="912" max-vertical-offset="3888">
+        <state line="132" column="0" selection-start="7121" selection-end="7121" vertical-scroll-proportion="-5.908046" vertical-offset="2654" max-vertical-offset="3840">
           <folding>
             <element signature="n#style#0;n#ul#1;n#div#1;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/View/index.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="94" selection-end="94" vertical-scroll-proportion="0.12931034" vertical-offset="0" max-vertical-offset="928">
+          <folding />
         </state>
       </provider>
     </entry>

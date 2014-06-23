@@ -26,7 +26,7 @@ class IndexController extends BaseController
     public function index()
     {
 
-        return $this->app["twig"]->render ("layout.default.html");
+        return $this->app["twig"]->render ("index.twig");
 
     }
 
