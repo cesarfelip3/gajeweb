@@ -19,8 +19,8 @@ class IndexController extends BaseController
         $this->response = new Response();
 
         $this->app->register(new TwigServiceProvider(), array(
-            'twig.path' => realpath (__DIR__ . '/../View'),
-            'twig.options' => array (
+            'twig.path' => realpath(__DIR__ . '/../View'),
+            'twig.options' => array(
                 "cache" => realpath(__DIR__ . "/../cache")
             )
         ));
@@ -30,8 +30,12 @@ class IndexController extends BaseController
     {
 
         // let's see if this works, and it worked!
+        $response = new Response();
+        $response->setTtl(5);
 
-        return $this->app["twig"]->render ("index.twig");
+        $response->setContent($this->app["twig"]->render("index.twig"));
+
+        return $response;
 
     }
 

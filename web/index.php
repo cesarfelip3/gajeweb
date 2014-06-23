@@ -356,6 +356,20 @@ $test->get("start", function () use ($app) {
 });
 
 $app->mount($basename . "/" . $config["router_test"], $test);
-$app->run();
+
+
+//========================================
+// what's different between those two?
+//========================================
+
+use Silex\Provider\HttpCacheServiceProvider;
+$app->register(new HttpCacheServiceProvider(), array(
+    'http_cache.cache_dir' => __DIR__ . "/cache/",
+    'http_cache.esi'       => null,
+));
+
+$app["http_cache"]->run();
+
+//$app->run();
 
 
