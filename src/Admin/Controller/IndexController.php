@@ -20,6 +20,9 @@ class IndexController extends BaseController
 
         $this->app->register(new TwigServiceProvider(), array(
             'twig.path' => realpath (__DIR__ . '/../View'),
+            'twig.options' => array (
+                "cache" => realpath(__DIR__ . "/../cache")
+            )
         ));
     }
 
