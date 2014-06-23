@@ -1,6 +1,6 @@
 <?php
 
-namespace Api\Controller;
+namespace Admin\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 

@@ -75,9 +75,9 @@ $basename = $config["basename"];
 $api_v1 = $config["router_apiv1"];
 
 
-use Model\Model;
+use Model\BaseModel;
 
-Model::$DB = $app['db'];
+BaseModel::$DB = $app['db'];
 
 //==========================
 // API module routers
@@ -116,7 +116,9 @@ $api->post("auth", function (Request $request) use ($app) {
 
 });
 
-// tested
+//==================================
+// basically routers for API
+//==================================
 
 $api->post("user/add", function (Request $request) use ($app) {
 
@@ -202,6 +204,24 @@ $api->before(function (Request $request) {
 $app->mount($basename . "/" . $api_v1, $api);
 
 //==================================
+// basically routers for admin
+//==================================
+
+use Admin\Controller\IndexController;
+
+$admin = $app["controllers_factory"];
+
+$admin->get ("/", function (Request $request) use ($app) {
+
+    $controller = new IndexController($request, $app);
+
+
+    return $controller->index();
+});
+
+$app->mount($basename . "/" . $config["router_admin"], $admin);
+
+//==================================
 // test case
 //==================================
 
@@ -225,7 +245,7 @@ $test->get("user/add", function () use ($app) {
 
 
     $curl->post($target_url, $post);
-    print_r (json_encode($curl->response));
+    print_r(json_encode($curl->response));
 
     exit;
 });
@@ -242,7 +262,7 @@ $test->get("image/upload/{userId}", function ($userId) use ($app) {
     $curl = new Curl();
 
     $curl->post($target_url, $post);
-    print_r (json_encode($curl->response));
+    print_r(json_encode($curl->response));
 
     exit;
 });
@@ -260,7 +280,7 @@ $test->get("user/image/latest/{userId}", function ($userId) use ($app) {
     $curl = new Curl();
 
     $curl->post($target_url, $post);
-    print_r (json_encode($curl->response));
+    print_r(json_encode($curl->response));
 
     exit;
 });
@@ -276,7 +296,7 @@ $test->get("image/latest", function () use ($app) {
     $curl = new Curl();
 
     $curl->post($target_url, $post);
-    print_r (json_encode($curl->response));
+    print_r(json_encode($curl->response));
 
     exit;
 });
@@ -312,7 +332,7 @@ $test->get("start", function () use ($app) {
 
         $target_url = $baseurl . $route;
 
-        $curl->get ($target_url);
+        $curl->get($target_url);
 
         print_r("\nURL = ");
         print_r($target_url);

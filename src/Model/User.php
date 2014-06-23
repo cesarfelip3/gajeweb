@@ -2,9 +2,9 @@
 
 namespace Model;
 
-use \Model\Model;
+use \Model\BaseModel;
 
-class User extends Model
+class User extends BaseModel
 {
 
     public $table = "user";
@@ -58,6 +58,26 @@ class User extends Model
         }
 
         return $uuid;
+    }
+
+    //=====================================
+    // admin
+    //=====================================
+
+    public function getUserList ()
+    {
+        $page = $data["page"];
+        $pageSize = $data["page_size"];
+        $user_uuid = $data["user_uuid"];
+
+        $page = intval($page);
+        $pageSize = intval($pageSize);
+        $page = $page * $pageSize;
+
+        $limit = "$page, $pageSize";
+        $result = $this->db->fetchAll("SELECT * FROM {$this->table} ORDER BY modified_date DESC LIMIT {$limit}");
+
+        return $result;
     }
 
     public static function table()

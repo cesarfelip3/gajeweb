@@ -2,9 +2,9 @@
 
 // database
 
-$config["db"] = array (
+$config["db"] = array(
 
-    "db.options" => array (
+    "db.options" => array(
         "driver" => "pdo_mysql",
         "host" => "localhost",
         "port" => "3306",
@@ -17,7 +17,7 @@ $config["db"] = array (
 
 // cache
 
-$config["cache"] = array (
+$config["cache"] = array(
     'http_cache.cache_dir' => __DIR__ . '/cache/',
 );
 
@@ -26,6 +26,7 @@ $config["cache"] = array (
 
 $config["basename"] = "/gajeweb";
 $config["router_apiv1"] = "api/v1/";
+$config["router_admin"] = "admin/";
 $config["router_test"] = "testcase/";
 
 // upload

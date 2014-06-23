@@ -2,9 +2,10 @@
 
 namespace Model;
 
-use \Model\Model;
+use \Model\BaseModel;
 
-class Image extends Model {
+class Image extends BaseModel
+{
 
 
     public $table = "image";
@@ -14,34 +15,34 @@ class Image extends Model {
         $this->db = self::$DB;
     }
 
-    public function addImage ($data)
+    public function addImage($data)
     {
 
         $data["image_uuid"] = uniqid();
         $data["create_date"] = time();
-        $data["modified_date"] = time ();
+        $data["modified_date"] = time();
 
         $this->db->insert($this->table, $data);
 
         return $data["image_uuid"];
     }
 
-    public function updateImage ($data)
+    public function updateImage($data)
     {
 
         $image_uuid = $data["image_uuid"];
         unset($data["image_uuid"]);
-        $this->db->update($this->table, $data, array('image_uuid'=>$image_uuid));
+        $this->db->update($this->table, $data, array('image_uuid' => $image_uuid));
     }
 
-    public function deleteImage ($imageId)
+    public function deleteImage($imageId)
     {
         $this->db->delete($this->table, array('token' => $data["token"]));
     }
 
-    public function imageExists ($imageId)
+    public function imageExists($imageId)
     {
-        $uuid = $this->db->fetchColumn("SELECT image_uuid FROM {$this->table} WHERE image_uuid=?", array ($imageId));
+        $uuid = $this->db->fetchColumn("SELECT image_uuid FROM {$this->table} WHERE image_uuid=?", array($imageId));
 
         if (empty ($uuid)) {
             return false;
@@ -51,7 +52,7 @@ class Image extends Model {
     }
 
     // get images
-    public function getImagesByUser ($data)
+    public function getImagesByUser($data)
     {
         $page = $data["page"];
         $pageSize = $data["page_size"];
@@ -62,7 +63,7 @@ class Image extends Model {
         $page = $page * $pageSize;
 
         $limit = "$page, $pageSize";
-        $result = $this->db->fetchAll ("SELECT `image_uuid`, `name`, `description`, `width`, `height`, `create_date`, `modified_date`, `file_name` FROM {$this->table} WHERE user_uuid=? ORDER BY modified_date DESC LIMIT {$limit} ", array ($user_uuid));
+        $result = $this->db->fetchAll("SELECT `image_uuid`, `name`, `description`, `width`, `height`, `create_date`, `modified_date`, `file_name` FROM {$this->table} WHERE user_uuid=? ORDER BY modified_date DESC LIMIT {$limit} ", array($user_uuid));
 
         if (!empty ($result)) {
 

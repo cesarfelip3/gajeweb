@@ -3,10 +3,11 @@
 
 namespace Model;
 
-use \Model\Model;
+use \Model\BaseModel;
 
-class Category extends Model {
-    public $table = "user";
+class Theme extends BaseModel
+{
+    public $table = "theme";
 
     public function __construct()
     {

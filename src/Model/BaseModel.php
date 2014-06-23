@@ -2,18 +2,19 @@
 
 namespace Model;
 
-class Model {
+class BaseModel
+{
 
     public static $DB;
     protected $db;
 
-    protected $error = array (
+    protected $error = array(
         "status" => "success",
         "message" => "",
-        "data" => array ()
+        "data" => array()
     );
 
-    public function setSuccess ($message, $data=array())
+    public function setSuccess($message, $data = array())
     {
         $this->error["status"] = "success";
         $this->error["message"] = empty ($message) ? "" : $message;
@@ -21,7 +22,7 @@ class Model {
         return true;
     }
 
-    public function setFailed ($message, $data=array())
+    public function setFailed($message, $data = array())
     {
         $this->error["status"] = "failure";
         $this->error["message"] = empty ($message) ? "" : $message;
@@ -29,7 +30,7 @@ class Model {
         return false;
     }
 
-    public function getError ()
+    public function getError()
     {
         return $this->error;
     }

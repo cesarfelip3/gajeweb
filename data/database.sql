@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 14, 2014 at 06:14 PM
+-- Generation Time: May 27, 2014 at 03:29 PM
 -- Server version: 5.5.31
 -- PHP Version: 5.4.19
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `gajeapp`
 --
-CREATE DATABASE IF NOT EXISTS `gajeapp` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE IF NOT EXISTS `gajeapp` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `gajeapp`;
 
 -- --------------------------------------------------------
@@ -28,6 +28,7 @@ USE `gajeapp`;
 -- Table structure for table `administrator`
 --
 
+DROP TABLE IF EXISTS `administrator`;
 CREATE TABLE IF NOT EXISTS `administrator` (
   `admin_id` int(20) NOT NULL AUTO_INCREMENT,
   `admin_uuid` varchar(255) NOT NULL DEFAULT '',
@@ -38,31 +39,41 @@ CREATE TABLE IF NOT EXISTS `administrator` (
   PRIMARY KEY (`admin_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+--
+-- Truncate table before insert `administrator`
+--
+
+TRUNCATE TABLE `administrator`;
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `category`
 --
 
+DROP TABLE IF EXISTS `theme`;
 CREATE TABLE IF NOT EXISTS `category` (
-  `category_id` int(20) NOT NULL AUTO_INCREMENT,
-  `category_uuid` varchar(255) NOT NULL DEFAULT '',
-  `user_uuid` varchar(32) NOT NULL DEFAULT '',
-  `parent_uuid` varchar(32) NOT NULL DEFAULT '',
+  `theme_id` int(20) NOT NULL AUTO_INCREMENT,
+  `theme_uuid` varchar(255) NOT NULL DEFAULT '',
+  `theme_uuid` varchar(32) NOT NULL DEFAULT '',
   `name` varchar(255) NOT NULL DEFAULT '',
   `description` varchar(255) NOT NULL DEFAULT '',
-  `level` int(11) NOT NULL DEFAULT '0',
-  `sort_order` int(11) NOT NULL DEFAULT '0',
-  `family_uuid` varchar(32) NOT NULL DEFAULT '',
+  `create_date` int(11) NOT NULL DEFAULT '0',
+  `modified_date` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`category_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+--
+-- Truncate table before insert `category`
+--
+
+TRUNCATE TABLE `category`;
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `geo_city`
 --
 
+DROP TABLE IF EXISTS `geo_city`;
 CREATE TABLE IF NOT EXISTS `geo_city` (
   `city_id` int(11) NOT NULL AUTO_INCREMENT,
   `city_uuid` varchar(255) NOT NULL DEFAULT '',
@@ -73,12 +84,18 @@ CREATE TABLE IF NOT EXISTS `geo_city` (
   PRIMARY KEY (`city_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+--
+-- Truncate table before insert `geo_city`
+--
+
+TRUNCATE TABLE `geo_city`;
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `geo_country`
 --
 
+DROP TABLE IF EXISTS `geo_country`;
 CREATE TABLE IF NOT EXISTS `geo_country` (
   `country_id` int(11) NOT NULL AUTO_INCREMENT,
   `country_uuid` varchar(255) NOT NULL DEFAULT '',
@@ -87,12 +104,18 @@ CREATE TABLE IF NOT EXISTS `geo_country` (
   PRIMARY KEY (`country_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+--
+-- Truncate table before insert `geo_country`
+--
+
+TRUNCATE TABLE `geo_country`;
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `geo_state`
 --
 
+DROP TABLE IF EXISTS `geo_state`;
 CREATE TABLE IF NOT EXISTS `geo_state` (
   `state_id` int(11) NOT NULL AUTO_INCREMENT,
   `state_uuid` varchar(255) NOT NULL DEFAULT '',
@@ -102,12 +125,18 @@ CREATE TABLE IF NOT EXISTS `geo_state` (
   PRIMARY KEY (`state_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+--
+-- Truncate table before insert `geo_state`
+--
+
+TRUNCATE TABLE `geo_state`;
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `image`
 --
 
+DROP TABLE IF EXISTS `image`;
 CREATE TABLE IF NOT EXISTS `image` (
   `image_id` int(20) NOT NULL AUTO_INCREMENT,
   `image_uuid` varchar(255) NOT NULL DEFAULT '',
@@ -129,36 +158,54 @@ CREATE TABLE IF NOT EXISTS `image` (
   PRIMARY KEY (`image_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+--
+-- Truncate table before insert `image`
+--
+
+TRUNCATE TABLE `image`;
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `image_to_category`
 --
 
+DROP TABLE IF EXISTS `image_to_category`;
 CREATE TABLE IF NOT EXISTS `image_to_category` (
   `image_uuid` varchar(255) NOT NULL DEFAULT '',
   `category_uuid` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`image_uuid`,`category_uuid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Truncate table before insert `image_to_category`
+--
+
+TRUNCATE TABLE `image_to_category`;
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `image_to_tag`
 --
 
+DROP TABLE IF EXISTS `image_to_tag`;
 CREATE TABLE IF NOT EXISTS `image_to_tag` (
   `image_uuid` varchar(255) NOT NULL DEFAULT '',
   `tag_uuid` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`image_uuid`,`tag_uuid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Truncate table before insert `image_to_tag`
+--
+
+TRUNCATE TABLE `image_to_tag`;
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `tag`
 --
 
+DROP TABLE IF EXISTS `tag`;
 CREATE TABLE IF NOT EXISTS `tag` (
   `tag_id` int(11) NOT NULL AUTO_INCREMENT,
   `tag_uuid` varchar(255) NOT NULL DEFAULT '',
@@ -167,12 +214,18 @@ CREATE TABLE IF NOT EXISTS `tag` (
   PRIMARY KEY (`tag_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+--
+-- Truncate table before insert `tag`
+--
+
+TRUNCATE TABLE `tag`;
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `user`
 --
 
+DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_uuid` varchar(255) NOT NULL DEFAULT '',
@@ -195,6 +248,11 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+--
+-- Truncate table before insert `user`
+--
+
+TRUNCATE TABLE `user`;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

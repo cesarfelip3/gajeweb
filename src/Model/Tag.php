@@ -2,11 +2,12 @@
 
 namespace Model;
 
-use \Model\Model;
+use \Model\BaseModel;
 
-class Tag extends Model {
+class Tag extends BaseModel
+{
 
-    public $table = "user";
+    public $table = "tag";
 
     public function __construct()
     {
