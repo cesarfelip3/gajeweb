@@ -61,12 +61,13 @@ if (strtolower(substr($os, 0, 3)) == "dar") {
 // define global value for app
 
 $app["debug"] = $config["debug"];
+$app["http_cache_enable"] = $config["http_cache_enable"];
+
 $app['upload.image.host'] = $config["upload.image.host"];
 $app['upload.folder'] = $config["upload.folder"];
 $app['upload.folder.image'] = $config["upload.folder.image"];
 
 $app->register(new Silex\Provider\DoctrineServiceProvider(), $config["db"]);
-$app->register(new Silex\Provider\HttpCacheServiceProvider(), $config["cache"]);
 
 // modules ==> controller ==> model
 // how to define modules ?
@@ -211,7 +212,7 @@ use Admin\Controller\IndexController;
 
 $admin = $app["controllers_factory"];
 
-$admin->get ("/", function (Request $request) use ($app) {
+$admin->get("/", function (Request $request) use ($app) {
 
     $controller = new IndexController($request, $app);
 
@@ -219,7 +220,7 @@ $admin->get ("/", function (Request $request) use ($app) {
     return $controller->index();
 });
 
-$admin->get ("/user", function (Request $request) use ($app) {
+$admin->get("/user", function (Request $request) use ($app) {
 
     $controller = new \Admin\Controller\UserController($request, $app);
 
@@ -243,14 +244,16 @@ if ($app["debug"]) {
 // what's different between those two?
 //========================================
 
-use Silex\Provider\HttpCacheServiceProvider;
-$app->register(new HttpCacheServiceProvider(), array(
-    'http_cache.cache_dir' => __DIR__ . "/cache/",
-    'http_cache.esi'       => null,
-));
+if ($config["http_cache_enable"]) {
 
-//$app["http_cache"]->run();
+    use Silex\Provider\HttpCacheServiceProvider;
+    $app->register(new HttpCacheServiceProvider(), $config["http_cache"]);
+    $app["http_cache"]->run();
 
-$app->run();
+} else {
+    $app->run();
+}
+
+
 
 

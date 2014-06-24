@@ -17,9 +17,13 @@ $config["db"] = array(
 
 // cache
 
-$config["cache"] = array(
-    'http_cache.cache_dir' => __DIR__ . '/cache/',
+$config["http_cache_enable"] = true;
+$config["http_cache"] = array(
+    'http_cache.cache_dir' => __DIR__ . "/cache/",
+    'http_cache.esi' => null,
 );
+
+$config["twig_cache_enable"] = true;
 
 // basename
 // route prefix

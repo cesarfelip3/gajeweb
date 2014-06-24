@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config-test.php" afterPath="$PROJECT_DIR$/web/config-test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config.php" afterPath="$PROJECT_DIR$/web/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.php" afterPath="$PROJECT_DIR$/web/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,19 +36,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config-test.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="config-test.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/config-test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="0" selection-start="1781" selection-end="1781" vertical-scroll-proportion="-12.848485" vertical-offset="1424" max-vertical-offset="4272">
+            <state line="25" column="37" selection-start="483" selection-end="483" vertical-scroll-proportion="0.62068963" vertical-offset="24" max-vertical-offset="4368">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="240" column="0" selection-start="5976" selection-end="5976" vertical-scroll-proportion="0.63793105" vertical-offset="5144" max-vertical-offset="6264">
+            <state line="69" column="76" selection-start="1587" selection-end="1587" vertical-scroll-proportion="43.747128" vertical-offset="5462" max-vertical-offset="6360">
+              <folding>
+                <element signature="e#273#318#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="5" selection-start="464" selection-end="500" vertical-scroll-proportion="-16.757576" vertical-offset="47" max-vertical-offset="1104">
               <folding />
             </state>
           </provider>
@@ -90,7 +101,6 @@
         <option value="$PROJECT_DIR$/src/Model/Tag.php" />
         <option value="$PROJECT_DIR$/src/Model/BaseBaseModel.php" />
         <option value="$PROJECT_DIR$/src/Admin/View/layout-default.html" />
-        <option value="$PROJECT_DIR$/web/config.php" />
         <option value="$PROJECT_DIR$/src/Admin/View/layout.default.html" />
         <option value="$PROJECT_DIR$/src/Admin/View/index.html" />
         <option value="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" />
@@ -103,6 +113,7 @@
         <option value="$PROJECT_DIR$/src/Admin/View/index.twig" />
         <option value="$PROJECT_DIR$/src/Admin/View/user_list.twig" />
         <option value="$PROJECT_DIR$/web/index.php" />
+        <option value="$PROJECT_DIR$/web/config.php" />
         <option value="$PROJECT_DIR$/web/config-test.php" />
       </list>
     </option>
@@ -415,7 +426,9 @@
     <entry file="file://$PROJECT_DIR$/web/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="414" column="2" selection-start="9804" selection-end="9804" vertical-scroll-proportion="0.0" vertical-offset="9936" max-vertical-offset="10200">
-          <folding />
+          <folding>
+            <element signature="e#273#318#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -583,11 +596,6 @@
         <state line="4" column="14" selection-start="83" selection-end="83" vertical-scroll-proportion="-2.909091" vertical-offset="0" max-vertical-offset="3600" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="36" selection-start="491" selection-end="527" vertical-scroll-proportion="-17.939394" vertical-offset="56" max-vertical-offset="1008" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/View/index2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="89" column="21" selection-start="0" selection-end="18161" vertical-scroll-proportion="-6.5454545" vertical-offset="1920" max-vertical-offset="10248" />
@@ -673,16 +681,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/config-test.php">
+    <entry file="file://$PROJECT_DIR$/web/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="0" selection-start="1781" selection-end="1781" vertical-scroll-proportion="-12.848485" vertical-offset="1424" max-vertical-offset="4272">
+        <state line="69" column="76" selection-start="1587" selection-end="1587" vertical-scroll-proportion="43.747128" vertical-offset="5462" max-vertical-offset="6360">
+          <folding>
+            <element signature="e#273#318#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="5" selection-start="464" selection-end="500" vertical-scroll-proportion="-16.757576" vertical-offset="47" max-vertical-offset="1104">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.php">
+    <entry file="file://$PROJECT_DIR$/web/config-test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="240" column="0" selection-start="5976" selection-end="5976" vertical-scroll-proportion="0.63793105" vertical-offset="5144" max-vertical-offset="6264">
+        <state line="25" column="37" selection-start="483" selection-end="483" vertical-scroll-proportion="0.62068963" vertical-offset="24" max-vertical-offset="4368">
           <folding />
         </state>
       </provider>
