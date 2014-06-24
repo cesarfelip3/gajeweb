@@ -52,6 +52,7 @@ class Api
             }
 
             return $app->json($controller->getError(), $status);
+
         });
 
         $api->post("user/image/latest", function (Request $request) use ($app) {
@@ -67,6 +68,7 @@ class Api
             }
 
             return $app->json($controller->getError(), $status);
+
         });
 
         $api->post("image/upload", function (Request $request) use ($app) {
@@ -82,6 +84,7 @@ class Api
             }
 
             return $app->json($controller->getError(), $status);
+
         });
 
         $api->post("image/update", function (Request $request) use ($app) {
@@ -97,6 +100,7 @@ class Api
             }
 
             return $app->json($controller->getError(), $status);
+
         });
 
         $api->post("image/latest", function (Request $request) use ($app) {
@@ -112,11 +116,36 @@ class Api
             }
 
             return $app->json($controller->getError(), $status);
+
         });
 
-        $api->before(function (Request $request) {
+        $api->before(function (Request $request, Application $app) {
 
-            return null;
+            $token = $request->headers->get("X-Auth-Token");
+            $time = $request->get("ticket", 0);
+
+            $message = "Invalid API request";
+
+            if (empty ($time) || empty ($token)) {
+
+                exit($app->json (array ("status"=>"failure", "message"=>$message), 400));
+            }
+
+            if (time () - intval($time)) {
+
+                exit($app->json (array ("status"=>"failure", "message"=>$message), 400));
+            }
+
+            $API_KEY = "XpHOUhadfhPIUYKHDFxOUYKJHERlkjhadfotYRWEWKEhluyadf";
+            $API_SECRET = "921936776534209348";
+
+            $api_token = hash_hmac ("sha256", $API_KEY . sha1($API_SECRET . $time));
+
+            if (trim($token) == $api_token) {
+
+                return null;
+            }
+
         });
 
         $app->mount($basename . "/" . $api_v1, $api);

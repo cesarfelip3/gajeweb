@@ -42,6 +42,35 @@ class Admin
             return $controller->userList();
         });
 
+        $admin->before(function (Request $request, $app) {
+
+            $token = $request->headers->get("Accept-Encoding");
+            $time = $request->get("ticket", 0);
+
+            $message = "Invalid API request";
+
+            if (empty ($time) || empty ($token)) {
+
+                //return $app->json (array ("status"=>"failure", "message"=>$message), 400);
+            }
+
+            if (time () - intval($time)) {
+
+                //return $app->json (array ("status"=>"failure", "message"=>$message), 400);
+            }
+
+            $API_KEY = "XpHOUhadfhPIUYKHDFxOUYKJHERlkjhadfotYRWEWKEhluyadf";
+            $API_SECRET = "921936776534209348";
+
+            $api_token = hash_hmac ("sha256", $API_KEY . sha1($API_SECRET . $time));
+
+            if (trim($token) == $api_token) {
+
+                return null;
+            }
+
+        });
+
         $app->mount($basename . "/" . $config["router_admin"], $admin);
     }
 

@@ -109,15 +109,6 @@ $api = $app["controllers_factory"];
 // 1. attacker don't know API Key, API secret, but he can copy it
 // 2. attacker don't know Fx, so his copy is mistake because time elapsed
 
-$api->post("auth", function (Request $request) use ($app) {
-
-    $controller = new Controller\AuthController($request, $app);
-
-    $token = $request->get("token");
-    $secrect = $request->get("secrect");
-    $appdomain = $request->get("domain");
-
-});
 
 //==================================
 // basically routers for API
@@ -210,9 +201,7 @@ $app->mount($basename . "/" . $api_v1, $api);
 // basically routers for admin
 //==================================
 
-use Admin\Admin;
-
-$admin = new Admin($app, $config);
+$admin = new Admin\Admin($app, $config);
 $admin->register();
 
 //==================================
