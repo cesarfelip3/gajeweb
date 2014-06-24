@@ -131,7 +131,7 @@ class Api
                 return $app->json (array ("status"=>"failure", "message"=>$message), 400);
             }
 
-            if (time () - intval($time)) {
+            if (time () - intval($time) >= 1000) {
 
                 return $app->json (array ("status"=>"failure", "message"=>$message), 400);
             }
