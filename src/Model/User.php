@@ -64,11 +64,29 @@ class User extends BaseModel
     // admin
     //=====================================
 
-    public function getUserList ()
+    public function getUserListHeader ()
+    {
+        return array (
+            "#" => "#",
+            "username" => "username",
+            "email" => "email",
+            "firstname" => "firstname",
+            "lastname" => "lastname",
+            "create_date" => "create date",
+            "modified_date" => "modified date"
+        );
+    }
+
+    public function getTotal ()
+    {
+        $total = $this->db->fetchColumn("SELECT COUNT(*) FROM {$this->table}");
+        return $total;
+    }
+
+    public function getUserList ($data)
     {
         $page = $data["page"];
         $pageSize = $data["page_size"];
-        $user_uuid = $data["user_uuid"];
 
         $page = intval($page);
         $pageSize = intval($pageSize);

@@ -38,10 +38,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
-                <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-                <li><a href="charts.html"><i class="fa fa-bar-chart-o"></i> Image</a></li>
-                <li><a href="tables.html"><i class="fa fa-table"></i> User</a></li>
-                <li><a href="forms.html"><i class="fa fa-edit"></i> Theme</a></li>
+                {% block left_sidebar %}{% endblock %}
             </ul>
 
             <ul class="nav navbar-nav navbar-right navbar-user" style="display:none">
@@ -112,24 +109,7 @@
 
     <div id="page-wrapper">
 
-        <div class="row">
-            <div class="col-lg-12">
-                <h1>Dashboard
-                    <small>Statistics Overview</small>
-                </h1>
-                <ol class="breadcrumb">
-                    <li class="active"><i class="fa fa-dashboard"></i> Dashboard</li>
-                </ol>
-                <div class="alert alert-success alert-dismissable">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    Welcome to SB Admin by <a class="alert-link" href="http://startbootstrap.com">Start Bootstrap</a>!
-                    Feel free to use this template for your admin needs! We are using a few different plugins to handle
-                    the dynamic tables and charts, so make sure you check out the necessary documentation links
-                    provided.
-                </div>
-            </div>
-        </div>
-        <!-- /.row -->
+
 
         {% block body %}{% endblock %}
 

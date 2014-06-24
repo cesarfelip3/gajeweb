@@ -10,6 +10,7 @@ class __TwigTemplate_49518b72b4831d272d58b691b89c628ac82b42eab5d1121b3772cd121f4
         $this->parent = false;
 
         $this->blocks = array(
+            'left_sidebar' => array($this, 'block_left_sidebar'),
             'body' => array($this, 'block_body'),
         );
     }
@@ -57,11 +58,11 @@ class __TwigTemplate_49518b72b4831d272d58b691b89c628ac82b42eab5d1121b3772cd121f4
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class=\"collapse navbar-collapse navbar-ex1-collapse\">
             <ul class=\"nav navbar-nav side-nav\">
-                <li class=\"active\"><a href=\"index.html\"><i class=\"fa fa-dashboard\"></i> Dashboard</a></li>
-                <li><a href=\"charts.html\"><i class=\"fa fa-bar-chart-o\"></i> Image</a></li>
-                <li><a href=\"tables.html\"><i class=\"fa fa-table\"></i> User</a></li>
-                <li><a href=\"forms.html\"><i class=\"fa fa-edit\"></i> Theme</a></li>
-            </ul>
+                ";
+        // line 41
+        $this->displayBlock('left_sidebar', $context, $blocks);
+        // line 42
+        echo "            </ul>
 
             <ul class=\"nav navbar-nav navbar-right navbar-user\" style=\"display:none\">
                 <li class=\"dropdown messages-dropdown\">
@@ -131,29 +132,12 @@ class __TwigTemplate_49518b72b4831d272d58b691b89c628ac82b42eab5d1121b3772cd121f4
 
     <div id=\"page-wrapper\">
 
-        <div class=\"row\">
-            <div class=\"col-lg-12\">
-                <h1>Dashboard
-                    <small>Statistics Overview</small>
-                </h1>
-                <ol class=\"breadcrumb\">
-                    <li class=\"active\"><i class=\"fa fa-dashboard\"></i> Dashboard</li>
-                </ol>
-                <div class=\"alert alert-success alert-dismissable\">
-                    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>
-                    Welcome to SB Admin by <a class=\"alert-link\" href=\"http://startbootstrap.com\">Start Bootstrap</a>!
-                    Feel free to use this template for your admin needs! We are using a few different plugins to handle
-                    the dynamic tables and charts, so make sure you check out the necessary documentation links
-                    provided.
-                </div>
-            </div>
-        </div>
-        <!-- /.row -->
+
 
         ";
-        // line 134
+        // line 114
         $this->displayBlock('body', $context, $blocks);
-        // line 135
+        // line 115
         echo "
     </div>
     <!-- /#page-wrapper -->
@@ -177,7 +161,12 @@ class __TwigTemplate_49518b72b4831d272d58b691b89c628ac82b42eab5d1121b3772cd121f4
 ";
     }
 
-    // line 134
+    // line 41
+    public function block_left_sidebar($context, array $blocks = array())
+    {
+    }
+
+    // line 114
     public function block_body($context, array $blocks = array())
     {
     }
@@ -189,6 +178,6 @@ class __TwigTemplate_49518b72b4831d272d58b691b89c628ac82b42eab5d1121b3772cd121f4
 
     public function getDebugInfo()
     {
-        return array (  181 => 134,  157 => 135,  155 => 134,  20 => 1,  31 => 4,  28 => 3,);
+        return array (  170 => 114,  165 => 41,  141 => 115,  139 => 114,  65 => 42,  63 => 41,  21 => 1,  43 => 11,  40 => 10,  32 => 4,  29 => 3,);
     }
 }

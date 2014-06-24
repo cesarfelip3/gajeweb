@@ -51,22 +51,21 @@ TRUNCATE TABLE `administrator`;
 --
 
 DROP TABLE IF EXISTS `theme`;
-CREATE TABLE IF NOT EXISTS `category` (
+CREATE TABLE IF NOT EXISTS `theme` (
   `theme_id` int(20) NOT NULL AUTO_INCREMENT,
   `theme_uuid` varchar(255) NOT NULL DEFAULT '',
-  `theme_uuid` varchar(32) NOT NULL DEFAULT '',
   `name` varchar(255) NOT NULL DEFAULT '',
   `description` varchar(255) NOT NULL DEFAULT '',
   `create_date` int(11) NOT NULL DEFAULT '0',
   `modified_date` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`category_id`)
+  PRIMARY KEY (`theme_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Truncate table before insert `category`
 --
 
-TRUNCATE TABLE `category`;
+TRUNCATE TABLE `theme`;
 -- --------------------------------------------------------
 
 --

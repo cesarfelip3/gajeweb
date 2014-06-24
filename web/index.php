@@ -219,6 +219,14 @@ $admin->get ("/", function (Request $request) use ($app) {
     return $controller->index();
 });
 
+$admin->get ("/user", function (Request $request) use ($app) {
+
+    $controller = new \Admin\Controller\UserController($request, $app);
+
+
+    return $controller->userList();
+});
+
 $app->mount($basename . "/" . $config["router_admin"], $admin);
 
 //==================================
@@ -228,6 +236,42 @@ $app->mount($basename . "/" . $config["router_admin"], $admin);
 // tests are here, but not right place I think
 
 $test = $app["controllers_factory"];
+
+// admin user
+
+$test->get ("/admin/user", function () use ($app) {
+
+
+    $user = new \Model\User();
+    $data = array ();
+
+    for ($i = 0; $i < 200; $i++) {
+
+        $data["username"] = "user_" . $i;
+        $data["email"] = "user_" . $i . "@gmail.com";
+        $data["firstname"] = "user_" . $i;
+        $data["lastname"] = "$i";
+
+        $user->addUser($data);
+
+    }
+
+    exit;
+
+    $target_url = "http://localhost/gajeweb/admin/user";
+
+    require_once __DIR__ . '/test/Curl.class.php';
+
+    $curl = new Curl();
+
+
+    $curl->post($target_url, $post);
+    print_r(json_encode($curl->response));
+
+    exit;
+
+});
+
 
 $test->get("user/add", function () use ($app) {
 
@@ -368,8 +412,8 @@ $app->register(new HttpCacheServiceProvider(), array(
     'http_cache.esi'       => null,
 ));
 
-$app["http_cache"]->run();
+//$app["http_cache"]->run();
 
-//$app->run();
+$app->run();
 
 
