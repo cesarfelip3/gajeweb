@@ -44,21 +44,6 @@ class Admin
 
         $admin->before(function (Request $request, $app) {
 
-            $token = $request->headers->get("Accept-Encoding");
-            $time = $request->get("ticket", 0);
-
-            $message = "Invalid API request";
-
-            if (empty ($time) || empty ($token)) {
-
-                //return $app->json (array ("status"=>"failure", "message"=>$message), 400);
-            }
-
-            if (time () - intval($time)) {
-
-                //return $app->json (array ("status"=>"failure", "message"=>$message), 400);
-            }
-
             $API_KEY = "XpHOUhadfhPIUYKHDFxOUYKJHERlkjhadfotYRWEWKEhluyadf";
             $API_SECRET = "921936776534209348";
 
@@ -68,6 +53,8 @@ class Admin
 
                 return null;
             }
+
+            return null;
 
         });
 
