@@ -47,13 +47,7 @@ class Admin
             $API_KEY = "XpHOUhadfhPIUYKHDFxOUYKJHERlkjhadfotYRWEWKEhluyadf";
             $API_SECRET = "921936776534209348";
 
-            $api_token = hash_hmac ("sha256", $API_KEY . sha1($API_SECRET . $time));
-
-            if (trim($token) == $api_token) {
-
-                return null;
-            }
-
+            
             return null;
 
         });
