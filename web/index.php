@@ -208,27 +208,10 @@ $app->mount($basename . "/" . $api_v1, $api);
 // basically routers for admin
 //==================================
 
-use Admin\Controller\IndexController;
+use Admin\Admin;
 
-$admin = $app["controllers_factory"];
-
-$admin->get("/", function (Request $request) use ($app) {
-
-    $controller = new IndexController($request, $app);
-
-
-    return $controller->index();
-});
-
-$admin->get("/user", function (Request $request) use ($app) {
-
-    $controller = new \Admin\Controller\UserController($request, $app);
-
-
-    return $controller->userList();
-});
-
-$app->mount($basename . "/" . $config["router_admin"], $admin);
+$admin = new Admin($app, $config);
+$admin->register();
 
 //==================================
 // test case
@@ -243,10 +226,10 @@ if ($app["debug"]) {
 //========================================
 // what's different between those two?
 //========================================
+use Silex\Provider\HttpCacheServiceProvider;
 
 if ($config["http_cache_enable"]) {
 
-    use Silex\Provider\HttpCacheServiceProvider;
     $app->register(new HttpCacheServiceProvider(), $config["http_cache"]);
     $app["http_cache"]->run();
 
