@@ -64,9 +64,9 @@ class User extends BaseModel
     // admin
     //=====================================
 
-    public function getUserListHeader ()
+    public function getUserListHeader()
     {
-        return array (
+        return array(
             "#" => "#",
             "username" => "username",
             "email" => "email",
@@ -77,13 +77,13 @@ class User extends BaseModel
         );
     }
 
-    public function getTotal ()
+    public function getTotal()
     {
         $total = $this->db->fetchColumn("SELECT COUNT(*) FROM {$this->table}");
         return $total;
     }
 
-    public function getUserList ($data)
+    public function getUserList($data)
     {
         $page = $data["page"];
         $pageSize = $data["page_size"];

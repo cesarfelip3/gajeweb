@@ -1,6 +1,7 @@
 <?php
 
 /* index.twig */
+
 class __TwigTemplate_ee552f701e4c34bd750f24b950954304514727550d8ea07fecce376851a797b9 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -75,6 +76,6 @@ class __TwigTemplate_ee552f701e4c34bd750f24b950954304514727550d8ea07fecce376851a
 
     public function getDebugInfo()
     {
-        return array (  43 => 11,  40 => 10,  32 => 4,  29 => 3,);
+        return array(43 => 11, 40 => 10, 32 => 4, 29 => 3,);
     }
 }

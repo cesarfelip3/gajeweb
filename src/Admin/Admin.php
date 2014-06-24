@@ -5,13 +5,14 @@ namespace Admin;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class Admin {
+class Admin
+{
 
     protected $request;
     protected $app;
     protected $config;
 
-    public function __construct ($app, $config)
+    public function __construct($app, $config)
     {
 
         $this->app = $app;
@@ -19,7 +20,7 @@ class Admin {
 
     }
 
-    public function register ()
+    public function register()
     {
 
         $app = $this->app;

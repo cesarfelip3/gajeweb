@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/Admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.php" afterPath="$PROJECT_DIR$/web/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/cache/ee/55/2f701e4c34bd750f24b950954304514727550d8ea07fecce376851a797b9.php" afterPath="$PROJECT_DIR$/src/Admin/cache/ee/55/2f701e4c34bd750f24b950954304514727550d8ea07fecce376851a797b9.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/cache/49/51/8b72b4831d272d58b691b89c628ac82b42eab5d1121b3772cd121f4cf5b9.php" afterPath="$PROJECT_DIR$/src/Admin/cache/49/51/8b72b4831d272d58b691b89c628ac82b42eab5d1121b3772cd121f4cf5b9.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Admin.php" afterPath="$PROJECT_DIR$/src/Admin/Admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Api.php" afterPath="$PROJECT_DIR$/src/Api/Api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" afterPath="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Controller/ThemeController.php" afterPath="$PROJECT_DIR$/src/Admin/Controller/ThemeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/User.php" afterPath="$PROJECT_DIR$/src/Model/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/Admin/Controller/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/blank-page.html" afterPath="$PROJECT_DIR$/src/Admin/View/blank-page.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/bootstrap-elements.html" afterPath="$PROJECT_DIR$/src/Admin/View/bootstrap-elements.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/bootstrap-grid.html" afterPath="$PROJECT_DIR$/src/Admin/View/bootstrap-grid.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/charts.html" afterPath="$PROJECT_DIR$/src/Admin/View/charts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/forms.html" afterPath="$PROJECT_DIR$/src/Admin/View/forms.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/index2.html" afterPath="$PROJECT_DIR$/src/Admin/View/index2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/layout.default.twig" afterPath="$PROJECT_DIR$/src/Admin/View/layout.default.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/tables.html" afterPath="$PROJECT_DIR$/src/Admin/View/tables.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/typography.html" afterPath="$PROJECT_DIR$/src/Admin/View/typography.html" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +44,7 @@
       <file leaf-file-name="UserController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/Controller/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="21" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="1872">
+            <state line="51" column="21" selection-start="1386" selection-end="1386" vertical-scroll-proportion="-9.212121" vertical-offset="800" max-vertical-offset="1728">
               <folding />
             </state>
           </provider>
@@ -39,7 +53,7 @@
       <file leaf-file-name="config-test.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/config-test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="11" selection-start="1006" selection-end="4421" vertical-scroll-proportion="-24.0" vertical-offset="360" max-vertical-offset="4368">
+            <state line="27" column="11" selection-start="496" selection-end="496" vertical-scroll-proportion="-8.727273" vertical-offset="360" max-vertical-offset="4368">
               <folding />
             </state>
           </provider>
@@ -48,7 +62,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="123" column="8" selection-start="3354" selection-end="5192" vertical-scroll-proportion="-23.757576" vertical-offset="2168" max-vertical-offset="5952">
+            <state line="109" column="41" selection-start="3038" selection-end="3038" vertical-scroll-proportion="43.878788" vertical-offset="4064" max-vertical-offset="5952">
               <folding>
                 <element signature="e#273#318#0" expanded="true" />
               </folding>
@@ -59,7 +73,7 @@
       <file leaf-file-name="Admin.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="11" selection-start="0" selection-end="1010" vertical-scroll-proportion="-25.454546" vertical-offset="0" max-vertical-offset="1248">
+            <state line="9" column="0" selection-start="133" selection-end="133" vertical-scroll-proportion="3.878788" vertical-offset="344" max-vertical-offset="1272">
               <folding>
                 <element signature="e#25#70#0" expanded="true" />
               </folding>
@@ -70,7 +84,7 @@
       <file leaf-file-name="Api.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Api/Api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="1" selection-start="24" selection-end="24" vertical-scroll-proportion="0.02586207" vertical-offset="72" max-vertical-offset="2808">
+            <state line="24" column="23" selection-start="380" selection-end="380" vertical-scroll-proportion="0.23275863" vertical-offset="360" max-vertical-offset="2952">
               <folding>
                 <element signature="e#23#68#0" expanded="true" />
               </folding>
@@ -81,7 +95,7 @@
       <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="5" selection-start="464" selection-end="500" vertical-scroll-proportion="0.0" vertical-offset="47" max-vertical-offset="1104">
+            <state line="25" column="5" selection-start="464" selection-end="500" vertical-scroll-proportion="-16.757576" vertical-offset="47" max-vertical-offset="1104">
               <folding />
             </state>
           </provider>
@@ -254,60 +268,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gajeweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gajeweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gajeweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gajeweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gajeweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gajeweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -663,71 +623,81 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/View/layout.default.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="54" selection-start="1581" selection-end="1581" vertical-scroll-proportion="0.0" vertical-offset="695" max-vertical-offset="3360" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/View/index.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="25" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="312" max-vertical-offset="888" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/View/forms.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8880" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/View/tables.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="24" selection-start="7370" selection-end="7370" vertical-scroll-proportion="0.0" vertical-offset="3408" max-vertical-offset="11088" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/View/user_list.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="9" selection-start="2650" selection-end="2650" vertical-scroll-proportion="-26.666666" vertical-offset="680" max-vertical-offset="1776" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="21" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="1872">
+        <state line="40" column="54" selection-start="1581" selection-end="1581" vertical-scroll-proportion="0.0" vertical-offset="695" max-vertical-offset="3360">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/config.php">
+    <entry file="file://$PROJECT_DIR$/src/Admin/View/index.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="5" selection-start="464" selection-end="500" vertical-scroll-proportion="0.0" vertical-offset="47" max-vertical-offset="1104">
+        <state line="13" column="25" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="312" max-vertical-offset="888">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/View/forms.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/View/tables.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="24" selection-start="7370" selection-end="7370" vertical-scroll-proportion="0.0" vertical-offset="3408" max-vertical-offset="11088">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/View/user_list.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="9" selection-start="2650" selection-end="2650" vertical-scroll-proportion="-26.666666" vertical-offset="680" max-vertical-offset="1776">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="21" selection-start="1386" selection-end="1386" vertical-scroll-proportion="-9.212121" vertical-offset="800" max-vertical-offset="1728">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/config-test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="11" selection-start="1006" selection-end="4421" vertical-scroll-proportion="-24.0" vertical-offset="360" max-vertical-offset="4368">
+        <state line="27" column="11" selection-start="496" selection-end="496" vertical-scroll-proportion="-8.727273" vertical-offset="360" max-vertical-offset="4368">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="11" selection-start="0" selection-end="1010" vertical-scroll-proportion="-25.454546" vertical-offset="0" max-vertical-offset="1248">
-          <folding>
-            <element signature="e#25#70#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="8" selection-start="3354" selection-end="5192" vertical-scroll-proportion="-23.757576" vertical-offset="2168" max-vertical-offset="5952">
+        <state line="109" column="41" selection-start="3038" selection-end="3038" vertical-scroll-proportion="43.878788" vertical-offset="4064" max-vertical-offset="5952">
           <folding>
             <element signature="e#273#318#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="133" selection-end="133" vertical-scroll-proportion="3.878788" vertical-offset="344" max-vertical-offset="1272">
+          <folding>
+            <element signature="e#25#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="5" selection-start="464" selection-end="500" vertical-scroll-proportion="-16.757576" vertical-offset="47" max-vertical-offset="1104">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="1" selection-start="24" selection-end="24" vertical-scroll-proportion="0.02586207" vertical-offset="72" max-vertical-offset="2808">
+        <state line="24" column="23" selection-start="380" selection-end="380" vertical-scroll-proportion="0.23275863" vertical-offset="360" max-vertical-offset="2952">
           <folding>
             <element signature="e#23#68#0" expanded="true" />
           </folding>

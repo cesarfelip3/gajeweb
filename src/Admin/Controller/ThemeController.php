@@ -21,12 +21,12 @@ class ImageController extends BaseController
         $this->response = new Response();
     }
 
-    public function addTheme ()
+    public function addTheme()
     {
 
     }
 
-    public function themeList ()
+    public function themeList()
     {
 
     }

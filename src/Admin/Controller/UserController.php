@@ -33,7 +33,7 @@ class UserController extends BaseController
 
     // user ==> name, email, created date, modified date, resources <image, .....>
 
-    public function userList ()
+    public function userList()
     {
 
         $response = new Response();
@@ -57,7 +57,7 @@ class UserController extends BaseController
             $user["modified_date"] = date("Y-m-d", $user["modified_date"]);
         }
 
-        $response->setContent($this->app["twig"]->render("user_list.twig", array (
+        $response->setContent($this->app["twig"]->render("user_list.twig", array(
             "headerArray" => $headerArray,
             "userArray" => $userArray,
             "page" => $page,
@@ -67,7 +67,6 @@ class UserController extends BaseController
 
         return $response;
     }
-
 
 
 }

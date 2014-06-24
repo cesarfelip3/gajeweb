@@ -21,7 +21,7 @@ class ImageController extends BaseController
         $this->response = new Response();
     }
 
-    public function imageList ()
+    public function imageList()
     {
 
         $page = $this->request->get("page", 0);
