@@ -102,10 +102,12 @@ $api = $app["controllers_factory"];
 
 // app domain ==>
 
-// there is no way to prevent API attack, if they copy everything in your network traffics...
-// we have to know its from some client, all information are from network traffics....
-// what if its same ? unless your used random API secret every time, and the network traffics changed every time...
-// otherwise you can't stop it
+// app ==> hash (API Key, Fx(API secret, time())) + ticket=timestamp
+// PHP ==> hash (API Key, Fx(API secret, $_GET['ticket']))
+// PHP ==> now () - $_GET['ticket'] >= 5 min : expired
+
+// 1. attacker don't know API Key, API secret, but he can copy it
+// 2. attacker don't know Fx, so his copy is mistake because time elapsed
 
 $api->post("auth", function (Request $request) use ($app) {
 

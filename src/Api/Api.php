@@ -28,6 +28,13 @@ class Api
     public function registerV1()
     {
 
+        // have to verify
+        // API key, API secret
+        // app ==> http://domain/ <X-Auth-Token: hash_256 (API Key, API Secret . time())>
+        // http://domain/?ticket=time()
+
+        //
+
         $app = $this->app;
         $config = $this->config;
         $basename = $this->config["basename"];
