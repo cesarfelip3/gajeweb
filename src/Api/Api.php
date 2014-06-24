@@ -128,12 +128,12 @@ class Api
 
             if (empty ($time) || empty ($token)) {
 
-                exit($app->json (array ("status"=>"failure", "message"=>$message), 400));
+                return $app->json (array ("status"=>"failure", "message"=>$message), 400);
             }
 
             if (time () - intval($time)) {
 
-                exit($app->json (array ("status"=>"failure", "message"=>$message), 400));
+                return $app->json (array ("status"=>"failure", "message"=>$message), 400);
             }
 
             $API_KEY = "XpHOUhadfhPIUYKHDFxOUYKJHERlkjhadfotYRWEWKEhluyadf";
