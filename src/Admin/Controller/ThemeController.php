@@ -40,7 +40,7 @@ class ThemeController extends BaseController
         $response->setTtl(5);
 
         $page = $this->request->get("page", 0);
-        $pageSize = $this->request->get("page_size", 25);
+        $pageSize = $this->request->get("page_size", 10);
 
         $data["page"] = intval($page) <= 0 ? 0 : intval($page);
         $data["page_size"] = $pageSize <= 25 ? 25 : intval($pageSize);

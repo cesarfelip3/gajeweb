@@ -22,7 +22,7 @@ class Theme extends BaseModel
     {
         return array(
             "#" => "#",
-            "name" => "themename",
+            "name" => "name",
             "description" => "description",
             "create_date" => "create date",
             "modified_date" => "modified date"
