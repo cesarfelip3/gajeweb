@@ -42,12 +42,25 @@ class Admin
             return $controller->userList();
         });
 
+        $admin->get("/image", function (Request $request) use ($app) {
+
+            $controller = new \Admin\Controller\ImageController($request, $app);
+            return $controller->imageList();
+        });
+
+        $admin->get("/theme", function (Request $request) use ($app) {
+
+            $controller = new \Admin\Controller\ThemeController($request, $app);
+            return $controller->themeList();
+        });
+
+
         $admin->before(function (Request $request, $app) {
 
             $API_KEY = "XpHOUhadfhPIUYKHDFxOUYKJHERlkjhadfotYRWEWKEhluyadf";
             $API_SECRET = "921936776534209348";
 
-            
+
             return null;
 
         });

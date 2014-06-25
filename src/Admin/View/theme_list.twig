@@ -3,18 +3,18 @@
 {% block left_sidebar %}
     <li><a href="/gajeweb/admin/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
     <li><a href="/gajeweb/admin/image"><i class="fa fa-bar-chart-o"></i> Image</a></li>
-    <li class="active"><a href="/gajeweb/admin/user"><i class="fa fa-table"></i> User</a></li>
-    <li><a href="/gajeweb/admin/theme"><i class="fa fa-edit"></i> Theme</a></li>
+    <li><a href="/gajeweb/admin/user"><i class="fa fa-table"></i> User</a></li>
+    <li class="active"><a href="/gajeweb/admin/theme"><i class="fa fa-edit"></i> Theme</a></li>
 {% endblock %}
 
 {% block body %}
     <div class="row">
         <div class="col-lg-12">
-            <h1>Users
+            <h1>Themes
                 <small>Statistics Overview</small>
             </h1>
             <ol class="breadcrumb">
-                <li class="active"><i class="fa fa-dashboard"></i> Users</li>
+                <li class="active"><i class="fa fa-dashboard"></i> Themes</li>
             </ol>
             <div class="alert alert-success alert-dismissable" style="display: none">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -41,13 +41,13 @@
                     {% endfor %}
                     </thead>
                     <tbody>
-                    {% for user in userArray %}
+                    {% for theme in themeArray %}
                         <tr>
                             {% for key in headerArray | keys %}
                                 {% if key == '#' %}
                                     <td>{{ '' }}</td>
                                 {% else %}
-                                    <td>{{ user[key] }}</td>
+                                    <td>{{ theme[key] }}</td>
                                 {% endif %}
                             {% endfor %}
                         </tr>

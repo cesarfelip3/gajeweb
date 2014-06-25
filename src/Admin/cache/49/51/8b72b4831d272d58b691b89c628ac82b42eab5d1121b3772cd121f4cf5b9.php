@@ -1,7 +1,6 @@
 <?php
 
 /* layout.default.twig */
-
 class __TwigTemplate_49518b72b4831d272d58b691b89c628ac82b42eab5d1121b3772cd121f4cf5b9 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -103,7 +102,7 @@ class __TwigTemplate_49518b72b4831d272d58b691b89c628ac82b42eab5d1121b3772cd121f4
                 </li>
                 <li class=\"dropdown alerts-dropdown\">
                     <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><i class=\"fa fa-bell\"></i> Alerts <span
-                            class=\"badge\">3</span> <b class=\"caret\"></b></a>
+                                class=\"badge\">3</span> <b class=\"caret\"></b></a>
                     <ul class=\"dropdown-menu\">
                         <li><a href=\"#\">Default <span class=\"label label-default\">Default</span></a></li>
                         <li><a href=\"#\">Primary <span class=\"label label-primary\">Primary</span></a></li>
@@ -117,7 +116,7 @@ class __TwigTemplate_49518b72b4831d272d58b691b89c628ac82b42eab5d1121b3772cd121f4
                 </li>
                 <li class=\"dropdown user-dropdown\">
                     <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><i class=\"fa fa-user\"></i> John Smith <b
-                            class=\"caret\"></b></a>
+                                class=\"caret\"></b></a>
                     <ul class=\"dropdown-menu\">
                         <li><a href=\"#\"><i class=\"fa fa-user\"></i> Profile</a></li>
                         <li><a href=\"#\"><i class=\"fa fa-envelope\"></i> Inbox <span class=\"badge\">7</span></a></li>
@@ -134,11 +133,10 @@ class __TwigTemplate_49518b72b4831d272d58b691b89c628ac82b42eab5d1121b3772cd121f4
     <div id=\"page-wrapper\">
 
 
-
         ";
-        // line 114
+        // line 113
         $this->displayBlock('body', $context, $blocks);
-        // line 115
+        // line 114
         echo "
     </div>
     <!-- /#page-wrapper -->
@@ -167,7 +165,7 @@ class __TwigTemplate_49518b72b4831d272d58b691b89c628ac82b42eab5d1121b3772cd121f4
     {
     }
 
-    // line 114
+    // line 113
     public function block_body($context, array $blocks = array())
     {
     }
@@ -179,6 +177,6 @@ class __TwigTemplate_49518b72b4831d272d58b691b89c628ac82b42eab5d1121b3772cd121f4
 
     public function getDebugInfo()
     {
-        return array(170 => 114, 165 => 41, 141 => 115, 139 => 114, 65 => 42, 63 => 41, 21 => 1, 43 => 11, 40 => 10, 32 => 4, 29 => 3,);
+        return array (  169 => 113,  164 => 41,  140 => 114,  138 => 113,  65 => 42,  63 => 41,  21 => 1,  43 => 11,  40 => 10,  32 => 4,  29 => 3,);
     }
 }
