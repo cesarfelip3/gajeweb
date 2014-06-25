@@ -16,13 +16,13 @@
             <ol class="breadcrumb">
                 <li class="active"><i class="fa fa-dashboard"></i> Themes</li>
             </ol>
-            <div class="alert alert-success alert-dismissable" style="display: none">
+
+            {% if error != "" %}
+            <div class="alert alert-success alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                Welcome to SB Admin by <a class="alert-link" href="http://startbootstrap.com">Start Bootstrap</a>!
-                Feel free to use this template for your admin needs! We are using a few different plugins to handle
-                the dynamic tables and charts, so make sure you check out the necessary documentation links
-                provided.
+                {{ error|raw }}
             </div>
+            {% endif %}
         </div>
     </div>
 
@@ -30,16 +30,16 @@
 
         <div class="col-lg-3" style="border-right: 1px solid #ccc">
 
-            <form role="form">
+            <form role="form" action="/gajeweb/admin/theme" method="post">
 
                 <div class="form-group">
                     <label>Theme name</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="theme[name]">
                 </div>
 
                 <div class="form-group">
                     <label>Description</label>
-                    <textarea class="form-control" rows="3"></textarea>
+                    <textarea class="form-control" rows="3" name="theme[description]"></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-default">Add</button>

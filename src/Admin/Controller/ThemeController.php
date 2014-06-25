@@ -15,7 +15,7 @@ use Model\Theme;
 class ThemeController extends BaseController
 {
 
-    public function __construct($request, $app)
+    public function __construct(Request $request, $app)
     {
         $this->app = $app;
         $this->request = $request;
@@ -29,13 +29,11 @@ class ThemeController extends BaseController
         ));
     }
 
-    public function addTheme()
-    {
-
-    }
-
     public function themeList()
     {
+
+        $error = $this->addTheme();
+
         $response = new Response();
         $response->setTtl(5);
 
@@ -43,7 +41,7 @@ class ThemeController extends BaseController
         $pageSize = $this->request->get("page_size", 10);
 
         $data["page"] = intval($page) <= 0 ? 0 : intval($page);
-        $data["page_size"] = $pageSize <= 25 ? 25 : intval($pageSize);
+        $data["page_size"] = $pageSize <= 10 ? 10 : intval($pageSize);
 
         $theme = new Theme();
         $headerArray = $theme->getThemeListHeader();
@@ -51,13 +49,13 @@ class ThemeController extends BaseController
 
         $total = $theme->getTotal();
 
-        foreach ($themeArray as &$theme) {
+        foreach ($themeArray as &$data) {
 
-            $theme["create_date"] = date("Y-m-d", $theme["create_date"]);
-            $theme["modified_date"] = date("Y-m-d", $theme["modified_date"]);
+            $data["create_date"] = date("Y-m-d", $data["create_date"]);
+            $data["modified_date"] = date("Y-m-d", $data["modified_date"]);
         }
 
-        $totalPage = ceil ($total / $pageSize);
+        $totalPage = ceil($total / $pageSize);
         $baseurl = "/gajeweb/admin";
 
 
@@ -73,7 +71,7 @@ class ThemeController extends BaseController
 
         $pagination = "<li><a href='$baseurl/theme?page=$prev'>«</a></li>";
 
-        for (;$i < $count; $i++) {
+        for (; $i < $count; $i++) {
 
             $j = $i + 1;
             if ($i == $page) {
@@ -95,10 +93,38 @@ class ThemeController extends BaseController
             "page" => $page,
             "pageSize" => $pageSize,
             "totalPages" => $total,
-            "pagination" => $pagination
+            "pagination" => $pagination,
+            "error" => $error
         )));
 
         return $response;
+    }
+
+    public function addTheme()
+    {
+        $error = "";
+        if ($this->request->isMethod("post")) {
+
+            $post = $this->request->get("theme", array());
+
+            if (!isset($post["name"]) || empty ($post["name"])) {
+
+                //
+                $error = "The theme name is required";
+
+            } else {
+
+                $data = array ();
+                $data["name"] = $post["name"];
+                $data["description"] = $post["description"];
+
+                $theme = new Theme();
+                $theme->addTheme($data);
+
+            }
+        }
+
+        return $error;
     }
 
 }

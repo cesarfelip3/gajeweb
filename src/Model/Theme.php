@@ -14,6 +14,17 @@ class Theme extends BaseModel
         $this->db = self::$DB;
     }
 
+    public function addTheme($data)
+    {
+
+        $data["theme_uuid"] = uniqid();
+        $data["create_date"] = time();
+        $data["modified_date"] = time();
+        $this->db->insert($this->table, $data);
+
+        return $data["theme_uuid"];
+    }
+
     //=====================================
     // admin
     //=====================================

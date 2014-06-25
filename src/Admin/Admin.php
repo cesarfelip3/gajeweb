@@ -48,12 +48,11 @@ class Admin
             return $controller->imageList();
         });
 
-        $admin->get("/theme", function (Request $request) use ($app) {
+        $admin->match("/theme", function (Request $request) use ($app) {
 
             $controller = new \Admin\Controller\ThemeController($request, $app);
             return $controller->themeList();
-        });
-
+        })->method("GET|POST");
 
         $admin->before(function (Request $request, $app) {
 
