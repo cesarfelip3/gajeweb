@@ -27,8 +27,8 @@ class User extends BaseModel
 
     public function updateUser($data)
     {
-        $token = $data["token"];
-        unset ($data["token"]);
+        $token = $data["facebook_token"];
+        unset ($data["facebook_token"]);
         $data["modified_date"] = time();
         $this->db->update($this->table, $data, array('facebook_token' => $token));
     }

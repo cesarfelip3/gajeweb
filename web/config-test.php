@@ -103,7 +103,8 @@ class TestCase {
             $file_name_with_full_path = realpath(__DIR__ . "/pi-512.png");
             $post = array(
                 'email' => '123456@abc.com',
-                'facebook_token' => 'bbad2323adfadsf'
+                'facebook_token' => 'bbad2323adfadsf',
+                'facebook_icon' => 'hello://'
             );
 
             $target_url = "http://localhost/gajeweb/api/v1/user/add";
