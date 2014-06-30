@@ -38,6 +38,29 @@ class Api
         $app = $this->app;
         $config = $this->config;
         $basename = $this->config["basename"];
+        $api_v1 = $this->config["router_apiv1"];
+
+        $api = $app["controllers_factory"];
+        $this->_userAPI($api);
+        $this->_imageAPI($api);
+
+        $app->mount($basename . "/" . $api_v1, $api);
+    }
+
+    // 1. user/add : when user from app got FB login, his identity will be saved in server too
+    // 2. user/image/latest : will return the latest image from current user <uploaded>
+
+    // 3. image/upload : accept uploading image from app and save it for current user of app
+    // 4. image/update : edit image info ?
+
+    //
+
+    protected function _userAPI (&$api)
+    {
+
+        $app = $this->app;
+        $config = $this->config;
+        $basename = $this->config["basename"];
 
         $api->post("user/add", function (Request $request) use ($app) {
 
@@ -70,6 +93,14 @@ class Api
             return $app->json($controller->getError(), $status);
 
         });
+    }
+
+    protected function _imageAPI (&$api)
+    {
+
+        $app = $this->app;
+        $config = $this->config;
+        $basename = $this->config["basename"];
 
         $api->post("image/upload", function (Request $request) use ($app) {
 
@@ -119,7 +150,9 @@ class Api
 
         });
 
-        $api->before(function (Request $request, Application $app) {
+        $api->before(function (Request $request, $app) {
+
+            return null;
 
             $token = $request->headers->get("X-Auth-Token");
             $time = $request->get("ticket", 0);
@@ -148,7 +181,6 @@ class Api
 
         });
 
-        $app->mount($basename . "/" . $api_v1, $api);
     }
 
 }

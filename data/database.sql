@@ -1,33 +1,16 @@
--- phpMyAdmin SQL Dump
--- version 4.0.4.1
--- http://www.phpmyadmin.net
---
--- Host: localhost
--- Generation Time: May 27, 2014 at 03:29 PM
--- Server version: 5.5.31
--- PHP Version: 5.4.19
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
---
--- Database: `gajeapp`
---
-CREATE DATABASE IF NOT EXISTS `gajeapp` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `gajeapp`;
-
+-- --------------------------------------------------------
+-- 主机:                           127.0.0.1
+-- 服务器版本:                        5.5.32 - MySQL Community Server (GPL)
+-- 服务器操作系统:                      Win32
+-- HeidiSQL 版本:                  8.1.0.4545
 -- --------------------------------------------------------
 
---
--- Table structure for table `administrator`
---
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
+-- 导出  表 gajeapp.administrator 结构
 DROP TABLE IF EXISTS `administrator`;
 CREATE TABLE IF NOT EXISTS `administrator` (
   `admin_id` int(20) NOT NULL AUTO_INCREMENT,
@@ -37,109 +20,38 @@ CREATE TABLE IF NOT EXISTS `administrator` (
   `password` varchar(255) NOT NULL DEFAULT '',
   `create_date` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`admin_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Truncate table before insert `administrator`
---
+-- 正在导出表  gajeapp.administrator 的数据：~0 rows (大约)
+DELETE FROM `administrator`;
+/*!40000 ALTER TABLE `administrator` DISABLE KEYS */;
+/*!40000 ALTER TABLE `administrator` ENABLE KEYS */;
 
-TRUNCATE TABLE `administrator`;
--- --------------------------------------------------------
 
---
--- Table structure for table `category`
---
+-- 导出  表 gajeapp.comment 结构
+DROP TABLE IF EXISTS `comment`;
+CREATE TABLE IF NOT EXISTS `comment` (
+  `comment_id` int(11) DEFAULT NULL,
+  `comment_uuid` char(128) DEFAULT NULL,
+  `user_uuid` char(128) DEFAULT NULL,
+  `content` varchar(512) DEFAULT NULL,
+  `create_date` int(20) DEFAULT NULL,
+  `modified_date` int(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-DROP TABLE IF EXISTS `theme`;
-CREATE TABLE IF NOT EXISTS `theme` (
-  `theme_id` int(20) NOT NULL AUTO_INCREMENT,
-  `theme_uuid` varchar(255) NOT NULL DEFAULT '',
-  `name` varchar(255) NOT NULL DEFAULT '',
-  `description` varchar(255) NOT NULL DEFAULT '',
-  `create_date` int(11) NOT NULL DEFAULT '0',
-  `modified_date` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`theme_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+-- 正在导出表  gajeapp.comment 的数据：~0 rows (大约)
+DELETE FROM `comment`;
+/*!40000 ALTER TABLE `comment` DISABLE KEYS */;
+/*!40000 ALTER TABLE `comment` ENABLE KEYS */;
 
---
--- Truncate table before insert `category`
---
 
-TRUNCATE TABLE `theme`;
--- --------------------------------------------------------
-
---
--- Table structure for table `geo_city`
---
-
-DROP TABLE IF EXISTS `geo_city`;
-CREATE TABLE IF NOT EXISTS `geo_city` (
-  `city_id` int(11) NOT NULL AUTO_INCREMENT,
-  `city_uuid` varchar(255) NOT NULL DEFAULT '',
-  `state_uuid` varchar(255) NOT NULL DEFAULT '',
-  `country_uuid` varchar(255) NOT NULL DEFAULT '',
-  `code` varchar(255) NOT NULL DEFAULT '',
-  `name` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`city_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Truncate table before insert `geo_city`
---
-
-TRUNCATE TABLE `geo_city`;
--- --------------------------------------------------------
-
---
--- Table structure for table `geo_country`
---
-
-DROP TABLE IF EXISTS `geo_country`;
-CREATE TABLE IF NOT EXISTS `geo_country` (
-  `country_id` int(11) NOT NULL AUTO_INCREMENT,
-  `country_uuid` varchar(255) NOT NULL DEFAULT '',
-  `code` varchar(255) NOT NULL DEFAULT '',
-  `name` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`country_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Truncate table before insert `geo_country`
---
-
-TRUNCATE TABLE `geo_country`;
--- --------------------------------------------------------
-
---
--- Table structure for table `geo_state`
---
-
-DROP TABLE IF EXISTS `geo_state`;
-CREATE TABLE IF NOT EXISTS `geo_state` (
-  `state_id` int(11) NOT NULL AUTO_INCREMENT,
-  `state_uuid` varchar(255) NOT NULL DEFAULT '',
-  `country_uuid` varchar(255) NOT NULL DEFAULT '',
-  `code` varchar(255) NOT NULL DEFAULT '',
-  `name` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`state_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Truncate table before insert `geo_state`
---
-
-TRUNCATE TABLE `geo_state`;
--- --------------------------------------------------------
-
---
--- Table structure for table `image`
---
-
+-- 导出  表 gajeapp.image 结构
 DROP TABLE IF EXISTS `image`;
 CREATE TABLE IF NOT EXISTS `image` (
   `image_id` int(20) NOT NULL AUTO_INCREMENT,
-  `image_uuid` varchar(255) NOT NULL DEFAULT '',
+  `image_uuid` char(50) NOT NULL DEFAULT '',
   `user_uuid` varchar(255) NOT NULL DEFAULT '',
+  `theme_uuid` varchar(255) NOT NULL DEFAULT '',
   `name` varchar(255) NOT NULL DEFAULT '',
   `description` varchar(512) NOT NULL DEFAULT '',
   `mime` varchar(255) NOT NULL DEFAULT '',
@@ -155,80 +67,70 @@ CREATE TABLE IF NOT EXISTS `image` (
   `create_date` int(11) NOT NULL DEFAULT '0',
   `modified_date` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`image_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Truncate table before insert `image`
---
-
-TRUNCATE TABLE `image`;
--- --------------------------------------------------------
-
---
--- Table structure for table `image_to_category`
---
-
-DROP TABLE IF EXISTS `image_to_category`;
-CREATE TABLE IF NOT EXISTS `image_to_category` (
-  `image_uuid` varchar(255) NOT NULL DEFAULT '',
-  `category_uuid` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`image_uuid`,`category_uuid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Truncate table before insert `image_to_category`
---
+-- 正在导出表  gajeapp.image 的数据：~0 rows (大约)
+DELETE FROM `image`;
+/*!40000 ALTER TABLE `image` DISABLE KEYS */;
+/*!40000 ALTER TABLE `image` ENABLE KEYS */;
 
-TRUNCATE TABLE `image_to_category`;
--- --------------------------------------------------------
 
---
--- Table structure for table `image_to_tag`
---
-
-DROP TABLE IF EXISTS `image_to_tag`;
-CREATE TABLE IF NOT EXISTS `image_to_tag` (
-  `image_uuid` varchar(255) NOT NULL DEFAULT '',
-  `tag_uuid` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`image_uuid`,`tag_uuid`)
+-- 导出  表 gajeapp.image_brander 结构
+DROP TABLE IF EXISTS `image_brander`;
+CREATE TABLE IF NOT EXISTS `image_brander` (
+  `image_brander_id` int(11) NOT NULL AUTO_INCREMENT,
+  `image_uuid` char(128) NOT NULL,
+  `user_brander_uuid` char(128) NOT NULL,
+  `create_date` int(20) NOT NULL,
+  PRIMARY KEY (`image_brander_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Truncate table before insert `image_to_tag`
---
+-- 正在导出表  gajeapp.image_brander 的数据：~0 rows (大约)
+DELETE FROM `image_brander`;
+/*!40000 ALTER TABLE `image_brander` DISABLE KEYS */;
+/*!40000 ALTER TABLE `image_brander` ENABLE KEYS */;
 
-TRUNCATE TABLE `image_to_tag`;
--- --------------------------------------------------------
 
---
--- Table structure for table `tag`
---
+-- 导出  表 gajeapp.image_comment 结构
+DROP TABLE IF EXISTS `image_comment`;
+CREATE TABLE IF NOT EXISTS `image_comment` (
+  `image_comment_id` int(20) NOT NULL AUTO_INCREMENT,
+  `comment_uuid` char(50) NOT NULL,
+  `image_uuid` char(50) NOT NULL,
+  PRIMARY KEY (`image_comment_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-DROP TABLE IF EXISTS `tag`;
-CREATE TABLE IF NOT EXISTS `tag` (
-  `tag_id` int(11) NOT NULL AUTO_INCREMENT,
-  `tag_uuid` varchar(255) NOT NULL DEFAULT '',
-  `name` varchar(255) NOT NULL DEFAULT '',
-  `sort_order` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`tag_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+-- 正在导出表  gajeapp.image_comment 的数据：~0 rows (大约)
+DELETE FROM `image_comment`;
+/*!40000 ALTER TABLE `image_comment` DISABLE KEYS */;
+/*!40000 ALTER TABLE `image_comment` ENABLE KEYS */;
 
---
--- Truncate table before insert `tag`
---
 
-TRUNCATE TABLE `tag`;
--- --------------------------------------------------------
+-- 导出  表 gajeapp.theme 结构
+DROP TABLE IF EXISTS `theme`;
+CREATE TABLE IF NOT EXISTS `theme` (
+  `theme_id` int(20) NOT NULL AUTO_INCREMENT,
+  `theme_uuid` char(50) NOT NULL DEFAULT '',
+  `name` varchar(50) NOT NULL DEFAULT '',
+  `description` varchar(255) NOT NULL DEFAULT '',
+  `create_date` int(11) NOT NULL DEFAULT '0',
+  `modified_date` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`theme_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Table structure for table `user`
---
+-- 正在导出表  gajeapp.theme 的数据：~0 rows (大约)
+DELETE FROM `theme`;
+/*!40000 ALTER TABLE `theme` DISABLE KEYS */;
+/*!40000 ALTER TABLE `theme` ENABLE KEYS */;
 
+
+-- 导出  表 gajeapp.user 结构
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_uuid` varchar(255) NOT NULL DEFAULT '',
-  `token` varchar(255) NOT NULL DEFAULT '',
+  `user_uuid` char(50) NOT NULL DEFAULT '',
+  `facebook_token` varchar(255) NOT NULL DEFAULT '',
+  `facebook_icon` varchar(255) NOT NULL DEFAULT '',
   `username` varchar(32) NOT NULL DEFAULT '',
   `email` varchar(255) NOT NULL DEFAULT '',
   `password` varchar(255) NOT NULL DEFAULT '',
@@ -245,13 +147,27 @@ CREATE TABLE IF NOT EXISTS `user` (
   `create_date` int(20) NOT NULL DEFAULT '0',
   `modified_date` int(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Truncate table before insert `user`
---
+-- 正在导出表  gajeapp.user 的数据：~0 rows (大约)
+DELETE FROM `user`;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
-TRUNCATE TABLE `user`;
+
+-- 导出  表 gajeapp.user_follow 结构
+DROP TABLE IF EXISTS `user_follow`;
+CREATE TABLE IF NOT EXISTS `user_follow` (
+  `user_follow_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_follower_uuid` char(50) NOT NULL,
+  `user_following_uuid` char(50) NOT NULL,
+  PRIMARY KEY (`user_follow_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 正在导出表  gajeapp.user_follow 的数据：~0 rows (大约)
+DELETE FROM `user_follow`;
+/*!40000 ALTER TABLE `user_follow` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user_follow` ENABLE KEYS */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

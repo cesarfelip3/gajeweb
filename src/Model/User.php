@@ -30,17 +30,17 @@ class User extends BaseModel
         $token = $data["token"];
         unset ($data["token"]);
         $data["modified_date"] = time();
-        $this->db->update($this->table, $data, array('token' => $token));
+        $this->db->update($this->table, $data, array('facebook_token' => $token));
     }
 
     public function deleteUser($data)
     {
-        $this->db->delete($this->table, array('token' => $data["token"]));
+        $this->db->delete($this->table, array('facebook_token' => $data["facebook_token"]));
     }
 
     public function userExistsByToken($userId)
     {
-        $uuid = $this->db->fetchColumn("SELECT user_uuid FROM {$this->table} WHERE token=?", array($userId));
+        $uuid = $this->db->fetchColumn("SELECT user_uuid FROM {$this->table} WHERE facebook_token=?", array($userId));
 
         if (empty ($uuid)) {
             return false;

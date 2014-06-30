@@ -22,19 +22,21 @@ class UserController extends BaseController
     {
 
         $email = $this->request->get("email", "");
-        $token = $this->request->get("token", "");
         $firstname = $this->request->get("firstname", "");
         $lastname = $this->request->get("lastname", "");
         $username = $this->request->get("username", "");
         $fullname = $this->request->get("fullname", "");
+        $token = $this->request->get("facebook_token", "");
+        $icon = $this->request->get("facebook_icon", "");
 
         $data = array(
             "email" => $email,
-            "token" => $token,
             "firstname" => $firstname,
             "lastname" => $lastname,
             "username" => $username,
-            "fullname" => $fullname
+            "fullname" => $fullname,
+            "facebook_token" => $token,
+            "facebook_icon" => $icon
         );
 
         if (empty ($token)) {
@@ -49,6 +51,8 @@ class UserController extends BaseController
             if (empty ($uuid)) {
                 return $this->setFailed("add user wrong");
             }
+        } else {
+            $user->updateUser($data);
         }
 
         $this->error["data"]["user_uuid"] = $uuid;
