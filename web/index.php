@@ -275,6 +275,20 @@ class TestCase {
             exit;
         });
 
+        $test->get("theme/list", function () use ($app) {
+
+            $post = array('page' => 0, 'page_size' => 50);
+
+            $target_url = "http://localhost/gajeweb/api/v1/theme/list";
+
+            $curl = new Curl();
+
+            $curl->post($target_url, $post);
+            print_r(json_encode($curl->response));
+
+            exit;
+        });
+
         $this->app->mount($basename . "/" . $config["router_test"], $test);
     }
 
