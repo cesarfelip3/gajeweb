@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config-test.php" afterPath="$PROJECT_DIR$/web/config-test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.php" afterPath="$PROJECT_DIR$/web/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Image.php" afterPath="$PROJECT_DIR$/src/Model/Image.php" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="11" selection-start="3212" selection-end="3212" vertical-scroll-proportion="0.25" vertical-offset="2720" max-vertical-offset="6960">
+            <state line="267" column="30" selection-start="6913" selection-end="6957" vertical-scroll-proportion="-15.030303" vertical-offset="5888" max-vertical-offset="6960">
               <folding />
             </state>
           </provider>
@@ -66,8 +64,26 @@
       <file leaf-file-name="ImageController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="210" column="22" selection-start="6018" selection-end="6018" vertical-scroll-proportion="-45.121212" vertical-offset="3407" max-vertical-offset="5544">
-              <folding />
+            <state line="5" column="4" selection-start="39" selection-end="39" vertical-scroll-proportion="-3.6363637" vertical-offset="0" max-vertical-offset="5688">
+              <folding>
+                <element signature="e#35#80#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Image.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Model/Image.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="132" column="175" selection-start="3314" selection-end="3314" vertical-scroll-proportion="0.76724136" vertical-offset="2528" max-vertical-offset="4224">
+              <folding>
+                <marker date="1404285902000" expanded="true" signature="880:936" placeholder="SELECT image..." />
+                <marker date="1404285902000" expanded="true" signature="1575:1610" placeholder="SELECT COUNT..." />
+                <marker date="1404285902000" expanded="true" signature="1944:2015" placeholder="SELECT * FRO..." />
+                <marker date="1404285902000" expanded="true" signature="2492:2679" placeholder="SELECT `imag..." />
+                <marker date="1404285902000" expanded="true" signature="3155:3516" placeholder="SELECT img.i..." />
+                <marker date="1404285902000" expanded="true" signature="3985:4296" placeholder="SELECT img.i..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,7 +130,6 @@
         <option value="$PROJECT_DIR$/src/Admin/View/user_list.twig" />
         <option value="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" />
         <option value="$PROJECT_DIR$/src/Admin/Controller/UserController.php" />
-        <option value="$PROJECT_DIR$/src/Model/Image.php" />
         <option value="$PROJECT_DIR$/src/Admin/View/image_list.twig" />
         <option value="$PROJECT_DIR$/src/Admin/View/theme_add.twig" />
         <option value="$PROJECT_DIR$/src/Model/Theme.php" />
@@ -127,6 +142,7 @@
         <option value="$PROJECT_DIR$/src/Model/User.php" />
         <option value="$PROJECT_DIR$/web/config-test.php" />
         <option value="$PROJECT_DIR$/web/index.php" />
+        <option value="$PROJECT_DIR$/src/Model/Image.php" />
       </list>
     </option>
   </component>
@@ -430,7 +446,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19266056" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19266056" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -604,11 +620,6 @@
         <state line="11" column="24" selection-start="175" selection-end="175" vertical-scroll-proportion="-7.2727275" vertical-offset="24" max-vertical-offset="1368" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="10" selection-start="1489" selection-end="1489" vertical-scroll-proportion="-8.484848" vertical-offset="1328" max-vertical-offset="4200" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/View/image_list.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="72" selection-start="698" selection-end="698" vertical-scroll-proportion="-4.413793" vertical-offset="0" max-vertical-offset="1704" />
@@ -699,13 +710,6 @@
         <state line="213" column="160" selection-start="10392" selection-end="10396" vertical-scroll-proportion="0.41509435" vertical-offset="5134" max-vertical-offset="27552" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="210" column="22" selection-start="6018" selection-end="6018" vertical-scroll-proportion="-45.121212" vertical-offset="3407" max-vertical-offset="5544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Api.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="135" column="0" selection-start="3333" selection-end="3333" vertical-scroll-proportion="-12.121212" vertical-offset="2816" max-vertical-offset="4560">
@@ -729,8 +733,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="11" selection-start="3212" selection-end="3212" vertical-scroll-proportion="0.25" vertical-offset="2720" max-vertical-offset="6960">
+        <state line="267" column="30" selection-start="6913" selection-end="6957" vertical-scroll-proportion="-15.030303" vertical-offset="5888" max-vertical-offset="6960">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="4" selection-start="39" selection-end="39" vertical-scroll-proportion="-3.6363637" vertical-offset="0" max-vertical-offset="5688">
+          <folding>
+            <element signature="e#35#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="175" selection-start="3314" selection-end="3314" vertical-scroll-proportion="0.76724136" vertical-offset="2528" max-vertical-offset="4224">
+          <folding>
+            <marker date="1404285902000" expanded="true" signature="880:936" placeholder="SELECT image..." />
+            <marker date="1404285902000" expanded="true" signature="1575:1610" placeholder="SELECT COUNT..." />
+            <marker date="1404285902000" expanded="true" signature="1944:2015" placeholder="SELECT * FRO..." />
+            <marker date="1404285902000" expanded="true" signature="2492:2679" placeholder="SELECT `imag..." />
+            <marker date="1404285902000" expanded="true" signature="3155:3516" placeholder="SELECT img.i..." />
+            <marker date="1404285902000" expanded="true" signature="3985:4296" placeholder="SELECT img.i..." />
+          </folding>
         </state>
       </provider>
     </entry>
