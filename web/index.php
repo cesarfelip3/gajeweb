@@ -123,7 +123,7 @@ $admin->register();
 //==================================
 
 if (true) {
-
+    require_once __DIR__ . '/test/Curl.class.php';
     $test = new TestCase ($app, $config);
     $test->register();
 }
@@ -144,7 +144,7 @@ if ($config["http_cache_enable"]) {
 
 //================================
 
-require_once __DIR__ . '/test/Curl.class.php';
+
 
 class TestCase {
 
