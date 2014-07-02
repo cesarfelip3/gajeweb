@@ -43,6 +43,7 @@ class Api
         $api = $app["controllers_factory"];
         $this->_userAPI($api);
         $this->_imageAPI($api);
+        $this->_themeAPI($api);
 
         $app->mount($basename . "/" . $api_v1, $api);
     }
