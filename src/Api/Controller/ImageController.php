@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Api\Controller\BaseController;
 use Model\Image;
 use Model\User;
+use Model\Theme;
 
 class ImageController extends BaseController
 {
@@ -19,6 +20,28 @@ class ImageController extends BaseController
         $this->app = $app;
         $this->request = $request;
         $this->response = new Response();
+    }
+
+    public function getThemeList()
+    {
+        $page = $this->request->get("page", 0);
+        $pageSize = $this->request->get("page_size", 25);
+
+        $data = array();
+        $data["page"] = intval($page);
+        $data["page_size"] = intval($pageSize);
+
+        $theme = new Theme();
+        $result = $theme->getThemeList($data);
+
+        if (empty ($result)) {
+
+            $this->setSuccess("empty result from db", array("themes" => array()));
+        } else {
+
+            $this->setSuccess("", array("themes" => $result));
+        }
+
     }
 
     public function upload($uploadFolder)
@@ -145,17 +168,13 @@ class ImageController extends BaseController
 
         $image = $image->getImagesByUser($data);
 
-        if ($image == false) {
-            $this->setSuccess("Something wrong with db", array("images" => array()));
+
+        if (empty ($image)) {
+
+            $this->setSuccess("empty result from db", array("images" => array()));
         } else {
 
-            if (empty ($image)) {
-
-                $this->setSuccess("empty result from db", array("images" => array()));
-            } else {
-
-                $this->setSuccess("", array("images" => $image));
-            }
+            $this->setSuccess("", array("images" => $image));
         }
 
         return true;
