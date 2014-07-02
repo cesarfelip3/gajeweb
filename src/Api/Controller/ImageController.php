@@ -174,17 +174,12 @@ class ImageController extends BaseController
 
         $image = $image->getLatestImages($data);
 
-        if ($image == false) {
-            $this->setSuccess("Something wrong with db", array("images" => array()));
+        if (empty ($image)) {
+
+            $this->setSuccess("empty result from db", array("images" => array()));
         } else {
 
-            if (empty ($image)) {
-
-                $this->setSuccess("empty result from db", array("images" => array()));
-            } else {
-
-                $this->setSuccess("", array("images" => $image));
-            }
+            $this->setSuccess("", array("images" => $image));
         }
 
         return true;
