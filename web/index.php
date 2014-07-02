@@ -284,6 +284,7 @@ class TestCase {
             $curl = new Curl();
 
             $curl->post($target_url, $post);
+            print_r ($curl->response);
             print_r(json_encode($curl->response));
 
             exit;
