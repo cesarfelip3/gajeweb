@@ -186,6 +186,10 @@ class Api
 
     protected function _themeAPI (&$api)
     {
+        $app = $this->app;
+        $config = $this->config;
+        $basename = $this->config["basename"];
+        
         $api->post("theme/list", function (Request $request) use ($app) {
 
             $controller = new Controller\ThemeController($request, $app);
