@@ -77,7 +77,14 @@ class ImageController extends BaseController
 
             $data['name'] = $this->request->get("name", "Untitle");
             $data['description'] = $this->request->get("description", "Untitle image");
+            $themeArray = $this->request->get("theme_array");
 
+            $themeArray = trim ($themeArray, ",");
+            $themeArray = explode(",", $themeArray);
+
+            if (isset($themeArray[0])) {
+                $data["theme_uuid"] = $themeArray[0];
+            }
 
             if (file_exists($data["file_path"])) {
 
