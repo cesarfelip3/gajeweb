@@ -323,7 +323,7 @@ class TestCase {
 
             $post = array('page' => 0, 'page_size' => 50, 'image_uuid'=>'53b68f84d698e');
 
-            $target_url = "http://localhost/gajeweb/api/v1/image/get_comment";
+            $target_url = "http://localhost/gajeweb/api/v1/image/brander/list";
 
             $curl = new Curl();
 
