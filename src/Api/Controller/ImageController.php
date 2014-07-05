@@ -174,6 +174,7 @@ class ImageController extends BaseController
     public function comment ()
     {
         $image_uuid = $this->request->get("image_uuid", "");
+        $user_uuid = $this->request->get("user_uuid", "");
         $content = $this->request->get("content", "");
 
         if (empty ($content)) {
@@ -190,9 +191,16 @@ class ImageController extends BaseController
             return false;
         }
 
+        $user = new User();
+        if (!$user->userExists($user_uuid)) {
+            $this->setFailed("Your account doesn't exist in current server");
+            return false;
+        }
+
         $comment = new Comment ();
 
         $data["content"] = $content;
+        $data["user_uuid"] = $user_uuid;
         $comment_uuid = $comment->addComment($data);
 
         $data = array ();

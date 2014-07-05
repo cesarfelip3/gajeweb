@@ -31,12 +31,13 @@ DELETE FROM `administrator`;
 -- 导出  表 gajeapp.comment 结构
 DROP TABLE IF EXISTS `comment`;
 CREATE TABLE IF NOT EXISTS `comment` (
-  `comment_id` int(11) DEFAULT NULL,
+  `comment_id` int(20) DEFAULT NOT NULL AUTO_INCREMENT,
   `comment_uuid` char(128) DEFAULT NULL,
   `user_uuid` char(128) DEFAULT NULL,
   `content` varchar(512) DEFAULT NULL,
   `create_date` int(20) DEFAULT NULL,
-  `modified_date` int(20) DEFAULT NULL
+  `modified_date` int(20) DEFAULT NULL,
+  PRIMARY KEY (`comment_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- 正在导出表  gajeapp.comment 的数据：~0 rows (大约)
