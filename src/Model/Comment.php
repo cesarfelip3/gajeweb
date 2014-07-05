@@ -3,48 +3,47 @@
 namespace Model;
 
 use \Model\BaseModel;
-use \Model\Comment;
 
-class Image extends BaseModel
+class Comment extends BaseModel
 {
 
 
-    public $table = "image";
-    public $table_image_comment = "image_comment";
+    public $table = "comment";
+    public $table_comment_comment = "comment_comment";
 
     public function __construct()
     {
         $this->db = self::$DB;
     }
 
-    public function addImage($data)
+    public function addComment($data)
     {
 
-        $data["image_uuid"] = uniqid();
+        $data["comment_uuid"] = uniqid();
         $data["create_date"] = time();
         $data["modified_date"] = time();
 
         $this->db->insert($this->table, $data);
 
-        return $data["image_uuid"];
+        return $data["comment_uuid"];
     }
 
-    public function updateImage($data)
+    public function updateComment($data)
     {
 
-        $image_uuid = $data["image_uuid"];
-        unset($data["image_uuid"]);
-        $this->db->update($this->table, $data, array('image_uuid' => $image_uuid));
+        $comment_uuid = $data["comment_uuid"];
+        unset($data["comment_uuid"]);
+        $this->db->update($this->table, $data, array('comment_uuid' => $comment_uuid));
     }
 
-    public function deleteImage($imageId)
+    public function deleteComment($commentId)
     {
         $this->db->delete($this->table, array('token' => $data["token"]));
     }
 
-    public function imageExists($imageId)
+    public function commentExists($commentId)
     {
-        $uuid = $this->db->fetchColumn("SELECT image_uuid FROM {$this->table} WHERE image_uuid=?", array($imageId));
+        $uuid = $this->db->fetchColumn("SELECT comment_uuid FROM {$this->table} WHERE comment_uuid=?", array($commentId));
 
         if (empty ($uuid)) {
             return false;
@@ -53,38 +52,12 @@ class Image extends BaseModel
         return $uuid;
     }
 
-    public function addComment ($data)
-    {
-        $this->db->insert ($this->table_image_comment, $data);
-    }
-
-    public function getCommentList($data)
-    {
-        $page = $data["page"];
-        $pageSize = $data["page_size"];
-
-        $page = intval($page);
-        $pageSize = intval($pageSize);
-        $page = $page * $pageSize;
-
-        $limit = "$page, $pageSize";
-
-        $commentTable = Comment::table();
-
-        $sql = "SELECT cmt.* FROM {$this->table} img INNER JOIN $commentTable cmt ON img.image_uuid=cmt.comment_uuid  ORDER BY cmt.modified_date DESC LIMIT {$limit} WHERE img.image_uuid=?";
-        $stmt = $this->db->prepare($sql);
-        $stmt->bindValue (1, $data["image_uuid"]);
-        $stmt->execute();
-        $result = $stmt->fetchAll();
-
-        return $result;
-    }
 
     //=====================================
     // admin
     //=====================================
 
-    public function getImageListHeader()
+    public function getCommentListHeader()
     {
         return array(
             "#" => "#",
@@ -103,7 +76,7 @@ class Image extends BaseModel
         return $total;
     }
 
-    public function getImageList($data)
+    public function getCommentList($data)
     {
         $page = $data["page"];
         $pageSize = $data["page_size"];
@@ -119,10 +92,10 @@ class Image extends BaseModel
     }
 
     //================================
-    // get images
+    // get comments
     //================================
 
-    public function getImagesByUser($data)
+    public function getCommentsByUser($data)
     {
         $page = $data["page"];
         $pageSize = $data["page_size"];
@@ -133,7 +106,7 @@ class Image extends BaseModel
         $page = $page * $pageSize;
 
         $limit = "$page, $pageSize";
-        $result = $this->db->fetchAll("SELECT `image_uuid`, `name`, `description`, `width`, `height`, `create_date`, `modified_date`, `file_name` FROM {$this->table} WHERE user_uuid=? ORDER BY modified_date DESC LIMIT {$limit} ", array($user_uuid));
+        $result = $this->db->fetchAll("SELECT `comment_uuid`, `name`, `description`, `width`, `height`, `create_date`, `modified_date`, `file_name` FROM {$this->table} WHERE user_uuid=? ORDER BY modified_date DESC LIMIT {$limit} ", array($user_uuid));
 
         if (!empty ($result)) {
 
@@ -146,7 +119,7 @@ class Image extends BaseModel
 
     }
 
-    public function getLatestImages($data)
+    public function getLatestComments($data)
     {
         $page = $data["page"];
         $pageSize = $data["page_size"];
@@ -159,7 +132,7 @@ class Image extends BaseModel
 
         $userTable = User::table();
 
-        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username FROM {$this->table} img INNER JOIN $userTable usr ON img.user_uuid=usr.user_uuid  ORDER BY modified_date DESC LIMIT {$limit}";
+        $sql = "SELECT img.comment_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username FROM {$this->table} img INNER JOIN $userTable usr ON img.user_uuid=usr.user_uuid  ORDER BY modified_date DESC LIMIT {$limit}";
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
 
@@ -168,7 +141,7 @@ class Image extends BaseModel
         return $result;
     }
 
-    public function getImagesWithoutThumbnail($data)
+    public function getCommentsWithoutThumbnail($data)
     {
         $page = $data["page"];
         $pageSize = $data["page_size"];
@@ -181,13 +154,18 @@ class Image extends BaseModel
 
         $userTable = User::table();
 
-        $sql = "SELECT img.image_uuid, img.width, img.height, img.file_path, img.file_name, usr.token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username FROM {$this->table} img INNER JOIN $userTable usr ON img.user_uuid=usr.user_uuid WHERE img.thumbnails=0 ORDER BY modified_date DESC";
+        $sql = "SELECT img.comment_uuid, img.width, img.height, img.file_path, img.file_name, usr.token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username FROM {$this->table} img INNER JOIN $userTable usr ON img.user_uuid=usr.user_uuid WHERE img.thumbnails=0 ORDER BY modified_date DESC";
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
 
         $result = $stmt->fetchAll();
 
         return $result;
+    }
+
+    public static function table()
+    {
+        return "comment";
     }
 
 }

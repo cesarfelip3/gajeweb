@@ -290,6 +290,35 @@ class TestCase {
             exit;
         });
 
+        // image comment
+        $test->get("image/comment", function () use ($app) {
+
+            $post = array('page' => 0, 'page_size' => 50);
+
+            $target_url = "http://localhost/gajeweb/api/v1/image/latest";
+
+            $curl = new Curl();
+
+            $curl->post($target_url, $post);
+            print_r(json_encode($curl->response));
+
+            exit;
+        });
+
+        $test->get("image/get_comment", function () use ($app) {
+
+            $post = array('page' => 0, 'page_size' => 50);
+
+            $target_url = "http://localhost/gajeweb/api/v1/image/get_comment";
+
+            $curl = new Curl();
+
+            $curl->post($target_url, $post);
+            print_r(json_encode($curl->response));
+
+            exit;
+        });
+
         $this->app->mount($basename . "/" . $config["router_test"], $test);
     }
 

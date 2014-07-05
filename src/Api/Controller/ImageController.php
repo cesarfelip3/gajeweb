@@ -11,6 +11,7 @@ use Api\Controller\BaseController;
 use Model\Image;
 use Model\User;
 use Model\Theme;
+use Model\Comment;
 
 class ImageController extends BaseController
 {
@@ -22,7 +23,11 @@ class ImageController extends BaseController
         $this->response = new Response();
     }
 
-    public function getThemeList()
+    //========================================
+    // get latest image list for app
+    //========================================
+
+    public function getLatest()
     {
         $page = $this->request->get("page", 0);
         $pageSize = $this->request->get("page_size", 25);
@@ -31,18 +36,24 @@ class ImageController extends BaseController
         $data["page"] = intval($page);
         $data["page_size"] = intval($pageSize);
 
-        $theme = new Theme();
-        $result = $theme->getThemeList($data);
+        $image = new Image();
 
-        if (empty ($result)) {
+        $image = $image->getLatestImages($data);
 
-            $this->setSuccess("empty result from db", array("themes" => array()));
+        if (empty ($image)) {
+
+            $this->setSuccess("empty result from db", array("images" => array()));
         } else {
 
-            $this->setSuccess("", array("themes" => $result));
+            $this->setSuccess("", array("images" => $image));
         }
 
+        return true;
     }
+
+    //=================================
+    // upload & update
+    //=================================
 
     public function upload($uploadFolder)
     {
@@ -156,6 +167,80 @@ class ImageController extends BaseController
         return $this->setFailed("update image error");
     }
 
+    //========================================
+    // comment & brand
+    //========================================
+
+    public function comment ()
+    {
+        $image_uuid = $this->request->get("image_uuid", "");
+        $content = $this->request->get("content", "");
+
+        if (empty ($content)) {
+
+            $this->setFailed("Empty comment");
+            return true;
+        }
+
+        $image = new Image();
+
+        if (!$image->imageExists($image_uuid)) {
+
+            $this->setFailed("Image doesn't exist");
+            return false;
+        }
+
+        $comment = new Comment ();
+
+        $data["content"] = $content;
+        $comment_uuid = $comment->addComment($data);
+
+        $data = array ();
+        $data["image_uuid"] = $image_uuid;
+        $data["comment_uuid"] = $comment_uuid;
+        $image->addComment($data);
+
+        return $this->setSuccess("");
+    }
+
+    public function getCommentList ()
+    {
+        // get comment list for image
+
+        $image_uuid = $this->request->get("image_uuid", "");
+        if (empty ($image_uuid)) {
+            return $this->setFailed("Image doesn't exist");
+        }
+
+        $page = $this->request->get("page", 0);
+        $pageSize = $this->request->get("page_size", 25);
+
+        $data = array();
+        $data["page"] = intval($page);
+        $data["page_size"] = intval($pageSize);
+        $data["image_uuid"] = $image_uuid;
+
+        $image = new Image();
+
+        $result = $image->getCommentList($data);
+
+        foreach ($result as &$element) {
+
+        }
+
+        return $this->setSuccess("", array ("comments"=>$result));
+
+    }
+
+    public function brand ()
+    {
+
+    }
+
+    //=============================================
+    // get images by user
+    //=============================================
+
     public function getLatestByUser()
     {
         $user_uuid = $this->request->get("user_uuid", "");
@@ -175,30 +260,6 @@ class ImageController extends BaseController
 
         $image = $image->getImagesByUser($data);
 
-
-        if (empty ($image)) {
-
-            $this->setSuccess("empty result from db", array("images" => array()));
-        } else {
-
-            $this->setSuccess("", array("images" => $image));
-        }
-
-        return true;
-    }
-
-    public function getLatest()
-    {
-        $page = $this->request->get("page", 0);
-        $pageSize = $this->request->get("page_size", 25);
-
-        $data = array();
-        $data["page"] = intval($page);
-        $data["page_size"] = intval($pageSize);
-
-        $image = new Image();
-
-        $image = $image->getLatestImages($data);
 
         if (empty ($image)) {
 
