@@ -244,7 +244,7 @@ class ImageController extends BaseController
     {
         $image_uuid = $this->request->get("image_uuid", "");
         $user_uuid = $this->request->get("user_uuid", "");
-        
+
         $image = new Image();
 
         if (!$image->imageExists($image_uuid)) {

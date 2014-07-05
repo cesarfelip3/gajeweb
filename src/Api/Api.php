@@ -158,7 +158,7 @@ class Api
         $api->post("image/comment/add", function (Request $request) use ($app) {
 
             $controller = new Controller\ImageController($request, $app);
-            $ret = $controller->comment();
+            $ret = $controller->addComment();
 
             $status = 200;
             if ($ret) {
