@@ -287,13 +287,13 @@ class ImageController extends BaseController
 
         $image = new Image();
 
-        $result = $image->getCommentList($data);
+        $result = $image->getBranderList($data);
 
         foreach ($result as &$element) {
 
         }
 
-        return $this->setSuccess("", array ("comments"=>$result));
+        return $this->setSuccess("", array ("branders"=>$result));
 
     }
 
