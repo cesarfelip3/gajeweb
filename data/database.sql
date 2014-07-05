@@ -31,7 +31,7 @@ DELETE FROM `administrator`;
 -- 导出  表 gajeapp.comment 结构
 DROP TABLE IF EXISTS `comment`;
 CREATE TABLE IF NOT EXISTS `comment` (
-  `comment_id` int(20) DEFAULT NOT NULL AUTO_INCREMENT,
+  `comment_id` int(20) NOT NULL AUTO_INCREMENT,
   `comment_uuid` char(128) DEFAULT NULL,
   `user_uuid` char(128) DEFAULT NULL,
   `content` varchar(512) DEFAULT NULL,

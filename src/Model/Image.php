@@ -70,8 +70,9 @@ class Image extends BaseModel
         $limit = "$page, $pageSize";
 
         $commentTable = Comment::table();
+        $userTable = User::table();
 
-        $sql = "SELECT cmt.* FROM {$this->table_image_comment} img INNER JOIN $commentTable cmt ON img.comment_uuid=cmt.comment_uuid WHERE img.image_uuid=? ORDER BY cmt.modified_date ASC LIMIT {$limit}";
+        $sql = "SELECT cmt.*, usr.username AS username, usr.fullname AS fullname, usr.facebook_icon AS usericon FROM {$this->table_image_comment} img INNER JOIN $commentTable cmt ON img.comment_uuid=cmt.comment_uuid INNER JOIN $$userTable usr ON cmt.user_uuid=usr.user_uuid WHERE img.image_uuid=? ORDER BY cmt.modified_date ASC LIMIT {$limit}";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue (1, $data["image_uuid"]);
         $stmt->execute();
