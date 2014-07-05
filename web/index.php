@@ -319,6 +319,20 @@ class TestCase {
             exit;
         });
 
+        $test->get("image/get_brander", function () use ($app) {
+
+            $post = array('page' => 0, 'page_size' => 50, 'image_uuid'=>'53b68f84d698e');
+
+            $target_url = "http://localhost/gajeweb/api/v1/image/get_comment";
+
+            $curl = new Curl();
+
+            $curl->post($target_url, $post);
+            print_r(json_encode($curl->response));
+
+            exit;
+        });
+
         $this->app->mount($basename . "/" . $config["router_test"], $test);
     }
 

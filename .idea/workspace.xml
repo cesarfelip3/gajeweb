@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Controller/ImageController.php" afterPath="$PROJECT_DIR$/src/Api/Controller/ImageController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.php" afterPath="$PROJECT_DIR$/web/index.php" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="304" column="10" selection-start="7880" selection-end="7880" vertical-scroll-proportion="-12.121212" vertical-offset="6872" max-vertical-offset="8016">
+            <state line="321" column="37" selection-start="8336" selection-end="8336" vertical-scroll-proportion="0.63793105" vertical-offset="7088" max-vertical-offset="8352">
               <folding />
             </state>
           </provider>
@@ -43,10 +43,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ImageController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="289" column="41" selection-start="8237" selection-end="8237" vertical-scroll-proportion="0.76724136" vertical-offset="6248" max-vertical-offset="9096">
+            <state line="262" column="32" selection-start="7480" selection-end="7480" vertical-scroll-proportion="-1.2121212" vertical-offset="6248" max-vertical-offset="9096">
               <folding>
                 <element signature="e#35#80#0" expanded="true" />
               </folding>
@@ -186,11 +186,11 @@
         <option value="$PROJECT_DIR$/web/config-test.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/ThemeController.php" />
         <option value="$PROJECT_DIR$/src/Model/Comment.php" />
-        <option value="$PROJECT_DIR$/web/index.php" />
         <option value="$PROJECT_DIR$/src/Model/Image.php" />
         <option value="$PROJECT_DIR$/data/database.sql" />
         <option value="$PROJECT_DIR$/src/Api/Api.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/ImageController.php" />
+        <option value="$PROJECT_DIR$/web/index.php" />
       </list>
     </option>
   </component>
@@ -777,13 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="304" column="10" selection-start="7880" selection-end="7880" vertical-scroll-proportion="-12.121212" vertical-offset="6872" max-vertical-offset="8016">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Comment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="114" column="13" selection-start="2895" selection-end="2895" vertical-scroll-proportion="-11.425287" vertical-offset="1742" max-vertical-offset="4392">
@@ -831,10 +824,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="289" column="41" selection-start="8237" selection-end="8237" vertical-scroll-proportion="0.76724136" vertical-offset="6248" max-vertical-offset="9096">
+        <state line="262" column="32" selection-start="7480" selection-end="7480" vertical-scroll-proportion="-1.2121212" vertical-offset="6248" max-vertical-offset="9096">
           <folding>
             <element signature="e#35#80#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="321" column="37" selection-start="8336" selection-end="8336" vertical-scroll-proportion="0.63793105" vertical-offset="7088" max-vertical-offset="8352">
+          <folding />
         </state>
       </provider>
     </entry>
