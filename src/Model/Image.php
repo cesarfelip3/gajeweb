@@ -71,7 +71,7 @@ class Image extends BaseModel
 
         $commentTable = Comment::table();
 
-        $sql = "SELECT cmt.* FROM {$this->table} img INNER JOIN $commentTable cmt ON img.image_uuid=cmt.comment_uuid  ORDER BY cmt.modified_date DESC LIMIT {$limit} WHERE img.image_uuid=?";
+        $sql = "SELECT cmt.* FROM {$this->table} img INNER JOIN $commentTable cmt ON img.image_uuid=cmt.image_uuid  ORDER BY cmt.modified_date ASC LIMIT {$limit} WHERE img.image_uuid=?";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue (1, $data["image_uuid"]);
         $stmt->execute();
