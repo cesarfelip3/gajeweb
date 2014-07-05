@@ -307,7 +307,7 @@ class TestCase {
 
         $test->get("image/get_comment", function () use ($app) {
 
-            $post = array('page' => 0, 'page_size' => 50);
+            $post = array('page' => 0, 'page_size' => 50, 'image_uuid'=>'53b68f84d698e');
 
             $target_url = "http://localhost/gajeweb/api/v1/image/get_comment";
 
