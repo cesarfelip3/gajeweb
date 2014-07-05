@@ -81,7 +81,7 @@ DROP TABLE IF EXISTS `image_brander`;
 CREATE TABLE IF NOT EXISTS `image_brander` (
   `image_brander_id` int(11) NOT NULL AUTO_INCREMENT,
   `image_uuid` char(128) NOT NULL,
-  `user_brander_uuid` char(128) NOT NULL,
+  `user_uuid` char(128) NOT NULL,
   `create_date` int(20) NOT NULL,
   PRIMARY KEY (`image_brander_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

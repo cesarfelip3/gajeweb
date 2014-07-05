@@ -11,6 +11,7 @@ class Image extends BaseModel
 
     public $table = "image";
     public $table_image_comment = "image_comment";
+    public $table_image_brander = "image_brander";
 
     public function __construct()
     {
@@ -73,6 +74,36 @@ class Image extends BaseModel
         $userTable = User::table();
 
         $sql = "SELECT cmt.*, usr.username AS username, usr.facebook_icon AS usericon FROM {$this->table_image_comment} img INNER JOIN $commentTable cmt ON img.comment_uuid=cmt.comment_uuid INNER JOIN $userTable usr ON cmt.user_uuid=usr.user_uuid WHERE img.image_uuid=? ORDER BY cmt.modified_date ASC LIMIT {$limit}";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue (1, $data["image_uuid"]);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+
+        return $result;
+    }
+
+    // brander
+
+    public function addBrander ($data)
+    {
+        $this->db->insert ($this->table_image_brander, $data);
+    }
+
+    public function getBranderList($data)
+    {
+        $page = $data["page"];
+        $pageSize = $data["page_size"];
+
+        $page = intval($page);
+        $pageSize = intval($pageSize);
+        $page = $page * $pageSize;
+
+        $limit = "$page, $pageSize";
+
+        $commentTable = Comment::table();
+        $userTable = User::table();
+
+        $sql = "SELECT usr.* FROM {$this->table_image_brander} img INNER JOIN $userTable usr ON img.user_uuid=usr.user_uuid WHERE img.image_uuid=? ORDER BY cmt.modified_date ASC LIMIT {$limit}";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue (1, $data["image_uuid"]);
         $stmt->execute();

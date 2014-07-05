@@ -151,7 +151,11 @@ class Api
 
         });
 
-        $api->post("image/comment", function (Request $request) use ($app) {
+        //==============
+        // comment
+        //==============
+
+        $api->post("image/comment/add", function (Request $request) use ($app) {
 
             $controller = new Controller\ImageController($request, $app);
             $ret = $controller->comment();
@@ -167,10 +171,46 @@ class Api
 
         });
 
-        $api->post("image/get_comment", function (Request $request) use ($app) {
+        $api->post("image/comment/list", function (Request $request) use ($app) {
 
             $controller = new Controller\ImageController($request, $app);
             $ret = $controller->getCommentList();
+
+            $status = 200;
+            if ($ret) {
+                $status = 200;
+            } else {
+                $status = 400;
+            }
+
+            return $app->json($controller->getError(), $status);
+
+        });
+
+        //====================
+        // brander
+        //====================
+
+        $api->post("image/brander/add", function (Request $request) use ($app) {
+
+            $controller = new Controller\ImageController($request, $app);
+            $ret = $controller->addBrander();
+
+            $status = 200;
+            if ($ret) {
+                $status = 200;
+            } else {
+                $status = 400;
+            }
+
+            return $app->json($controller->getError(), $status);
+
+        });
+
+        $api->post("image/brander/list", function (Request $request) use ($app) {
+
+            $controller = new Controller\ImageController($request, $app);
+            $ret = $controller->getBranderList();
 
             $status = 200;
             if ($ret) {

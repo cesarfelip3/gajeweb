@@ -171,7 +171,7 @@ class ImageController extends BaseController
     // comment & brand
     //========================================
 
-    public function comment ()
+    public function addComment ()
     {
         $image_uuid = $this->request->get("image_uuid", "");
         $user_uuid = $this->request->get("user_uuid", "");
@@ -240,8 +240,66 @@ class ImageController extends BaseController
 
     }
 
-    public function brand ()
+    public function addBrander ()
     {
+        $image_uuid = $this->request->get("image_uuid", "");
+        $user_uuid = $this->request->get("user_uuid", "");
+
+        if (empty ($content)) {
+
+            $this->setFailed("Empty comment");
+            return true;
+        }
+
+        $image = new Image();
+
+        if (!$image->imageExists($image_uuid)) {
+
+            $this->setFailed("Image doesn't exist");
+            return false;
+        }
+
+        $user = new User();
+        if (!$user->userExists($user_uuid)) {
+            $this->setFailed("Your account doesn't exist in current server");
+            return false;
+        }
+
+        $data = array ();
+        $data["image_uuid"] = $image_uuid;
+        $data["user_uuid"] = $user_uuid;
+        $data["create_date"] = time();
+        $image->addBrander($data);
+
+        return $this->setSuccess("");
+    }
+
+    public function getBranderList ()
+    {
+        // get comment list for image
+
+        $image_uuid = $this->request->get("image_uuid", "");
+        if (empty ($image_uuid)) {
+            return $this->setFailed("Image doesn't exist");
+        }
+
+        $page = $this->request->get("page", 0);
+        $pageSize = $this->request->get("page_size", 25);
+
+        $data = array();
+        $data["page"] = intval($page);
+        $data["page_size"] = intval($pageSize);
+        $data["image_uuid"] = $image_uuid;
+
+        $image = new Image();
+
+        $result = $image->getCommentList($data);
+
+        foreach ($result as &$element) {
+
+        }
+
+        return $this->setSuccess("", array ("comments"=>$result));
 
     }
 
