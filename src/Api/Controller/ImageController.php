@@ -38,12 +38,23 @@ class ImageController extends BaseController
 
         $image = new Image();
 
-        $image = $image->getLatestImages($data);
+        $imageArray = $image->getLatestImages($data);
 
         if (empty ($image)) {
 
             $this->setSuccess("empty result from db", array("images" => array()));
         } else {
+
+            $data = array();
+            $data["page"] = 0;
+            $data["page_size"] = 512;
+
+            foreach ($imageArray as &$value) {
+
+                $data["image_uuid"] = $value["image_uuid"];
+                $value["branders"] = $image->getBranderList($data);
+
+            }
 
             $this->setSuccess("", array("images" => $image));
         }
