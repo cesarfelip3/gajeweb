@@ -89,7 +89,7 @@ class Image extends BaseModel
         $user_uuid = $data["user_uuid"];
         $image_uuid = $data["image_uuid"];
 
-        $uuid = $this->db->fetchColumn("SELECT image_uuid FROM {$this->table} WHERE image_uuid=? AND user_uuid=?", array($image_uuid, $user_uuid));
+        $uuid = $this->db->fetchColumn("SELECT image_uuid FROM {$this->table_image_brander} WHERE image_uuid=? AND user_uuid=?", array($image_uuid, $user_uuid));
 
         if (!empty ($uuid)) {
             return true;
