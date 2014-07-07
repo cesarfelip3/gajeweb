@@ -24,7 +24,7 @@ class ThemeController extends BaseController
     public function getThemeList()
     {
         $page = $this->request->get("page", 0);
-        $pageSize = $this->request->get("page_size", 25);
+        $pageSize = $this->request->get("page_size", 1);
 
         $data = array();
         $data["page"] = intval($page);
