@@ -53,6 +53,7 @@ class ImageController extends BaseController
 
                 $data["image_uuid"] = $value["image_uuid"];
                 $value["branders"] = $image->getBranderList($data);
+                $value["brander_count"] = count($value["branders"]);
 
             }
 
