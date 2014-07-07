@@ -86,6 +86,15 @@ class Image extends BaseModel
 
     public function addBrander ($data)
     {
+        $user_uuid = $data["user_uuid"];
+        $image_uuid = $data["image_uuid"];
+
+        $uuid = $this->db->fetchColumn("SELECT image_uuid FROM {$this->table} WHERE image_uuid=? AND user_uuid=?", array($image_uuid, $user_uuid));
+
+        if (!empty ($uuid)) {
+            return true;
+        }
+
         $this->db->insert ($this->table_image_brander, $data);
     }
 
