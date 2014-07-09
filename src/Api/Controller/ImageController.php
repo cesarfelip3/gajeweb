@@ -40,7 +40,7 @@ class ImageController extends BaseController
 
         $imageArray = $image->getLatestImages($data);
 
-        if (empty ($image)) {
+        if (empty ($imageArray)) {
 
             $this->setSuccess("empty result from db", array("images" => array()));
         } else {
@@ -330,15 +330,26 @@ class ImageController extends BaseController
 
         $image = new Image();
 
-        $image = $image->getImagesByUser($data);
+        $imageArray = $image->getImagesByUser($data);
 
-
-        if (empty ($image)) {
+        if (empty ($imageArray)) {
 
             $this->setSuccess("empty result from db", array("images" => array()));
         } else {
 
-            $this->setSuccess("", array("images" => $image));
+            $data = array();
+            $data["page"] = 0;
+            $data["page_size"] = 512;
+
+            foreach ($imageArray as &$value) {
+
+                $data["image_uuid"] = $value["image_uuid"];
+                $value["branders"] = $image->getBranderList($data);
+                $value["brander_count"] = count($value["branders"]);
+
+            }
+
+            $this->setSuccess("", array("images" => $imageArray));
         }
 
         return true;
