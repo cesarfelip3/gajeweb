@@ -61,4 +61,28 @@ class UserController extends BaseController
 
     }
 
+    public function addFollow ()
+    {
+        $user_uuid = $this->request->get("user_uuid", "");
+        $follow_uuid = $this->request->get("following_uuid", "");
+
+        $data["user_follower_uuid"] = $user_uuid;
+        $data["user_following_uuid"] = $follow_uuid;
+
+        $user = new User();
+        $uuid = $user->userExists($data);
+
+        if (!$uuid) {
+
+            $user->addFollow($data);
+            return $this->setSuccess("success");
+
+        } else {
+
+            return $this->setSuccess("exists");
+        }
+
+        return true;
+    }
+
 }

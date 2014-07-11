@@ -61,6 +61,26 @@ class User extends BaseModel
     }
 
     //=====================================
+    //
+    //=====================================
+
+    public function addFollow ($data)
+    {
+        $this->db->insert($this->table, $data);
+    }
+
+    public function followExist ($data)
+    {
+        $uuid = $this->db->fetchColumn("SELECT user_follower_uuid FROM {$this->table} WHERE user_follower_uuid=? OR user_following_uuid=?", array($data["user_follower_uuid"], $data["user_following_uuid"]));
+
+        if (empty ($uuid)) {
+            return false;
+        }
+
+        return $uuid;
+    }
+
+    //=====================================
     // admin
     //=====================================
 
