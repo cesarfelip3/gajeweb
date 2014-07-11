@@ -8,6 +8,7 @@ class User extends BaseModel
 {
 
     public $table = "user";
+    public $table_user_follow = "user_follow";
 
     public function __construct()
     {
@@ -66,7 +67,14 @@ class User extends BaseModel
 
     public function addFollow ($data)
     {
-        $this->db->insert($this->table, $data);
+        $this->db->insert($this->table_user_follow, $data);
+    }
+
+    public function deleteFollow ($data)
+    {
+
+        $this->db->delete($this->table_user_follow, array("user_follower_uuid"=>$data["user_follower_uuid"], "user_following_uuid"=>$data["user_following_uuid"]));
+
     }
 
     public function followExist ($data)

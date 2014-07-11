@@ -97,8 +97,24 @@ class Api
 
         $api->post("user/follow", function (Request $request) use ($app) {
 
-            $controller = new Controller\ImageController($request, $app);
-            $ret = $controller->getLatestByUser();
+            $controller = new Controller\UserController($request, $app);
+            $ret = $controller->addFollow();
+
+            $status = 200;
+            if ($ret) {
+                $status = 200;
+            } else {
+                $status = 400;
+            }
+
+            return $app->json($controller->getError(), $status);
+
+        });
+
+        $api->post("user/unfollow", function (Request $request) use ($app) {
+
+            $controller = new Controller\UserController($request, $app);
+            $ret = $controller->addFollow();
 
             $status = 200;
             if ($ret) {
