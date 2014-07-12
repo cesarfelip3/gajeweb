@@ -146,7 +146,7 @@ class Api
         $api->post("user/following/list", function (Request $request) use ($app) {
 
             $controller = new Controller\UserController($request, $app);
-            $ret = $controller->getFollowerListByUser();
+            $ret = $controller->getFollowingListByUser();
 
             $status = 200;
             if ($ret) {
