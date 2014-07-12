@@ -138,6 +138,54 @@ class UserController extends BaseController
         return true;
     }
 
+    public function getFollowingListByUser ()
+    {
+        $user_uuid = $this->request->get("user_uuid", "");
+        if (empty ($user_uuid)) {
+            return $this->setFailed("user uuid is empty");
+        }
+
+        $page = $this->request->get("page", 0);
+        $pageSize = $this->request->get("page_size", 25);
+
+        $data = array();
+        $data["page"] = intval($page);
+        $data["page_size"] = intval($pageSize);
+        $data["user_uuid"] = $user_uuid;
+
+        $user = new User();
+        $userArray = $user->getFollowingList($data);
+
+        if (empty ($userArray)) {
+
+            $this->setSuccess("empty result from db", array("followings" => array()));
+        } else {
+
+            $data = array();
+            $data["page"] = 0;
+            $data["page_size"] = 1;
+            $data["user_uuid"] = $user_uuid;
+
+            $image = new Image();
+
+            foreach ($userArray as &$follower) {
+
+                $imageArray = $image->getImageByUser($data);
+
+                if (!empty ($imageArray)) {
+                    $follower["image"] = $imageArray[0];
+                } else {
+                    $follower["image"] = array ();
+                }
+
+            }
+
+            $this->setSuccess("", array("followings" => $userArray));
+        }
+
+        return true;
+    }
+
     public function unFollow ()
     {
         $user_uuid = $this->request->get("user_uuid", "");
