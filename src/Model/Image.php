@@ -163,6 +163,14 @@ class Image extends BaseModel
     // get images
     //================================
 
+    public function getImageByUser ($data)
+    {
+        $limit = "0, 1";
+        $result = $this->db->fetchAll("SELECT `image_uuid`, `name`, `description`, `width`, `height`, `create_date`, `modified_date`, `file_name`, `thumbnail` FROM {$this->table} WHERE user_uuid=? ORDER BY modified_date DESC LIMIT {$limit} ", array($user_uuid));
+
+        return $result;
+    }
+
     public function getImagesByUser($data)
     {
         $page = $data["page"];
@@ -175,13 +183,6 @@ class Image extends BaseModel
 
         $limit = "$page, $pageSize";
         $result = $this->db->fetchAll("SELECT `image_uuid`, `name`, `description`, `width`, `height`, `create_date`, `modified_date`, `file_name`, `thumbnail` FROM {$this->table} WHERE user_uuid=? ORDER BY modified_date DESC LIMIT {$limit} ", array($user_uuid));
-
-        if (!empty ($result)) {
-
-            foreach ($result as &$item) {
-
-            }
-        }
 
         return $result;
 

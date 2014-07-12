@@ -2,6 +2,7 @@
 
 namespace Api\Controller;
 
+use Model\Image;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Api\Controller\BaseController;
@@ -114,7 +115,22 @@ class UserController extends BaseController
 
             $data = array();
             $data["page"] = 0;
-            $data["page_size"] = 512;
+            $data["page_size"] = 1;
+            $data["user_uuid"] = $user_uuid;
+
+            $image = new Image();
+
+            foreach ($userArray as &$follower) {
+
+                $imageArray = $image->getImageByUser($data);
+
+                if (!empty ($imageArray)) {
+                    $follower["image"] = $imageArray[0];
+                } else {
+                    $follower["image"] = array ();
+                }
+
+            }
 
             $this->setSuccess("", array("followers" => $userArray));
         }
