@@ -165,6 +165,8 @@ class Image extends BaseModel
 
     public function getImageByUser ($data)
     {
+
+        $user_uuid = $data["user_uuid"];
         $limit = "0, 1";
         $result = $this->db->fetchAll("SELECT `image_uuid`, `name`, `description`, `width`, `height`, `create_date`, `modified_date`, `file_name`, `thumbnail` FROM {$this->table} WHERE user_uuid=? ORDER BY modified_date DESC LIMIT {$limit} ", array($user_uuid));
 
