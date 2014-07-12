@@ -319,7 +319,7 @@ class TestCase {
             exit;
         });
 
-        $test->get("image/get_brander", function () use ($app) {
+        $test->get("user/follower/list", function () use ($app) {
 
             $post = array('page' => 0, 'page_size' => 50, 'user_uuid'=>'53c0cdedceb1f');
 
