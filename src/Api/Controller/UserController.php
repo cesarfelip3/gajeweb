@@ -116,13 +116,7 @@ class UserController extends BaseController
             $data["page"] = 0;
             $data["page_size"] = 512;
 
-            foreach ($userArray as &$value) {
-
-                $value["latest_image_url"] = "";
-
-            }
-
-            $this->setSuccess("", array("followers" => $imageArray));
+            $this->setSuccess("", array("followers" => $userArray));
         }
 
         return true;
