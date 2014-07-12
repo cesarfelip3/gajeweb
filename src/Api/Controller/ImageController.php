@@ -118,15 +118,21 @@ class ImageController extends BaseController
                     $size = getimagesize($data["file_path"] . $data["file_name"]);
                     $data["width"] = $width = $size[0];
                     $data["height"] = $height = $size[1];
+
+                    $thumbnail_width = 280;
+                    $thumbnail_height = 185;
+
+                    $data["thumbnail"] = pathinfo($data["file_name"], PATHINFO_FILENAME) . "_" . $thumbnail_width . "x" . $thumbnail_height . pathinfo($data["file_name"], PATHINFO_EXTENSION);
+
                     $image = new Image();
                     $image_uuid = $image->addImage($data);
 
                     $imagine = new \Imagine\Imagick\Imagine();
 
                     $image = $imagine->open($data["file_path"] . $data["file_name"]);
-                    $image->resize(new \Imagine\Image\Box(280, 280 * $height / $width))
-                        ->crop(new \Imagine\Image\Point(0, 0), new \Imagine\Image\Box(280, 185))
-                        ->save($data["file_path"] . pathinfo($data["file_name"], PATHINFO_BASENAME) . "_280x240." . pathinfo($data["file_name"], PATHINFO_EXTENSION));
+                    $image->resize(new \Imagine\Image\Box($thumbnail_width, $thumbnail_width * $height / $width))
+                        ->crop(new \Imagine\Image\Point(0, 0), new \Imagine\Image\Box($thumbnail_width, $thumbnail_height))
+                        ->save($data["file_path"] . $data["thumbnail"]);
 
                     if (empty ($image_uuid)) {
 

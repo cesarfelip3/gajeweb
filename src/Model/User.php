@@ -73,19 +73,41 @@ class User extends BaseModel
     public function deleteFollow ($data)
     {
 
-        $this->db->delete($this->table_user_follow, array("user_follower_uuid"=>$data["user_follower_uuid"], "user_following_uuid"=>$data["user_following_uuid"]));
+        $this->db->delete($this->table_user_follow, array("user_followed_uuid"=>$data["user_followed_uuid"], "user_following_uuid"=>$data["user_following_uuid"]));
 
     }
 
     public function followExist ($data)
     {
-        $uuid = $this->db->fetchColumn("SELECT user_follower_uuid FROM {$this->table} WHERE user_follower_uuid=? OR user_following_uuid=?", array($data["user_follower_uuid"], $data["user_following_uuid"]));
+        $uuid = $this->db->fetchColumn("SELECT user_followed_uuid FROM {$this->table_user_follow} WHERE user_followed_uuid=? AND user_following_uuid=?", array($data["user_followed_uuid"], $data["user_following_uuid"]));
 
         if (empty ($uuid)) {
             return false;
         }
 
         return $uuid;
+    }
+
+    public function getFollowerList($data)
+    {
+        $page = $data["page"];
+        $pageSize = $data["page_size"];
+
+        $page = intval($page);
+        $pageSize = intval($pageSize);
+        $page = $page * $pageSize;
+
+        $limit = "$page, $pageSize";
+
+        $userTable = User::table();
+
+        $sql = "SELECT usr.* FROM {$this->table} usr INNER JOIN {$this->table_user_follow} fol ON usr.user_uuid=fol.user_followed_uuid WHERE fol.user_followed_uuid=? ORDER BY fol.create_date DESC LIMIT {$limit}";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue (1, $data["user_uuid"]);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+
+        return $result;
     }
 
     //=====================================

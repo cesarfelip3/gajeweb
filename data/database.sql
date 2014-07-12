@@ -59,9 +59,9 @@ CREATE TABLE IF NOT EXISTS `image` (
   `type` varchar(32) NOT NULL DEFAULT '',
   `status` varchar(32) NOT NULL DEFAULT '',
   `approved` int(11) NOT NULL DEFAULT '0',
-  `thumbnails` int(11) NOT NULL DEFAULT '0',
   `width` int(11) NOT NULL DEFAULT '0',
   `height` int(11) NOT NULL DEFAULT '0',
+  `thumbnail` varchar(255) NOT NULL DEFAULT '',
   `file_name` varchar(255) NOT NULL DEFAULT '',
   `file_path` varchar(255) NOT NULL DEFAULT '',
   `sort_order` int(11) NOT NULL DEFAULT '0',
@@ -145,6 +145,8 @@ CREATE TABLE IF NOT EXISTS `user` (
   `state` varchar(255) NOT NULL DEFAULT '',
   `country` varchar(255) NOT NULL DEFAULT '',
   `phone` varchar(255) NOT NULL DEFAULT '',
+  `image_latest` varchar(255) NOT NULL DEFAULT '',
+  `images` int(20) NOT NULL DEFAULT '0',
   `create_date` int(20) NOT NULL DEFAULT '0',
   `modified_date` int(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`user_id`)
@@ -160,8 +162,9 @@ DELETE FROM `user`;
 DROP TABLE IF EXISTS `user_follow`;
 CREATE TABLE IF NOT EXISTS `user_follow` (
   `user_follow_id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_follower_uuid` char(50) NOT NULL,
+  `user_followed_uuid` char(50) NOT NULL,
   `user_following_uuid` char(50) NOT NULL,
+  `create_date` int(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`user_follow_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
