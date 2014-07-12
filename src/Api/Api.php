@@ -126,6 +126,22 @@ class Api
             return $app->json($controller->getError(), $status);
 
         });
+
+        $api->post("user/follower/list", function (Request $request) use ($app) {
+
+            $controller = new Controller\UserController($request, $app);
+            $ret = $controller->getFollowerListByUser();
+
+            $status = 200;
+            if ($ret) {
+                $status = 200;
+            } else {
+                $status = 400;
+            }
+
+            return $app->json($controller->getError(), $status);
+
+        });
     }
 
     protected function _imageAPI (&$api)
