@@ -67,6 +67,7 @@ class User extends BaseModel
 
     public function addFollow ($data)
     {
+        $data["create_date"] = time();
         $this->db->insert($this->table_user_follow, $data);
     }
 
