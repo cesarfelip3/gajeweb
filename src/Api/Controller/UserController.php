@@ -170,6 +170,7 @@ class UserController extends BaseController
 
             foreach ($userArray as &$follower) {
 
+                $data["user_uuid"] = $follower["user_uuid"];
                 $imageArray = $image->getImageByUser($data);
 
                 if (!empty ($imageArray)) {
