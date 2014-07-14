@@ -116,12 +116,12 @@ class UserController extends BaseController
             $data = array();
             $data["page"] = 0;
             $data["page_size"] = 1;
-            $data["user_uuid"] = $user_uuid;
 
             $image = new Image();
 
             foreach ($userArray as &$follower) {
 
+                $data["user_uuid"] = $follower["user_uuid"];
                 $imageArray = $image->getImageByUser($data);
 
                 if (!empty ($imageArray)) {
