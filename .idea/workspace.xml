@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/User.php" afterPath="$PROJECT_DIR$/src/Model/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,15 +64,15 @@
       <file leaf-file-name="User.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Model/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="10" selection-start="2739" selection-end="2739" vertical-scroll-proportion="0.62068963" vertical-offset="1992" max-vertical-offset="4416">
+            <state line="102" column="31" selection-start="2536" selection-end="2536" vertical-scroll-proportion="0.54310346" vertical-offset="1992" max-vertical-offset="4416">
               <folding>
-                <marker date="1405346514000" expanded="true" signature="981:1040" placeholder="SELECT user_..." />
-                <marker date="1405346514000" expanded="true" signature="1242:1296" placeholder="SELECT user_..." />
-                <marker date="1405346514000" expanded="true" signature="1964:2074" placeholder="SELECT user_..." />
-                <marker date="1405346514000" expanded="true" signature="2521:2684" placeholder="SELECT usr.*..." />
-                <marker date="1405346514000" expanded="true" signature="3158:3354" placeholder="SELECT usr.*..." />
-                <marker date="1405346514000" expanded="true" signature="4073:4108" placeholder="SELECT COUNT..." />
-                <marker date="1405346514000" expanded="true" signature="4441:4512" placeholder="SELECT * FRO..." />
+                <marker date="1405346652000" expanded="true" signature="981:1040" placeholder="SELECT user_..." />
+                <marker date="1405346652000" expanded="true" signature="1242:1296" placeholder="SELECT user_..." />
+                <marker date="1405346652000" expanded="true" signature="1964:2074" placeholder="SELECT user_..." />
+                <marker date="1405346652000" expanded="true" signature="2521:2693" placeholder="SELECT DISTI..." />
+                <marker date="1405346652000" expanded="true" signature="3167:3363" placeholder="SELECT usr.*..." />
+                <marker date="1405346652000" expanded="true" signature="4082:4117" placeholder="SELECT COUNT..." />
+                <marker date="1405346652000" expanded="true" signature="4450:4521" placeholder="SELECT * FRO..." />
               </folding>
             </state>
           </provider>
@@ -814,15 +813,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="10" selection-start="2739" selection-end="2739" vertical-scroll-proportion="0.62068963" vertical-offset="1992" max-vertical-offset="4416">
+        <state line="102" column="31" selection-start="2536" selection-end="2536" vertical-scroll-proportion="0.54310346" vertical-offset="1992" max-vertical-offset="4416">
           <folding>
-            <marker date="1405346514000" expanded="true" signature="981:1040" placeholder="SELECT user_..." />
-            <marker date="1405346514000" expanded="true" signature="1242:1296" placeholder="SELECT user_..." />
-            <marker date="1405346514000" expanded="true" signature="1964:2074" placeholder="SELECT user_..." />
-            <marker date="1405346514000" expanded="true" signature="2521:2684" placeholder="SELECT usr.*..." />
-            <marker date="1405346514000" expanded="true" signature="3158:3354" placeholder="SELECT usr.*..." />
-            <marker date="1405346514000" expanded="true" signature="4073:4108" placeholder="SELECT COUNT..." />
-            <marker date="1405346514000" expanded="true" signature="4441:4512" placeholder="SELECT * FRO..." />
+            <marker date="1405346652000" expanded="true" signature="981:1040" placeholder="SELECT user_..." />
+            <marker date="1405346652000" expanded="true" signature="1242:1296" placeholder="SELECT user_..." />
+            <marker date="1405346652000" expanded="true" signature="1964:2074" placeholder="SELECT user_..." />
+            <marker date="1405346652000" expanded="true" signature="2521:2693" placeholder="SELECT DISTI..." />
+            <marker date="1405346652000" expanded="true" signature="3167:3363" placeholder="SELECT usr.*..." />
+            <marker date="1405346652000" expanded="true" signature="4082:4117" placeholder="SELECT COUNT..." />
+            <marker date="1405346652000" expanded="true" signature="4450:4521" placeholder="SELECT * FRO..." />
           </folding>
         </state>
       </provider>
