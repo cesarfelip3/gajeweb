@@ -29,8 +29,8 @@ class Api
     {
 
         // have to verify
-        // API key, API secret
-        // app ==> http://domain/ <X-Auth-Token: hash_256 (API Key, API Secret . time())>
+        //  key,  secret
+        // app ==> http://domain/ <X-Auth-Token: hash_256 ( Key,  Secret . time())>
         // http://domain/?ticket=time()
 
         //
@@ -41,22 +41,15 @@ class Api
         $api_v1 = $this->config["router_apiv1"];
 
         $api = $app["controllers_factory"];
-        $this->_userAPI($api);
-        $this->_imageAPI($api);
-        $this->_themeAPI($api);
+
+        $this->registerUserApi($api);
+        $this->registerImageApi($api);
+        $this->registerThemeApi($api);
 
         $app->mount($basename . "/" . $api_v1, $api);
     }
 
-    // 1. user/add : when user from app got FB login, his identity will be saved in server too
-    // 2. user/image/latest : will return the latest image from current user <uploaded>
-
-    // 3. image/upload : accept uploading image from app and save it for current user of app
-    // 4. image/update : edit image info ?
-
-    //
-
-    protected function _userAPI (&$api)
+    protected function registerUserApi (&$api)
     {
 
         $app = $this->app;
@@ -160,7 +153,7 @@ class Api
         });
     }
 
-    protected function _imageAPI (&$api)
+    protected function registerImageApi (&$api)
     {
 
         $app = $this->app;
@@ -295,7 +288,7 @@ class Api
             $token = $request->headers->get("X-Auth-Token");
             $time = $request->get("ticket", 0);
 
-            $message = "Invalid API request";
+            $message = "Invalid  request";
 
             if (empty ($time) || empty ($token)) {
 
@@ -307,10 +300,10 @@ class Api
                 return $app->json (array ("status"=>"failure", "message"=>$message), 400);
             }
 
-            $API_KEY = "XpHOUhadfhPIUYKHDFxOUYKJHERlkjhadfotYRWEWKEhluyadf";
-            $API_SECRET = "921936776534209348";
+            $_KEY = "XpHOUhadfhPIUYKHDFxOUYKJHERlkjhadfotYRWEWKEhluyadf";
+            $_SECRET = "921936776534209348";
 
-            $api_token = hash_hmac ("sha256", $API_KEY . sha1($API_SECRET . $time));
+            $api_token = hash_hmac ("sha256", $_KEY . sha1($_SECRET . $time));
 
             if (trim($token) == $api_token) {
 
@@ -321,7 +314,7 @@ class Api
 
     }
 
-    protected function _themeAPI (&$api)
+    protected function registerThemeApi (&$api)
     {
         $app = $this->app;
         $config = $this->config;

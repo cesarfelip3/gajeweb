@@ -31,6 +31,7 @@ class ImageController extends BaseController
     {
         $page = $this->request->get("page", 0);
         $pageSize = $this->request->get("page_size", 25);
+        $user_uuid = $this->request->get("user_uuid", "");
 
         $data = array();
         $data["page"] = intval($page);
@@ -54,7 +55,8 @@ class ImageController extends BaseController
                 $data["image_uuid"] = $value["image_uuid"];
                 $value["branders"] = $image->getBranderList($data);
                 $value["brander_count"] = count($value["branders"]);
-
+                $data["user_uuid"] = $user_uuid;
+                $value["enable_brander"] = $image->branderExist($data) == true ? 0 : 1;
             }
 
             $this->setSuccess("", array("images" => $imageArray));

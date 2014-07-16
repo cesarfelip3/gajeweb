@@ -54,9 +54,9 @@ class Image extends BaseModel
         return $uuid;
     }
 
-    public function addComment ($data)
+    public function addComment($data)
     {
-        $this->db->insert ($this->table_image_comment, $data);
+        $this->db->insert($this->table_image_comment, $data);
     }
 
     public function getCommentList($data)
@@ -75,7 +75,7 @@ class Image extends BaseModel
 
         $sql = "SELECT cmt.*, usr.username AS username, usr.facebook_icon AS usericon FROM {$this->table_image_comment} img INNER JOIN $commentTable cmt ON img.comment_uuid=cmt.comment_uuid INNER JOIN $userTable usr ON cmt.user_uuid=usr.user_uuid WHERE img.image_uuid=? ORDER BY cmt.modified_date ASC LIMIT {$limit}";
         $stmt = $this->db->prepare($sql);
-        $stmt->bindValue (1, $data["image_uuid"]);
+        $stmt->bindValue(1, $data["image_uuid"]);
         $stmt->execute();
         $result = $stmt->fetchAll();
 
@@ -84,7 +84,7 @@ class Image extends BaseModel
 
     // brander
 
-    public function addBrander ($data)
+    public function addBrander($data)
     {
         $user_uuid = $data["user_uuid"];
         $image_uuid = $data["image_uuid"];
@@ -95,7 +95,7 @@ class Image extends BaseModel
             return true;
         }
 
-        $this->db->insert ($this->table_image_brander, $data);
+        $this->db->insert($this->table_image_brander, $data);
     }
 
     public function getBranderList($data)
@@ -114,9 +114,38 @@ class Image extends BaseModel
 
         $sql = "SELECT usr.* FROM {$this->table_image_brander} img INNER JOIN $userTable usr ON img.user_uuid=usr.user_uuid WHERE img.image_uuid=? ORDER BY img.create_date ASC LIMIT {$limit}";
         $stmt = $this->db->prepare($sql);
-        $stmt->bindValue (1, $data["image_uuid"]);
+        $stmt->bindValue(1, $data["image_uuid"]);
         $stmt->execute();
         $result = $stmt->fetchAll();
+
+        return $result;
+    }
+
+    public function branderExist($data)
+    {
+        $page = $data["page"];
+        $pageSize = $data["page_size"];
+
+        $page = intval($page);
+        $pageSize = intval($pageSize);
+        $page = $page * $pageSize;
+
+        $limit = "$page, $pageSize";
+
+        $commentTable = Comment::table();
+        $userTable = User::table();
+
+        $sql = "SELECT img.image_uuid FROM {$this->table_image_brander} img INNER JOIN $userTable usr ON img.user_uuid=usr.user_uuid WHERE img.image_uuid=? AND img.user_uuid=? ORDER BY img.create_date ASC LIMIT {$limit}";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(1, $data["image_uuid"]);
+        $stmt->bindValue(2, $data["user_uuid"]);
+
+        $stmt->execute();
+        $result = $stmt->fetchColumn();
+
+        if (empty ($result)) {
+            return false;
+        }
 
         return $result;
     }
@@ -163,7 +192,7 @@ class Image extends BaseModel
     // get images
     //================================
 
-    public function getImageByUser ($data)
+    public function getImageByUser($data)
     {
 
         $user_uuid = $data["user_uuid"];
