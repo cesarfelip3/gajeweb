@@ -105,7 +105,14 @@ class ImageController extends BaseController
 
     public function deleteImage ($id)
     {
-        //$this->deleteImage($id);
+
+        $image = new Image();
+
+        if (!$image->imageExists($id)) {
+            exit("");
+        }
+
+        $this->deleteImage($id);
         exit("ok");
     }
 

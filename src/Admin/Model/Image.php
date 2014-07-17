@@ -53,6 +53,17 @@ class Image extends BaseModel
         return $result;
     }
 
+    public function imageExists($imageId)
+    {
+        $uuid = $this->db->fetchColumn("SELECT image_uuid FROM {$this->table} WHERE image_uuid=?", array($imageId));
+
+        if (empty ($uuid)) {
+            return false;
+        }
+
+        return $uuid;
+    }
+
     public function deleteImage($imageId)
     {
         $this->db->delete($this->table, array('image_uuid' => $imageId));
