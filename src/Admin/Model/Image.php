@@ -53,6 +53,11 @@ class Image extends BaseModel
         return $result;
     }
 
+    public function deleteImage($imageId)
+    {
+        $this->db->delete($this->table, array('image_uuid' => $imageId));
+    }
+
     public function getImage($data)
     {
 

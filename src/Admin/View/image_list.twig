@@ -76,7 +76,9 @@
             )
                     .done(function (data) {
 
-                        alert (data);
+                        if (data == "ok") {
+                            window.location.href = "";
+                        }
 
                     });
 

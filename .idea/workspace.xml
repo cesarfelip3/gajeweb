@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Admin.php" afterPath="$PROJECT_DIR$/src/Admin/Admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Model/Image.php" afterPath="$PROJECT_DIR$/src/Admin/Model/Image.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" afterPath="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/image_list.twig" afterPath="$PROJECT_DIR$/src/Admin/View/image_list.twig" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +30,7 @@
       <file leaf-file-name="ImageController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="13" selection-start="3091" selection-end="3091" vertical-scroll-proportion="-21.575758" vertical-offset="1904" max-vertical-offset="3024">
+            <state line="108" column="19" selection-start="3106" selection-end="3106" vertical-scroll-proportion="-20.848484" vertical-offset="1904" max-vertical-offset="3000">
               <folding>
                 <element signature="e#37#82#0" expanded="true" />
               </folding>
@@ -36,19 +38,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Admin.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Image.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Admin/Model/Image.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="0" selection-start="1393" selection-end="1393" vertical-scroll-proportion="-5.818182" vertical-offset="1224" max-vertical-offset="3768">
+              <folding>
+                <element signature="e#31#57#0" expanded="true" />
+                <marker date="1405600400000" expanded="true" signature="789:824" placeholder="SELECT COUNT..." />
+                <marker date="1405600400000" expanded="true" signature="1158:1229" placeholder="SELECT * FRO..." />
+                <marker date="1405600400000" expanded="true" signature="1544:1634" placeholder="SELECT * FRO..." />
+                <marker date="1405600400000" expanded="true" signature="1845:2045" placeholder="SELECT `imag..." />
+                <marker date="1405600400000" expanded="true" signature="2445:2645" placeholder="SELECT `imag..." />
+                <marker date="1405600400000" expanded="true" signature="3020:3396" placeholder="SELECT img.i..." />
+                <marker date="1405600400000" expanded="true" signature="3865:4176" placeholder="SELECT img.i..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Admin.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="0" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.5862069" vertical-offset="608" max-vertical-offset="1920">
+            <state line="51" column="0" selection-start="1227" selection-end="1227" vertical-scroll-proportion="-17.939394" vertical-offset="608" max-vertical-offset="1920">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image_list.twig" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Image.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Image.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="10" selection-start="788" selection-end="912" vertical-scroll-proportion="-16.757576" vertical-offset="383" max-vertical-offset="5904">
+              <folding>
+                <marker date="1405598256000" expanded="true" signature="1002:1058" placeholder="SELECT image..." />
+                <marker date="1405598256000" expanded="true" signature="1647:1946" placeholder="SELECT cmt.*..." />
+                <marker date="1405598256000" expanded="true" signature="2321:2407" placeholder="SELECT image..." />
+                <marker date="1405598256000" expanded="true" signature="2938:3112" placeholder="SELECT usr.*..." />
+                <marker date="1405598256000" expanded="true" signature="3659:3862" placeholder="SELECT img.i..." />
+                <marker date="1405598256000" expanded="true" signature="4424:4624" placeholder="SELECT `imag..." />
+                <marker date="1405598256000" expanded="true" signature="5024:5224" placeholder="SELECT `imag..." />
+                <marker date="1405598256000" expanded="true" signature="5599:5975" placeholder="SELECT img.i..." />
+                <marker date="1405598256000" expanded="true" signature="6444:6755" placeholder="SELECT img.i..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="image_list.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Admin/View/image_list.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="37" selection-start="3035" selection-end="3035" vertical-scroll-proportion="-28.121212" vertical-offset="944" max-vertical-offset="2208">
+            <state line="81" column="0" selection-start="3123" selection-end="3123" vertical-scroll-proportion="0.8189655" vertical-offset="1184" max-vertical-offset="2256">
               <folding />
             </state>
           </provider>
@@ -112,11 +151,11 @@
         <option value="$PROJECT_DIR$/src/Model/Image.php" />
         <option value="$PROJECT_DIR$/web/index.php" />
         <option value="$PROJECT_DIR$/src/Admin/Model/User.php" />
-        <option value="$PROJECT_DIR$/src/Admin/Model/Image.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/ImageController.php" />
-        <option value="$PROJECT_DIR$/src/Admin/View/image_list.twig" />
-        <option value="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" />
         <option value="$PROJECT_DIR$/src/Admin/Admin.php" />
+        <option value="$PROJECT_DIR$/src/Admin/Model/Image.php" />
+        <option value="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" />
+        <option value="$PROJECT_DIR$/src/Admin/View/image_list.twig" />
       </list>
     </option>
   </component>
@@ -763,23 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="218" column="137" selection-start="6565" selection-end="6565" vertical-scroll-proportion="-7.060606" vertical-offset="4975" max-vertical-offset="5904">
-          <folding>
-            <marker date="1405598256000" expanded="true" signature="-1:-1" placeholder="SELECT image..." />
-            <marker date="1405598256000" expanded="true" signature="-1:-1" placeholder="SELECT cmt.*..." />
-            <marker date="1405598256000" expanded="true" signature="-1:-1" placeholder="SELECT image..." />
-            <marker date="1405598256000" expanded="true" signature="-1:-1" placeholder="SELECT usr.*..." />
-            <marker date="1405598256000" expanded="true" signature="-1:-1" placeholder="SELECT img.i..." />
-            <marker date="1405598256000" expanded="true" signature="-1:-1" placeholder="SELECT `imag..." />
-            <marker date="1405598256000" expanded="true" signature="-1:-1" placeholder="SELECT `imag..." />
-            <marker date="1405598256000" expanded="true" signature="-1:-1" placeholder="SELECT img.i..." />
-            <marker date="1405598256000" expanded="true" signature="-1:-1" placeholder="SELECT img.i..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Model/BaseModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="1" selection-start="48" selection-end="48" vertical-scroll-proportion="-3.6363637" vertical-offset="0" max-vertical-offset="1056">
@@ -811,23 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Model/Image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="15" selection-start="919" selection-end="919" vertical-scroll-proportion="-16.515152" vertical-offset="463" max-vertical-offset="3648">
-          <folding>
-            <element signature="e#31#57#0" expanded="true" />
-            <marker date="1405598530000" expanded="true" signature="-1:-1" placeholder="SELECT img.i..." />
-            <marker date="1405598530000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
-            <marker date="1405598530000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1405598530000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1405598530000" expanded="true" signature="-1:-1" placeholder="SELECT `imag..." />
-            <marker date="1405598530000" expanded="true" signature="-1:-1" placeholder="SELECT `imag..." />
-            <marker date="1405598530000" expanded="true" signature="-1:-1" placeholder="SELECT img.i..." />
-            <marker date="1405598530000" expanded="true" signature="-1:-1" placeholder="SELECT img.i..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="108" column="0" selection-start="3086" selection-end="3086" vertical-scroll-proportion="-0.72727275" vertical-offset="2568" max-vertical-offset="9840">
@@ -837,25 +842,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/View/image_list.twig">
+    <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="37" selection-start="3035" selection-end="3035" vertical-scroll-proportion="-28.121212" vertical-offset="944" max-vertical-offset="2208">
+        <state line="51" column="0" selection-start="1227" selection-end="1227" vertical-scroll-proportion="-17.939394" vertical-offset="608" max-vertical-offset="1920">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ImageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="13" selection-start="3091" selection-end="3091" vertical-scroll-proportion="-21.575758" vertical-offset="1904" max-vertical-offset="3024">
+        <state line="108" column="19" selection-start="3106" selection-end="3106" vertical-scroll-proportion="-20.848484" vertical-offset="1904" max-vertical-offset="3000">
           <folding>
             <element signature="e#37#82#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
+    <entry file="file://$PROJECT_DIR$/src/Admin/Model/Image.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.5862069" vertical-offset="608" max-vertical-offset="1920">
+        <state line="59" column="0" selection-start="1393" selection-end="1393" vertical-scroll-proportion="-5.818182" vertical-offset="1224" max-vertical-offset="3768">
+          <folding>
+            <element signature="e#31#57#0" expanded="true" />
+            <marker date="1405600400000" expanded="true" signature="789:824" placeholder="SELECT COUNT..." />
+            <marker date="1405600400000" expanded="true" signature="1158:1229" placeholder="SELECT * FRO..." />
+            <marker date="1405600400000" expanded="true" signature="1544:1634" placeholder="SELECT * FRO..." />
+            <marker date="1405600400000" expanded="true" signature="1845:2045" placeholder="SELECT `imag..." />
+            <marker date="1405600400000" expanded="true" signature="2445:2645" placeholder="SELECT `imag..." />
+            <marker date="1405600400000" expanded="true" signature="3020:3396" placeholder="SELECT img.i..." />
+            <marker date="1405600400000" expanded="true" signature="3865:4176" placeholder="SELECT img.i..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="10" selection-start="788" selection-end="912" vertical-scroll-proportion="-16.757576" vertical-offset="383" max-vertical-offset="5904">
+          <folding>
+            <marker date="1405598256000" expanded="true" signature="1002:1058" placeholder="SELECT image..." />
+            <marker date="1405598256000" expanded="true" signature="1647:1946" placeholder="SELECT cmt.*..." />
+            <marker date="1405598256000" expanded="true" signature="2321:2407" placeholder="SELECT image..." />
+            <marker date="1405598256000" expanded="true" signature="2938:3112" placeholder="SELECT usr.*..." />
+            <marker date="1405598256000" expanded="true" signature="3659:3862" placeholder="SELECT img.i..." />
+            <marker date="1405598256000" expanded="true" signature="4424:4624" placeholder="SELECT `imag..." />
+            <marker date="1405598256000" expanded="true" signature="5024:5224" placeholder="SELECT `imag..." />
+            <marker date="1405598256000" expanded="true" signature="5599:5975" placeholder="SELECT img.i..." />
+            <marker date="1405598256000" expanded="true" signature="6444:6755" placeholder="SELECT img.i..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/View/image_list.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="0" selection-start="3123" selection-end="3123" vertical-scroll-proportion="0.8189655" vertical-offset="1184" max-vertical-offset="2256">
           <folding />
         </state>
       </provider>
