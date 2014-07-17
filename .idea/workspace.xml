@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" afterPath="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/image_list.twig" afterPath="$PROJECT_DIR$/src/Admin/View/image_list.twig" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,12 +25,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ImageController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ImageController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="151" selection-start="1600" selection-end="1600" vertical-scroll-proportion="0.68176794" vertical-offset="727" max-vertical-offset="2808">
+            <state line="31" column="31" selection-start="760" selection-end="760" vertical-scroll-proportion="-0.5151515" vertical-offset="727" max-vertical-offset="2808">
               <folding>
                 <element signature="e#37#82#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="image_list.twig" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Admin/View/image_list.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="56" selection-start="1694" selection-end="1694" vertical-scroll-proportion="0.25745857" vertical-offset="679" max-vertical-offset="1752">
+              <folding>
+                <element signature="e#1374#1393#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,15 +82,6 @@
                 <marker date="1405598256000" expanded="true" signature="5599:5975" placeholder="SELECT img.i..." />
                 <marker date="1405598256000" expanded="true" signature="6444:6755" placeholder="SELECT img.i..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/Controller/BaseController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="24" selection-start="175" selection-end="175" vertical-scroll-proportion="-7.2727275" vertical-offset="24" max-vertical-offset="1368">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -197,7 +199,6 @@
         <option value="$PROJECT_DIR$/src/Admin/Controller/BaseController.php" />
         <option value="$PROJECT_DIR$/src/Admin/View/user_list.twig" />
         <option value="$PROJECT_DIR$/src/Admin/Controller/UserController.php" />
-        <option value="$PROJECT_DIR$/src/Admin/View/image_list.twig" />
         <option value="$PROJECT_DIR$/src/Admin/View/theme_add.twig" />
         <option value="$PROJECT_DIR$/src/Model/Theme.php" />
         <option value="$PROJECT_DIR$/src/Admin/View/theme_list.twig" />
@@ -220,6 +221,7 @@
         <option value="$PROJECT_DIR$/src/Admin/Model/User.php" />
         <option value="$PROJECT_DIR$/src/Admin/Model/Image.php" />
         <option value="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" />
+        <option value="$PROJECT_DIR$/src/Admin/View/image_list.twig" />
       </list>
     </option>
   </component>
@@ -411,6 +413,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gajeweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gajeweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -806,13 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/View/image_list.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="72" selection-start="698" selection-end="698" vertical-scroll-proportion="-0.72727275" vertical-offset="360" max-vertical-offset="1704">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="20" selection-start="487" selection-end="515" vertical-scroll-proportion="-20.121212" vertical-offset="8" max-vertical-offset="1776">
@@ -932,9 +949,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ImageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="151" selection-start="1600" selection-end="1600" vertical-scroll-proportion="0.68176794" vertical-offset="727" max-vertical-offset="2808">
+        <state line="31" column="31" selection-start="760" selection-end="760" vertical-scroll-proportion="-0.5151515" vertical-offset="727" max-vertical-offset="2808">
           <folding>
             <element signature="e#37#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/View/image_list.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="56" selection-start="1694" selection-end="1694" vertical-scroll-proportion="0.25745857" vertical-offset="679" max-vertical-offset="1752">
+          <folding>
+            <element signature="e#1374#1393#0" expanded="true" />
           </folding>
         </state>
       </provider>
