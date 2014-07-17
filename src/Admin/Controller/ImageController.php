@@ -15,7 +15,7 @@ use Admin\Model\User;
 class ImageController extends BaseController
 {
 
-    public function __construct($request, $app)
+    public function __construct(Request $request, $app)
     {
         $this->app = $app;
         $this->request = $request;
@@ -52,6 +52,8 @@ class ImageController extends BaseController
 
             $image["create_date"] = date("Y-m-d", $image["create_date"]);
             $image["modified_date"] = date("Y-m-d", $image["modified_date"]);
+
+            $image["thumbnail"] = $this->request->getHost() . "/upload/image/" . $image["thumbnail"];
         }
 
         $totalPage = ceil ($total / $pageSize);
