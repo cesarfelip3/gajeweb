@@ -48,7 +48,7 @@ class Admin
             return $controller->imageList();
         });
 
-        $admin->get("/image/delete/{id}", function (Request $request) use ($app, $id) {
+        $admin->get("/image/delete/{id}", function (Request $request, $id) use ($app) {
 
             $controller = new \Admin\Controller\ImageController($request, $app);
             return $controller->deleteImage($id);

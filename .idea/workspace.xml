@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Admin.php" afterPath="$PROJECT_DIR$/src/Admin/Admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" afterPath="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ImageController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ImageController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="13" selection-start="3091" selection-end="3091" vertical-scroll-proportion="0.79310346" vertical-offset="1904" max-vertical-offset="3024">
+            <state line="109" column="13" selection-start="3091" selection-end="3091" vertical-scroll-proportion="-21.575758" vertical-offset="1904" max-vertical-offset="3024">
               <folding>
                 <element signature="e#37#82#0" expanded="true" />
               </folding>
@@ -37,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Admin.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Admin.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="49" selection-start="1358" selection-end="1358" vertical-scroll-proportion="-19.39394" vertical-offset="608" max-vertical-offset="1920">
+            <state line="49" column="0" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.5862069" vertical-offset="608" max-vertical-offset="1920">
               <folding />
             </state>
           </provider>
@@ -116,8 +115,8 @@
         <option value="$PROJECT_DIR$/src/Admin/Model/Image.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/ImageController.php" />
         <option value="$PROJECT_DIR$/src/Admin/View/image_list.twig" />
-        <option value="$PROJECT_DIR$/src/Admin/Admin.php" />
         <option value="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" />
+        <option value="$PROJECT_DIR$/src/Admin/Admin.php" />
       </list>
     </option>
   </component>
@@ -845,19 +844,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="49" selection-start="1358" selection-end="1358" vertical-scroll-proportion="-19.39394" vertical-offset="608" max-vertical-offset="1920">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ImageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="13" selection-start="3091" selection-end="3091" vertical-scroll-proportion="0.79310346" vertical-offset="1904" max-vertical-offset="3024">
+        <state line="109" column="13" selection-start="3091" selection-end="3091" vertical-scroll-proportion="-21.575758" vertical-offset="1904" max-vertical-offset="3024">
           <folding>
             <element signature="e#37#82#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="0" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.5862069" vertical-offset="608" max-vertical-offset="1920">
+          <folding />
         </state>
       </provider>
     </entry>
