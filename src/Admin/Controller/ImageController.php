@@ -53,7 +53,7 @@ class ImageController extends BaseController
             $image["create_date"] = date("Y-m-d", $image["create_date"]);
             $image["modified_date"] = date("Y-m-d", $image["modified_date"]);
 
-            $image["thumbnail"] = $this->request->getHost() . "/upload/image/" . $image["thumbnail"];
+            $image["thumbnail"] = '<img src="http://' . $this->request->getHost() . "/upload/image/" . $image["thumbnail"] . '" style="width:280px" />';
         }
 
         $totalPage = ceil ($total / $pageSize);
