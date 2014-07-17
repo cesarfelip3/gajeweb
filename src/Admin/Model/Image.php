@@ -27,7 +27,8 @@ class Image extends BaseModel
             "width" => "width",
             "height" => "height",
             "create_date" => "create date",
-            "modified_date" => "modified date"
+            "modified_date" => "modified date",
+            "thumbnail" => "thumbnail",
         );
     }
 
@@ -52,9 +53,15 @@ class Image extends BaseModel
         return $result;
     }
 
-    //================================
-    // get images
-    //================================
+    public function getImage($data)
+    {
+
+        $image_uuid = $data["image_uuid"];
+        $limit = "0, 1";
+        $result = $this->db->fetchAll("SELECT * FROM {$this->table} WHERE image_uuid=? ORDER BY modified_date DESC LIMIT {$limit} ", array($image_uuid));
+
+        return $result;
+    }
 
     public function getImageByUser($data)
     {
