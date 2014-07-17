@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" afterPath="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/image_list.twig" afterPath="$PROJECT_DIR$/src/Admin/View/image_list.twig" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ImageController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ImageController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="40" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.63900864" vertical-offset="727" max-vertical-offset="2856">
+            <state line="59" column="47" selection-start="1813" selection-end="1813" vertical-scroll-proportion="-20.878788" vertical-offset="727" max-vertical-offset="2856">
               <folding>
                 <element signature="e#37#82#0" expanded="true" />
               </folding>
@@ -36,10 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image_list.twig" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="image_list.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Admin/View/image_list.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="30" selection-start="2280" selection-end="2280" vertical-scroll-proportion="-19.424242" vertical-offset="559" max-vertical-offset="1752">
+            <state line="47" column="60" selection-start="2113" selection-end="2113" vertical-scroll-proportion="0.61314654" vertical-offset="559" max-vertical-offset="1752">
               <folding />
             </state>
           </provider>
@@ -106,8 +107,8 @@
         <option value="$PROJECT_DIR$/src/Admin/Model/User.php" />
         <option value="$PROJECT_DIR$/src/Admin/Model/Image.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/ImageController.php" />
-        <option value="$PROJECT_DIR$/src/Admin/View/image_list.twig" />
         <option value="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" />
+        <option value="$PROJECT_DIR$/src/Admin/View/image_list.twig" />
       </list>
     </option>
   </component>
@@ -835,19 +836,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/View/image_list.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="30" selection-start="2280" selection-end="2280" vertical-scroll-proportion="-19.424242" vertical-offset="559" max-vertical-offset="1752">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ImageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="40" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.63900864" vertical-offset="727" max-vertical-offset="2856">
+        <state line="59" column="47" selection-start="1813" selection-end="1813" vertical-scroll-proportion="-20.878788" vertical-offset="727" max-vertical-offset="2856">
           <folding>
             <element signature="e#37#82#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/View/image_list.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="60" selection-start="2113" selection-end="2113" vertical-scroll-proportion="0.61314654" vertical-offset="559" max-vertical-offset="1752">
+          <folding />
         </state>
       </provider>
     </entry>
