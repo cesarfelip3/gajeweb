@@ -79,6 +79,7 @@ $api_v1 = $config["router_apiv1"];
 use Model\BaseModel;
 
 BaseModel::$DB = $app['db'];
+\Admin\Model\BaseModel::$DB = $app['db'];
 
 //==========================
 // API module routers
