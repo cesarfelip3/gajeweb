@@ -75,7 +75,8 @@ class User extends BaseModel
             "firstname" => "firstname",
             "lastname" => "lastname",
             "create_date" => "create date",
-            "modified_date" => "modified date"
+            "modified_date" => "modified date",
+            "location" => "location"
         );
     }
 
