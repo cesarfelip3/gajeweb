@@ -112,6 +112,9 @@ class ImageController extends BaseController
             exit("");
         }
 
+        print_r ($id);
+        exit;
+
         $this->deleteImage($id);
         exit("ok");
     }
