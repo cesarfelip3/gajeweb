@@ -94,8 +94,9 @@ class UserController extends BaseController
             "userArray" => $userArray,
             "page" => $page,
             "pageSize" => $pageSize,
-            "totalPages" => $total,
-            "pagination" => $pagination
+            "totalPages" => $totalPage,
+            "pagination" => $pagination,
+            "totalUsers" => $total
         )));
 
         return $response;
