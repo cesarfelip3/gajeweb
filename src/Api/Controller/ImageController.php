@@ -122,7 +122,7 @@ class ImageController extends BaseController
                     $data["height"] = $height = $size[1];
 
                     $thumbnail_width = 280;
-                    $thumbnail_height = 185;
+                    $thumbnail_height = (int)(280 * $height / $width);
 
                     $data["thumbnail"] = pathinfo($data["file_name"], PATHINFO_FILENAME) . "_" . $thumbnail_width . "x" . $thumbnail_height . pathinfo($data["file_name"], PATHINFO_EXTENSION);
 

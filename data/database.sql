@@ -175,3 +175,16 @@ DELETE FROM `user_follow`;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+
+-- 导出  表 gajeapp.user_follow 结构
+DROP TABLE IF EXISTS `user_block`;
+CREATE TABLE IF NOT EXISTS `user_block` (
+  `user_block_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_uuid` char(50) NOT NULL,
+  `user_block_uuid` char(50) NOT NULL,
+  `create_date` int(20) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`user_block_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 正在导出表  gajeapp.user_follow 的数据：~0 rows (大约)
+DELETE FROM `user_block`;
