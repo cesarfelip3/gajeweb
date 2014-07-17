@@ -68,7 +68,7 @@
 
         function del(id) {
             jQuery.ajax({
-                        url: "{{ deleteUrl|raw }}",
+                        url: "{{ deleteUrl|raw }}" + id,
                         beforeSend: function (xhr) {
 
                         }
@@ -76,6 +76,7 @@
             )
                     .done(function (data) {
 
+                        alert (data);
 
                     });
 

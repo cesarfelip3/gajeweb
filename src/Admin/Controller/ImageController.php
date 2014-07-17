@@ -54,7 +54,7 @@ class ImageController extends BaseController
             $image["modified_date"] = date("Y-m-d", $image["modified_date"]);
 
             $image["thumbnail"] = '<img src="http://' . $this->request->getHost() . "/upload/image/" . $image["thumbnail"] . '" style="width:280px" />';
-            $image["#"] = '<a href="http://' . $this->request->getHttpHost() . "/gajeweb/admin/image/delete/" . $image["image_uuid"] . '"> Delete </a>';
+            $image["#"] = '<a href="javascript:del(' . $image["image_uuid"] . ');"> Delete </a>';
         }
 
         $totalPage = ceil ($total / $pageSize);
@@ -96,7 +96,7 @@ class ImageController extends BaseController
             "pageSize" => $pageSize,
             "totalPages" => $total,
             "pagination" => $pagination,
-            "deleteUrl" => 'http://' . $this->request->getHost() . "/gajeweb/image/delete/"
+            "deleteUrl" => 'http://' . $this->request->getHost() . "/gajeweb/admin/image/delete/"
         )));
 
         return $response;
