@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Model/Image.php" afterPath="$PROJECT_DIR$/src/Admin/Model/Image.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" afterPath="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/image_list.twig" afterPath="$PROJECT_DIR$/src/Admin/View/image_list.twig" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ImageController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ImageController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="19" selection-start="3106" selection-end="3106" vertical-scroll-proportion="-20.848484" vertical-offset="1904" max-vertical-offset="3000">
+            <state line="107" column="10" selection-start="3064" selection-end="3064" vertical-scroll-proportion="0.7413793" vertical-offset="1904" max-vertical-offset="3000">
               <folding>
                 <element signature="e#37#82#0" expanded="true" />
               </folding>
@@ -84,10 +82,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image_list.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="image_list.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/View/image_list.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="0" selection-start="3123" selection-end="3123" vertical-scroll-proportion="0.8189655" vertical-offset="1184" max-vertical-offset="2256">
+            <state line="75" column="13" selection-start="2952" selection-end="2952" vertical-scroll-proportion="-18.666666" vertical-offset="1184" max-vertical-offset="2256">
               <folding />
             </state>
           </provider>
@@ -154,8 +152,8 @@
         <option value="$PROJECT_DIR$/src/Api/Controller/ImageController.php" />
         <option value="$PROJECT_DIR$/src/Admin/Admin.php" />
         <option value="$PROJECT_DIR$/src/Admin/Model/Image.php" />
-        <option value="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" />
         <option value="$PROJECT_DIR$/src/Admin/View/image_list.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" />
       </list>
     </option>
   </component>
@@ -849,15 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ImageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="19" selection-start="3106" selection-end="3106" vertical-scroll-proportion="-20.848484" vertical-offset="1904" max-vertical-offset="3000">
-          <folding>
-            <element signature="e#37#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Model/Image.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="59" column="0" selection-start="1393" selection-end="1393" vertical-scroll-proportion="-5.818182" vertical-offset="1224" max-vertical-offset="3768">
@@ -893,8 +882,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/View/image_list.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="0" selection-start="3123" selection-end="3123" vertical-scroll-proportion="0.8189655" vertical-offset="1184" max-vertical-offset="2256">
+        <state line="75" column="13" selection-start="2952" selection-end="2952" vertical-scroll-proportion="-18.666666" vertical-offset="1184" max-vertical-offset="2256">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ImageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="10" selection-start="3064" selection-end="3064" vertical-scroll-proportion="0.7413793" vertical-offset="1904" max-vertical-offset="3000">
+          <folding>
+            <element signature="e#37#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
