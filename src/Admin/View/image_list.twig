@@ -64,5 +64,23 @@
         {{ pagination|raw }}
     </ul>
 
+    <script type="text/javascript">
+
+        function del(id) {
+            jQuery.ajax({
+                        url: "{{ deleteUrl|raw }}",
+                        beforeSend: function (xhr) {
+
+                        }
+                    }
+            )
+                    .done(function (data) {
+
+
+                    });
+
+        }
+    </script>
+
 
 {% endblock %}

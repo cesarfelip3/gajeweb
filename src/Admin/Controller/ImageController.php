@@ -95,7 +95,8 @@ class ImageController extends BaseController
             "page" => $page,
             "pageSize" => $pageSize,
             "totalPages" => $total,
-            "pagination" => $pagination
+            "pagination" => $pagination,
+            "deleteUrl" => 'http://' . $this->request->getHost() . "/gajeweb/image/delete/"
         )));
 
         return $response;

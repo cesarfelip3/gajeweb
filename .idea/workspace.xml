@@ -29,7 +29,7 @@
       <file leaf-file-name="ImageController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="47" selection-start="1813" selection-end="1813" vertical-scroll-proportion="-20.878788" vertical-offset="727" max-vertical-offset="2856">
+            <state line="98" column="91" selection-start="3006" selection-end="3006" vertical-scroll-proportion="-20.878788" vertical-offset="1663" max-vertical-offset="2880">
               <folding>
                 <element signature="e#37#82#0" expanded="true" />
               </folding>
@@ -40,7 +40,7 @@
       <file leaf-file-name="image_list.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Admin/View/image_list.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="60" selection-start="2113" selection-end="2113" vertical-scroll-proportion="0.61314654" vertical-offset="559" max-vertical-offset="1752">
+            <state line="68" column="26" selection-start="2753" selection-end="2753" vertical-scroll-proportion="0.5344828" vertical-offset="1136" max-vertical-offset="2184">
               <folding />
             </state>
           </provider>
@@ -838,7 +838,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ImageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="47" selection-start="1813" selection-end="1813" vertical-scroll-proportion="-20.878788" vertical-offset="727" max-vertical-offset="2856">
+        <state line="98" column="91" selection-start="3006" selection-end="3006" vertical-scroll-proportion="-20.878788" vertical-offset="1663" max-vertical-offset="2880">
           <folding>
             <element signature="e#37#82#0" expanded="true" />
           </folding>
@@ -847,7 +847,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/View/image_list.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="60" selection-start="2113" selection-end="2113" vertical-scroll-proportion="0.61314654" vertical-offset="559" max-vertical-offset="1752">
+        <state line="68" column="26" selection-start="2753" selection-end="2753" vertical-scroll-proportion="0.5344828" vertical-offset="1136" max-vertical-offset="2184">
           <folding />
         </state>
       </provider>
