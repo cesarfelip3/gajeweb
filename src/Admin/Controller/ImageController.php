@@ -9,8 +9,8 @@ use Symfony\Component\HttpFoundation\Response;
 
 use Admin\Controller\BaseController;
 use Silex\Provider\TwigServiceProvider;
-use Model\Image;
-use Model\User;
+use Admin\Model\Image;
+use Admin\Model\User;
 
 class ImageController extends BaseController
 {
@@ -95,6 +95,13 @@ class ImageController extends BaseController
         )));
 
         return $response;
+
+    }
+
+    public function getImage ()
+    {
+        $image_uuid = $this->request->get ("id", "");
+
 
     }
 
