@@ -9,8 +9,8 @@ use Symfony\Component\HttpFoundation\Response;
 
 use Admin\Controller\BaseController;
 use Silex\Provider\TwigServiceProvider;
-use Model\Image;
-use Model\Theme;
+use Admin\Model\Image;
+use Admin\Model\Theme;
 
 class ThemeController extends BaseController
 {

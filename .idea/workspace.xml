@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Model/User.php" afterPath="$PROJECT_DIR$/src/Admin/Model/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Controller/IndexController.php" afterPath="$PROJECT_DIR$/src/Admin/Controller/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Controller/ThemeController.php" afterPath="$PROJECT_DIR$/src/Admin/Controller/ThemeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/Admin/Controller/UserController.php" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +30,7 @@
       <file leaf-file-name="ImageController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="0" selection-start="3085" selection-end="3085" vertical-scroll-proportion="-16.484848" vertical-offset="2072" max-vertical-offset="3168">
+            <state line="109" column="0" selection-start="3085" selection-end="3085" vertical-scroll-proportion="-79.27273" vertical-offset="0" max-vertical-offset="3168">
               <folding>
                 <element signature="e#37#82#0" expanded="true" />
               </folding>
@@ -36,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/Model/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="47" selection-start="1851" selection-end="1851" vertical-scroll-proportion="0.69827586" vertical-offset="1200" max-vertical-offset="2736">
+            <state line="78" column="36" selection-start="1888" selection-end="1888" vertical-scroll-proportion="-10.181818" vertical-offset="1536" max-vertical-offset="2736">
               <folding>
                 <marker date="1405601424000" expanded="true" signature="992:1051" placeholder="SELECT user_..." />
                 <marker date="1405601424000" expanded="true" signature="1253:1307" placeholder="SELECT user_..." />
@@ -50,10 +52,49 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Theme.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Admin/Model/Theme.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="4" selection-start="36" selection-end="36" vertical-scroll-proportion="5.818182" vertical-offset="312" max-vertical-offset="1680">
+              <folding>
+                <marker date="1405598044000" expanded="true" signature="911:946" placeholder="SELECT COUNT..." />
+                <marker date="1405598044000" expanded="true" signature="1280:1351" placeholder="SELECT * FRO..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="UserController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/Controller/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="38" selection-start="2675" selection-end="2675" vertical-scroll-proportion="-19.39394" vertical-offset="1472" max-vertical-offset="2544">
+            <state line="9" column="10" selection-start="217" selection-end="217" vertical-scroll-proportion="-6.5454545" vertical-offset="0" max-vertical-offset="2664">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThemeController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ThemeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="10" selection-start="242" selection-end="242" vertical-scroll-proportion="-8.727273" vertical-offset="0" max-vertical-offset="3240">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Admin/Controller/IndexController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="10" selection-start="217" selection-end="217" vertical-scroll-proportion="-6.5454545" vertical-offset="0" max-vertical-offset="1152">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Admin/Controller/BaseController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="24" selection-start="175" selection-end="175" vertical-scroll-proportion="0.26519337" vertical-offset="24" max-vertical-offset="1368">
               <folding />
             </state>
           </provider>
@@ -89,47 +130,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Admin.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="0" selection-start="1227" selection-end="1227" vertical-scroll-proportion="-17.939394" vertical-offset="608" max-vertical-offset="1920">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Image.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Image.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="7" selection-start="918" selection-end="1173" vertical-scroll-proportion="-13.848485" vertical-offset="599" max-vertical-offset="5904">
-              <folding>
-                <marker date="1405598256000" expanded="true" signature="1002:1058" placeholder="SELECT image..." />
-                <marker date="1405598256000" expanded="true" signature="1647:1946" placeholder="SELECT cmt.*..." />
-                <marker date="1405598256000" expanded="true" signature="2321:2407" placeholder="SELECT image..." />
-                <marker date="1405598256000" expanded="true" signature="2938:3112" placeholder="SELECT usr.*..." />
-                <marker date="1405598256000" expanded="true" signature="3659:3862" placeholder="SELECT img.i..." />
-                <marker date="1405598256000" expanded="true" signature="4424:4624" placeholder="SELECT `imag..." />
-                <marker date="1405598256000" expanded="true" signature="5024:5224" placeholder="SELECT `imag..." />
-                <marker date="1405598256000" expanded="true" signature="5599:5975" placeholder="SELECT img.i..." />
-                <marker date="1405598256000" expanded="true" signature="6444:6755" placeholder="SELECT img.i..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="database.sql" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/database.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state line="97" column="17" selection-start="3596" selection-end="3596" vertical-scroll-proportion="0.0" vertical-offset="2760" max-vertical-offset="4680">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="image_list.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/View/image_list.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="13" selection-start="2952" selection-end="2952" vertical-scroll-proportion="-18.666666" vertical-offset="1184" max-vertical-offset="2256">
               <folding />
             </state>
           </provider>
@@ -168,7 +172,6 @@
         <option value="$PROJECT_DIR$/src/Admin/View/layout-default.html" />
         <option value="$PROJECT_DIR$/src/Admin/View/layout.default.html" />
         <option value="$PROJECT_DIR$/src/Admin/View/index.html" />
-        <option value="$PROJECT_DIR$/src/Admin/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/src/Admin/View/layout.default.twig" />
         <option value="$PROJECT_DIR$/src/Admin/View/index.twig" />
         <option value="$PROJECT_DIR$/web/config.php" />
@@ -176,7 +179,6 @@
         <option value="$PROJECT_DIR$/src/Admin/View/theme_add.twig" />
         <option value="$PROJECT_DIR$/src/Model/Theme.php" />
         <option value="$PROJECT_DIR$/src/Admin/View/theme_list.twig" />
-        <option value="$PROJECT_DIR$/src/Admin/Controller/ThemeController.php" />
         <option value="$PROJECT_DIR$/web/config-test.php" />
         <option value="$PROJECT_DIR$/src/Model/Comment.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/ThemeController.php" />
@@ -195,9 +197,11 @@
         <option value="$PROJECT_DIR$/src/Admin/View/image_list.twig" />
         <option value="$PROJECT_DIR$/src/Admin/Model/Image.php" />
         <option value="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" />
-        <option value="$PROJECT_DIR$/src/Admin/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/src/Admin/View/user_list.twig" />
         <option value="$PROJECT_DIR$/src/Admin/Model/User.php" />
+        <option value="$PROJECT_DIR$/src/Admin/Controller/UserController.php" />
+        <option value="$PROJECT_DIR$/src/Admin/Controller/ThemeController.php" />
+        <option value="$PROJECT_DIR$/src/Admin/Controller/IndexController.php" />
       </list>
     </option>
   </component>
@@ -689,11 +693,6 @@
         <state line="32" column="20" selection-start="1453" selection-end="1453" vertical-scroll-proportion="0.82758623" vertical-offset="0" max-vertical-offset="1704" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="46" selection-start="128" selection-end="168" vertical-scroll-proportion="2.1515152" vertical-offset="191" max-vertical-offset="1152" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/View/index2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="22" selection-start="2204" selection-end="2708" vertical-scroll-proportion="-16.727272" vertical-offset="624" max-vertical-offset="10560" />
@@ -702,11 +701,6 @@
     <entry file="file://$PROJECT_DIR$/src/Admin/View/forms.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="146" column="0" selection-start="7298" selection-end="11437" vertical-scroll-proportion="0.0" vertical-offset="3048" max-vertical-offset="9288" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ThemeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="858" selection-end="858" vertical-scroll-proportion="-0.72727275" vertical-offset="888" max-vertical-offset="3240" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/View/theme_list.twig">
@@ -789,13 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/BaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="24" selection-start="175" selection-end="175" vertical-scroll-proportion="-7.2727275" vertical-offset="24" max-vertical-offset="1368">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Model/Comment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="4" selection-start="35" selection-end="35" vertical-scroll-proportion="-2.909091" vertical-offset="0" max-vertical-offset="4392">
@@ -814,16 +801,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="4" selection-start="35" selection-end="35" vertical-scroll-proportion="-2.909091" vertical-offset="0" max-vertical-offset="528">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Model/Theme.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="4" selection-start="36" selection-end="36" vertical-scroll-proportion="-3.6363637" vertical-offset="0" max-vertical-offset="1680">
-          <folding>
-            <marker date="1405598044000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
-            <marker date="1405598044000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -870,15 +847,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="7" selection-start="918" selection-end="1173" vertical-scroll-proportion="-13.848485" vertical-offset="599" max-vertical-offset="5904">
           <folding>
-            <marker date="1405598256000" expanded="true" signature="1002:1058" placeholder="SELECT image..." />
-            <marker date="1405598256000" expanded="true" signature="1647:1946" placeholder="SELECT cmt.*..." />
-            <marker date="1405598256000" expanded="true" signature="2321:2407" placeholder="SELECT image..." />
-            <marker date="1405598256000" expanded="true" signature="2938:3112" placeholder="SELECT usr.*..." />
-            <marker date="1405598256000" expanded="true" signature="3659:3862" placeholder="SELECT img.i..." />
-            <marker date="1405598256000" expanded="true" signature="4424:4624" placeholder="SELECT `imag..." />
-            <marker date="1405598256000" expanded="true" signature="5024:5224" placeholder="SELECT `imag..." />
-            <marker date="1405598256000" expanded="true" signature="5599:5975" placeholder="SELECT img.i..." />
-            <marker date="1405598256000" expanded="true" signature="6444:6755" placeholder="SELECT img.i..." />
+            <marker date="1405598256000" expanded="true" signature="-1:-1" placeholder="SELECT image..." />
+            <marker date="1405598256000" expanded="true" signature="-1:-1" placeholder="SELECT cmt.*..." />
+            <marker date="1405598256000" expanded="true" signature="-1:-1" placeholder="SELECT image..." />
+            <marker date="1405598256000" expanded="true" signature="-1:-1" placeholder="SELECT usr.*..." />
+            <marker date="1405598256000" expanded="true" signature="-1:-1" placeholder="SELECT img.i..." />
+            <marker date="1405598256000" expanded="true" signature="-1:-1" placeholder="SELECT `imag..." />
+            <marker date="1405598256000" expanded="true" signature="-1:-1" placeholder="SELECT `imag..." />
+            <marker date="1405598256000" expanded="true" signature="-1:-1" placeholder="SELECT img.i..." />
+            <marker date="1405598256000" expanded="true" signature="-1:-1" placeholder="SELECT img.i..." />
           </folding>
         </state>
       </provider>
@@ -900,22 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ImageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="0" selection-start="3085" selection-end="3085" vertical-scroll-proportion="-16.484848" vertical-offset="2072" max-vertical-offset="3168">
-          <folding>
-            <element signature="e#37#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="38" selection-start="2675" selection-end="2675" vertical-scroll-proportion="-19.39394" vertical-offset="1472" max-vertical-offset="2544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/View/user_list.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="0" selection-start="1459" selection-end="1459" vertical-scroll-proportion="-20.363636" vertical-offset="72" max-vertical-offset="1704">
@@ -932,15 +893,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/Model/Theme.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="4" selection-start="36" selection-end="36" vertical-scroll-proportion="5.818182" vertical-offset="312" max-vertical-offset="1680">
+          <folding>
+            <marker date="1405598044000" expanded="true" signature="911:946" placeholder="SELECT COUNT..." />
+            <marker date="1405598044000" expanded="true" signature="1280:1351" placeholder="SELECT * FRO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Model/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="47" selection-start="1851" selection-end="1851" vertical-scroll-proportion="0.69827586" vertical-offset="1200" max-vertical-offset="2736">
+        <state line="78" column="36" selection-start="1888" selection-end="1888" vertical-scroll-proportion="-10.181818" vertical-offset="1536" max-vertical-offset="2736">
           <folding>
             <marker date="1405601424000" expanded="true" signature="992:1051" placeholder="SELECT user_..." />
             <marker date="1405601424000" expanded="true" signature="1253:1307" placeholder="SELECT user_..." />
             <marker date="1405601424000" expanded="true" signature="1985:2020" placeholder="SELECT COUNT..." />
             <marker date="1405601424000" expanded="true" signature="2353:2424" placeholder="SELECT * FRO..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="10" selection-start="217" selection-end="217" vertical-scroll-proportion="-6.5454545" vertical-offset="0" max-vertical-offset="2664">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ThemeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="10" selection-start="242" selection-end="242" vertical-scroll-proportion="-8.727273" vertical-offset="0" max-vertical-offset="3240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="10" selection-start="217" selection-end="217" vertical-scroll-proportion="-6.5454545" vertical-offset="0" max-vertical-offset="1152">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ImageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="0" selection-start="3085" selection-end="3085" vertical-scroll-proportion="-79.27273" vertical-offset="0" max-vertical-offset="3168">
+          <folding>
+            <element signature="e#37#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="24" selection-start="175" selection-end="175" vertical-scroll-proportion="0.26519337" vertical-offset="24" max-vertical-offset="1368">
+          <folding />
         </state>
       </provider>
     </entry>

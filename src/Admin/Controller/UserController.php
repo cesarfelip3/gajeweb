@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Silex\Provider\TwigServiceProvider;
 use Admin\Controller\BaseController;
 
-use Model\User;
+use Admin\Model\User;
 
 class UserController extends BaseController
 {
