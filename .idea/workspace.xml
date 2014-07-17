@@ -28,7 +28,7 @@
       <file leaf-file-name="ImageController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="13" selection-start="3196" selection-end="3196" vertical-scroll-proportion="0.76724136" vertical-offset="2072" max-vertical-offset="3240">
+            <state line="112" column="9" selection-start="3158" selection-end="3158" vertical-scroll-proportion="0.6896552" vertical-offset="2072" max-vertical-offset="3168">
               <folding>
                 <element signature="e#37#82#0" expanded="true" />
               </folding>
@@ -900,7 +900,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ImageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="13" selection-start="3196" selection-end="3196" vertical-scroll-proportion="0.76724136" vertical-offset="2072" max-vertical-offset="3240">
+        <state line="112" column="9" selection-start="3158" selection-end="3158" vertical-scroll-proportion="0.6896552" vertical-offset="2072" max-vertical-offset="3168">
           <folding>
             <element signature="e#37#82#0" expanded="true" />
           </folding>
