@@ -62,9 +62,9 @@
       <file leaf-file-name="user_list.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Admin/View/user_list.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="85" selection-start="710" selection-end="710" vertical-scroll-proportion="0.33620688" vertical-offset="72" max-vertical-offset="1704">
+            <state line="16" column="95" selection-start="720" selection-end="720" vertical-scroll-proportion="0.33620688" vertical-offset="72" max-vertical-offset="1704">
               <folding>
-                <element signature="e#806#827#0" expanded="true" />
+                <element signature="e#811#832#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -937,9 +937,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/View/user_list.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="85" selection-start="710" selection-end="710" vertical-scroll-proportion="0.33620688" vertical-offset="72" max-vertical-offset="1704">
+        <state line="16" column="95" selection-start="720" selection-end="720" vertical-scroll-proportion="0.33620688" vertical-offset="72" max-vertical-offset="1704">
           <folding>
-            <element signature="e#806#827#0" expanded="true" />
+            <element signature="e#811#832#0" expanded="true" />
           </folding>
         </state>
       </provider>
