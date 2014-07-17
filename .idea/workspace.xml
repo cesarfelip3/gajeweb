@@ -39,7 +39,7 @@
       <file leaf-file-name="image_list.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Admin/View/image_list.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="56" selection-start="1694" selection-end="1694" vertical-scroll-proportion="0.25745857" vertical-offset="679" max-vertical-offset="1752">
+            <state line="48" column="52" selection-start="2159" selection-end="2159" vertical-scroll-proportion="0.5226519" vertical-offset="679" max-vertical-offset="1752">
               <folding>
                 <element signature="e#1374#1393#0" expanded="true" />
               </folding>
@@ -958,7 +958,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/View/image_list.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="56" selection-start="1694" selection-end="1694" vertical-scroll-proportion="0.25745857" vertical-offset="679" max-vertical-offset="1752">
+        <state line="48" column="52" selection-start="2159" selection-end="2159" vertical-scroll-proportion="0.5226519" vertical-offset="679" max-vertical-offset="1752">
           <folding>
             <element signature="e#1374#1393#0" expanded="true" />
           </folding>
