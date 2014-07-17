@@ -48,6 +48,12 @@ class Admin
             return $controller->imageList();
         });
 
+        $admin->get("/image/delete/{id}", function (Request $request) use ($app, $id) {
+
+            $controller = new \Admin\Controller\ImageController($request, $app);
+            return $controller->deleteImage($id);
+        });
+
         $admin->match("/theme", function (Request $request) use ($app) {
 
             $controller = new \Admin\Controller\ThemeController($request, $app);

@@ -103,6 +103,13 @@ class ImageController extends BaseController
 
     }
 
+    public function deleteImage ($id)
+    {
+
+        print_r ($id);
+        exit;
+    }
+
     public function getImage ()
     {
         $image_uuid = $this->request->get ("id", "");

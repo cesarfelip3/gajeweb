@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Admin.php" afterPath="$PROJECT_DIR$/src/Admin/Admin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" afterPath="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" />
     </list>
     <ignored path="gaje.iws" />
@@ -28,10 +29,19 @@
       <file leaf-file-name="ImageController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="83" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.43211207" vertical-offset="967" max-vertical-offset="2856">
+            <state line="109" column="13" selection-start="3091" selection-end="3091" vertical-scroll-proportion="0.79310346" vertical-offset="1904" max-vertical-offset="3024">
               <folding>
                 <element signature="e#37#82#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Admin.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="49" selection-start="1358" selection-end="1358" vertical-scroll-proportion="-19.39394" vertical-offset="608" max-vertical-offset="1920">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,7 +98,6 @@
         <option value="$PROJECT_DIR$/src/Admin/View/theme_add.twig" />
         <option value="$PROJECT_DIR$/src/Model/Theme.php" />
         <option value="$PROJECT_DIR$/src/Admin/View/theme_list.twig" />
-        <option value="$PROJECT_DIR$/src/Admin/Admin.php" />
         <option value="$PROJECT_DIR$/src/Admin/Controller/ThemeController.php" />
         <option value="$PROJECT_DIR$/web/config-test.php" />
         <option value="$PROJECT_DIR$/src/Model/Comment.php" />
@@ -107,6 +116,7 @@
         <option value="$PROJECT_DIR$/src/Admin/Model/Image.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/ImageController.php" />
         <option value="$PROJECT_DIR$/src/Admin/View/image_list.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/Admin.php" />
         <option value="$PROJECT_DIR$/src/Admin/Controller/ImageController.php" />
       </list>
     </option>
@@ -716,13 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="20" selection-start="487" selection-end="515" vertical-scroll-proportion="-20.121212" vertical-offset="8" max-vertical-offset="1776">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Controller/BaseController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="24" selection-start="175" selection-end="175" vertical-scroll-proportion="-7.2727275" vertical-offset="24" max-vertical-offset="1368">
@@ -842,9 +845,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="49" selection-start="1358" selection-end="1358" vertical-scroll-proportion="-19.39394" vertical-offset="608" max-vertical-offset="1920">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ImageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="83" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.43211207" vertical-offset="967" max-vertical-offset="2856">
+        <state line="109" column="13" selection-start="3091" selection-end="3091" vertical-scroll-proportion="0.79310346" vertical-offset="1904" max-vertical-offset="3024">
           <folding>
             <element signature="e#37#82#0" expanded="true" />
           </folding>
