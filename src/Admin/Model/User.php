@@ -1,0 +1,175 @@
+<?php
+
+namespace Admin\Model;
+
+use \Admin\Model\BaseModel;
+
+class User extends BaseModel
+{
+
+    public $table = "user";
+    public $table_user_follow = "user_follow";
+
+    public function __construct()
+    {
+        $this->db = self::$DB;
+    }
+
+    public function addUser($data)
+    {
+
+        $data["user_uuid"] = uniqid();
+        $data["create_date"] = time();
+        $data["modified_date"] = time();
+        $this->db->insert($this->table, $data);
+
+        return $data["user_uuid"];
+    }
+
+    public function updateUser($data)
+    {
+        $token = $data["facebook_token"];
+        unset ($data["facebook_token"]);
+        $data["modified_date"] = time();
+        $this->db->update($this->table, $data, array('facebook_token' => $token));
+    }
+
+    public function deleteUser($data)
+    {
+        $this->db->delete($this->table, array('facebook_token' => $data["facebook_token"]));
+    }
+
+    public function userExistsByToken($userId)
+    {
+        $uuid = $this->db->fetchColumn("SELECT user_uuid FROM {$this->table} WHERE facebook_token=?", array($userId));
+
+        if (empty ($uuid)) {
+            return false;
+        }
+
+        return $uuid;
+    }
+
+    public function userExists($userId)
+    {
+        $uuid = $this->db->fetchColumn("SELECT user_uuid FROM {$this->table} WHERE user_uuid=?", array($userId));
+
+        if (empty ($uuid)) {
+            return false;
+        }
+
+        return $uuid;
+    }
+
+    //=====================================
+    //
+    //=====================================
+
+    public function addFollow ($data)
+    {
+        $data["create_date"] = time();
+        $this->db->insert($this->table_user_follow, $data);
+    }
+
+    public function deleteFollow ($data)
+    {
+
+        $this->db->delete($this->table_user_follow, array("user_followed_uuid"=>$data["user_followed_uuid"], "user_following_uuid"=>$data["user_following_uuid"]));
+
+    }
+
+    public function followExist ($data)
+    {
+        $uuid = $this->db->fetchColumn("SELECT user_followed_uuid FROM {$this->table_user_follow} WHERE user_followed_uuid=? AND user_following_uuid=?", array($data["user_followed_uuid"], $data["user_following_uuid"]));
+
+        if (empty ($uuid)) {
+            return false;
+        }
+
+        return $uuid;
+    }
+
+    public function getFollowerList($data)
+    {
+        $page = $data["page"];
+        $pageSize = $data["page_size"];
+
+        $page = intval($page);
+        $pageSize = intval($pageSize);
+        $page = $page * $pageSize;
+
+        $limit = "$page, $pageSize";
+
+        $sql = "SELECT DISTINCT usr.* FROM {$this->table} usr INNER JOIN {$this->table_user_follow} fol ON usr.user_uuid=fol.user_followed_uuid ORDER BY fol.create_date DESC LIMIT {$limit}";
+        $stmt = $this->db->prepare($sql);
+        //$stmt->bindValue (1, $data["user_uuid"]);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+
+        return $result;
+    }
+
+    public function getFollowingList($data)
+    {
+        $page = $data["page"];
+        $pageSize = $data["page_size"];
+
+        $page = intval($page);
+        $pageSize = intval($pageSize);
+        $page = $page * $pageSize;
+
+        $limit = "$page, $pageSize";
+
+        $sql = "SELECT DISTINCT usr.* FROM {$this->table} usr INNER JOIN {$this->table_user_follow} fol ON usr.user_uuid=fol.user_following_uuid ORDER BY fol.create_date DESC LIMIT {$limit}";
+        $stmt = $this->db->prepare($sql);
+        //$stmt->bindValue (1, $data["user_uuid"]);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+
+        return $result;
+    }
+
+    //=====================================
+    // admin
+    //=====================================
+
+    public function getUserListHeader()
+    {
+        return array(
+            "#" => "#",
+            "username" => "username",
+            "email" => "email",
+            "firstname" => "firstname",
+            "lastname" => "lastname",
+            "create_date" => "create date",
+            "modified_date" => "modified date"
+        );
+    }
+
+    public function getTotal()
+    {
+        $total = $this->db->fetchColumn("SELECT COUNT(*) FROM {$this->table}");
+        return $total;
+    }
+
+    public function getUserList($data)
+    {
+        $page = $data["page"];
+        $pageSize = $data["page_size"];
+
+        $page = intval($page);
+        $pageSize = intval($pageSize);
+        $page = $page * $pageSize;
+
+        $limit = "$page, $pageSize";
+        $result = $this->db->fetchAll("SELECT * FROM {$this->table} ORDER BY modified_date DESC LIMIT {$limit}");
+
+        return $result;
+    }
+
+    public static function table()
+    {
+        return "user";
+    }
+
+}
