@@ -42,9 +42,7 @@ class ImageController extends BaseController
         $data["page_size"] = $pageSize <= 25 ? 25 : intval($pageSize);
 
         $image = new Image();
-        print_r ($image);
-        exit;
-        
+
         $headerArray = $image->getImageListHeader();
         $imageArray = $image->getImageList($data);
 
