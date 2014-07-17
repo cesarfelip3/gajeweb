@@ -124,7 +124,7 @@ class ImageController extends BaseController
                     $thumbnail_width = 280;
                     $thumbnail_height = (int)(280 * $height / $width);
 
-                    $data["thumbnail"] = pathinfo($data["file_name"], PATHINFO_FILENAME) . "_" . $thumbnail_width . "x" . $thumbnail_height . pathinfo($data["file_name"], PATHINFO_EXTENSION);
+                    $data["thumbnail"] = pathinfo($data["file_name"], PATHINFO_FILENAME) . "_" . $thumbnail_width . "x" . $thumbnail_height . "." . pathinfo($data["file_name"], PATHINFO_EXTENSION);
 
                     $image = new Image();
                     $image_uuid = $image->addImage($data);
