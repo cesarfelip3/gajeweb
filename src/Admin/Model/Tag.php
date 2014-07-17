@@ -2,7 +2,7 @@
 
 namespace Admin\Model;
 
-use \Admin\Model\BaseModel;
+use Admin\Model\BaseModel;
 
 class Tag extends BaseModel
 {

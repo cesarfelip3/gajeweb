@@ -2,8 +2,8 @@
 
 namespace Admin\Model;
 
-use \Admin\Model\BaseModel;
-use \Admin\Model\Comment;
+use Admin\Model\BaseModel;
+use Admin\Model\Comment;
 
 class Image extends BaseModel
 {
