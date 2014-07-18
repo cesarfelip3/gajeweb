@@ -37,7 +37,7 @@ class ImageController extends BaseController
         $data["page"] = intval($page);
         $data["page_size"] = intval($pageSize);
         $data["user_uuid"] = $user_uuid;
-        
+
         $image = new Image();
 
         $imageArray = $image->getLatestImages($data);

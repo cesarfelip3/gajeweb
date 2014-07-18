@@ -196,7 +196,7 @@ class Image extends BaseModel
 
         $userTable = User::table();
 
-        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username FROM {$this->table} img INNER JOIN $userTable usr ON img.user_uuid=usr.user_uuid WHERE usr.user_uuid NOT IN (SELECT usrb.user_uuid FROM user_block usrb WHERE usrb.user_uuid=?) ORDER BY modified_date DESC LIMIT {$limit}";
+        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username FROM {$this->table} img INNER JOIN $userTable usr ON img.user_uuid=usr.user_uuid WHERE usr.user_uuid NOT IN (SELECT usrb.user_block_uuid FROM user_block usrb WHERE usrb.user_uuid=?) ORDER BY modified_date DESC LIMIT {$limit}";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue(1, $user_uuid);
         $stmt->execute();

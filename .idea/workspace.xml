@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Image.php" afterPath="$PROJECT_DIR$/src/Model/Image.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Controller/ImageController.php" afterPath="$PROJECT_DIR$/src/Api/Controller/ImageController.php" />
     </list>
     <ignored path="gaje.iws" />
@@ -25,29 +26,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ImageController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ImageController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="8" selection-start="945" selection-end="945" vertical-scroll-proportion="0.20689656" vertical-offset="552" max-vertical-offset="9672">
+            <state line="39" column="0" selection-start="937" selection-end="937" vertical-scroll-proportion="-5.818182" vertical-offset="552" max-vertical-offset="9624">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Image.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Image.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Model/Image.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="182" column="0" selection-start="5280" selection-end="5280" vertical-scroll-proportion="1.6969697" vertical-offset="4400" max-vertical-offset="5976">
+            <state line="198" column="400" selection-start="6025" selection-end="6025" vertical-scroll-proportion="0.7413793" vertical-offset="4328" max-vertical-offset="5976">
               <folding>
-                <marker date="1405695316000" expanded="true" signature="1002:1058" placeholder="SELECT image..." />
-                <marker date="1405695316000" expanded="true" signature="1647:1946" placeholder="SELECT cmt.*..." />
-                <marker date="1405695316000" expanded="true" signature="2321:2407" placeholder="SELECT image..." />
-                <marker date="1405695316000" expanded="true" signature="2938:3112" placeholder="SELECT usr.*..." />
-                <marker date="1405695316000" expanded="true" signature="3659:3862" placeholder="SELECT img.i..." />
-                <marker date="1405695316000" expanded="true" signature="4424:4624" placeholder="SELECT `imag..." />
-                <marker date="1405695316000" expanded="true" signature="5024:5224" placeholder="SELECT `imag..." />
-                <marker date="1405695316000" expanded="true" signature="5641:6111" placeholder="SELECT img.i..." />
-                <marker date="1405695316000" expanded="true" signature="6621:6932" placeholder="SELECT img.i..." />
+                <marker date="1405695664000" expanded="true" signature="1002:1058" placeholder="SELECT image..." />
+                <marker date="1405695664000" expanded="true" signature="1647:1946" placeholder="SELECT cmt.*..." />
+                <marker date="1405695664000" expanded="true" signature="2321:2407" placeholder="SELECT image..." />
+                <marker date="1405695664000" expanded="true" signature="2938:3112" placeholder="SELECT usr.*..." />
+                <marker date="1405695664000" expanded="true" signature="3659:3862" placeholder="SELECT img.i..." />
+                <marker date="1405695664000" expanded="true" signature="4424:4624" placeholder="SELECT `imag..." />
+                <marker date="1405695664000" expanded="true" signature="5024:5224" placeholder="SELECT `imag..." />
+                <marker date="1405695664000" expanded="true" signature="5641:6117" placeholder="SELECT img.i..." />
+                <marker date="1405695664000" expanded="true" signature="6627:6938" placeholder="SELECT img.i..." />
               </folding>
             </state>
           </provider>
@@ -114,8 +115,8 @@
         <option value="$PROJECT_DIR$/src/Model/User.php" />
         <option value="$PROJECT_DIR$/src/Api/Api.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/UserController.php" />
-        <option value="$PROJECT_DIR$/src/Model/Image.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/ImageController.php" />
+        <option value="$PROJECT_DIR$/src/Model/Image.php" />
       </list>
     </option>
   </component>
@@ -723,27 +724,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Image.php">
+    <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="0" selection-start="5280" selection-end="5280" vertical-scroll-proportion="1.6969697" vertical-offset="4400" max-vertical-offset="5976">
-          <folding>
-            <marker date="1405695316000" expanded="true" signature="1002:1058" placeholder="SELECT image..." />
-            <marker date="1405695316000" expanded="true" signature="1647:1946" placeholder="SELECT cmt.*..." />
-            <marker date="1405695316000" expanded="true" signature="2321:2407" placeholder="SELECT image..." />
-            <marker date="1405695316000" expanded="true" signature="2938:3112" placeholder="SELECT usr.*..." />
-            <marker date="1405695316000" expanded="true" signature="3659:3862" placeholder="SELECT img.i..." />
-            <marker date="1405695316000" expanded="true" signature="4424:4624" placeholder="SELECT `imag..." />
-            <marker date="1405695316000" expanded="true" signature="5024:5224" placeholder="SELECT `imag..." />
-            <marker date="1405695316000" expanded="true" signature="5641:6111" placeholder="SELECT img.i..." />
-            <marker date="1405695316000" expanded="true" signature="6621:6932" placeholder="SELECT img.i..." />
-          </folding>
+        <state line="39" column="0" selection-start="937" selection-end="937" vertical-scroll-proportion="-5.818182" vertical-offset="552" max-vertical-offset="9624">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
+    <entry file="file://$PROJECT_DIR$/src/Model/Image.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="8" selection-start="945" selection-end="945" vertical-scroll-proportion="0.20689656" vertical-offset="552" max-vertical-offset="9672">
-          <folding />
+        <state line="198" column="400" selection-start="6025" selection-end="6025" vertical-scroll-proportion="0.7413793" vertical-offset="4328" max-vertical-offset="5976">
+          <folding>
+            <marker date="1405695664000" expanded="true" signature="1002:1058" placeholder="SELECT image..." />
+            <marker date="1405695664000" expanded="true" signature="1647:1946" placeholder="SELECT cmt.*..." />
+            <marker date="1405695664000" expanded="true" signature="2321:2407" placeholder="SELECT image..." />
+            <marker date="1405695664000" expanded="true" signature="2938:3112" placeholder="SELECT usr.*..." />
+            <marker date="1405695664000" expanded="true" signature="3659:3862" placeholder="SELECT img.i..." />
+            <marker date="1405695664000" expanded="true" signature="4424:4624" placeholder="SELECT `imag..." />
+            <marker date="1405695664000" expanded="true" signature="5024:5224" placeholder="SELECT `imag..." />
+            <marker date="1405695664000" expanded="true" signature="5641:6117" placeholder="SELECT img.i..." />
+            <marker date="1405695664000" expanded="true" signature="6627:6938" placeholder="SELECT img.i..." />
+          </folding>
         </state>
       </provider>
     </entry>
