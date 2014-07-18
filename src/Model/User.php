@@ -9,6 +9,7 @@ class User extends BaseModel
 
     public $table = "user";
     public $table_user_follow = "user_follow";
+    public $table_user_block = "user_block";
 
     public function __construct()
     {
@@ -59,6 +60,27 @@ class User extends BaseModel
         }
 
         return $uuid;
+    }
+
+    //===============================
+    //
+    //===============================
+
+    public function blockExist ($data)
+    {
+        $uuid = $this->db->fetchColumn("SELECT user_uuid FROM {$this->table_user_block} WHERE user_uuid=? AND user_block_uuid=?", array($data["user_uuid"], $data["user_block_uuid"]));
+
+        if (empty ($uuid)) {
+            return false;
+        }
+
+        return $uuid;
+    }
+
+    public function addBlock ($data)
+    {
+        $data["create_date"] = time();
+        $this->db->insert($this->table_user_block, $data);
     }
 
     //=====================================

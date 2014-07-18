@@ -62,6 +62,33 @@ class UserController extends BaseController
 
     }
 
+    //=================================
+    //
+    //=================================
+    public function addBlock ()
+    {
+        $user_uuid = $this->request->get("user_uuid", "");
+        $block_uuid = $this->request->get("user_block_uuid", "");
+
+        $data["user_uuid"] = $user_uuid;
+        $data["user_block_uuid"] = $follow_uuid;
+
+        $user = new User();
+        $uuid = $user->blockExist($data);
+
+        if (!$uuid) {
+
+            $user->addBlock($data);
+            return $this->setSuccess("success");
+
+        } else {
+
+            return $this->setSuccess("exists");
+        }
+
+        return true;
+    }
+
     //======================================
     //
     //======================================
