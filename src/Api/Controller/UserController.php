@@ -71,7 +71,7 @@ class UserController extends BaseController
         $block_uuid = $this->request->get("user_block_uuid", "");
 
         $data["user_uuid"] = $user_uuid;
-        $data["user_block_uuid"] = $follow_uuid;
+        $data["user_block_uuid"] = $block_uuid;
 
         $user = new User();
         $uuid = $user->blockExist($data);
