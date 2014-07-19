@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Admin.php" afterPath="$PROJECT_DIR$/src/Admin/Admin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/database.sql" afterPath="$PROJECT_DIR$/data/database.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/image_list.twig" afterPath="$PROJECT_DIR$/src/Admin/View/image_list.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/index.twig" afterPath="$PROJECT_DIR$/src/Admin/View/index.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/theme_list.twig" afterPath="$PROJECT_DIR$/src/Admin/View/theme_list.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/user_list.twig" afterPath="$PROJECT_DIR$/src/Admin/View/user_list.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/note_list.twig" afterPath="$PROJECT_DIR$/src/Admin/View/note_list.twig" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,22 +26,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="note_list.twig" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="note_list.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Admin/View/note_list.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="28" selection-start="625" selection-end="625" vertical-scroll-proportion="-3.862069" vertical-offset="0" max-vertical-offset="2232">
+            <state line="14" column="50" selection-start="648" selection-end="648" vertical-scroll-proportion="0.38443935" vertical-offset="0" max-vertical-offset="2232">
               <folding>
-                <element signature="e#1176#1212#0" expanded="true" />
-                <element signature="e#2918#2937#0" expanded="true" />
+                <element signature="e#1177#1213#0" expanded="true" />
+                <element signature="e#2919#2938#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Admin.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Admin.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="0" selection-start="1677" selection-end="1677" vertical-scroll-proportion="0.5344828" vertical-offset="992" max-vertical-offset="2064">
+            <state line="63" column="0" selection-start="1677" selection-end="1677" vertical-scroll-proportion="-15.030303" vertical-offset="992" max-vertical-offset="2064">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.sql" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/database.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="116" column="40" selection-start="4263" selection-end="4263" vertical-scroll-proportion="0.0" vertical-offset="2544" max-vertical-offset="5088">
               <folding />
             </state>
           </provider>
@@ -65,19 +69,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="theme_add.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/View/theme_add.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="17" selection-start="0" selection-end="2558" vertical-scroll-proportion="-12.363636" vertical-offset="0" max-vertical-offset="1704">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="theme_list.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/View/theme_list.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="95" selection-start="410" selection-end="489" vertical-scroll-proportion="-4.3636365" vertical-offset="0" max-vertical-offset="2232">
+            <state line="7" column="17" selection-start="428" selection-end="428" vertical-scroll-proportion="-5.090909" vertical-offset="0" max-vertical-offset="2232">
               <folding />
             </state>
           </provider>
@@ -185,7 +180,6 @@
         <option value="$PROJECT_DIR$/src/Api/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/ImageController.php" />
         <option value="$PROJECT_DIR$/src/Model/Image.php" />
-        <option value="$PROJECT_DIR$/data/database.sql" />
         <option value="$PROJECT_DIR$/src/Admin/Controller/NoteController.php" />
         <option value="$PROJECT_DIR$/src/Admin/Model/Note.php" />
         <option value="$PROJECT_DIR$/src/Admin/View/note_add.twig" />
@@ -193,8 +187,9 @@
         <option value="$PROJECT_DIR$/src/Admin/View/user_list.twig" />
         <option value="$PROJECT_DIR$/src/Admin/View/image_list.twig" />
         <option value="$PROJECT_DIR$/src/Admin/View/index.twig" />
-        <option value="$PROJECT_DIR$/src/Admin/View/note_list.twig" />
         <option value="$PROJECT_DIR$/src/Admin/Admin.php" />
+        <option value="$PROJECT_DIR$/data/database.sql" />
+        <option value="$PROJECT_DIR$/src/Admin/View/note_list.twig" />
       </list>
     </option>
   </component>
@@ -792,13 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/database.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="0" selection-start="4399" selection-end="4399" vertical-scroll-proportion="0.0" vertical-offset="2544" max-vertical-offset="5088">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/ThemeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="54" selection-start="571" selection-end="571" vertical-scroll-proportion="-10.212121" vertical-offset="119" max-vertical-offset="1080">
@@ -851,13 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/View/theme_list.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="95" selection-start="410" selection-end="489" vertical-scroll-proportion="-4.3636365" vertical-offset="0" max-vertical-offset="2232">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/View/user_list.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="78" selection-start="489" selection-end="489" vertical-scroll-proportion="-2.909091" vertical-offset="72" max-vertical-offset="1728">
@@ -897,20 +878,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/View/note_list.twig">
+    <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="28" selection-start="625" selection-end="625" vertical-scroll-proportion="-3.862069" vertical-offset="0" max-vertical-offset="2232">
-          <folding>
-            <element signature="e#1176#1212#0" expanded="true" />
-            <element signature="e#2918#2937#0" expanded="true" />
-          </folding>
+        <state line="63" column="0" selection-start="1677" selection-end="1677" vertical-scroll-proportion="-15.030303" vertical-offset="992" max-vertical-offset="2064">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
+    <entry file="file://$PROJECT_DIR$/data/database.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="1677" selection-end="1677" vertical-scroll-proportion="0.5344828" vertical-offset="992" max-vertical-offset="2064">
+        <state line="116" column="40" selection-start="4263" selection-end="4263" vertical-scroll-proportion="0.0" vertical-offset="2544" max-vertical-offset="5088">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/View/theme_list.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="17" selection-start="428" selection-end="428" vertical-scroll-proportion="-5.090909" vertical-offset="0" max-vertical-offset="2232">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/View/note_list.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="50" selection-start="648" selection-end="648" vertical-scroll-proportion="0.38443935" vertical-offset="0" max-vertical-offset="2232">
+          <folding>
+            <element signature="e#1177#1213#0" expanded="true" />
+            <element signature="e#2919#2938#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

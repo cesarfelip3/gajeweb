@@ -113,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `theme` (
   `theme_id` int(20) NOT NULL AUTO_INCREMENT,
   `theme_uuid` char(50) NOT NULL DEFAULT '',
   `name` varchar(50) NOT NULL DEFAULT '',
-  `description` varchar(255) NOT NULL DEFAULT '',
+  `description` text DEFAULT '',
   `create_date` int(11) NOT NULL DEFAULT '0',
   `modified_date` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`theme_id`)
@@ -130,7 +130,7 @@ CREATE TABLE IF NOT EXISTS `note` (
   `note_id` int(20) NOT NULL AUTO_INCREMENT,
   `note_uuid` char(50) NOT NULL DEFAULT '',
   `name` varchar(50) NOT NULL DEFAULT '',
-  `description` varchar(255) NOT NULL DEFAULT '',
+  `description` text NOT NULL DEFAULT '',
   `create_date` int(11) NOT NULL DEFAULT '0',
   `modified_date` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`note_id`)
