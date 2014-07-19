@@ -354,8 +354,8 @@ class Api
 
         $api->post("note/list", function (Request $request) use ($app) {
 
-            $controller = new Controller\ThemeController($request, $app);
-            $ret = $controller->getThemeList();
+            $controller = new Controller\NoteController($request, $app);
+            $ret = $controller->getNoteList();
 
             $status = 200;
             if ($ret) {
