@@ -28,10 +28,10 @@
       <file leaf-file-name="note_list.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Admin/View/note_list.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="71" selection-start="386" selection-end="386" vertical-scroll-proportion="0.16475973" vertical-offset="0" max-vertical-offset="2232">
+            <state line="6" column="75" selection-start="390" selection-end="390" vertical-scroll-proportion="0.16475973" vertical-offset="0" max-vertical-offset="2232">
               <folding>
-                <element signature="e#1174#1210#0" expanded="true" />
-                <element signature="e#2916#2935#0" expanded="true" />
+                <element signature="e#1178#1214#0" expanded="true" />
+                <element signature="e#2920#2939#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -921,10 +921,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/View/note_list.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="71" selection-start="386" selection-end="386" vertical-scroll-proportion="0.16475973" vertical-offset="0" max-vertical-offset="2232">
+        <state line="6" column="75" selection-start="390" selection-end="390" vertical-scroll-proportion="0.16475973" vertical-offset="0" max-vertical-offset="2232">
           <folding>
-            <element signature="e#1174#1210#0" expanded="true" />
-            <element signature="e#2916#2935#0" expanded="true" />
+            <element signature="e#1178#1214#0" expanded="true" />
+            <element signature="e#2920#2939#0" expanded="true" />
           </folding>
         </state>
       </provider>
