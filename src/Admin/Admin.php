@@ -60,6 +60,12 @@ class Admin
             return $controller->themeList();
         })->method("GET|POST");
 
+        $admin->match("/note", function (Request $request) use ($app) {
+
+            $controller = new \Admin\Controller\NoteController($request, $app);
+            return $controller->noteList();
+        })->method("GET|POST");
+
         $admin->before(function (Request $request, $app) {
 
             $API_KEY = "XpHOUhadfhPIUYKHDFxOUYKJHERlkjhadfotYRWEWKEhluyadf";

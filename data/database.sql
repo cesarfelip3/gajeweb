@@ -124,6 +124,23 @@ DELETE FROM `theme`;
 /*!40000 ALTER TABLE `theme` DISABLE KEYS */;
 /*!40000 ALTER TABLE `theme` ENABLE KEYS */;
 
+-- 导出  表 gajeapp.theme 结构
+DROP TABLE IF EXISTS `note`;
+CREATE TABLE IF NOT EXISTS `note` (
+  `note_id` int(20) NOT NULL AUTO_INCREMENT,
+  `note_uuid` char(50) NOT NULL DEFAULT '',
+  `name` varchar(50) NOT NULL DEFAULT '',
+  `description` varchar(255) NOT NULL DEFAULT '',
+  `create_date` int(11) NOT NULL DEFAULT '0',
+  `modified_date` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`note_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 正在导出表  gajeapp.theme 的数据：~0 rows (大约)
+DELETE FROM `theme`;
+/*!40000 ALTER TABLE `theme` DISABLE KEYS */;
+/*!40000 ALTER TABLE `theme` ENABLE KEYS */;
+
 
 -- 导出  表 gajeapp.user 结构
 DROP TABLE IF EXISTS `user`;
