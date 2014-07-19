@@ -351,6 +351,22 @@ class Api
             return $app->json($controller->getError(), $status);
 
         });
+
+        $api->post("note/list", function (Request $request) use ($app) {
+
+            $controller = new Controller\ThemeController($request, $app);
+            $ret = $controller->getThemeList();
+
+            $status = 200;
+            if ($ret) {
+                $status = 200;
+            } else {
+                $status = 400;
+            }
+
+            return $app->json($controller->getError(), $status);
+
+        });
     }
 
 }

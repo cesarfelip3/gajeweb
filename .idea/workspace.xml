@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/database.sql" afterPath="$PROJECT_DIR$/data/database.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/note_list.twig" afterPath="$PROJECT_DIR$/src/Admin/View/note_list.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Api.php" afterPath="$PROJECT_DIR$/src/Api/Api.php" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,13 +25,66 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="note_list.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="note_list.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/View/note_list.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="50" selection-start="648" selection-end="648" vertical-scroll-proportion="0.38443935" vertical-offset="0" max-vertical-offset="2232">
+            <state line="14" column="50" selection-start="648" selection-end="648" vertical-scroll-proportion="-3.862069" vertical-offset="0" max-vertical-offset="2232">
               <folding>
                 <element signature="e#1177#1213#0" expanded="true" />
                 <element signature="e#2919#2938#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThemeController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Api/Controller/ThemeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="29" selection-start="0" selection-end="1002" vertical-scroll-proportion="-15.30303" vertical-offset="119" max-vertical-offset="1080">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NoteController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Api/Controller/NoteController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="0" selection-start="758" selection-end="758" vertical-scroll-proportion="-5.0804596" vertical-offset="374" max-vertical-offset="1248">
+              <folding>
+                <element signature="e#34#79#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Note.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Note.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="28" selection-start="425" selection-end="425" vertical-scroll-proportion="-3.3448277" vertical-offset="285" max-vertical-offset="1680">
+              <folding>
+                <marker date="1405746180000" expanded="true" signature="894:929" placeholder="SELECT COUNT..." />
+                <marker date="1405746180000" expanded="true" signature="1262:1333" placeholder="SELECT * FRO..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Api.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Api/Api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="357" column="33" selection-start="9166" selection-end="9166" vertical-scroll-proportion="0.6637931" vertical-offset="7928" max-vertical-offset="9024">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Theme.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Theme.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="20" selection-start="989" selection-end="989" vertical-scroll-proportion="-13.848485" vertical-offset="695" max-vertical-offset="1680">
+              <folding>
+                <marker date="1403737368000" expanded="true" signature="900:935" placeholder="SELECT COUNT..." />
+                <marker date="1403737368000" expanded="true" signature="1269:1340" placeholder="SELECT * FRO..." />
               </folding>
             </state>
           </provider>
@@ -78,54 +130,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_list.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/View/user_list.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="78" selection-start="489" selection-end="489" vertical-scroll-proportion="-2.909091" vertical-offset="72" max-vertical-offset="1728">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="image_list.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/View/image_list.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="78" selection-start="489" selection-end="489" vertical-scroll-proportion="-5.090909" vertical-offset="0" max-vertical-offset="2280">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/View/index.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="78" selection-start="489" selection-end="489" vertical-scroll-proportion="-5.090909" vertical-offset="0" max-vertical-offset="912">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.default.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/View/layout.default.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="54" selection-start="1581" selection-end="1581" vertical-scroll-proportion="-0.72727275" vertical-offset="936" max-vertical-offset="3336">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Note.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/Model/Note.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="22" selection-start="113" selection-end="113" vertical-scroll-proportion="-2.4827585" vertical-offset="0" max-vertical-offset="1680">
-              <folding>
-                <marker date="1405745480000" expanded="true" signature="905:940" placeholder="SELECT COUNT..." />
-                <marker date="1405745480000" expanded="true" signature="1273:1344" placeholder="SELECT * FRO..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -139,8 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Model/Category.php" />
-        <option value="$PROJECT_DIR$/web/test.php" />
         <option value="$PROJECT_DIR$/phpunit.xml.dist" />
         <option value="$PROJECT_DIR$/tests/TestCase.php" />
         <option value="$PROJECT_DIR$/tests/App/TestCase.php" />
@@ -176,7 +178,6 @@
         <option value="$PROJECT_DIR$/src/Admin/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/src/Admin/Model/User.php" />
         <option value="$PROJECT_DIR$/src/Model/User.php" />
-        <option value="$PROJECT_DIR$/src/Api/Api.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/ImageController.php" />
         <option value="$PROJECT_DIR$/src/Model/Image.php" />
@@ -190,6 +191,9 @@
         <option value="$PROJECT_DIR$/src/Admin/Admin.php" />
         <option value="$PROJECT_DIR$/data/database.sql" />
         <option value="$PROJECT_DIR$/src/Admin/View/note_list.twig" />
+        <option value="$PROJECT_DIR$/src/Api/Controller/NoteController.php" />
+        <option value="$PROJECT_DIR$/src/Model/Note.php" />
+        <option value="$PROJECT_DIR$/src/Api/Api.php" />
       </list>
     </option>
   </component>
@@ -591,16 +595,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/Silex/Tests/WebTestCaseTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1800" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Api/Controller/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="5" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="420" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/BaseController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="5" selection-start="299" selection-end="849" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="825" />
@@ -691,11 +685,6 @@
         <state line="20" column="18" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1104" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Theme.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="19" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0" vertical-offset="623" max-vertical-offset="1680" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Model/Comment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="4" selection-start="35" selection-end="35" vertical-scroll-proportion="-2.909091" vertical-offset="0" max-vertical-offset="4392" />
@@ -748,11 +737,6 @@
         <state line="80" column="5" selection-start="1908" selection-end="1908" vertical-scroll-proportion="-7.2727275" vertical-offset="1680" max-vertical-offset="4968" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Api/Api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="43" selection-start="3946" selection-end="3946" vertical-scroll-proportion="-18.666666" vertical-offset="3128" max-vertical-offset="8640" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="72" column="23" selection-start="1926" selection-end="1926" vertical-scroll-proportion="-44.121212" vertical-offset="152" max-vertical-offset="5784" />
@@ -784,13 +768,6 @@
             <marker date="1405695664000" expanded="true" signature="-1:-1" placeholder="SELECT img.i..." />
             <marker date="1405695664000" expanded="true" signature="-1:-1" placeholder="SELECT img.i..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Api/Controller/ThemeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="54" selection-start="571" selection-end="571" vertical-scroll-proportion="-10.212121" vertical-offset="119" max-vertical-offset="1080">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -833,8 +810,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="22" selection-start="113" selection-end="113" vertical-scroll-proportion="-2.4827585" vertical-offset="0" max-vertical-offset="1680">
           <folding>
-            <marker date="1405745480000" expanded="true" signature="905:940" placeholder="SELECT COUNT..." />
-            <marker date="1405745480000" expanded="true" signature="1273:1344" placeholder="SELECT * FRO..." />
+            <marker date="1405745480000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+            <marker date="1405745480000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
           </folding>
         </state>
       </provider>
@@ -901,11 +878,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/View/note_list.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="50" selection-start="648" selection-end="648" vertical-scroll-proportion="0.38443935" vertical-offset="0" max-vertical-offset="2232">
+        <state line="14" column="50" selection-start="648" selection-end="648" vertical-scroll-proportion="-3.862069" vertical-offset="0" max-vertical-offset="2232">
           <folding>
             <element signature="e#1177#1213#0" expanded="true" />
             <element signature="e#2919#2938#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Api/Controller/ThemeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="29" selection-start="0" selection-end="1002" vertical-scroll-proportion="-15.30303" vertical-offset="119" max-vertical-offset="1080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Api/Controller/NoteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="758" selection-end="758" vertical-scroll-proportion="-5.0804596" vertical-offset="374" max-vertical-offset="1248">
+          <folding>
+            <element signature="e#34#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Theme.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="20" selection-start="989" selection-end="989" vertical-scroll-proportion="-13.848485" vertical-offset="695" max-vertical-offset="1680">
+          <folding>
+            <marker date="1403737368000" expanded="true" signature="900:935" placeholder="SELECT COUNT..." />
+            <marker date="1403737368000" expanded="true" signature="1269:1340" placeholder="SELECT * FRO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Note.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="28" selection-start="425" selection-end="425" vertical-scroll-proportion="-3.3448277" vertical-offset="285" max-vertical-offset="1680">
+          <folding>
+            <marker date="1405746180000" expanded="true" signature="894:929" placeholder="SELECT COUNT..." />
+            <marker date="1405746180000" expanded="true" signature="1262:1333" placeholder="SELECT * FRO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Api/Api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="357" column="33" selection-start="9166" selection-end="9166" vertical-scroll-proportion="0.6637931" vertical-offset="7928" max-vertical-offset="9024">
+          <folding />
         </state>
       </provider>
     </entry>
