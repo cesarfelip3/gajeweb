@@ -90,20 +90,11 @@ class User extends BaseModel
     public function addFollow ($data)
     {
         $data["create_date"] = time();
-
-        if ($this->followExist(array (
-            "user_followed_uuid" => $data["user_following_uuid"],
-            "user_following_uuid" => $data["user_followed_uuid"]
-        ))) {
-            $data["is_mutual"] = 1;
-        }
-
         $this->db->insert($this->table_user_follow, $data);
     }
 
     public function deleteFollow ($data)
     {
-
         $this->db->delete($this->table_user_follow, array("user_followed_uuid"=>$data["user_followed_uuid"], "user_following_uuid"=>$data["user_following_uuid"]));
 
     }
