@@ -66,7 +66,7 @@ class User extends BaseModel
     //
     //===============================
 
-    public function blockExist ($data)
+    public function blockExist($data)
     {
         $uuid = $this->db->fetchColumn("SELECT user_uuid FROM {$this->table_user_block} WHERE user_uuid=? AND user_block_uuid=?", array($data["user_uuid"], $data["user_block_uuid"]));
 
@@ -77,7 +77,7 @@ class User extends BaseModel
         return $uuid;
     }
 
-    public function addBlock ($data)
+    public function addBlock($data)
     {
         $data["create_date"] = time();
         $this->db->insert($this->table_user_block, $data);
@@ -87,19 +87,46 @@ class User extends BaseModel
     //
     //=====================================
 
-    public function addFollow ($data)
+    // when you follow your followers, and it will be is_mutal
+    // for each of them, it's same
+
+    public function addFollow($data)
     {
         $data["create_date"] = time();
+        if ($this->followExist(array(
+            "user_followed_uuid" => $data["user_following_uuid"],
+            "user_following_uuid" => $data["user_followed_uuid"]
+        ))
+        ) {
+
+            $data["is_mutual"] = 1;
+            $this->db->update($this->table_user_follow, array("is_mutual"=>1), array(
+                "user_followed_uuid" => $data["user_following_uuid"],
+                "user_following_uuid" => $data["user_followed_uuid"]));
+        }
+
         $this->db->insert($this->table_user_follow, $data);
     }
 
-    public function deleteFollow ($data)
+    public function deleteFollow($data)
     {
-        $this->db->delete($this->table_user_follow, array("user_followed_uuid"=>$data["user_followed_uuid"], "user_following_uuid"=>$data["user_following_uuid"]));
+        if ($this->followExist(array(
+            "user_followed_uuid" => $data["user_following_uuid"],
+            "user_following_uuid" => $data["user_followed_uuid"]
+        ))
+        ) {
+
+            $data["is_mutual"] = 1;
+            $this->db->update($this->table_user_follow, array("is_mutual"=>0), array(
+                "user_followed_uuid" => $data["user_following_uuid"],
+                "user_following_uuid" => $data["user_followed_uuid"]));
+        }
+
+        $this->db->delete($this->table_user_follow, array("user_followed_uuid" => $data["user_followed_uuid"], "user_following_uuid" => $data["user_following_uuid"]));
 
     }
 
-    public function followExist ($data)
+    public function followExist($data)
     {
         $uuid = $this->db->fetchColumn("SELECT user_followed_uuid FROM {$this->table_user_follow} WHERE user_followed_uuid=? AND user_following_uuid=?", array($data["user_followed_uuid"], $data["user_following_uuid"]));
 
