@@ -214,25 +214,25 @@ class UserController extends BaseController
         return true;
     }
 
-    public function unFollow ()
+    public function removeFollow ()
     {
-        $user_uuid = $this->request->get("user_uuid", "");
-        $follow_uuid = $this->request->get("following_uuid", "");
+        $user_uuid = $this->request->get("user_followed_uuid", "");
+        $follow_uuid = $this->request->get("user_following_uuid", "");
 
         $data["user_followed_uuid"] = $user_uuid;
         $data["user_following_uuid"] = $follow_uuid;
 
         $user = new User();
-        $uuid = $user->userExists($data);
+        $uuid = $user->followExist($data);
 
-        if (!$uuid) {
+        if ($uuid) {
 
-            $user->addFollow($data);
+            $user->deleteFollow($data);
             return $this->setSuccess("success");
 
         } else {
 
-            return $this->setSuccess("exists");
+            return $this->setSuccess("not exists");
         }
 
         return true;

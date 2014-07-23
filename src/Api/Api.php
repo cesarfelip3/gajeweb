@@ -107,7 +107,7 @@ class Api
         $api->post("user/unfollow", function (Request $request) use ($app) {
 
             $controller = new Controller\UserController($request, $app);
-            $ret = $controller->addFollow();
+            $ret = $controller->removeFollow();
 
             $status = 200;
             if ($ret) {
