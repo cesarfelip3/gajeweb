@@ -168,7 +168,7 @@ class User extends BaseModel
 
         $limit = "$page, $pageSize";
 
-        $sql = "SELECT DISTINCT usr.* FROM {$this->table} usr INNER JOIN {$this->table_user_follow} fol ON usr.user_uuid=fol.user_followed_uuid WHERE fol.user_following_uuid=? ORDER BY fol.create_date DESC LIMIT {$limit}";
+        $sql = "SELECT DISTINCT usr.*, fol.is_mutual AS is_mutual FROM {$this->table} usr INNER JOIN {$this->table_user_follow} fol ON usr.user_uuid=fol.user_followed_uuid WHERE fol.user_following_uuid=? ORDER BY fol.create_date DESC LIMIT {$limit}";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue (1, $data["user_uuid"]);
         $stmt->execute();
