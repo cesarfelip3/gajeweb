@@ -91,7 +91,6 @@ class ImageController extends BaseController
             return $this->setFailed("file handler not exist");
         }
 
-        return $this->setFailed("", array((array)$file));
 
         if ($file->isValid()) {
 
