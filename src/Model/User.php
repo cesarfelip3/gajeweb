@@ -62,6 +62,27 @@ class User extends BaseModel
         return $uuid;
     }
 
+    public function filterUserByName ($data)
+    {
+        $page = $data["page"];
+        $pageSize = $data["page_size"];
+
+        $page = intval($page);
+        $pageSize = intval($pageSize);
+        $page = $page * $pageSize;
+
+        $limit = "$page, $pageSize";
+
+        $sql = "SELECT DISTINCT usr.* FROM {$this->table} usr WHERE usr.name LIKE ? ORDER BY fol.create_date DESC LIMIT {$limit}";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue (1, $data["name"]);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+
+        return $result;
+    }
+
+
     //===============================
     //
     //===============================

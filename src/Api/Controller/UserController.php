@@ -62,6 +62,35 @@ class UserController extends BaseController
 
     }
 
+    public function searchUser ()
+    {
+        $name = $this->request->get("name", "");
+        if (empty ($name)) {
+            return $this->setFailed("empty user name");
+        }
+
+        $page = $this->request->get("page", 0);
+        $pageSize = $this->request->get("page_size", 25);
+
+        $data = array();
+        $data["page"] = intval($page);
+        $data["page_size"] = intval($pageSize);
+        $data["name"] = '%' . $name . '%';
+
+        $user = new User();
+        $userArray = $user->filterUserByName($data);
+
+        if (empty ($userArray)) {
+
+            $this->setSuccess("empty result from db", array("users" => array()));
+        } else {
+
+            $this->setSuccess("", array("followings" => $userArray));
+        }
+
+        return true;
+    }
+
     //=================================
     //
     //=================================
