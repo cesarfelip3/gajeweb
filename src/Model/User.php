@@ -73,7 +73,7 @@ class User extends BaseModel
 
         $limit = "$page, $pageSize";
 
-        $sql = "SELECT DISTINCT usr.* FROM {$this->table} usr WHERE usr.username LIKE ? ORDER BY fol.create_date DESC LIMIT {$limit}";
+        $sql = "SELECT DISTINCT usr.* FROM {$this->table} usr WHERE usr.username LIKE ? ORDER BY usr.create_date DESC LIMIT {$limit}";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue (1, $data["name"]);
         $stmt->execute();
