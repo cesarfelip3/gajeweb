@@ -183,6 +183,23 @@ class Api
             return $app->json($controller->getError(), $status);
 
         });
+
+        // https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW1
+
+        $api->post("push/apns", function (Request $request) use ($app) {
+
+            $controller = new Controller\PushController($request, $app);
+            $ret = $controller->push($app["certificates.folder"] . "ri_dev_pns.pem");
+
+            $status = 200;
+            if ($ret) {
+                $status = 200;
+            } else {
+                $status = 400;
+            }
+
+            return $app->json($controller->getError(), $status);
+        });
     }
 
     protected function registerImageApi (&$api)

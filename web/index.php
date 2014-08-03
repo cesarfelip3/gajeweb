@@ -66,6 +66,7 @@ $app["http_cache_enable"] = $config["http_cache_enable"];
 $app['upload.image.host'] = $config["upload.image.host"];
 $app['upload.folder'] = $config["upload.folder"];
 $app['upload.folder.image'] = $config["upload.folder.image"];
+$app["certificates.folder"] = $config["certificates.folder"];
 
 $app->register(new Silex\Provider\DoctrineServiceProvider(), $config["db"]);
 
