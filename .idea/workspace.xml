@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Api.php" afterPath="$PROJECT_DIR$/src/Api/Api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/User.php" afterPath="$PROJECT_DIR$/src/Model/User.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/Api/Controller/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,19 +25,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Api.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Api.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Api/Api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="175" column="26" selection-start="4401" selection-end="4401" vertical-scroll-proportion="0.7155172" vertical-offset="3512" max-vertical-offset="9408">
+            <state line="175" column="26" selection-start="4401" selection-end="4401" vertical-scroll-proportion="-20.121212" vertical-offset="3512" max-vertical-offset="9408">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="UserController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Api/Controller/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="0" selection-start="2316" selection-end="2316" vertical-scroll-proportion="-19.39394" vertical-offset="1304" max-vertical-offset="6480">
+            <state line="87" column="46" selection-start="2363" selection-end="2363" vertical-scroll-proportion="0.7155172" vertical-offset="1304" max-vertical-offset="6480">
               <folding />
             </state>
           </provider>
@@ -127,8 +124,8 @@
         <option value="$USER_HOME$/Downloads/IndexController.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/ImageController.php" />
         <option value="$PROJECT_DIR$/src/Model/User.php" />
-        <option value="$PROJECT_DIR$/src/Api/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/src/Api/Api.php" />
+        <option value="$PROJECT_DIR$/src/Api/Controller/UserController.php" />
       </list>
     </option>
   </component>
@@ -725,16 +722,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Api/Controller/UserController.php">
+    <entry file="file://$PROJECT_DIR$/src/Api/Api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="0" selection-start="2316" selection-end="2316" vertical-scroll-proportion="-19.39394" vertical-offset="1304" max-vertical-offset="6480">
+        <state line="175" column="26" selection-start="4401" selection-end="4401" vertical-scroll-proportion="-20.121212" vertical-offset="3512" max-vertical-offset="9408">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Api/Api.php">
+    <entry file="file://$PROJECT_DIR$/src/Api/Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="26" selection-start="4401" selection-end="4401" vertical-scroll-proportion="0.7155172" vertical-offset="3512" max-vertical-offset="9408">
+        <state line="87" column="46" selection-start="2363" selection-end="2363" vertical-scroll-proportion="0.7155172" vertical-offset="1304" max-vertical-offset="6480">
           <folding />
         </state>
       </provider>
