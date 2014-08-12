@@ -167,6 +167,8 @@ CREATE TABLE IF NOT EXISTS `user` (
   `create_date` int(20) NOT NULL DEFAULT '0',
   `modified_date` int(20) NOT NULL DEFAULT '0',
   `comment_id` int(20) NOT NULL DEFAULT '0',
+  `brander_id` int(20) NOT NULL DEFAULT '0',
+  `follower_id` int(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
