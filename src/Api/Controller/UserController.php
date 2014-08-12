@@ -295,23 +295,18 @@ class UserController extends BaseController
 
     function getUpdateInfo ()
     {
-        $user_uuid = $this->request->get("user_followed_uuid", "");
-        $follow_uuid = $this->request->get("user_following_uuid", "");
-
-        $data["user_followed_uuid"] = $user_uuid;
-        $data["user_following_uuid"] = $follow_uuid;
+        $userUUID = $this->request->get("user_uuid", "");
 
         $user = new User();
-        $uuid = $user->followExist($data);
+        $uuid = "";
+        $uuid = $user->userExists($userUUID);
 
-        if ($uuid) {
-
-            $user->deleteFollow($data);
-            return $this->setSuccess("success");
+        if (!$uuid) {
 
         } else {
-
-            return $this->setSuccess("not exists");
+            $data["user_uuid"] = $userUUID;
+            $data["modification_date"] = time ();
+            $user->updateUserByUUID($data);
         }
 
         return true;

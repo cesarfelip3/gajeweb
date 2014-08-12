@@ -212,6 +212,38 @@ class Api
 
         });
 
+        $api->post("user/notification/prepare", function (Request $request) use ($app) {
+
+            $controller = new Controller\UserController($request, $app);
+            $ret = $controller->prepareNotification();
+
+            $status = 200;
+            if ($ret) {
+                $status = 200;
+            } else {
+                $status = 400;
+            }
+
+            return $app->json($controller->getError(), $status);
+
+        });
+
+        $api->post("user/notification/latest", function (Request $request) use ($app) {
+
+            $controller = new Controller\UserController($request, $app);
+            $ret = $controller->getUpdateInfo();
+
+            $status = 200;
+            if ($ret) {
+                $status = 200;
+            } else {
+                $status = 400;
+            }
+
+            return $app->json($controller->getError(), $status);
+
+        });
+
         // https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW1
 
         $api->post("push/apns", function (Request $request) use ($app) {
