@@ -6,7 +6,6 @@ namespace Api\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-
 use Api\Controller\BaseController;
 use Api\Model\Image;
 use Api\Model\User;
