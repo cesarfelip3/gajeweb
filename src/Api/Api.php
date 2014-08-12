@@ -338,13 +338,13 @@ class Api
             $token = $request->headers->get("X-AUTH-KEY");
 
             if (empty ($token)) {
-                return $app->json (array ("status"=>"failure", "message"=>$message), 400);
+                return $app->json (array ("status"=>"failure", "message"=>$data), 400);
             }
 
             $data = explode("+", $token);
 
             if (count($data) != 2) {
-                return $app->json (array ("status"=>"failure", "message"=>$message), 400);
+                return $app->json (array ("status"=>"failure", "message"=>$data), 400);
             }
 
             $hash = md5 ($config["api_secrect"] . $data[1]);
@@ -354,8 +354,8 @@ class Api
 
             }
 
-            return $app->json (array ("status"=>"failure", "message"=>$message), 400);
-            
+            return $app->json (array ("status"=>"failure", "message"=>$data), 400);
+
         });
 
     }
