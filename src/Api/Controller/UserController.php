@@ -77,7 +77,7 @@ class UserController extends BaseController
         $data = array();
         $data["page"] = intval($page);
         $data["page_size"] = intval($pageSize);
-        $data["name"] = '%' . $name . '%';
+        $data["name"] = '%' . trim($name) . '%';
 
         $user = new User();
         $userArray = $user->filterUserByName($data);
