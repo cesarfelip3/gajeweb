@@ -25,27 +25,6 @@ class Note extends BaseModel
         return $data["note_uuid"];
     }
 
-    //=====================================
-    // admin
-    //=====================================
-
-    public function getNoteListHeader()
-    {
-        return array(
-            "#" => "#",
-            "name" => "name",
-            "description" => "description",
-            "create_date" => "create date",
-            "modified_date" => "modified date"
-        );
-    }
-
-    public function getTotal()
-    {
-        $total = $this->db->fetchColumn("SELECT COUNT(*) FROM {$this->table}");
-        return $total;
-    }
-
     public function getNoteList($data)
     {
         $page = $data["page"];

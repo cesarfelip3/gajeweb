@@ -3,7 +3,7 @@
 
 namespace Api\Model;
 
-use Api\Model\BaseModel;
+use \Model\BaseModel;
 
 class Theme extends BaseModel
 {
@@ -23,27 +23,6 @@ class Theme extends BaseModel
         $this->db->insert($this->table, $data);
 
         return $data["theme_uuid"];
-    }
-
-    //=====================================
-    // admin
-    //=====================================
-
-    public function getThemeListHeader()
-    {
-        return array(
-            "#" => "#",
-            "name" => "name",
-            "description" => "description",
-            "create_date" => "create date",
-            "modified_date" => "modified date"
-        );
-    }
-
-    public function getTotal()
-    {
-        $total = $this->db->fetchColumn("SELECT COUNT(*) FROM {$this->table}");
-        return $total;
     }
 
     public function getThemeList($data)

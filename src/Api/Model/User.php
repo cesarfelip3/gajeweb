@@ -35,6 +35,13 @@ class User extends BaseModel
         $this->db->update($this->table, $data, array('facebook_token' => $token));
     }
 
+    public function updateUserByUUID($data)
+    {
+        $userUUID = $data["user_uuid"];
+        unset ($data["user_uuid"]);
+        $this->db->update($this->table, $data, array('user_uuid' => $userUUID));
+    }
+
     public function deleteUser($data)
     {
         $this->db->delete($this->table, array('facebook_token' => $data["facebook_token"]));
@@ -194,44 +201,6 @@ class User extends BaseModel
         $stmt->bindValue (1, $data["user_uuid"]);
         $stmt->execute();
         $result = $stmt->fetchAll();
-
-        return $result;
-    }
-
-    //=====================================
-    // admin
-    //=====================================
-
-    public function getUserListHeader()
-    {
-        return array(
-            "#" => "#",
-            "username" => "username",
-            "email" => "email",
-            "firstname" => "firstname",
-            "lastname" => "lastname",
-            "create_date" => "create date",
-            "modified_date" => "modified date"
-        );
-    }
-
-    public function getTotal()
-    {
-        $total = $this->db->fetchColumn("SELECT COUNT(*) FROM {$this->table}");
-        return $total;
-    }
-
-    public function getUserList($data)
-    {
-        $page = $data["page"];
-        $pageSize = $data["page_size"];
-
-        $page = intval($page);
-        $pageSize = intval($pageSize);
-        $page = $page * $pageSize;
-
-        $limit = "$page, $pageSize";
-        $result = $this->db->fetchAll("SELECT * FROM {$this->table} ORDER BY modified_date DESC LIMIT {$limit}");
 
         return $result;
     }

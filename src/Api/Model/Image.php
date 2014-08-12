@@ -8,7 +8,6 @@ use Api\Model\Comment;
 class Image extends BaseModel
 {
 
-
     public $table = "image";
     public $table_image_comment = "image_comment";
     public $table_image_brander = "image_brander";
