@@ -38,6 +38,7 @@ class ImageController extends BaseController
         $data["user_uuid"] = $user_uuid;
 
         $image = new Image();
+        $this->setSuccess("empty result from db", array("images" => array()));
 
         $imageArray = $image->getLatestImages($data);
 
