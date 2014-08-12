@@ -32,6 +32,7 @@ $config["basename"] = "/gajeweb";
 $config["router_apiv1"] = "api/v1/";
 $config["router_admin"] = "admin/";
 $config["router_test"] = "testcase/";
+$config["api_secrect"] = "(qeADF@#w3453aqwe412LKSHKJY*(^$%!@:LIKJSUP)(*!@Tjkh&*(&@#";
 
 // upload
 $config["debug"] = true;

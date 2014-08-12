@@ -40,6 +40,7 @@ class Api
         $basename = $this->config["basename"];
         $api_v1 = $this->config["router_apiv1"];
 
+
         $api = $app["controllers_factory"];
 
         $this->registerUserApi($api);
@@ -330,35 +331,31 @@ class Api
 
         });
 
-        $api->before(function (Request $request, $app) {
+        $api->before(function (Request $request, $app) use ($config) {
 
             return null;
 
-            $token = $request->headers->get("X-Auth-Token");
-            $time = $request->get("ticket", 0);
+            $token = $request->headers->get("X-AUTH-KEY");
 
-            $message = "Invalid  request";
-
-            if (empty ($time) || empty ($token)) {
-
+            if (empty ($token)) {
                 return $app->json (array ("status"=>"failure", "message"=>$message), 400);
             }
 
-            if (time () - intval($time) >= 1000) {
+            $data = explode("+", $token);
 
+            if (count($data) != 2) {
                 return $app->json (array ("status"=>"failure", "message"=>$message), 400);
             }
 
-            $_KEY = "XpHOUhadfhPIUYKHDFxOUYKJHERlkjhadfotYRWEWKEhluyadf";
-            $_SECRET = "921936776534209348";
-
-            $api_token = hash_hmac ("sha256", $_KEY . sha1($_SECRET . $time));
-
-            if (trim($token) == $api_token) {
+            $hash = md5 ($config["api_secrect"] . $data[1]);
+            if ($hash == $data[0]) {
 
                 return null;
+
             }
 
+            return $app->json (array ("status"=>"failure", "message"=>$message), 400);
+            
         });
 
     }
