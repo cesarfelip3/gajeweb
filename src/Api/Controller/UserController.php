@@ -269,7 +269,29 @@ class UserController extends BaseController
         return true;
     }
 
-    //
+    //=========================================
+    // Notification ::
+    //=========================================
+
+    function prepareNotification ()
+    {
+        $userUUID = $this->request->get("user_uuid", "");
+
+        $user = new User();
+        $uuid = "";
+        $uuid = $user->userExists($userUUID);
+
+        if (!$uuid) {
+
+        } else {
+            $data["user_uuid"] = $userUUID;
+            $data["modification_date"] = time ();
+            $user->updateUserByUUID($data);
+        }
+
+        $this->setSuccess("");
+        return true;
+    }
 
     function getUpdateInfo ()
     {
