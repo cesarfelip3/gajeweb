@@ -54,14 +54,13 @@ class Api
             $token = $request->headers->get("X-AUTH-KEY");
 
             if (empty ($token)) {
-                return $app->json (array ("status"=>"failure", "message"=>$data), 400);
+                return $app->json (array ("status"=>"failure", "message"=>"the request from the app is invalid"), 400);
             }
 
             $data = explode("+", $token);
-            return $app->json (array ("status"=>"failure", "message"=>$data), 400);
 
             if (count($data) != 2) {
-                return $app->json (array ("status"=>"failure", "message"=>$data), 400);
+                return $app->json (array ("status"=>"failure", "message"=>"the request from the app is invalid"), 400);
             }
 
             $hash = md5 ($config["api_secrect"] . $data[1]);
@@ -71,7 +70,7 @@ class Api
 
             }
 
-            return $app->json (array ("status"=>"failure", "message"=>$data), 400);
+            return $app->json (array ("status"=>"failure", "message"=>"the request from the app is invalid"), 400);
 
         });
 
