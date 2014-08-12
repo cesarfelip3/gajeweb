@@ -29,6 +29,7 @@ class UserController extends BaseController
         $fullname = $this->request->get("fullname", "");
         $token = $this->request->get("facebook_token", "");
         $icon = $this->request->get("facebook_icon", "");
+        $location = $this->request->get("location", "");
 
         $data = array(
             "email" => $email,
@@ -37,7 +38,8 @@ class UserController extends BaseController
             "username" => $username,
             "fullname" => $fullname,
             "facebook_token" => $token,
-            "facebook_icon" => $icon
+            "facebook_icon" => $icon,
+            "location" => $location
         );
 
         if (empty ($token)) {

@@ -52,45 +52,6 @@ class Comment extends BaseModel
         return $uuid;
     }
 
-
-    //=====================================
-    // admin
-    //=====================================
-
-    public function getCommentListHeader()
-    {
-        return array(
-            "#" => "#",
-            "name" => "name",
-            "description" => "description",
-            "width" => "width",
-            "height" => "height",
-            "create_date" => "create date",
-            "modified_date" => "modified date"
-        );
-    }
-
-    public function getTotal()
-    {
-        $total = $this->db->fetchColumn("SELECT COUNT(*) FROM {$this->table}");
-        return $total;
-    }
-
-    public function getCommentList($data)
-    {
-        $page = $data["page"];
-        $pageSize = $data["page_size"];
-
-        $page = intval($page);
-        $pageSize = intval($pageSize);
-        $page = $page * $pageSize;
-
-        $limit = "$page, $pageSize";
-        $result = $this->db->fetchAll("SELECT * FROM {$this->table} ORDER BY modified_date DESC LIMIT {$limit}");
-
-        return $result;
-    }
-
     //================================
     // get comments
     //================================
@@ -108,54 +69,27 @@ class Comment extends BaseModel
         $limit = "$page, $pageSize";
         $result = $this->db->fetchAll("SELECT `comment_uuid`, `name`, `description`, `width`, `height`, `create_date`, `modified_date`, `file_name` FROM {$this->table} WHERE user_uuid=? ORDER BY modified_date DESC LIMIT {$limit} ", array($user_uuid));
 
-        if (!empty ($result)) {
-
-            foreach ($result as &$item) {
-
-            }
-        }
-
         return $result;
 
     }
 
-    public function getLatestComments($data)
+    public function getLatestCommentsByUser($data)
     {
         $page = $data["page"];
         $pageSize = $data["page_size"];
+        $user_uuid = $data["user_uuid"];
+        $modified_date = $data["modified_date"];
 
         $page = intval($page);
         $pageSize = intval($pageSize);
         $page = $page * $pageSize;
 
         $limit = "$page, $pageSize";
+        $sql = "SELECT `comment_uuid`, `name`, `description`, `width`, `height`, `create_date`, `modified_date`, `file_name` FROM {$this->table} WHERE user_uuid=? AND modified_date>? ORDER BY modified_date DESC LIMIT {$limit}";
 
-        $userTable = User::table();
-
-        $sql = "SELECT img.comment_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username FROM {$this->table} img INNER JOIN $userTable usr ON img.user_uuid=usr.user_uuid  ORDER BY modified_date DESC LIMIT {$limit}";
         $stmt = $this->db->prepare($sql);
-        $stmt->execute();
-
-        $result = $stmt->fetchAll();
-
-        return $result;
-    }
-
-    public function getCommentsWithoutThumbnail($data)
-    {
-        $page = $data["page"];
-        $pageSize = $data["page_size"];
-
-        $page = intval($page);
-        $pageSize = intval($pageSize);
-        $page = $page * $pageSize;
-
-        $limit = "$page, $pageSize";
-
-        $userTable = User::table();
-
-        $sql = "SELECT img.comment_uuid, img.width, img.height, img.file_path, img.file_name, usr.token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username FROM {$this->table} img INNER JOIN $userTable usr ON img.user_uuid=usr.user_uuid WHERE img.thumbnails=0 ORDER BY modified_date DESC";
-        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(1, $user_uuid);
+        $stmt->bindValue(2, $modified_date);
         $stmt->execute();
 
         $result = $stmt->fetchAll();

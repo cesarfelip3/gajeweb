@@ -16,3 +16,8 @@ http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/secu
 // http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/query-builder.html
 // http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/transactions.html
 // http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/security.html
+
+Issues
+======
+
+1. User A ==> comment on Image of User B ==> Push notification ? what if User B is in background ==> is payload ok?
