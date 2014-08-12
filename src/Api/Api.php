@@ -47,6 +47,34 @@ class Api
         $this->registerImageApi($api);
         $this->registerThemeApi($api);
 
+        $api->before(function (Request $request, $app) use ($config) {
+
+            //return null;
+
+            $token = $request->headers->get("X-AUTH-KEY");
+
+            if (empty ($token)) {
+                return $app->json (array ("status"=>"failure", "message"=>$data), 400);
+            }
+
+            $data = explode("+", $token);
+            return $app->json (array ("status"=>"failure", "message"=>$data), 400);
+
+            if (count($data) != 2) {
+                return $app->json (array ("status"=>"failure", "message"=>$data), 400);
+            }
+
+            $hash = md5 ($config["api_secrect"] . $data[1]);
+            if ($hash == $data[0]) {
+
+                return null;
+
+            }
+
+            return $app->json (array ("status"=>"failure", "message"=>$data), 400);
+
+        });
+
         $app->mount($basename . "/" . $api_v1, $api);
     }
 
@@ -328,33 +356,6 @@ class Api
             }
 
             return $app->json($controller->getError(), $status);
-
-        });
-
-        $api->before(function (Request $request, $app) use ($config) {
-
-            //return null;
-
-            $token = $request->headers->get("X-AUTH-KEY");
-
-            if (empty ($token)) {
-                return $app->json (array ("status"=>"failure", "message"=>$data), 400);
-            }
-
-            $data = explode("+", $token);
-
-            if (count($data) != 2) {
-                return $app->json (array ("status"=>"failure", "message"=>$data), 400);
-            }
-
-            $hash = md5 ($config["api_secrect"] . $data[1]);
-            if ($hash == $data[0]) {
-
-                return null;
-
-            }
-
-            return $app->json (array ("status"=>"failure", "message"=>$data), 400);
 
         });
 
