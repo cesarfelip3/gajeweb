@@ -2,12 +2,12 @@
 
 namespace Api\Controller;
 
-use Model\Image;
+use Api\Model\Image;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Api\Controller\BaseController;
 
-use Model\User;
+use Api\Model\User;
 
 class UserController extends BaseController
 {

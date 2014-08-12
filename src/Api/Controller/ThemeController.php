@@ -7,9 +7,9 @@ use Symfony\Component\HttpFoundation\Response;
 
 
 use Api\Controller\BaseController;
-use Model\Image;
-use Model\User;
-use Model\Theme;
+use Api\Model\Image;
+use Api\Model\User;
+use Api\Model\Theme;
 
 class ThemeController extends BaseController
 {

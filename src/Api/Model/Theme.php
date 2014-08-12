@@ -1,35 +1,35 @@
 <?php
 
 
-namespace Model;
+namespace Api\Model;
 
-use \Model\BaseModel;
+use Api\Model\BaseModel;
 
-class Note extends BaseModel
+class Theme extends BaseModel
 {
-    public $table = "note";
+    public $table = "theme";
 
     public function __construct()
     {
         $this->db = self::$DB;
     }
 
-    public function addNote($data)
+    public function addTheme($data)
     {
 
-        $data["note_uuid"] = uniqid();
+        $data["theme_uuid"] = uniqid();
         $data["create_date"] = time();
         $data["modified_date"] = time();
         $this->db->insert($this->table, $data);
 
-        return $data["note_uuid"];
+        return $data["theme_uuid"];
     }
 
     //=====================================
     // admin
     //=====================================
 
-    public function getNoteListHeader()
+    public function getThemeListHeader()
     {
         return array(
             "#" => "#",
@@ -46,7 +46,7 @@ class Note extends BaseModel
         return $total;
     }
 
-    public function getNoteList($data)
+    public function getThemeList($data)
     {
         $page = $data["page"];
         $pageSize = $data["page_size"];

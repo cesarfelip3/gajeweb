@@ -1,9 +1,9 @@
 <?php
 
-namespace Model;
+namespace Api\Model;
 
-use \Model\BaseModel;
-use \Model\Comment;
+use Api\Model\BaseModel;
+use Api\Model\Comment;
 
 class Image extends BaseModel
 {

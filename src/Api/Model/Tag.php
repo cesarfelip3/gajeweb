@@ -1,8 +1,8 @@
 <?php
 
-namespace Model;
+namespace Api\Model;
 
-use \Model\BaseModel;
+use Api\Model\BaseModel;
 
 class Tag extends BaseModel
 {

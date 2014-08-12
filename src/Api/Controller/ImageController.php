@@ -8,10 +8,10 @@ use Symfony\Component\HttpFoundation\Response;
 
 
 use Api\Controller\BaseController;
-use Model\Image;
-use Model\User;
-use Model\Theme;
-use Model\Comment;
+use Api\Model\Image;
+use Api\Model\User;
+use Api\Model\Theme;
+use Api\Model\Comment;
 
 class ImageController extends BaseController
 {

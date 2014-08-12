@@ -7,9 +7,9 @@ use Symfony\Component\HttpFoundation\Response;
 
 
 use Api\Controller\BaseController;
-use Model\Image;
-use Model\User;
-use Model\Note;
+use Api\Model\Image;
+use Api\Model\User;
+use Api\Model\Note;
 
 class NoteController extends BaseController
 {
