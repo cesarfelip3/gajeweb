@@ -76,10 +76,7 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), $config["db"]);
 $basename = $config["basename"];
 $api_v1 = $config["router_apiv1"];
 
-
-use Model\BaseModel;
-
-BaseModel::$DB = $app['db'];
+\Api\Model\BaseModel::$DB = $app['db'];
 \Admin\Model\BaseModel::$DB = $app['db'];
 
 //==========================
