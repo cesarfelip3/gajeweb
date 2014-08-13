@@ -220,14 +220,14 @@ class User extends BaseModel
 
         $limit = "$page, $pageSize";
 
-        $sql = "SELECT DISTINCT modified_date FROM {$this->table} usr WHERE user_uuid=?";
+        $sql = "SELECT DISTINCT modified_date FROM {$this->table} WHERE user_uuid=?";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue (1, $data["user_uuid"]);
         $stmt->execute();
         $result = $stmt->fetchColumn();
 
         return $result;
-        
+
         $modified = $result["modified_date"];
 
         if (empty ($modified)) {

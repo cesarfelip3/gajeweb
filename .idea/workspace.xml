@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Model/User.php" afterPath="$PROJECT_DIR$/src/Api/Model/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/Api/Controller/UserController.php" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,17 +28,17 @@
       <file leaf-file-name="User.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Api/Model/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="229" column="8" selection-start="6722" selection-end="6722" vertical-scroll-proportion="0.45689654" vertical-offset="5216" max-vertical-offset="6552">
+            <state line="228" column="23" selection-start="6709" selection-end="6709" vertical-scroll-proportion="0.43103448" vertical-offset="5216" max-vertical-offset="6552">
               <folding>
-                <marker date="1407936390000" expanded="true" signature="1247:1306" placeholder="SELECT user_..." />
-                <marker date="1407936390000" expanded="true" signature="1508:1562" placeholder="SELECT user_..." />
-                <marker date="1407936390000" expanded="true" signature="1961:2077" placeholder="SELECT DISTI..." />
-                <marker date="1407936390000" expanded="true" signature="2431:2518" placeholder="SELECT user_..." />
-                <marker date="1407936390000" expanded="true" signature="4405:4515" placeholder="SELECT user_..." />
-                <marker date="1407936390000" expanded="true" signature="4962:5194" placeholder="SELECT DISTI..." />
-                <marker date="1407936390000" expanded="true" signature="5666:5898" placeholder="SELECT DISTI..." />
-                <marker date="1407936390000" expanded="true" signature="6457:6528" placeholder="SELECT DISTI..." />
-                <marker date="1407936390000" expanded="true" signature="7059:7310" placeholder="SELECT img.*..$tableImage img..." />
+                <marker date="1407936456000" expanded="true" signature="1247:1306" placeholder="SELECT user_..." />
+                <marker date="1407936456000" expanded="true" signature="1508:1562" placeholder="SELECT user_..." />
+                <marker date="1407936456000" expanded="true" signature="1961:2077" placeholder="SELECT DISTI..." />
+                <marker date="1407936456000" expanded="true" signature="2431:2518" placeholder="SELECT user_..." />
+                <marker date="1407936456000" expanded="true" signature="4405:4515" placeholder="SELECT user_..." />
+                <marker date="1407936456000" expanded="true" signature="4962:5194" placeholder="SELECT DISTI..." />
+                <marker date="1407936456000" expanded="true" signature="5666:5898" placeholder="SELECT DISTI..." />
+                <marker date="1407936456000" expanded="true" signature="6457:6524" placeholder="SELECT DISTI..." />
+                <marker date="1407936456000" expanded="true" signature="7047:7298" placeholder="SELECT img.*..$tableImage img..." />
               </folding>
             </state>
           </provider>
@@ -726,17 +725,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Model/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="229" column="8" selection-start="6722" selection-end="6722" vertical-scroll-proportion="0.45689654" vertical-offset="5216" max-vertical-offset="6552">
+        <state line="228" column="23" selection-start="6709" selection-end="6709" vertical-scroll-proportion="0.43103448" vertical-offset="5216" max-vertical-offset="6552">
           <folding>
-            <marker date="1407936390000" expanded="true" signature="1247:1306" placeholder="SELECT user_..." />
-            <marker date="1407936390000" expanded="true" signature="1508:1562" placeholder="SELECT user_..." />
-            <marker date="1407936390000" expanded="true" signature="1961:2077" placeholder="SELECT DISTI..." />
-            <marker date="1407936390000" expanded="true" signature="2431:2518" placeholder="SELECT user_..." />
-            <marker date="1407936390000" expanded="true" signature="4405:4515" placeholder="SELECT user_..." />
-            <marker date="1407936390000" expanded="true" signature="4962:5194" placeholder="SELECT DISTI..." />
-            <marker date="1407936390000" expanded="true" signature="5666:5898" placeholder="SELECT DISTI..." />
-            <marker date="1407936390000" expanded="true" signature="6457:6528" placeholder="SELECT DISTI..." />
-            <marker date="1407936390000" expanded="true" signature="7059:7310" placeholder="SELECT img.*..$tableImage img..." />
+            <marker date="1407936456000" expanded="true" signature="1247:1306" placeholder="SELECT user_..." />
+            <marker date="1407936456000" expanded="true" signature="1508:1562" placeholder="SELECT user_..." />
+            <marker date="1407936456000" expanded="true" signature="1961:2077" placeholder="SELECT DISTI..." />
+            <marker date="1407936456000" expanded="true" signature="2431:2518" placeholder="SELECT user_..." />
+            <marker date="1407936456000" expanded="true" signature="4405:4515" placeholder="SELECT user_..." />
+            <marker date="1407936456000" expanded="true" signature="4962:5194" placeholder="SELECT DISTI..." />
+            <marker date="1407936456000" expanded="true" signature="5666:5898" placeholder="SELECT DISTI..." />
+            <marker date="1407936456000" expanded="true" signature="6457:6524" placeholder="SELECT DISTI..." />
+            <marker date="1407936456000" expanded="true" signature="7047:7298" placeholder="SELECT img.*..$tableImage img..." />
           </folding>
         </state>
       </provider>
