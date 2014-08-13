@@ -310,7 +310,7 @@ class UserController extends BaseController
             $data["user_uuid"] = $uuid;
 
             $result = $user->getUpdateInfo($data);
-            $this->setSuccess("", array ("result"=>$result));
+            $this->setSuccess("", $result);
         }
 
         return true;
