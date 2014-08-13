@@ -226,6 +226,8 @@ class User extends BaseModel
         $stmt->execute();
         $result = $stmt->fetchColumn();
 
+        return $result;
+        
         $modified = $result["modified_date"];
 
         if (empty ($modified)) {
