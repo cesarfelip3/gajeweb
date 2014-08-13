@@ -310,7 +310,8 @@ class UserController extends BaseController
             $data["user_uuid"] = $uuid;
 
             $result = $user->getUpdateInfo($data);
-
+            $image = new Image();
+            
             $comments = $result["comments"];
 
             if (!empty ($comments)) {
