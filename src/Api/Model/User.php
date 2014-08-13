@@ -224,7 +224,9 @@ class User extends BaseModel
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue (1, $data["user_uuid"]);
         $stmt->execute();
-        $result = $stmt->fetchColumn();
+        $result = $stmt->fetchAll();
+
+        print_r ($result);
 
         return $result;
 
