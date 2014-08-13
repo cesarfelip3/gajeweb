@@ -76,7 +76,7 @@
       <file leaf-file-name="UserController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Api/Controller/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="313" column="12" selection-start="8086" selection-end="8086" vertical-scroll-proportion="0.45689654" vertical-offset="6968" max-vertical-offset="8664">
+            <state line="314" column="42" selection-start="8119" selection-end="8119" vertical-scroll-proportion="0.25" vertical-offset="7184" max-vertical-offset="8832">
               <folding />
             </state>
           </provider>
@@ -85,7 +85,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="213" column="35" selection-start="5508" selection-end="5508" vertical-scroll-proportion="-5.818182" vertical-offset="4896" max-vertical-offset="8232">
+            <state line="43" column="22" selection-start="871" selection-end="871" vertical-scroll-proportion="-15.272727" vertical-offset="504" max-vertical-offset="8232">
               <folding />
             </state>
           </provider>
@@ -738,13 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="213" column="35" selection-start="5508" selection-end="5508" vertical-scroll-proportion="-5.818182" vertical-offset="4896" max-vertical-offset="8232">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Model/Image.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="197" column="29" selection-start="5657" selection-end="5902" vertical-scroll-proportion="-0.030303031" vertical-offset="4703" max-vertical-offset="6072">
@@ -787,9 +780,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="22" selection-start="871" selection-end="871" vertical-scroll-proportion="-15.272727" vertical-offset="504" max-vertical-offset="8232">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="313" column="12" selection-start="8086" selection-end="8086" vertical-scroll-proportion="0.45689654" vertical-offset="6968" max-vertical-offset="8664">
+        <state line="314" column="42" selection-start="8119" selection-end="8119" vertical-scroll-proportion="0.25" vertical-offset="7184" max-vertical-offset="8832">
           <folding />
         </state>
       </provider>

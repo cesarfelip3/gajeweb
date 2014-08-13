@@ -310,8 +310,13 @@ class UserController extends BaseController
             $data["user_uuid"] = $uuid;
 
             $result = $user->getUpdateInfo($data);
+
+            if ($result == false) {
+                $this->setFailed("false");
+            }
+
             $image = new Image();
-            
+
             $comments = $result["comments"];
 
             if (!empty ($comments)) {
@@ -352,6 +357,8 @@ class UserController extends BaseController
 
                 $result["branders"] = $branders;
             }
+
+            $this->setSuccess("", $result);
 
         }
 
