@@ -245,6 +245,14 @@ class User extends BaseModel
         $stmt->execute();
         $comments = $stmt->fetchAll();
 
+        // get comments first
+        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username FROM $tableImage img INNER JOIN $tableImageBrander imgcmt ON img.image_uuid=imgcmt.image_uuid INNER JOIN {$this->table} usr ON imgcmt.user_uuid=usr.user_uuid WHERE imgcmt.modified_date>=? AND imgcmt.user_uuid=? ORDER BY cmt.modified_date ASC LIMIT {$limit}";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue (1, $modified);
+        $stmt->bindValue (2, $data["user_uuid"]);
+        $stmt->execute();
+        $comments = $stmt->fetchAll();
+
 
         return array ("comments"=>$comments);
     }
