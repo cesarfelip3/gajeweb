@@ -310,11 +310,48 @@ class UserController extends BaseController
             $data["user_uuid"] = $uuid;
 
             $result = $user->getUpdateInfo($data);
-            if ($result) {
-                $this->setSuccess("", $result);
-            } else {
-                $this->setFailed("nothing");
+
+            $comments = $result["comments"];
+
+            if (!empty ($comments)) {
+
+                $data = array();
+                $data["page"] = 0;
+                $data["page_size"] = 512;
+
+                foreach ($comments as &$value) {
+
+                    $data["image_uuid"] = $value["image_uuid"];
+                    $value["branders"] = $image->getBranderList($data);
+                    $value["brander_count"] = count($value["branders"]);
+                    $data["user_uuid"] = $user_uuid;
+                    $value["enable_brander"] = $image->branderExist($data) == true ? 0 : 1;
+                }
+
+                $result["comments"] = $comments;
+
             }
+
+            $branders = $result["branders"];
+
+            if (!empty ($branders)) {
+
+                $data = array();
+                $data["page"] = 0;
+                $data["page_size"] = 512;
+
+                foreach ($branders as &$value) {
+
+                    $data["image_uuid"] = $value["image_uuid"];
+                    $value["branders"] = $image->getBranderList($data);
+                    $value["brander_count"] = count($value["branders"]);
+                    $data["user_uuid"] = $user_uuid;
+                    $value["enable_brander"] = $image->branderExist($data) == true ? 0 : 1;
+                }
+
+                $result["branders"] = $branders;
+            }
+
         }
 
         return true;
