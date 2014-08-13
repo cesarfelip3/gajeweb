@@ -285,7 +285,7 @@ class UserController extends BaseController
 
         } else {
             $data["user_uuid"] = $userUUID;
-            $data["modification_date"] = time ();
+            $data["modified_date"] = time ();
             $user->updateUserByUUID($data);
         }
 
