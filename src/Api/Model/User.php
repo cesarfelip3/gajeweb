@@ -224,7 +224,7 @@ class User extends BaseModel
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue (1, $data["user_uuid"]);
         $stmt->execute();
-        $result = $stmt->fetchAll();
+        $result = $stmt->fetchColumn();
 
         $modified = $result["modified_date"];
 
