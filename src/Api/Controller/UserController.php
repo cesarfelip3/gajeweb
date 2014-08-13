@@ -304,9 +304,9 @@ class UserController extends BaseController
         if (!$uuid) {
 
         } else {
-            $data["user_uuid"] = $userUUID;
-            $data["modification_date"] = time ();
-            $user->updateUserByUUID($data);
+
+            $result = $user->getUpdateInfo();
+            $this->setSuccess("", array ("result"=>$result));
         }
 
         return true;

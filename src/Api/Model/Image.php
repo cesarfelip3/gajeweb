@@ -227,4 +227,9 @@ class Image extends BaseModel
         return $result;
     }
 
+    public static function table ()
+    {
+        return "image";
+    }
+
 }
