@@ -242,7 +242,7 @@ class User extends BaseModel
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue (1, $modified);
         $stmt->execute();
-        $comments = $stmt->fetchColumn();
+        $comments = $stmt->fetchAll();
 
         //
 
