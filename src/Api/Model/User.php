@@ -245,12 +245,6 @@ class User extends BaseModel
         $stmt->execute();
         $comments = $stmt->fetchAll();
 
-        //
-        $sql = "SELECT img.* FROM $tableImage img INNER JOIN $tableImageBrander imgcmt ON img.image_uuid=imgcmt.image_uuid INNER JOIN $tableComment AS cmt ON cmt.comment_uuid=imgcmt.comment_uuid WHERE cmt.modified_date>=? ORDER BY cmt.modified_date ASC LIMIT {$limit}";
-        $stmt = $this->db->prepare($sql);
-        $stmt->bindValue (1, $modified);
-        $stmt->execute();
-        $comments = $stmt->fetchAll();
 
         return array ("comments"=>$comments);
     }
