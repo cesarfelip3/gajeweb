@@ -209,7 +209,7 @@ class User extends BaseModel
     //
     //====================================
 
-    public function getUpdateInfo ()
+    public function getUpdateInfo ($data)
     {
         $page = $data["page"];
         $pageSize = $data["page_size"];
@@ -226,6 +226,7 @@ class User extends BaseModel
         $stmt->execute();
         $result = $stmt->fetchAll();
 
+        print_r ($data);
         print_r ($result);
 
         return $result;
