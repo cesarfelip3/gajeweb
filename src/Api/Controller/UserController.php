@@ -309,7 +309,7 @@ class UserController extends BaseController
             $data["page_size"] = 10;
             $data["user_uuid"] = $uuid;
 
-            $result = $user->getUpdateInfo();
+            $result = $user->getUpdateInfo($data);
             $this->setSuccess("", array ("result"=>$result));
         }
 
