@@ -251,10 +251,9 @@ class User extends BaseModel
         $stmt->bindValue (1, $modified);
         $stmt->bindValue (2, $data["user_uuid"]);
         $stmt->execute();
-        $comments = $stmt->fetchAll();
+        $branders = $stmt->fetchAll();
 
-
-        return array ("comments"=>$comments);
+        return array ("comments"=>$comments, "branders"=>$branders);
     }
 
 
