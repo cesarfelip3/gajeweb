@@ -200,19 +200,15 @@ class TestCase {
         // @module: api
         // @target: user/add
 
-        $test->get("user/add", function () use ($app) {
+        $test->get("user/notify", function () use ($app) {
 
-            $file_name_with_full_path = realpath(__DIR__ . "/pi-512.png");
             $post = array(
-                'email' => '123456@abc.com',
-                'facebook_token' => 'bbad2323adfadsf',
-                'facebook_icon' => 'hello://'
+                'user_uuid' => '53da40fb7a7e8'
             );
 
-            $target_url = "http://localhost/gajeweb/api/v1/user/add";
+            $target_url = "http://localhost/gajeweb/api/v1/user/notification/latest";
 
             $curl = new Curl();
-
 
             $curl->post($target_url, $post);
             print_r(json_encode($curl->response));
