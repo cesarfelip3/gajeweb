@@ -3,7 +3,7 @@
 
 namespace Api\Model;
 
-use \Model\BaseModel;
+use Api\Model\BaseModel;
 
 class Theme extends BaseModel
 {
