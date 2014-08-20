@@ -256,6 +256,54 @@ class User extends BaseModel
         return array ("comments"=>$comments, "branders"=>$branders);
     }
 
+    public function getNumberOfUpdateInfo ($data)
+    {
+        $page = $data["page"];
+        $pageSize = $data["page_size"];
+
+        $page = intval($page);
+        $pageSize = intval($pageSize);
+        $page = $page * $pageSize;
+
+        $limit = "$page, $pageSize";
+
+        $sql = "SELECT DISTINCT modified_date FROM {$this->table} WHERE user_uuid=?";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue (1, $data["user_uuid"]);
+        $stmt->execute();
+        $result = $stmt->fetchColumn();
+
+        $modified = $result["modified_date"];
+
+        if (empty ($modified)) {
+            return false;
+        }
+
+        $tableComment = Comment::table();
+        $tableImageBrander = "image_brander";
+        $tableImageComment = "image_comment";
+        $tableImage = Image::table();
+
+        // get comments first
+        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username, cmt.user_uuid AS comment_user_uuid FROM $tableImage img INNER JOIN $tableImageComment imgcmt ON img.image_uuid=imgcmt.image_uuid INNER JOIN $tableComment AS cmt ON cmt.comment_uuid=imgcmt.comment_uuid INNER JOIN {$this->table} usr ON cmt.user_uuid=usr.user_uuid WHERE cmt.modified_date>=? AND img.user_uuid=? ORDER BY cmt.modified_date ASC LIMIT {$limit}";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue (1, $modified);
+        $stmt->bindValue (2, $data["user_uuid"]);
+        $stmt->execute();
+        $comments = $stmt->fetchAll();
+
+        $total = count($comments);
+
+        // get comments first
+        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username, imgcmt.user_uuid AS brander_user FROM $tableImage img INNER JOIN $tableImageBrander imgcmt ON img.image_uuid=imgcmt.image_uuid INNER JOIN {$this->table} usr ON imgcmt.user_uuid=usr.user_uuid WHERE imgcmt.create_date>=? AND img.user_uuid=? ORDER BY imgcmt.create_date ASC LIMIT {$limit}";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue (1, $modified);
+        $stmt->bindValue (2, $data["user_uuid"]);
+        $stmt->execute();
+        $branders = $stmt->fetchAll();
+
+        return $total + count($branders);
+    }
 
     public static function table()
     {

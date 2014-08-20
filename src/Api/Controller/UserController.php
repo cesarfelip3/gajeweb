@@ -64,7 +64,7 @@ class UserController extends BaseController
 
     }
 
-    public function searchUser ()
+    public function searchUser()
     {
         $name = $this->request->get("name", "");
         if (empty ($name)) {
@@ -96,7 +96,7 @@ class UserController extends BaseController
     //=================================
     //
     //=================================
-    public function addBlock ()
+    public function addBlock()
     {
         $user_uuid = $this->request->get("user_uuid", "");
         $block_uuid = $this->request->get("user_block_uuid", "");
@@ -124,7 +124,7 @@ class UserController extends BaseController
     //
     //======================================
 
-    public function addFollow ()
+    public function addFollow()
     {
         $user_uuid = $this->request->get("user_followed_uuid", "");
         $follow_uuid = $this->request->get("user_following_uuid", "");
@@ -148,7 +148,7 @@ class UserController extends BaseController
         return true;
     }
 
-    public function getFollowerListByUser ()
+    public function getFollowerListByUser()
     {
         $user_uuid = $this->request->get("user_uuid", "");
         if (empty ($user_uuid)) {
@@ -185,7 +185,7 @@ class UserController extends BaseController
                 if (!empty ($imageArray)) {
                     $follower["image"] = $imageArray[0];
                 } else {
-                    $follower["image"] = array ();
+                    $follower["image"] = array();
                 }
 
             }
@@ -196,7 +196,7 @@ class UserController extends BaseController
         return true;
     }
 
-    public function getFollowingListByUser ()
+    public function getFollowingListByUser()
     {
         $user_uuid = $this->request->get("user_uuid", "");
         if (empty ($user_uuid)) {
@@ -234,7 +234,7 @@ class UserController extends BaseController
                 if (!empty ($imageArray)) {
                     $follower["image"] = $imageArray[0];
                 } else {
-                    $follower["image"] = array ();
+                    $follower["image"] = array();
                 }
 
             }
@@ -245,7 +245,7 @@ class UserController extends BaseController
         return true;
     }
 
-    public function removeFollow ()
+    public function removeFollow()
     {
         $user_uuid = $this->request->get("user_followed_uuid", "");
         $follow_uuid = $this->request->get("user_following_uuid", "");
@@ -273,7 +273,7 @@ class UserController extends BaseController
     // Notification ::
     //=========================================
 
-    function prepareNotification ()
+    function prepareNotification()
     {
         $userUUID = $this->request->get("user_uuid", "");
 
@@ -285,7 +285,7 @@ class UserController extends BaseController
 
         } else {
             $data["user_uuid"] = $userUUID;
-            $data["modified_date"] = time ();
+            $data["modified_date"] = time();
             $user->updateUserByUUID($data);
         }
 
@@ -293,7 +293,7 @@ class UserController extends BaseController
         return true;
     }
 
-    function getUpdateInfo ()
+    function getUpdateInfo()
     {
         $userUUID = $this->request->get("user_uuid", "");
 
@@ -306,7 +306,7 @@ class UserController extends BaseController
         } else {
 
             $data["page"] = 0;
-            $data["page_size"] = 10;
+            $data["page_size"] = 50;
             $data["user_uuid"] = $uuid;
 
             $result = $user->getUpdateInfo($data);
@@ -360,6 +360,30 @@ class UserController extends BaseController
 
             $this->setSuccess("", $result);
 
+        }
+
+        return true;
+    }
+
+    function getNumberOfUpdateInfo()
+    {
+        $userUUID = $this->request->get("user_uuid", "");
+
+        $user = new User();
+        $uuid = "";
+        $uuid = $user->userExists($userUUID);
+
+        if (!$uuid) {
+
+        } else {
+
+            $data["page"] = 0;
+            $data["page_size"] = 50;
+            $data["user_uuid"] = $uuid;
+
+            $result = $user->getNumberOfUpdateInfo($data);
+
+            $this->setSuccess("", array ("total"=>$result));
         }
 
         return true;
