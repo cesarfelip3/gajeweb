@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Api.php" afterPath="$PROJECT_DIR$/src/Api/Api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Model/User.php" afterPath="$PROJECT_DIR$/src/Api/Model/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/Api/Controller/UserController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gaje.iws" />
@@ -31,22 +28,8 @@
       <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Api/Model/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="306" column="0" selection-start="11230" selection-end="11230" vertical-scroll-proportion="-20.121212" vertical-offset="6680" max-vertical-offset="7632">
-              <folding>
-                <marker date="1408549262000" expanded="true" signature="1247:1306" placeholder="SELECT user_..." />
-                <marker date="1408549262000" expanded="true" signature="1508:1562" placeholder="SELECT user_..." />
-                <marker date="1408549262000" expanded="true" signature="1961:2077" placeholder="SELECT DISTI..." />
-                <marker date="1408549262000" expanded="true" signature="2431:2518" placeholder="SELECT user_..." />
-                <marker date="1408549262000" expanded="true" signature="4405:4515" placeholder="SELECT user_..." />
-                <marker date="1408549262000" expanded="true" signature="4962:5194" placeholder="SELECT DISTI..." />
-                <marker date="1408549262000" expanded="true" signature="5666:5898" placeholder="SELECT DISTI..." />
-                <marker date="1408549262000" expanded="true" signature="6462:6529" placeholder="SELECT DISTI..." />
-                <marker date="1408549262000" expanded="true" signature="7027:7634" placeholder="SELECT img.i..$tableImage img..." />
-                <marker date="1408549262000" expanded="true" signature="7882:8420" placeholder="SELECT img.i..$tableImage img..." />
-                <marker date="1408549262000" expanded="true" signature="8986:9053" placeholder="SELECT DISTI..." />
-                <marker date="1408549262000" expanded="true" signature="9551:10158" placeholder="SELECT img.i..$tableImage img..." />
-                <marker date="1408549262000" expanded="true" signature="10442:10980" placeholder="SELECT img.i..$tableImage img..." />
-              </folding>
+            <state line="306" column="0" selection-start="11230" selection-end="11230" vertical-scroll-proportion="0.0" vertical-offset="6680" max-vertical-offset="7632">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -54,7 +37,7 @@
       <file leaf-file-name="ThemeController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Api/Controller/ThemeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="19" selection-start="294" selection-end="294" vertical-scroll-proportion="-2.939394" vertical-offset="119" max-vertical-offset="1080">
+            <state line="16" column="19" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" vertical-offset="384" max-vertical-offset="1248">
               <folding />
             </state>
           </provider>
@@ -63,7 +46,7 @@
       <file leaf-file-name="UserController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Api/Controller/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="388" column="20" selection-start="10109" selection-end="10109" vertical-scroll-proportion="-24.484848" vertical-offset="8384" max-vertical-offset="9408">
+            <state line="388" column="20" selection-start="10109" selection-end="10109" vertical-scroll-proportion="0.0" vertical-offset="9312" max-vertical-offset="9528">
               <folding />
             </state>
           </provider>
@@ -72,7 +55,7 @@
       <file leaf-file-name="Api.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Api/Api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="246" column="24" selection-start="6327" selection-end="6350" vertical-scroll-proportion="0.35344827" vertical-offset="5552" max-vertical-offset="10920">
+            <state line="256" column="13" selection-start="6673" selection-end="6673" vertical-scroll-proportion="0.12931034" vertical-offset="6000" max-vertical-offset="10920">
               <folding />
             </state>
           </provider>
@@ -81,7 +64,7 @@
       <file leaf-file-name="PushController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Api/Controller/PushController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="27" selection-start="1615" selection-end="1615" vertical-scroll-proportion="-5.090909" vertical-offset="936" max-vertical-offset="2088">
+            <state line="57" column="27" selection-start="1615" selection-end="1615" vertical-scroll-proportion="0.0" vertical-offset="1368" max-vertical-offset="2352">
               <folding />
             </state>
           </provider>
@@ -242,110 +225,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gajeweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gajeweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gajeweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gajeweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gajeweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gajeweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gajeweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gajeweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gajeweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gajeweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gajeweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gajeweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -357,7 +236,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/hybridauth-2.1.2" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/php-src-master" />
     <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="LayoutCode.rearrangeEntries" value="false" />
@@ -434,14 +313,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="22" width="1871" height="1058" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19241047" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19241047" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -449,11 +328,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962587" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962587" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39939332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39939332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -476,21 +355,7 @@
     <entry file="file://$PROJECT_DIR$/src/Api/Model/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="240" column="625" selection-start="7636" selection-end="7636" vertical-scroll-proportion="0.0" vertical-offset="5760" max-vertical-offset="6480">
-          <folding>
-            <marker date="1408549262000" expanded="true" signature="1247:1306" placeholder="SELECT user_..." />
-            <marker date="1408549262000" expanded="true" signature="1508:1562" placeholder="SELECT user_..." />
-            <marker date="1408549262000" expanded="true" signature="1961:2077" placeholder="SELECT DISTI..." />
-            <marker date="1408549262000" expanded="true" signature="2431:2518" placeholder="SELECT user_..." />
-            <marker date="1408549262000" expanded="true" signature="4405:4515" placeholder="SELECT user_..." />
-            <marker date="1408549262000" expanded="true" signature="4962:5194" placeholder="SELECT DISTI..." />
-            <marker date="1408549262000" expanded="true" signature="5666:5898" placeholder="SELECT DISTI..." />
-            <marker date="1408549262000" expanded="true" signature="6462:6529" placeholder="SELECT DISTI..." />
-            <marker date="1408549262000" expanded="true" signature="7027:7634" placeholder="SELECT img.i..$tableImage img..." />
-            <marker date="1408549262000" expanded="true" signature="7882:8420" placeholder="SELECT img.i..$tableImage img..." />
-            <marker date="1408549262000" expanded="true" signature="8986:9053" placeholder="SELECT DISTI..." />
-            <marker date="1408549262000" expanded="true" signature="9551:10158" placeholder="SELECT img.i..$tableImage img..." />
-            <marker date="1408549262000" expanded="true" signature="10442:10980" placeholder="SELECT img.i..$tableImage img..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -671,9 +536,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Model/BaseModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="30" selection-start="151" selection-end="151" vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="1056">
-          <folding />
-        </state>
+        <state line="11" column="30" selection-start="151" selection-end="151" vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="1056" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Model/Comment.php">
@@ -708,9 +571,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="21" selection-start="1187" selection-end="1669" vertical-scroll-proportion="0.0" vertical-offset="1152" max-vertical-offset="9792">
-          <folding />
-        </state>
+        <state line="48" column="21" selection-start="1187" selection-end="1669" vertical-scroll-proportion="0.0" vertical-offset="1152" max-vertical-offset="9792" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.php">
@@ -725,49 +586,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/PushController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="27" selection-start="1615" selection-end="1615" vertical-scroll-proportion="-5.090909" vertical-offset="936" max-vertical-offset="2088">
+        <state line="57" column="27" selection-start="1615" selection-end="1615" vertical-scroll-proportion="0.0" vertical-offset="1368" max-vertical-offset="2352">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/ThemeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="19" selection-start="294" selection-end="294" vertical-scroll-proportion="-2.939394" vertical-offset="119" max-vertical-offset="1080">
+        <state line="16" column="19" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" vertical-offset="384" max-vertical-offset="1248">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Model/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="306" column="0" selection-start="11230" selection-end="11230" vertical-scroll-proportion="-20.121212" vertical-offset="6680" max-vertical-offset="7632">
-          <folding>
-            <marker date="1408549262000" expanded="true" signature="1247:1306" placeholder="SELECT user_..." />
-            <marker date="1408549262000" expanded="true" signature="1508:1562" placeholder="SELECT user_..." />
-            <marker date="1408549262000" expanded="true" signature="1961:2077" placeholder="SELECT DISTI..." />
-            <marker date="1408549262000" expanded="true" signature="2431:2518" placeholder="SELECT user_..." />
-            <marker date="1408549262000" expanded="true" signature="4405:4515" placeholder="SELECT user_..." />
-            <marker date="1408549262000" expanded="true" signature="4962:5194" placeholder="SELECT DISTI..." />
-            <marker date="1408549262000" expanded="true" signature="5666:5898" placeholder="SELECT DISTI..." />
-            <marker date="1408549262000" expanded="true" signature="6462:6529" placeholder="SELECT DISTI..." />
-            <marker date="1408549262000" expanded="true" signature="7027:7634" placeholder="SELECT img.i..$tableImage img..." />
-            <marker date="1408549262000" expanded="true" signature="7882:8420" placeholder="SELECT img.i..$tableImage img..." />
-            <marker date="1408549262000" expanded="true" signature="8986:9053" placeholder="SELECT DISTI..." />
-            <marker date="1408549262000" expanded="true" signature="9551:10158" placeholder="SELECT img.i..$tableImage img..." />
-            <marker date="1408549262000" expanded="true" signature="10442:10980" placeholder="SELECT img.i..$tableImage img..." />
-          </folding>
+        <state line="306" column="0" selection-start="11230" selection-end="11230" vertical-scroll-proportion="0.0" vertical-offset="6680" max-vertical-offset="7632">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="388" column="20" selection-start="10109" selection-end="10109" vertical-scroll-proportion="-24.484848" vertical-offset="8384" max-vertical-offset="9408">
+        <state line="388" column="20" selection-start="10109" selection-end="10109" vertical-scroll-proportion="0.0" vertical-offset="9312" max-vertical-offset="9528">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="246" column="24" selection-start="6327" selection-end="6350" vertical-scroll-proportion="0.35344827" vertical-offset="5552" max-vertical-offset="10920">
+        <state line="256" column="13" selection-start="6673" selection-end="6673" vertical-scroll-proportion="0.12931034" vertical-offset="6000" max-vertical-offset="10920">
           <folding />
         </state>
       </provider>

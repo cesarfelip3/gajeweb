@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-image: url(images/pattern.jpg); font-family:Arial, Helvetica, sans-serif; font-size:12px; padding:30px 0;
+}
+.wrapper{ border-radius: 4px;
+   /* box-shadow: 0 0 3px #888;*/
+    margin: 0 auto;
+    padding: 10px;}
+.name{ margin:0 auto; text-align:center; width:100%}
+.logo{margin:0 auto; text-align:center; width:100%}
+.name img, .logo img{ max-width:100%}
+
+.content{ text-align:center; width:60%; padding:10px 20%}
+.content p{ line-height:20px;}
+
+.button{background-image: url("images/greenpattern.jpg");
+    border-radius: 5px;
+    box-shadow: 3px 2px 8px #888;
+    color: #fff;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto;
+    max-width: 350px;
+    padding: 10px 20px;
+    text-transform: uppercase;}
+.button span{ float:left; padding:5px 10px}
+.button span.two{padding:12px 10px}
+h1{ text-transform:uppercase; font-size:40px;}
+.content strong{ font-size:16px;}
+ @media only screen and (min-width: 768px) and (max-width: 959px) {
+	 
+}
+ @media only screen and (max-width: 767px) {
+	 .wrapper{ width:90%; margin:0 auto}
+}
+ @media only screen and (min-width: 480px) and (max-width: 767px) {
+	 .wrapper{ width:90%; margin:0 auto}
+}
+ @media only screen and (min-width: 1024px) and (max-width: 1400px) {
+	 .wrapper{ width:1000px; margin:0 auto}
+}
