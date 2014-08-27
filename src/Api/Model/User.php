@@ -309,7 +309,14 @@ class User extends BaseModel
         $stmt->execute();
         $branders = $stmt->fetchAll();
 
-        return $total + count($branders);
+        $sql = "SELECT DISTINCT usr.*, fol.is_mutual AS is_mutual FROM {$this->table} usr INNER JOIN {$this->table_user_follow} fol ON usr.user_uuid=fol.user_following_uuid WHERE fol.create_date>=? AND fol.user_followed_uuid=? ORDER BY fol.create_date DESC LIMIT {$limit}";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue (1, $modified);
+        $stmt->bindValue (2, $data["user_uuid"]);
+        $stmt->execute();
+        $followers = $stmt->fetchAll();
+
+        return $total + count($branders) + count($followers);
     }
 
     public static function table()
