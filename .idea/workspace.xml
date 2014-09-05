@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Controller/ImageController.php" afterPath="$PROJECT_DIR$/src/Api/Controller/ImageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,7 +55,7 @@
       <file leaf-file-name="ImageController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="25" selection-start="4660" selection-end="4660" vertical-scroll-proportion="0.80172414" vertical-offset="2496" max-vertical-offset="9792">
+            <state line="132" column="0" selection-start="4157" selection-end="4157" vertical-scroll-proportion="0.5689655" vertical-offset="2496" max-vertical-offset="9696">
               <folding />
             </state>
           </provider>
@@ -785,7 +784,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="25" selection-start="4660" selection-end="4660" vertical-scroll-proportion="0.80172414" vertical-offset="2496" max-vertical-offset="9792">
+        <state line="132" column="0" selection-start="4157" selection-end="4157" vertical-scroll-proportion="0.5689655" vertical-offset="2496" max-vertical-offset="9696">
           <folding />
         </state>
       </provider>

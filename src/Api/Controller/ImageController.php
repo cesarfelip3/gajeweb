@@ -131,15 +131,11 @@ class ImageController extends BaseController
 
                     $imagine = new \Imagine\Imagick\Imagine();
 
-                    print_r ($imagine);
-
                     $image = $imagine->open($data["file_path"] . $data["file_name"]);
                     $image->resize(new \Imagine\Image\Box($thumbnail_width, $thumbnail_width * $height / $width))
                         ->crop(new \Imagine\Image\Point(0, 0), new \Imagine\Image\Box($thumbnail_width, $thumbnail_height))
                         ->save($data["file_path"] . $data["thumbnail"]);
 
-                    print_r ($image);
-                    exit;
 
                     if (empty ($image_uuid)) {
 
