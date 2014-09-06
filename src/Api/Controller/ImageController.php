@@ -364,41 +364,4 @@ class ImageController extends BaseController
         return true;
     }
 
-    // service ==> cron
-    // not tested yet
-
-    public function toThumbnails()
-    {
-        $image = new Image();
-
-        $result = $image->getImagesWithoutThumbnail();
-
-        if (!empty ($result)) {
-
-            $imagine = new \Imagine\Imagick\Imagine();
-
-            foreach ($result as $data) {
-
-                if (file_exists($data["file_path"] . $data["file_name"])) {
-
-                    $width = $data["width"];
-                    $heght = $data["height"];
-
-                    $thumbnail = $imagine->open($data["file_path"] . $data["file_name"]);
-                    $thumbnail->resize(new \Imagine\Image\Box(280, 280 * $height / $width))
-                        ->crop(new \Imagine\Image\Point(0, 0), new \Imagine\Image\Box(280, 185))
-                        ->save($data["file_path"] . pathinfo($data["file_name"], PATHINFO_BASENAME) . "_280x240." . pathinfo($data["file_name"], PATHINFO_EXTENSION));
-
-                    $data["thumbnails"] = 1;
-                    $image->updateImage($data);
-
-                }
-
-            }
-
-        }
-
-    }
-
-
 }

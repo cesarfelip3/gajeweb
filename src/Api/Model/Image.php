@@ -171,32 +171,8 @@ class Image extends BaseModel
 
         $sql = "SELECT * FROM view_image_latest_collection WHERE user_uuid NOT IN (SELECT user_block_uuid FROM user_block WHERE user_uuid=?) ORDER BY modified_date DESC";
 
-
-        //$sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username FROM {$this->table} img INNER JOIN $userTable usr ON img.user_uuid=usr.user_uuid WHERE usr.user_uuid NOT IN (SELECT usrb.user_block_uuid FROM user_block usrb WHERE usrb.user_uuid=?) ORDER BY modified_date DESC LIMIT {$limit}";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue(1, $user_uuid);
-        $stmt->execute();
-
-        $result = $stmt->fetchAll();
-
-        return $result;
-    }
-
-    public function getImagesWithoutThumbnail($data)
-    {
-        $page = $data["page"];
-        $pageSize = $data["page_size"];
-
-        $page = intval($page);
-        $pageSize = intval($pageSize);
-        $page = $page * $pageSize;
-
-        $limit = "$page, $pageSize";
-
-        $userTable = User::table();
-
-        $sql = "SELECT img.image_uuid, img.width, img.height, img.file_path, img.file_name, usr.token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username FROM {$this->table} img INNER JOIN $userTable usr ON img.user_uuid=usr.user_uuid WHERE img.thumbnails=0 ORDER BY modified_date DESC";
-        $stmt = $this->db->prepare($sql);
         $stmt->execute();
 
         $result = $stmt->fetchAll();
