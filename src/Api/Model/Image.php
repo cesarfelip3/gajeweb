@@ -153,33 +153,6 @@ class Image extends BaseModel
     // get images
     //================================
 
-    public function getImageByUser($data)
-    {
-
-        $user_uuid = $data["user_uuid"];
-        $limit = "0, 1";
-        $result = $this->db->fetchAll("SELECT `image_uuid`, `name`, `description`, `width`, `height`, `create_date`, `modified_date`, `file_name`, `thumbnail` FROM {$this->table} WHERE user_uuid=? ORDER BY modified_date DESC LIMIT {$limit} ", array($user_uuid));
-
-        return $result;
-    }
-
-    public function getImagesByUser($data)
-    {
-        $page = $data["page"];
-        $pageSize = $data["page_size"];
-        $user_uuid = $data["user_uuid"];
-
-        $page = intval($page);
-        $pageSize = intval($pageSize);
-        $page = $page * $pageSize;
-
-        $limit = "$page, $pageSize";
-        $result = $this->db->fetchAll("SELECT `image_uuid`, `name`, `description`, `width`, `height`, `create_date`, `modified_date`, `file_name`, `thumbnail` FROM {$this->table} WHERE user_uuid=? ORDER BY modified_date DESC LIMIT {$limit} ", array($user_uuid));
-
-        return $result;
-
-    }
-
     public function getLatestImages($data)
     {
         $user_uuid = $data["user_uuid"];
@@ -195,7 +168,11 @@ class Image extends BaseModel
 
         $userTable = User::table();
 
-        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username FROM {$this->table} img INNER JOIN $userTable usr ON img.user_uuid=usr.user_uuid WHERE usr.user_uuid NOT IN (SELECT usrb.user_block_uuid FROM user_block usrb WHERE usrb.user_uuid=?) ORDER BY modified_date DESC LIMIT {$limit}";
+
+        $sql = "SELECT * FROM view_image_latest_collection WHERE user_uuid NOT IN (SELECT user_block_uuid FROM user_block WHERE user_uuid=?) ORDER BY modified_date DESC";
+
+
+        //$sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username FROM {$this->table} img INNER JOIN $userTable usr ON img.user_uuid=usr.user_uuid WHERE usr.user_uuid NOT IN (SELECT usrb.user_block_uuid FROM user_block usrb WHERE usrb.user_uuid=?) ORDER BY modified_date DESC LIMIT {$limit}";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue(1, $user_uuid);
         $stmt->execute();
@@ -225,6 +202,33 @@ class Image extends BaseModel
         $result = $stmt->fetchAll();
 
         return $result;
+    }
+
+    public function getImageByUser($data)
+    {
+
+        $user_uuid = $data["user_uuid"];
+        $limit = "0, 1";
+        $result = $this->db->fetchAll("SELECT `image_uuid`, `name`, `description`, `width`, `height`, `create_date`, `modified_date`, `file_name`, `thumbnail` FROM {$this->table} WHERE user_uuid=? ORDER BY modified_date DESC LIMIT {$limit} ", array($user_uuid));
+
+        return $result;
+    }
+
+    public function getImagesByUser($data)
+    {
+        $page = $data["page"];
+        $pageSize = $data["page_size"];
+        $user_uuid = $data["user_uuid"];
+
+        $page = intval($page);
+        $pageSize = intval($pageSize);
+        $page = $page * $pageSize;
+
+        $limit = "$page, $pageSize";
+        $result = $this->db->fetchAll("SELECT `image_uuid`, `name`, `description`, `width`, `height`, `create_date`, `modified_date`, `file_name`, `thumbnail` FROM {$this->table} WHERE user_uuid=? ORDER BY modified_date DESC LIMIT {$limit} ", array($user_uuid));
+
+        return $result;
+
     }
 
     public static function table ()
