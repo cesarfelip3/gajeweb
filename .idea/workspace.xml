@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Model/Image.php" afterPath="$PROJECT_DIR$/src/Api/Model/Image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/database.sql" afterPath="$PROJECT_DIR$/data/database.sql" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,10 +59,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Image.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Image.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Api/Model/Image.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="172" column="0" selection-start="4795" selection-end="4795" vertical-scroll-proportion="0.61206895" vertical-offset="3680" max-vertical-offset="6216">
+            <state line="172" column="0" selection-start="4795" selection-end="4795" vertical-scroll-proportion="-12.848485" vertical-offset="3680" max-vertical-offset="6216">
               <folding>
                 <marker date="1410011644000" expanded="true" signature="1011:1067" placeholder="SELECT image..." />
                 <marker date="1410011644000" expanded="true" signature="1656:1955" placeholder="SELECT cmt.*..." />
@@ -82,10 +80,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.sql" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="database.sql" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/database.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="14" selection-start="3338" selection-end="3338" vertical-scroll-proportion="-6.2222223" vertical-offset="1800" max-vertical-offset="5184">
+            <state line="421" column="7" selection-start="15998" selection-end="15998" vertical-scroll-proportion="0.40062433" vertical-offset="9719" max-vertical-offset="10680">
               <folding />
             </state>
           </provider>
@@ -372,11 +370,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
       <recent name="$USER_HOME$/Downloads" />
       <recent name="$PROJECT_DIR$/src/Api/Controller" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/src/Admin/Model" />
-      <recent name="$PROJECT_DIR$/src/Admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Api" />
@@ -485,11 +483,6 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="60" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="288" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/database.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="51" selection-start="5398" selection-end="5398" vertical-scroll-proportion="0.0" vertical-offset="3215" max-vertical-offset="5136" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/test/Zebra_cURL.php">
@@ -719,13 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/database.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="14" selection-start="3338" selection-end="3338" vertical-scroll-proportion="-6.2222223" vertical-offset="1800" max-vertical-offset="5184">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Model/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="196" column="36" selection-start="5648" selection-end="5648" vertical-scroll-proportion="34.60606" vertical-offset="5846" max-vertical-offset="8640">
@@ -751,7 +737,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Model/Image.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="0" selection-start="4795" selection-end="4795" vertical-scroll-proportion="0.61206895" vertical-offset="3680" max-vertical-offset="6216">
+        <state line="172" column="0" selection-start="4795" selection-end="4795" vertical-scroll-proportion="-12.848485" vertical-offset="3680" max-vertical-offset="6216">
           <folding>
             <marker date="1410011644000" expanded="true" signature="1011:1067" placeholder="SELECT image..." />
             <marker date="1410011644000" expanded="true" signature="1656:1955" placeholder="SELECT cmt.*..." />
@@ -765,6 +751,13 @@
             <marker date="1410011644000" expanded="true" signature="6407:6607" placeholder="SELECT `imag..." />
             <marker date="1410011644000" expanded="true" signature="7007:7207" placeholder="SELECT `imag..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/database.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="421" column="7" selection-start="15998" selection-end="15998" vertical-scroll-proportion="0.40062433" vertical-offset="9719" max-vertical-offset="10680">
+          <folding />
         </state>
       </provider>
     </entry>
