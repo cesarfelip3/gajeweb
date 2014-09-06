@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/database.sql" afterPath="$PROJECT_DIR$/data/database.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config.php" afterPath="$PROJECT_DIR$/web/config.php" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,10 +80,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.sql" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="database.sql" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/database.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="421" column="7" selection-start="15998" selection-end="15998" vertical-scroll-proportion="0.40062433" vertical-offset="9719" max-vertical-offset="10680">
+            <state line="425" column="0" selection-start="16108" selection-end="16108" vertical-scroll-proportion="0.0" vertical-offset="9719" max-vertical-offset="10680">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Theme.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Admin/Model/Theme.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="35" selection-start="318" selection-end="318" vertical-scroll-proportion="-11.636364" vertical-offset="96" max-vertical-offset="1680">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThemeController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ThemeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="105" column="30" selection-start="2803" selection-end="2803" vertical-scroll-proportion="-10.181818" vertical-offset="2016" max-vertical-offset="3072">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="27" selection-start="214" selection-end="214" vertical-scroll-proportion="0.104525864" vertical-offset="167" max-vertical-offset="1152">
               <folding />
             </state>
           </provider>
@@ -138,7 +165,6 @@
         <option value="$USER_HOME$/Downloads/_190.mememakerinit.js" />
         <option value="$USER_HOME$/Downloads/card_2013-10-01.sql" />
         <option value="$PROJECT_DIR$/data/database.sql" />
-        <option value="$PROJECT_DIR$/web/config.php" />
         <option value="$PROJECT_DIR$/web/config-test.php" />
         <option value="$PROJECT_DIR$/src/Api/Model/BaseModel.php" />
         <option value="$PROJECT_DIR$/src/Api/Model/Comment.php" />
@@ -153,6 +179,7 @@
         <option value="$PROJECT_DIR$/src/Api/Controller/ImageController.php" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/Api/Model/Image.php" />
+        <option value="$PROJECT_DIR$/web/config.php" />
       </list>
     </option>
   </component>
@@ -326,6 +353,68 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gajeweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gajeweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gajeweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gajeweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gajeweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gajeweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -550,16 +639,6 @@
         <state line="109" column="0" selection-start="3085" selection-end="3085" vertical-scroll-proportion="-74.181816" vertical-offset="0" max-vertical-offset="3000" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ThemeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="21" selection-start="0" selection-end="3325" vertical-scroll-proportion="-13.818182" vertical-offset="1752" max-vertical-offset="3240" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Model/Theme.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="17" selection-start="0" selection-end="1389" vertical-scroll-proportion="-11.636364" vertical-offset="96" max-vertical-offset="1680" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Controller/NoteController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="0" selection-start="1109" selection-end="1109" vertical-scroll-proportion="15.057471" vertical-offset="2366" max-vertical-offset="3240" />
@@ -695,11 +774,6 @@
         <state line="258" column="29" selection-start="6704" selection-end="6704" vertical-scroll-proportion="0.0" vertical-offset="6776" max-vertical-offset="10920" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="28" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="167" max-vertical-offset="1152" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="132" column="0" selection-start="4157" selection-end="4157" vertical-scroll-proportion="-0.0" vertical-offset="3000" max-vertical-offset="9696" />
@@ -756,7 +830,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/database.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="421" column="7" selection-start="15998" selection-end="15998" vertical-scroll-proportion="0.40062433" vertical-offset="9719" max-vertical-offset="10680">
+        <state line="425" column="0" selection-start="16108" selection-end="16108" vertical-scroll-proportion="0.0" vertical-offset="9719" max-vertical-offset="10680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/Model/Theme.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="35" selection-start="318" selection-end="318" vertical-scroll-proportion="-11.636364" vertical-offset="96" max-vertical-offset="1680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ThemeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="30" selection-start="2803" selection-end="2803" vertical-scroll-proportion="-10.181818" vertical-offset="2016" max-vertical-offset="3072">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="27" selection-start="214" selection-end="214" vertical-scroll-proportion="0.104525864" vertical-offset="167" max-vertical-offset="1152">
           <folding />
         </state>
       </provider>
