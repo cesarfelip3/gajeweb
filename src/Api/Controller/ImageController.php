@@ -26,7 +26,7 @@ class ImageController extends BaseController
     // get latest image list for app
     //========================================
 
-    public function getLatest()
+    public function getLatest($host)
     {
         $page = $this->request->get("page", 0);
         $pageSize = $this->request->get("page_size", 25);
@@ -51,6 +51,9 @@ class ImageController extends BaseController
 
             foreach ($imageArray as &$value) {
 
+                $data["url_thumbnail"] = $host . $data["thumbnail"];
+                $data["url_file"] = $host . $data["file_name"];
+                
                 $data["image_uuid"] = $value["image_uuid"];
                 $value["branders"] = $image->getBranderList($data);
                 $value["brander_count"] = count($value["branders"]);
@@ -207,7 +210,6 @@ class ImageController extends BaseController
         $image = new Image();
 
         if (!$image->imageExists($image_uuid)) {
-
             $this->setFailed("Image doesn't exist");
             return false;
         }

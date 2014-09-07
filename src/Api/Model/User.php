@@ -10,6 +10,7 @@ class User extends BaseModel
     public $table = "user";
     public $table_user_follow = "user_follow";
     public $table_user_block = "user_block";
+    public $table_user_update = "user_update";
 
     public function __construct()
     {

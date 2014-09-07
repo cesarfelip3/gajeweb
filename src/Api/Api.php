@@ -320,7 +320,7 @@ class Api
         $api->post("image/latest", function (Request $request) use ($app) {
 
             $controller = new Controller\ImageController($request, $app);
-            $ret = $controller->getLatest();
+            $ret = $controller->getLatest($app['upload.image.host']);
 
             $status = 200;
             if ($ret) {
