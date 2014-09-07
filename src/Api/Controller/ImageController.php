@@ -51,9 +51,9 @@ class ImageController extends BaseController
 
             foreach ($imageArray as &$value) {
 
-                $data["url_thumbnail"] = $host . $data["thumbnail"];
-                $data["url_file"] = $host . $data["file_name"];
-                
+                $value["url_thumbnail"] = $host . $value["thumbnail"];
+                $value["url_file"] = $host . $value["file_name"];
+
                 $data["image_uuid"] = $value["image_uuid"];
                 $value["branders"] = $image->getBranderList($data);
                 $value["brander_count"] = count($value["branders"]);
