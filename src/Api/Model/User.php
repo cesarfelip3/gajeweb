@@ -39,6 +39,7 @@ class User extends BaseModel
     {
         $userUUID = $data["user_uuid"];
         unset ($data["user_uuid"]);
+        $data["modified_date"] = time();
         $this->db->update($this->table, $data, array('user_uuid' => $userUUID));
     }
 
