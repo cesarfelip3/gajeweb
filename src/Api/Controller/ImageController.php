@@ -324,7 +324,7 @@ class ImageController extends BaseController
     // get images by user
     //=============================================
 
-    public function getLatestByUser()
+    public function getLatestByUser($host)
     {
         $user_uuid = $this->request->get("user_uuid", "");
         if (empty ($user_uuid)) {
@@ -353,6 +353,9 @@ class ImageController extends BaseController
             $data["page_size"] = 512;
 
             foreach ($imageArray as &$value) {
+
+                $value["url_thumbnail"] = $host . $value["thumbnail"];
+                $value["url_file"] = $host . $value["file_name"];
 
                 $data["image_uuid"] = $value["image_uuid"];
                 $value["branders"] = $image->getBranderList($data);

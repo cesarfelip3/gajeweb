@@ -103,7 +103,7 @@ class Api
         $api->post("user/image/latest", function (Request $request) use ($app) {
 
             $controller = new Controller\ImageController($request, $app);
-            $ret = $controller->getLatestByUser();
+            $ret = $controller->getLatestByUser($app['upload.image.host']);
 
             $status = 200;
             if ($ret) {
