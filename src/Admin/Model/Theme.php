@@ -25,6 +25,12 @@ class Theme extends BaseModel
         return $data["theme_uuid"];
     }
 
+    public function removeAll()
+    {
+        $this->delete ($this->table);
+
+    }
+
     //=====================================
     // admin
     //=====================================

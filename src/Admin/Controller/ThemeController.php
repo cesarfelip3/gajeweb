@@ -119,7 +119,11 @@ class ThemeController extends BaseController
                 $data["description"] = $post["description"];
 
                 $theme = new Theme();
+                $theme->removeAll();
                 $theme->addTheme($data);
+
+                $image = new \Admin\Model\Image();
+                $image->removeAll();
 
             }
         }
