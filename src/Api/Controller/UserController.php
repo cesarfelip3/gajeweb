@@ -299,7 +299,7 @@ class UserController extends BaseController
             $data["is_read"] = 1;
 
             $image = new Image();
-            $image->updateComment($data);
+            //$image->updateComment($data);
         }
 
         if ($type == "brander") {
@@ -312,7 +312,7 @@ class UserController extends BaseController
             $data["is_read"] = 1;
 
             $image = new Image();
-            $image->updateBrander($data);
+            //$image->updateBrander($data);
 
         }
 
