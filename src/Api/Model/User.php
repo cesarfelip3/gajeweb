@@ -262,7 +262,7 @@ class User extends BaseModel
         $stmt->execute();
         $branders = $stmt->fetchAll();
 
-        $sql = "SELECT DISTINCT usr.*, fol.is_mutual AS is_mutual FROM {$this->table} usr INNER JOIN {$this->table_user_follow} fol ON usr.user_uuid=fol.user_following_uuid WHERE fol.create_date>=? AND fol.user_followed_uuid=? ORDER BY fol.create_date DESC LIMIT {$limit}";
+        $sql = "SELECT DISTINCT usr.*, fol.is_mutual AS is_mutual FROM {$this->table} usr INNER JOIN {$this->table_user_follow} fol ON usr.user_uuid=fol.user_following_uuid WHERE fol.create_date>=? AND fol.user_followed_uuid=? AND fol.is_read=0 ORDER BY fol.create_date DESC LIMIT {$limit}";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue (1, $modified);
         $stmt->bindValue (2, $data["user_uuid"]);
@@ -301,7 +301,7 @@ class User extends BaseModel
         $tableImage = Image::table();
 
         // get comments first
-        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username, cmt.user_uuid AS comment_user_uuid FROM $tableImage img INNER JOIN $tableImageComment imgcmt ON img.image_uuid=imgcmt.image_uuid INNER JOIN $tableComment AS cmt ON cmt.comment_uuid=imgcmt.comment_uuid INNER JOIN {$this->table} usr ON cmt.user_uuid=usr.user_uuid WHERE cmt.modified_date>=? AND img.user_uuid=? ORDER BY cmt.modified_date ASC LIMIT {$limit}";
+        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username, cmt.user_uuid AS comment_user_uuid FROM $tableImage img INNER JOIN $tableImageComment imgcmt ON img.image_uuid=imgcmt.image_uuid INNER JOIN $tableComment AS cmt ON cmt.comment_uuid=imgcmt.comment_uuid INNER JOIN {$this->table} usr ON cmt.user_uuid=usr.user_uuid WHERE cmt.modified_date>=? AND img.user_uuid=? AND imgcmt.is_read=0 ORDER BY cmt.modified_date ASC LIMIT {$limit}";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue (1, $modified);
         $stmt->bindValue (2, $data["user_uuid"]);
@@ -311,14 +311,14 @@ class User extends BaseModel
         $total = count($comments);
 
         // get comments first
-        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username, imgcmt.user_uuid AS brander_user FROM $tableImage img INNER JOIN $tableImageBrander imgcmt ON img.image_uuid=imgcmt.image_uuid INNER JOIN {$this->table} usr ON imgcmt.user_uuid=usr.user_uuid WHERE imgcmt.create_date>=? AND img.user_uuid=? ORDER BY imgcmt.create_date ASC LIMIT {$limit}";
+        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username, imgcmt.user_uuid AS brander_user FROM $tableImage img INNER JOIN $tableImageBrander imgcmt ON img.image_uuid=imgcmt.image_uuid INNER JOIN {$this->table} usr ON imgcmt.user_uuid=usr.user_uuid WHERE imgcmt.create_date>=? AND img.user_uuid=? AND imgcmt.is_read=0 ORDER BY imgcmt.create_date ASC LIMIT {$limit}";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue (1, $modified);
         $stmt->bindValue (2, $data["user_uuid"]);
         $stmt->execute();
         $branders = $stmt->fetchAll();
 
-        $sql = "SELECT DISTINCT usr.*, fol.is_mutual AS is_mutual FROM {$this->table} usr INNER JOIN {$this->table_user_follow} fol ON usr.user_uuid=fol.user_following_uuid WHERE fol.create_date>=? AND fol.user_followed_uuid=? ORDER BY fol.create_date DESC LIMIT {$limit}";
+        $sql = "SELECT DISTINCT usr.*, fol.is_mutual AS is_mutual FROM {$this->table} usr INNER JOIN {$this->table_user_follow} fol ON usr.user_uuid=fol.user_following_uuid WHERE fol.create_date>=? AND fol.user_followed_uuid=? AND fol.is_read=0 ORDER BY fol.create_date DESC LIMIT {$limit}";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue (1, $modified);
         $stmt->bindValue (2, $data["user_uuid"]);
