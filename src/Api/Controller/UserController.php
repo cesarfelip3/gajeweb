@@ -285,8 +285,7 @@ class UserController extends BaseController
         $image_uuid = $this->request->get("image_uuid", "");
 
         if (empty ($type)) {
-
-            $this->setFailed("");
+            return $this->setFailed("");
         }
 
         if ($type == "comment") {
@@ -300,7 +299,7 @@ class UserController extends BaseController
 
             $image = new Image();
             $image->updateComment($data);
-            $this->setSuccess("success to change read status of comment");
+            return $this->setSuccess("success to change read status of comment");
         }
 
         if ($type == "brander") {
@@ -314,10 +313,10 @@ class UserController extends BaseController
 
             $image = new Image();
             $image->updateBrander($data);
-            $this->setSuccess("success to change read status of brander");
+            return $this->setSuccess("success to change read status of brander");
         }
 
-        $this->setSuccess("", var_export($image, true));
+        $this->setSuccess("");
     }
 
     function getUpdateInfo()
