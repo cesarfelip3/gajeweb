@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Model/User.php" afterPath="$PROJECT_DIR$/src/Api/Model/User.php" />
-    </list>
+    <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="" />
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,7 +72,7 @@
       <file leaf-file-name="User.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Api/Model/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="320" column="231" selection-start="12351" selection-end="12351" vertical-scroll-proportion="0.62068963" vertical-offset="7776" max-vertical-offset="8880">
+            <state line="313" column="130" selection-start="11473" selection-end="11473" vertical-scroll-proportion="0.33620688" vertical-offset="7776" max-vertical-offset="8880">
               <folding>
                 <marker date="1410283364000" expanded="true" signature="1335:1394" placeholder="SELECT user_..." />
                 <marker date="1410283364000" expanded="true" signature="1596:1650" placeholder="SELECT user_..." />
@@ -853,7 +851,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Model/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="320" column="231" selection-start="12351" selection-end="12351" vertical-scroll-proportion="0.62068963" vertical-offset="7776" max-vertical-offset="8880">
+        <state line="313" column="130" selection-start="11473" selection-end="11473" vertical-scroll-proportion="0.33620688" vertical-offset="7776" max-vertical-offset="8880">
           <folding>
             <marker date="1410283364000" expanded="true" signature="1335:1394" placeholder="SELECT user_..." />
             <marker date="1410283364000" expanded="true" signature="1596:1650" placeholder="SELECT user_..." />

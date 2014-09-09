@@ -211,8 +211,9 @@ CREATE TABLE IF NOT EXISTS `user_follow` (
   `user_follow_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_followed_uuid` char(50) NOT NULL,
   `user_following_uuid` char(50) NOT NULL,
-  `is_mutual` int(20) NOT NULL DEFAULT '0',
-  `create_date` int(20) NOT NULL DEFAULT '0',
+  `is_mutual` int(11) NOT NULL DEFAULT '0',
+  `is_read` int(11) NOT NULL DEFAULT '0',
+  `create_date` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`user_follow_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -332,7 +333,7 @@ CREATE TABLE `view_user_follower_collection` (
 	`comment_id` INT(20) NOT NULL,
 	`brander_id` INT(20) NOT NULL,
 	`follower_id` INT(20) NOT NULL,
-	`is_mutual` INT(20) NOT NULL
+	`is_mutual` INT(11) NOT NULL
 ) ENGINE=MyISAM;
 
 
@@ -363,7 +364,7 @@ CREATE TABLE `view_user_following_collection` (
 	`comment_id` INT(20) NOT NULL,
 	`brander_id` INT(20) NOT NULL,
 	`follower_id` INT(20) NOT NULL,
-	`is_mutual` INT(20) NOT NULL
+	`is_mutual` INT(11) NOT NULL
 ) ENGINE=MyISAM;
 
 
