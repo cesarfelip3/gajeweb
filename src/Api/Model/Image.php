@@ -57,7 +57,12 @@ class Image extends BaseModel
 
     public function updateComment ($data)
     {
-        $this->db->update($this->table_image_comment, array ("comment_uuid"=>$data["comment_uuid"], "image_uuid"=>$data["image_uuid"]));
+        $sql = "UPDATE " . $this->table_image_comment . " SET is_read=? WHERE comment_uuid=? AND image_uuid=?";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(1, $data["is_read"]);
+        $stmt->bindValue(2, $data["comment_uuid"]);
+        $stmt->bindValue(3, $data["image_uuid"]);
+        $stmt->execute();
     }
 
     public function addComment($data)

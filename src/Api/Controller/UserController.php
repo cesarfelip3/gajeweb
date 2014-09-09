@@ -299,7 +299,8 @@ class UserController extends BaseController
             $data["is_read"] = 1;
 
             $image = new Image();
-            //$image->updateComment($data);
+            $image->updateComment($data);
+            $this->setSuccess("success to change read status of comment");
         }
 
         if ($type == "brander") {
@@ -312,8 +313,8 @@ class UserController extends BaseController
             $data["is_read"] = 1;
 
             $image = new Image();
-            //$image->updateBrander($data);
-
+            $image->updateBrander($data);
+            $this->setSuccess("success to change read status of brander");
         }
 
         $this->setSuccess("", var_export($image, true));
