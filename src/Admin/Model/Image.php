@@ -66,9 +66,9 @@ class Image extends BaseModel
 
     public function removeAll()
     {
-        $this->db->delete($this->table);
-        $this->db->delete($this->table_image_brander);
-        $this->db->delete($this->table_image_comment);
+        $this->db->executeQuery ("DELETE FROM " . $this->table);
+        $this->db->executeQuery ("DELETE FROM " . $this->table_image_brander);
+        $this->db->executeQuery ("DELETE FROM " . $this->table_image_comment);
     }
 
     public function deleteImage($imageId)
