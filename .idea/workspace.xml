@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Model/Image.php" afterPath="$PROJECT_DIR$/src/Admin/Model/Image.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Model/Theme.php" afterPath="$PROJECT_DIR$/src/Admin/Model/Theme.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Controller/ThemeController.php" afterPath="$PROJECT_DIR$/src/Admin/Controller/ThemeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ThemeController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ThemeController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ThemeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="36" selection-start="3393" selection-end="3393" vertical-scroll-proportion="0.7966851" vertical-offset="2111" max-vertical-offset="3168">
+            <state line="125" column="36" selection-start="3393" selection-end="3393" vertical-scroll-proportion="-21.848484" vertical-offset="2111" max-vertical-offset="3168">
               <folding />
             </state>
           </provider>
@@ -70,19 +67,19 @@
       <file leaf-file-name="Theme.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/Model/Theme.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="531" selection-end="531" vertical-scroll-proportion="-16.0" vertical-offset="192" max-vertical-offset="1824">
+            <state line="29" column="40" selection-start="533" selection-end="533" vertical-scroll-proportion="-15.272727" vertical-offset="192" max-vertical-offset="1824">
               <folding>
-                <marker date="1410274840000" expanded="true" signature="995:1030" placeholder="SELECT COUNT..." />
-                <marker date="1410274840000" expanded="true" signature="1364:1435" placeholder="SELECT * FRO..." />
+                <marker date="1410275176000" expanded="true" signature="998:1033" placeholder="SELECT COUNT..." />
+                <marker date="1410275176000" expanded="true" signature="1367:1438" placeholder="SELECT * FRO..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Image.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Image.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Admin/Model/Image.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="40" selection-start="1604" selection-end="1604" vertical-scroll-proportion="-13.606061" vertical-offset="1159" max-vertical-offset="4224">
+            <state line="68" column="40" selection-start="1604" selection-end="1604" vertical-scroll-proportion="0.49613258" vertical-offset="1159" max-vertical-offset="4224">
               <folding>
                 <marker date="1410274908000" expanded="true" signature="789:824" placeholder="SELECT COUNT..." />
                 <marker date="1410274908000" expanded="true" signature="1158:1229" placeholder="SELECT * FRO..." />
@@ -222,9 +219,9 @@
         <option value="$PROJECT_DIR$/src/Api/Model/User.php" />
         <option value="$PROJECT_DIR$/src/Api/Model/Theme.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/UserController.php" />
-        <option value="$PROJECT_DIR$/src/Admin/Model/Theme.php" />
         <option value="$PROJECT_DIR$/src/Admin/Model/Image.php" />
         <option value="$PROJECT_DIR$/src/Admin/Controller/ThemeController.php" />
+        <option value="$PROJECT_DIR$/src/Admin/Model/Theme.php" />
       </list>
     </option>
   </component>
@@ -898,19 +895,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ThemeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="36" selection-start="3393" selection-end="3393" vertical-scroll-proportion="-21.848484" vertical-offset="2111" max-vertical-offset="3168">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Model/Theme.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="531" selection-end="531" vertical-scroll-proportion="-16.0" vertical-offset="192" max-vertical-offset="1824">
+        <state line="29" column="40" selection-start="533" selection-end="533" vertical-scroll-proportion="-15.272727" vertical-offset="192" max-vertical-offset="1824">
           <folding>
-            <marker date="1410274840000" expanded="true" signature="995:1030" placeholder="SELECT COUNT..." />
-            <marker date="1410274840000" expanded="true" signature="1364:1435" placeholder="SELECT * FRO..." />
+            <marker date="1410275176000" expanded="true" signature="998:1033" placeholder="SELECT COUNT..." />
+            <marker date="1410275176000" expanded="true" signature="1367:1438" placeholder="SELECT * FRO..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Model/Image.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="40" selection-start="1604" selection-end="1604" vertical-scroll-proportion="-13.606061" vertical-offset="1159" max-vertical-offset="4224">
+        <state line="68" column="40" selection-start="1604" selection-end="1604" vertical-scroll-proportion="0.49613258" vertical-offset="1159" max-vertical-offset="4224">
           <folding>
             <marker date="1410274908000" expanded="true" signature="789:824" placeholder="SELECT COUNT..." />
             <marker date="1410274908000" expanded="true" signature="1158:1229" placeholder="SELECT * FRO..." />
@@ -921,13 +925,6 @@
             <marker date="1410274908000" expanded="true" signature="3653:4029" placeholder="SELECT img.i..." />
             <marker date="1410274908000" expanded="true" signature="4498:4809" placeholder="SELECT img.i..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ThemeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="36" selection-start="3393" selection-end="3393" vertical-scroll-proportion="0.7966851" vertical-offset="2111" max-vertical-offset="3168">
-          <folding />
         </state>
       </provider>
     </entry>

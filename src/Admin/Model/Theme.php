@@ -27,7 +27,7 @@ class Theme extends BaseModel
 
     public function removeAll()
     {
-        $this->delete ($this->table);
+        $this->db->delete($this->table);
 
     }
 
