@@ -316,7 +316,7 @@ class UserController extends BaseController
 
         }
 
-        $this->setSuccess("");
+        $this->setSuccess("", var_export($image, true));
     }
 
     function getUpdateInfo()
