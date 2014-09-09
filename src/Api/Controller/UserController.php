@@ -64,7 +64,7 @@ class UserController extends BaseController
         $theme = new Theme();
         $theme_uuid = $theme->getTheme();
 
-        return $this->setSuccess("", array ("data"=>array ("user_uuid"=>$uuid, "theme_uuid"=>$theme_uuid)));
+        return $this->setSuccess("", array ("user_uuid"=>$uuid, "theme_uuid"=>$theme_uuid));
         return true;
 
     }
