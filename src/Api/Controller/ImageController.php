@@ -263,6 +263,9 @@ class ImageController extends BaseController
 
     }
 
+
+    //
+
     public function addBrander ()
     {
         $image_uuid = $this->request->get("image_uuid", "");

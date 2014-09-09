@@ -278,10 +278,45 @@ class UserController extends BaseController
     // Notification ::
     //=========================================
 
-    function generateUpdate()
+    function markItRead ()
     {
+        $uuid = $this->request->get("uuid", "");
+        $type = $this->request->get("type", "");
+        $image_uuid = $this->request->get("image_uuid", "");
 
+        if (empty ($type)) {
 
+            $this->setFailed("");
+        }
+
+        if ($type == "comment") {
+
+            // mark it read
+
+            $data["image_uuid"] = $image_uuid;
+            $data["comment_uuid"] = $uuid;
+
+            $data["is_read"] = 1;
+
+            $image = new Image();
+            $image->updateComment($data);
+        }
+
+        if ($type == "brander") {
+
+            // mark it read
+
+            $data["image_uuid"] = $image_uuid;
+            $data["user_uuid"] = $uuid;
+
+            $data["is_read"] = 1;
+
+            $image = new Image();
+            $image->updateBrander($data);
+
+        }
+
+        $this->setSuccess("");
     }
 
     function getUpdateInfo()

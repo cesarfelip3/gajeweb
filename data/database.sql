@@ -30,11 +30,12 @@ DELETE FROM `administrator`;
 -- 导出  表 gajeapp.comment 结构
 CREATE TABLE IF NOT EXISTS `comment` (
   `comment_id` int(20) NOT NULL AUTO_INCREMENT,
-  `comment_uuid` char(128) DEFAULT NULL,
-  `user_uuid` char(128) DEFAULT NULL,
-  `content` varchar(512) DEFAULT NULL,
-  `create_date` int(20) DEFAULT NULL,
-  `modified_date` int(20) DEFAULT NULL,
+  `comment_uuid` char(128) NOT NULL,
+  `user_uuid` char(128) NOT NULL,
+  `content` varchar(512) NOT NULL,
+  `is_read` int(11) NOT NULL,
+  `create_date` int(20) NOT NULL,
+  `modified_date` int(20) NOT NULL,
   PRIMARY KEY (`comment_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -78,7 +79,8 @@ CREATE TABLE IF NOT EXISTS `image_brander` (
   `image_brander_id` int(11) NOT NULL AUTO_INCREMENT,
   `image_uuid` char(128) NOT NULL,
   `user_uuid` char(128) NOT NULL,
-  `create_date` int(20) NOT NULL,
+  `is_read` tinyint(11) NOT NULL,
+  `create_date` int(11) NOT NULL,
   PRIMARY KEY (`image_brander_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -93,6 +95,8 @@ CREATE TABLE IF NOT EXISTS `image_comment` (
   `image_comment_id` int(20) NOT NULL AUTO_INCREMENT,
   `comment_uuid` char(50) NOT NULL,
   `image_uuid` char(50) NOT NULL,
+  `is_read` tinyint(4) NOT NULL DEFAULT '0',
+  `create_date` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`image_comment_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -124,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `theme` (
   `theme_id` int(20) NOT NULL AUTO_INCREMENT,
   `theme_uuid` char(50) NOT NULL DEFAULT '',
   `name` varchar(50) NOT NULL DEFAULT '',
-  `description` text,
+  `description` text NOT NULL,
   `create_date` int(11) NOT NULL DEFAULT '0',
   `modified_date` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`theme_id`)
@@ -140,8 +144,8 @@ DELETE FROM `theme`;
 CREATE TABLE IF NOT EXISTS `update` (
   `update_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_uuid` char(32) NOT NULL DEFAULT '0',
-  `key` char(32) NOT NULL,
-  `content` text NOT NULL,
+  `object_uuid` char(32) NOT NULL,
+  `type` char(32) NOT NULL,
   `status` int(11) NOT NULL,
   PRIMARY KEY (`update_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -221,11 +225,11 @@ DELETE FROM `user_follow`;
 -- 导出  表 gajeapp.user_update 结构
 CREATE TABLE IF NOT EXISTS `user_update` (
   `user_update_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `user_uuid` char(32) DEFAULT '0',
-  `user_from_uuid` char(32) NOT NULL DEFAULT '0',
+  `user_uuid` char(32) NOT NULL,
+  `user_from_uuid` char(32) NOT NULL,
   `type` enum('image.comment','image.brander','user.follower') NOT NULL DEFAULT 'image.comment',
-  `reference_uuid` char(32) NOT NULL DEFAULT '0',
-  `status` int(11) NOT NULL DEFAULT '0',
+  `reference_uuid` char(32) NOT NULL,
+  `status` int(11) NOT NULL,
   `create_date` int(11) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`user_update_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -263,7 +267,7 @@ CREATE TABLE `view_image_brander_collection` (
 	`comment_id` INT(20) NOT NULL,
 	`brander_id` INT(20) NOT NULL,
 	`follower_id` INT(20) NOT NULL,
-	`date_added` INT(20) NOT NULL
+	`date_added` INT(11) NOT NULL
 ) ENGINE=MyISAM;
 
 
@@ -271,11 +275,11 @@ CREATE TABLE `view_image_brander_collection` (
 -- 创建临时表以解决视图依赖性错误
 CREATE TABLE `view_image_comment_collection` (
 	`comment_id` INT(20) NOT NULL,
-	`comment_uuid` CHAR(128) NULL COLLATE 'utf8_general_ci',
-	`user_uuid` CHAR(128) NULL COLLATE 'utf8_general_ci',
-	`content` VARCHAR(512) NULL COLLATE 'utf8_general_ci',
-	`create_date` INT(20) NULL,
-	`modified_date` INT(20) NULL,
+	`comment_uuid` CHAR(128) NOT NULL COLLATE 'utf8_general_ci',
+	`user_uuid` CHAR(128) NOT NULL COLLATE 'utf8_general_ci',
+	`content` VARCHAR(512) NOT NULL COLLATE 'utf8_general_ci',
+	`create_date` INT(20) NOT NULL,
+	`modified_date` INT(20) NOT NULL,
 	`user_token` VARCHAR(255) NOT NULL COLLATE 'utf8_general_ci',
 	`fullname` VARCHAR(255) NOT NULL COLLATE 'utf8_general_ci',
 	`username` VARCHAR(32) NOT NULL COLLATE 'utf8_general_ci'

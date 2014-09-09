@@ -53,6 +53,13 @@ class Image extends BaseModel
         return $uuid;
     }
 
+    //
+
+    public function updateComment ($data)
+    {
+        $this->db->update($this->table_image_comment, array ("comment_uuid"=>$data["comment_uuid"], "image_uuid"=>$data["image_uuid"]));
+    }
+
     public function addComment($data)
     {
         $this->db->insert($this->table_image_comment, $data);
@@ -82,6 +89,11 @@ class Image extends BaseModel
     }
 
     // brander
+
+    public function updateBrander ($data)
+    {
+        $this->db->update($this->table_image_brander, array ("user_uuid"=>$data["user_uuid"], "image_uuid"=>$data["image_uuid"]));
+    }
 
     public function addBrander($data)
     {
