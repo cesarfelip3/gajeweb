@@ -307,7 +307,7 @@ class UserController extends BaseController
             // mark it read
 
             $data["image_uuid"] = $image_uuid;
-            $data["user_uuid"] = $uuid;
+            $data["brander_uuid"] = $uuid;
 
             $data["is_read"] = 1;
 
