@@ -40,5 +40,16 @@ class Theme extends BaseModel
         return $result;
     }
 
+    public function getTheme()
+    {
+        $uuid = $this->db->fetchColumn("SELECT theme_uuid FROM {$this->table} ORDER BY modified_date DESC LIMIT 0,1");
+
+        if (empty ($uuid)) {
+            return false;
+        }
+
+        return $uuid;
+    }
+
 
 }

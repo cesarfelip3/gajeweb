@@ -3,6 +3,7 @@
 namespace Api\Controller;
 
 use Api\Model\Image;
+use Api\Model\Theme;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Api\Controller\BaseController;
@@ -60,6 +61,10 @@ class UserController extends BaseController
 
         $this->error["data"]["user_uuid"] = $uuid;
 
+        $theme = new Theme();
+        $theme_uuid = $theme->getTheme();
+
+        return $this->setSuccess("", array ("data"=>array ("user_uuid"=>$uuid, "theme_uuid"=>$theme_uuid)));
         return true;
 
     }
@@ -273,24 +278,10 @@ class UserController extends BaseController
     // Notification ::
     //=========================================
 
-    function prepareNotification()
+    function generateUpdate()
     {
-        $userUUID = $this->request->get("user_uuid", "");
 
-        $user = new User();
-        $uuid = "";
-        $uuid = $user->userExists($userUUID);
 
-        if (!$uuid) {
-
-        } else {
-            $data["user_uuid"] = $userUUID;
-            $data["modified_date"] = time();
-            $user->updateUserByUUID($data);
-        }
-
-        $this->setSuccess("");
-        return true;
     }
 
     function getUpdateInfo()

@@ -211,6 +211,13 @@ class User extends BaseModel
     //
     //====================================
 
+    public function addToUpdate ($data)
+    {
+
+        $data["create_date"] = time ();
+        $this->insert($this->table_user_update, $data);
+    }
+    
     public function getUpdateInfo ($data)
     {
         $page = $data["page"];

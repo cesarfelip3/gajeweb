@@ -11,7 +11,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 -- 导出  表 gajeapp.administrator 结构
-DROP TABLE IF EXISTS `administrator`;
 CREATE TABLE IF NOT EXISTS `administrator` (
   `admin_id` int(20) NOT NULL AUTO_INCREMENT,
   `admin_uuid` varchar(255) NOT NULL DEFAULT '',
@@ -28,25 +27,7 @@ DELETE FROM `administrator`;
 /*!40000 ALTER TABLE `administrator` ENABLE KEYS */;
 
 
--- 导出  表 gajeapp.cache 结构
-DROP TABLE IF EXISTS `cache`;
-CREATE TABLE IF NOT EXISTS `cache` (
-  `cache_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `type` int(10) unsigned NOT NULL,
-  `key` char(32) NOT NULL,
-  `content` text NOT NULL,
-  `status` int(11) NOT NULL,
-  PRIMARY KEY (`cache_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- 正在导出表  gajeapp.cache 的数据：~0 rows (大约)
-DELETE FROM `cache`;
-/*!40000 ALTER TABLE `cache` DISABLE KEYS */;
-/*!40000 ALTER TABLE `cache` ENABLE KEYS */;
-
-
 -- 导出  表 gajeapp.comment 结构
-DROP TABLE IF EXISTS `comment`;
 CREATE TABLE IF NOT EXISTS `comment` (
   `comment_id` int(20) NOT NULL AUTO_INCREMENT,
   `comment_uuid` char(128) DEFAULT NULL,
@@ -64,7 +45,6 @@ DELETE FROM `comment`;
 
 
 -- 导出  表 gajeapp.image 结构
-DROP TABLE IF EXISTS `image`;
 CREATE TABLE IF NOT EXISTS `image` (
   `image_id` int(20) NOT NULL AUTO_INCREMENT,
   `image_uuid` char(50) NOT NULL DEFAULT '',
@@ -94,7 +74,6 @@ DELETE FROM `image`;
 
 
 -- 导出  表 gajeapp.image_brander 结构
-DROP TABLE IF EXISTS `image_brander`;
 CREATE TABLE IF NOT EXISTS `image_brander` (
   `image_brander_id` int(11) NOT NULL AUTO_INCREMENT,
   `image_uuid` char(128) NOT NULL,
@@ -110,7 +89,6 @@ DELETE FROM `image_brander`;
 
 
 -- 导出  表 gajeapp.image_comment 结构
-DROP TABLE IF EXISTS `image_comment`;
 CREATE TABLE IF NOT EXISTS `image_comment` (
   `image_comment_id` int(20) NOT NULL AUTO_INCREMENT,
   `comment_uuid` char(50) NOT NULL,
@@ -125,7 +103,6 @@ DELETE FROM `image_comment`;
 
 
 -- 导出  表 gajeapp.note 结构
-DROP TABLE IF EXISTS `note`;
 CREATE TABLE IF NOT EXISTS `note` (
   `note_id` int(20) NOT NULL AUTO_INCREMENT,
   `note_uuid` char(50) NOT NULL DEFAULT '',
@@ -143,7 +120,6 @@ DELETE FROM `note`;
 
 
 -- 导出  表 gajeapp.theme 结构
-DROP TABLE IF EXISTS `theme`;
 CREATE TABLE IF NOT EXISTS `theme` (
   `theme_id` int(20) NOT NULL AUTO_INCREMENT,
   `theme_uuid` char(50) NOT NULL DEFAULT '',
@@ -160,8 +136,23 @@ DELETE FROM `theme`;
 /*!40000 ALTER TABLE `theme` ENABLE KEYS */;
 
 
+-- 导出  表 gajeapp.update 结构
+CREATE TABLE IF NOT EXISTS `update` (
+  `update_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `user_uuid` char(32) NOT NULL DEFAULT '0',
+  `key` char(32) NOT NULL,
+  `content` text NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`update_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 正在导出表  gajeapp.update 的数据：~0 rows (大约)
+DELETE FROM `update`;
+/*!40000 ALTER TABLE `update` DISABLE KEYS */;
+/*!40000 ALTER TABLE `update` ENABLE KEYS */;
+
+
 -- 导出  表 gajeapp.user 结构
-DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_uuid` char(50) NOT NULL DEFAULT '',
@@ -197,7 +188,6 @@ DELETE FROM `user`;
 
 
 -- 导出  表 gajeapp.user_block 结构
-DROP TABLE IF EXISTS `user_block`;
 CREATE TABLE IF NOT EXISTS `user_block` (
   `user_block_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_uuid` char(50) NOT NULL,
@@ -213,7 +203,6 @@ DELETE FROM `user_block`;
 
 
 -- 导出  表 gajeapp.user_follow 结构
-DROP TABLE IF EXISTS `user_follow`;
 CREATE TABLE IF NOT EXISTS `user_follow` (
   `user_follow_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_followed_uuid` char(50) NOT NULL,
@@ -229,8 +218,25 @@ DELETE FROM `user_follow`;
 /*!40000 ALTER TABLE `user_follow` ENABLE KEYS */;
 
 
+-- 导出  表 gajeapp.user_update 结构
+CREATE TABLE IF NOT EXISTS `user_update` (
+  `user_update_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_uuid` char(32) DEFAULT '0',
+  `user_from_uuid` char(32) NOT NULL DEFAULT '0',
+  `type` enum('image.comment','image.brander','user.follower') NOT NULL DEFAULT 'image.comment',
+  `reference_uuid` char(32) NOT NULL DEFAULT '0',
+  `status` int(11) NOT NULL DEFAULT '0',
+  `create_date` int(11) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`user_update_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 正在导出表  gajeapp.user_update 的数据：~0 rows (大约)
+DELETE FROM `user_update`;
+/*!40000 ALTER TABLE `user_update` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user_update` ENABLE KEYS */;
+
+
 -- 导出  视图 gajeapp.view_image_brander_collection 结构
-DROP VIEW IF EXISTS `view_image_brander_collection`;
 -- 创建临时表以解决视图依赖性错误
 CREATE TABLE `view_image_brander_collection` (
 	`user_id` INT(11) NOT NULL,
@@ -262,7 +268,6 @@ CREATE TABLE `view_image_brander_collection` (
 
 
 -- 导出  视图 gajeapp.view_image_comment_collection 结构
-DROP VIEW IF EXISTS `view_image_comment_collection`;
 -- 创建临时表以解决视图依赖性错误
 CREATE TABLE `view_image_comment_collection` (
 	`comment_id` INT(20) NOT NULL,
@@ -278,7 +283,6 @@ CREATE TABLE `view_image_comment_collection` (
 
 
 -- 导出  视图 gajeapp.view_image_latest_collection 结构
-DROP VIEW IF EXISTS `view_image_latest_collection`;
 -- 创建临时表以解决视图依赖性错误
 CREATE TABLE `view_image_latest_collection` (
 	`image_uuid` CHAR(50) NOT NULL COLLATE 'utf8_general_ci',
@@ -298,7 +302,6 @@ CREATE TABLE `view_image_latest_collection` (
 
 
 -- 导出  视图 gajeapp.view_user_follower_collection 结构
-DROP VIEW IF EXISTS `view_user_follower_collection`;
 -- 创建临时表以解决视图依赖性错误
 CREATE TABLE `view_user_follower_collection` (
 	`user_id` INT(11) NOT NULL,
@@ -330,7 +333,6 @@ CREATE TABLE `view_user_follower_collection` (
 
 
 -- 导出  视图 gajeapp.view_user_following_collection 结构
-DROP VIEW IF EXISTS `view_user_following_collection`;
 -- 创建临时表以解决视图依赖性错误
 CREATE TABLE `view_user_following_collection` (
 	`user_id` INT(11) NOT NULL,
@@ -362,10 +364,9 @@ CREATE TABLE `view_user_following_collection` (
 
 
 -- 导出  视图 gajeapp.view_image_brander_collection 结构
-DROP VIEW IF EXISTS `view_image_brander_collection`;
 -- 移除临时表并创建最终视图结构
 DROP TABLE IF EXISTS `view_image_brander_collection`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` VIEW `view_image_brander_collection` AS SELECT 
+CREATE ALGORITHM=MERGE DEFINER=`root`@`localhost` VIEW `view_image_brander_collection` AS SELECT 
 	usr.*, 
 	imgb.create_date AS date_added 
 FROM image_brander imgb INNER JOIN user usr 
@@ -374,10 +375,9 @@ ORDER BY imgb.create_date ASC ;
 
 
 -- 导出  视图 gajeapp.view_image_comment_collection 结构
-DROP VIEW IF EXISTS `view_image_comment_collection`;
 -- 移除临时表并创建最终视图结构
 DROP TABLE IF EXISTS `view_image_comment_collection`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` VIEW `view_image_comment_collection` AS SELECT 
+CREATE ALGORITHM=MERGE DEFINER=`root`@`localhost` VIEW `view_image_comment_collection` AS SELECT 
 	cmt.*,
 	usr.facebook_token AS user_token, 
 	usr.fullname AS fullname, 
@@ -390,10 +390,9 @@ ORDER BY cmt.create_date ASC ;
 
 
 -- 导出  视图 gajeapp.view_image_latest_collection 结构
-DROP VIEW IF EXISTS `view_image_latest_collection`;
 -- 移除临时表并创建最终视图结构
 DROP TABLE IF EXISTS `view_image_latest_collection`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` VIEW `view_image_latest_collection` AS SELECT 
+CREATE ALGORITHM=MERGE DEFINER=`root`@`localhost` VIEW `view_image_latest_collection` AS SELECT 
 	img.image_uuid, 
 	img.name, 
 	img.description, 
@@ -413,7 +412,6 @@ ORDER BY img.modified_date ;
 
 
 -- 导出  视图 gajeapp.view_user_follower_collection 结构
-DROP VIEW IF EXISTS `view_user_follower_collection`;
 -- 移除临时表并创建最终视图结构
 DROP TABLE IF EXISTS `view_user_follower_collection`;
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` VIEW `view_user_follower_collection` AS SELECT DISTINCT 
@@ -425,7 +423,6 @@ ORDER BY fol.create_date DESC ;
 
 
 -- 导出  视图 gajeapp.view_user_following_collection 结构
-DROP VIEW IF EXISTS `view_user_following_collection`;
 -- 移除临时表并创建最终视图结构
 DROP TABLE IF EXISTS `view_user_following_collection`;
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` VIEW `view_user_following_collection` AS SELECT DISTINCT 
