@@ -97,7 +97,12 @@ class Image extends BaseModel
 
     public function updateBrander ($data)
     {
-        $this->db->update($this->table_image_brander, array ("user_uuid"=>$data["user_uuid"], "image_uuid"=>$data["image_uuid"]));
+        $sql = "UPDATE " . $this->table_image_brander . " SET is_read=? WHERE user_uuid=? AND image_uuid=?";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(1, $data["is_read"]);
+        $stmt->bindValue(2, $data["brander_uuid"]);
+        $stmt->bindValue(3, $data["image_uuid"]);
+        $stmt->execute();
     }
 
     public function addBrander($data)
