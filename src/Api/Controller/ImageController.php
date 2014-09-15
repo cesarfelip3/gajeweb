@@ -191,6 +191,35 @@ class ImageController extends BaseController
         return $this->setFailed("update image error");
     }
 
+    //
+
+    public function removeImage ()
+    {
+
+        $image_uuid = $this->request->get("image_uuid", "");
+
+        if (empty ($image_uuid)) {
+
+            $this->error["status"] = "failure";
+            $this->error["message"] = "image id is empty";
+            return false;
+        }
+
+        $image = new Image();
+
+        if (!$image->imageExists($image_uuid)) {
+            return $this->setFailed("Your image doesn't exist");
+        }
+
+        if ($image->deleteImage($data)) {
+            $this->error["data"]["image_uuid"] = $image_uuid;
+            return $this->setSuccess("", array ("image_uuid"=>$image_uuid));
+        }
+
+        return $this->setFailed("remove image error");
+
+    }
+
     //========================================
     // comment & brand
     //========================================
