@@ -132,6 +132,22 @@ class Api
 
         });
 
+        $api->post("user/image/exclude", function (Request $request) use ($app) {
+
+            $controller = new Controller\UserController($request, $app);
+            $ret = $controller->addExcludeImage();
+
+            $status = 200;
+            if ($ret) {
+                $status = 200;
+            } else {
+                $status = 400;
+            }
+
+            return $app->json($controller->getError(), $status);
+
+        });
+
         $api->post("user/follow", function (Request $request) use ($app) {
 
             $controller = new Controller\UserController($request, $app);
