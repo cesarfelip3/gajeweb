@@ -222,6 +222,20 @@ DELETE FROM `user_follow`;
 /*!40000 ALTER TABLE `user_follow` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user_follow` ENABLE KEYS */;
 
+-- 导出  表 gajeapp.user_block 结构
+CREATE TABLE IF NOT EXISTS `user_exclude_image` (
+  `user_exclude_image_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_uuid` char(50) NOT NULL,
+  `image_uuid` char(50) NOT NULL,
+  `create_date` int(20) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`user_exclude_image_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 正在导出表  gajeapp.user_block 的数据：~0 rows (大约)
+DELETE FROM `user_exclude_image`;
+/*!40000 ALTER TABLE `user_block` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user_block` ENABLE KEYS */;
+
 
 -- 导出  表 gajeapp.user_update 结构
 CREATE TABLE IF NOT EXISTS `user_update` (

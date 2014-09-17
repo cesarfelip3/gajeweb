@@ -187,10 +187,16 @@ class Image extends BaseModel
         $page = $page * $pageSize;
 
         $limit = "$page, $pageSize";
-        $sql = "SELECT * FROM view_image_latest_collection WHERE user_uuid NOT IN (SELECT user_block_uuid FROM user_block WHERE user_uuid=?) ORDER BY modified_date DESC LIMIT {$limit}";
+        $sql = "SELECT *
+            FROM view_image_latest_collection
+            WHERE user_uuid NOT IN (SELECT user_block_uuid FROM user_block WHERE user_uuid=?) AND
+             image_uuid NOT IN (SELECT image_uuid FROM user_exclude_image WHERE user_uuid=? )
+            ORDER BY modified_date DESC
+            LIMIT {$limit}";
 
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue(1, $user_uuid);
+        $stmt->bindValue(2, $user_uuid);
         $stmt->execute();
 
         $result = $stmt->fetchAll();
