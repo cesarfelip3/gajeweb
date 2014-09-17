@@ -98,10 +98,37 @@ class UserController extends BaseController
         return true;
     }
 
-
-    //=================================
     //
-    //=================================
+    // exclude image
+    //
+
+    public function addExcludeImage ()
+    {
+        $user_uuid = $this->request->get("user_uuid", "");
+        $image_uuid = $this->request->get("image_uuid", "");
+
+        $data["user_uuid"] = $user_uuid;
+        $data["image_uuid"] = $block_uuid;
+
+        $user = new User();
+        $uuid = $user->exImageExist($data);
+
+        if (!$uuid) {
+
+            $user->addExImage($data);
+            return $this->setSuccess("success");
+
+        } else {
+
+            return $this->setSuccess("exists");
+        }
+
+        return true;
+    }
+
+    //
+    // block
+    //
     public function addBlock()
     {
         $user_uuid = $this->request->get("user_uuid", "");

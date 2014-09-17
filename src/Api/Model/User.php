@@ -11,6 +11,7 @@ class User extends BaseModel
     public $table_user_follow = "user_follow";
     public $table_user_block = "user_block";
     public $table_user_update = "user_update";
+    public $table_user_exclude_image = "user_exclude_image";
 
     public function __construct()
     {
@@ -91,10 +92,27 @@ class User extends BaseModel
         return $result;
     }
 
-
-    //===============================
     //
-    //===============================
+    // exclude image
+    //
+
+    public function exImageExist($data)
+    {
+
+        $uuid = $this->db->fetchColumn("SELECT user_uuid FROM {$this->table_user_exclude_image} WHERE user_uuid=? AND image_uuid=?", array($data["user_uuid"], $data["image_uuid"]));
+
+        if (empty ($uuid)) {
+            return false;
+        }
+
+        return $uuid;
+    }
+
+    public function addExImage($data)
+    {
+        $data["create_date"] = time();
+        return $this->db->insert($this->table_user_exclude_image, $data);
+    }
 
     public function blockExist($data)
     {
