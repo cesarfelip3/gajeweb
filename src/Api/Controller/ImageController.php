@@ -212,10 +212,10 @@ class ImageController extends BaseController
         }
 
         $data = array ();
+        $data['image_uuid'] = $image_uuid;
         
         if ($image->deleteImage($data)) {
             $this->error["data"]["image_uuid"] = $image_uuid;
-            $data['image_uuid'] = $image_uuid;
             return $this->setSuccess("", array ("image_uuid"=>$image_uuid));
         }
 
