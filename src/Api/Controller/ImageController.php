@@ -211,8 +211,11 @@ class ImageController extends BaseController
             return $this->setFailed("Your image doesn't exist");
         }
 
+        $data = array ();
+        
         if ($image->deleteImage($data)) {
             $this->error["data"]["image_uuid"] = $image_uuid;
+            $data['image_uuid'] = $image_uuid;
             return $this->setSuccess("", array ("image_uuid"=>$image_uuid));
         }
 
