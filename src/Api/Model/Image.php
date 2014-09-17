@@ -40,6 +40,7 @@ class Image extends BaseModel
     public function deleteImage($data)
     {
         $this->db->delete($this->table, array('image_uuid' => $data["image_uuid"]));
+        return true;
     }
 
     public function imageExists($imageId)
