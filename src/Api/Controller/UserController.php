@@ -309,11 +309,34 @@ class UserController extends BaseController
 
     function markItRead ()
     {
-        $uuid = $this->request->get("uuid", "");
+
         $type = $this->request->get("type", "");
-        $image_uuid = $this->request->get("image_uuid", "");
 
         if (empty ($type)) {
+            return $this->setFailed("");
+        }
+
+        if ($type == "comment" || $type == "brander") {
+            $uuid = $this->request->get("uuid", "");
+            $image_uuid = $this->request->get("image_uuid", "");
+        }
+
+        if ($type == "followers") {
+
+            $user_uuid = $this->request->get("user_uuid", "");
+            $follower_uuid = $this->request->get("follower_uuid", "");
+
+            $data = array (
+                "user_following_uuid" => $follower_uuid,
+                "user_followed_uuid" => $user_uuid,
+                "is_read" => 1
+            );
+
+            $user = new User();
+            $user->updateFollower($data);
+
+        } else {
+
             return $this->setFailed("");
         }
 

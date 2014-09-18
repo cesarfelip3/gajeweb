@@ -135,6 +135,16 @@ class User extends BaseModel
     //
     //=====================================
 
+    public function updateFollower ($data)
+    {
+        $sql = "UPDATE " . $this->table_user_follow . " SET is_read=? WHERE user_followed_uuid=? AND user_following_uuid=?";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(1, $data["is_read"]);
+        $stmt->bindValue(2, $data["user_followed_uuid"]);
+        $stmt->bindValue(3, $data["user_following_uuid"]);
+        $stmt->execute();
+    }
+
     // when you follow your followers, and it will be is_mutal
     // for each of them, it's same
 
