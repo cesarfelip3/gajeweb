@@ -138,9 +138,7 @@ class Api
             $ret = $controller->addExcludeImage();
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 

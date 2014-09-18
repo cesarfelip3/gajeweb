@@ -109,7 +109,7 @@ class UserController extends BaseController
 
         $data = array();
         $data["user_uuid"] = $user_uuid;
-        $data["image_uuid"] = $block_uuid;
+        $data["image_uuid"] = $image_uuid;
 
         $user = new User();
         $uuid = $user->exImageExist($data);
