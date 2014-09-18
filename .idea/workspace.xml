@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Api.php" afterPath="$PROJECT_DIR$/src/Api/Api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/Api/Controller/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Model/Image.php" afterPath="$PROJECT_DIR$/src/Api/Model/Image.php" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="UserController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Api/Controller/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="41" selection-start="3024" selection-end="3024" vertical-scroll-proportion="0.38793105" vertical-offset="2160" max-vertical-offset="10704">
+            <state line="111" column="41" selection-start="3024" selection-end="3024" vertical-scroll-proportion="-10.909091" vertical-offset="2160" max-vertical-offset="10704">
               <folding />
             </state>
           </provider>
@@ -49,7 +48,7 @@
       <file leaf-file-name="ImageController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="220" column="0" selection-start="6758" selection-end="6758" vertical-scroll-proportion="-0.0" vertical-offset="5112" max-vertical-offset="9744">
+            <state line="220" column="0" selection-start="6758" selection-end="6758" vertical-scroll-proportion="-144.72728" vertical-offset="336" max-vertical-offset="9744">
               <folding />
             </state>
           </provider>
@@ -76,6 +75,27 @@
                 <marker date="1410975464000" expanded="true" signature="10948:11576" placeholder="SELECT img.i..$tableImage img..." />
                 <marker date="1410975464000" expanded="true" signature="11860:12419" placeholder="SELECT img.i..$tableImage img..." />
                 <marker date="1410975464000" expanded="true" signature="12637:12910" placeholder="SELECT DISTI..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Image.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Api/Model/Image.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="191" column="96" selection-start="5539" selection-end="5539" vertical-scroll-proportion="0.41379312" vertical-offset="4296" max-vertical-offset="6048">
+              <folding>
+                <marker date="1411037680000" expanded="true" signature="1025:1081" placeholder="SELECT image..." />
+                <marker date="1411037680000" expanded="true" signature="2062:2361" placeholder="SELECT cmt.*..." />
+                <marker date="1411037680000" expanded="true" signature="3117:3203" placeholder="SELECT image..." />
+                <marker date="1411037680000" expanded="true" signature="3734:3908" placeholder="SELECT usr.*..." />
+                <marker date="1411037680000" expanded="true" signature="4455:4658" placeholder="SELECT img.i..." />
+                <marker date="1411037680000" expanded="true" signature="5388:5699" placeholder="SELECT * FRO..view_image_latest_collection..." />
+                <marker date="1411037680000" expanded="true" signature="5479:5535" placeholder="SELECT user_..user_block..." />
+                <marker date="1411037680000" expanded="true" signature="5572:5631" placeholder="SELECT image..user_exclude_image..." />
+                <marker date="1411037680000" expanded="true" signature="5672:5699" placeholder="SELECT * FRO..view_image_latest_collection..." />
+                <marker date="1411037680000" expanded="true" signature="6077:6277" placeholder="SELECT `imag..." />
+                <marker date="1411037680000" expanded="true" signature="6677:6877" placeholder="SELECT `imag..." />
               </folding>
             </state>
           </provider>
@@ -141,10 +161,10 @@
         <option value="$PROJECT_DIR$/src/Api/Model/Comment.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/ImageController.php" />
         <option value="$PROJECT_DIR$/data/database.sql" />
-        <option value="$PROJECT_DIR$/src/Api/Model/Image.php" />
         <option value="$PROJECT_DIR$/src/Api/Model/User.php" />
         <option value="$PROJECT_DIR$/src/Api/Api.php" />
         <option value="$PROJECT_DIR$/src/Api/Controller/UserController.php" />
+        <option value="$PROJECT_DIR$/src/Api/Model/Image.php" />
       </list>
     </option>
   </component>
@@ -761,31 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Api/Model/Image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="198" column="40" selection-start="5828" selection-end="5828" vertical-scroll-proportion="0.0" vertical-offset="4752" max-vertical-offset="5856">
-          <folding>
-            <marker date="1410974958000" expanded="true" signature="-1:-1" placeholder="SELECT image..." />
-            <marker date="1410974958000" expanded="true" signature="-1:-1" placeholder="SELECT cmt.*..." />
-            <marker date="1410974958000" expanded="true" signature="-1:-1" placeholder="SELECT image..." />
-            <marker date="1410974958000" expanded="true" signature="-1:-1" placeholder="SELECT usr.*..." />
-            <marker date="1410974958000" expanded="true" signature="-1:-1" placeholder="SELECT img.i..." />
-            <marker date="1410974958000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..view_image_latest_collection..." />
-            <marker date="1410974958000" expanded="true" signature="-1:-1" placeholder="SELECT user_..user_block..." />
-            <marker date="1410974958000" expanded="true" signature="-1:-1" placeholder="SELECT image..user_exclude_image..." />
-            <marker date="1410974958000" expanded="true" signature="-1:-1" placeholder="SELECT `imag..." />
-            <marker date="1410974958000" expanded="true" signature="-1:-1" placeholder="SELECT `imag..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="220" column="0" selection-start="6758" selection-end="6758" vertical-scroll-proportion="0.0" vertical-offset="5280" max-vertical-offset="9888">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Api.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="141" column="30" selection-start="3581" selection-end="3581" vertical-scroll-proportion="-5.816092" vertical-offset="2878" max-vertical-offset="12048">
@@ -821,8 +816,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="41" selection-start="3024" selection-end="3024" vertical-scroll-proportion="0.38793105" vertical-offset="2160" max-vertical-offset="10704">
+        <state line="111" column="41" selection-start="3024" selection-end="3024" vertical-scroll-proportion="-10.909091" vertical-offset="2160" max-vertical-offset="10704">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Api/Controller/ImageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="220" column="0" selection-start="6758" selection-end="6758" vertical-scroll-proportion="-144.72728" vertical-offset="336" max-vertical-offset="9744">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Api/Model/Image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="191" column="96" selection-start="5539" selection-end="5539" vertical-scroll-proportion="0.41379312" vertical-offset="4296" max-vertical-offset="6048">
+          <folding>
+            <marker date="1411037680000" expanded="true" signature="1025:1081" placeholder="SELECT image..." />
+            <marker date="1411037680000" expanded="true" signature="2062:2361" placeholder="SELECT cmt.*..." />
+            <marker date="1411037680000" expanded="true" signature="3117:3203" placeholder="SELECT image..." />
+            <marker date="1411037680000" expanded="true" signature="3734:3908" placeholder="SELECT usr.*..." />
+            <marker date="1411037680000" expanded="true" signature="4455:4658" placeholder="SELECT img.i..." />
+            <marker date="1411037680000" expanded="true" signature="5388:5699" placeholder="SELECT * FRO..view_image_latest_collection..." />
+            <marker date="1411037680000" expanded="true" signature="5479:5535" placeholder="SELECT user_..user_block..." />
+            <marker date="1411037680000" expanded="true" signature="5572:5631" placeholder="SELECT image..user_exclude_image..." />
+            <marker date="1411037680000" expanded="true" signature="5672:5699" placeholder="SELECT * FRO..view_image_latest_collection..." />
+            <marker date="1411037680000" expanded="true" signature="6077:6277" placeholder="SELECT `imag..." />
+            <marker date="1411037680000" expanded="true" signature="6677:6877" placeholder="SELECT `imag..." />
+          </folding>
         </state>
       </provider>
     </entry>

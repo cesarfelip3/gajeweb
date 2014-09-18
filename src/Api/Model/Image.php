@@ -189,8 +189,8 @@ class Image extends BaseModel
         $limit = "$page, $pageSize";
         $sql = "SELECT *
             FROM view_image_latest_collection
-            WHERE user_uuid NOT IN (SELECT user_block_uuid FROM user_block WHERE user_uuid=?) AND
-             image_uuid NOT IN (SELECT image_uuid FROM user_exclude_image WHERE user_uuid=? )
+            WHERE user_uuid NOT IN (SELECT user_block_uuid FROM user_block WHERE user_uuid=?) OR
+             image_uuid NOT IN (SELECT image_uuid FROM user_exclude_image WHERE user_uuid=?)
             ORDER BY modified_date DESC
             LIMIT {$limit}";
 
