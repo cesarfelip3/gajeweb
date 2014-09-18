@@ -107,6 +107,7 @@ class UserController extends BaseController
         $user_uuid = $this->request->get("user_uuid", "");
         $image_uuid = $this->request->get("image_uuid", "");
 
+        $data = array();
         $data["user_uuid"] = $user_uuid;
         $data["image_uuid"] = $block_uuid;
 
