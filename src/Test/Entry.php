@@ -12,6 +12,6 @@ $user = new Controller\UserController();
 
 $data = array ();
 
-$result = $user->user_notification_update(new Curl, $data);
+$result = $user->user_notification_update(new Curl(), $data);
 
 
