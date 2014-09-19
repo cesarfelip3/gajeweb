@@ -316,7 +316,7 @@ class UserController extends BaseController
             return $this->setFailed("");
         }
 
-        if ($type == "comment" || $type == "brander") {
+        if ($type == "comments" || $type == "branders") {
             $uuid = $this->request->get("uuid", "");
             $image_uuid = $this->request->get("image_uuid", "");
         }

@@ -59,7 +59,8 @@
             "Silex": "src/",
             "Model": "src/",
             "Admin": "src/",
-            "Api": "src/"
+            "Api": "src/",
+            "Test": "src/"
         }
     },
     "extra": {
