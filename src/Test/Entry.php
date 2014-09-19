@@ -5,13 +5,23 @@ require_once(__DIR__ . "/../../vendor/autoload.php");
 require_once(__DIR__ . "/Class/Curl.class.php");
 
 use Test\Test;
-use Test\Controller;
 
-$user = new Controller\UserController();
+// loading all api test case
 
+require_once(__DIR__ . "/Api/Api.php");
 
-$data = array ();
+//@case api/v1/user/notification/update
 
-$result = $user->user_notification_update(new Curl(), $data);
+$host = $test_case_api_user["host"];
+$class = $test_case_api_user["class"];
+$method = $test_case_api_user["method"]["user/notification/update"];
+$data = array (
+    "host" => $host,
+    "post_data" => array ()
+);
+
+$object = new $class();
+$result = $object->$method($data);
+
 
 

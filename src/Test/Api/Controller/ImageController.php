@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Controller;
+namespace Test\Api\Controller;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class ImageController {
