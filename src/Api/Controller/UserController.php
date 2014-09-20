@@ -335,12 +335,9 @@ class UserController extends BaseController
             $user = new User();
             $user->updateFollower($data);
 
-        } else {
-
-            return $this->setFailed("");
         }
-
-        if ($type == "comment") {
+        
+        if ($type == "comments") {
 
             // mark it read
 
@@ -354,7 +351,7 @@ class UserController extends BaseController
             return $this->setSuccess("success to change read status of comment");
         }
 
-        if ($type == "brander") {
+        if ($type == "branders") {
 
             // mark it read
 
