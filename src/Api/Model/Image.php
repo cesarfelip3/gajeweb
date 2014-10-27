@@ -117,6 +117,10 @@ class Image extends BaseModel
         }
 
         $this->db->insert($this->table_image_brander, $data);
+
+        $count = $this->db->fetchColumn("SELECT brander_count FROM {$this->table} WHERE `image_uuid`=?", array($image_uuid));
+        $count = intval($count) + 1;
+        $this->db->update($this->table, array('brander_count'=>$count), array('image_uuid' => $image_uuid));
     }
 
     public function getBranderList($data)
@@ -229,6 +233,39 @@ class Image extends BaseModel
 
         return $result;
 
+    }
+
+    // get top 50 == brander
+
+    public function getMostBrandedImage($data)
+    {
+        $user_uuid = $data["user_uuid"];
+
+        $page = $data["page"];
+        $pageSize = $data["page_size"];
+
+        $page = intval($page);
+        $pageSize = intval($pageSize);
+        $page = $page * $pageSize;
+
+        $limit = "$page, $pageSize";
+        $limit = "0, 50";
+
+        $sql = "SELECT *
+            FROM view_image_latest_collection
+            WHERE user_uuid NOT IN (SELECT user_block_uuid FROM user_block WHERE user_uuid='{$data[user_uuid]}') AND
+             image_uuid NOT IN (SELECT image_uuid FROM user_exclude_image WHERE user_uuid='{$data[user_uuid]}')
+            ORDER BY brander_count DESC
+            LIMIT {$limit}";
+
+        $stmt = $this->db->prepare($sql);
+        //$stmt->bindValue(1, $user_uuid);
+        //$stmt->bindValue(2, $user_uuid);
+        $stmt->execute();
+
+        $result = $stmt->fetchAll();
+
+        return $result;
     }
 
     public static function table ()

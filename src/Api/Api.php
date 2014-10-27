@@ -379,6 +379,19 @@ class Api
 
         });
 
+        $api->post("image/top/brander", function (Request $request) use ($app) {
+
+            $controller = new Controller\ImageController($request, $app);
+            $ret = $controller->getTopBrands($app['upload.image.host']);
+
+            $status = 200;
+            if (!$ret) {
+                $status = 400;
+            }
+
+            return $app->json($controller->getError(), $status);
+
+        });
 
         //==============
         // comment

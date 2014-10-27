@@ -67,6 +67,49 @@ class ImageController extends BaseController
         return true;
     }
 
+    // get top
+
+    public function getTopBrands($host)
+    {
+        $page = $this->request->get("page", 0);
+        $pageSize = $this->request->get("page_size", 25);
+        $user_uuid = $this->request->get("user_uuid", "");
+
+        $data = array();
+        $data["page"] = intval($page);
+        $data["page_size"] = intval($pageSize);
+        $data["user_uuid"] = $user_uuid;
+
+        $image = new Image();
+        $imageArray = $image->getLatestImages($data);
+
+        if (empty ($imageArray)) {
+
+            $this->setSuccess("empty result from db", array("images" => array()));
+        } else {
+
+            $data = array();
+            $data["page"] = 0;
+            $data["page_size"] = 512;
+
+            foreach ($imageArray as &$value) {
+
+                $value["url_thumbnail"] = $host . $value["thumbnail"];
+                $value["url_file"] = $host . $value["file_name"];
+
+                $data["image_uuid"] = $value["image_uuid"];
+                $value["branders"] = $image->getBranderList($data);
+                $value["brander_count"] = count($value["branders"]);
+                $data["user_uuid"] = $user_uuid;
+                $value["enable_brander"] = $image->branderExist($data) == true ? 0 : 1;
+            }
+
+            $this->setSuccess("", array("images" => $imageArray));
+        }
+
+        return true;
+    }
+
     //=================================
     // upload & update
     //=================================
