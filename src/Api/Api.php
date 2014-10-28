@@ -379,7 +379,7 @@ class Api
 
         });
 
-        $api->post("image/top/brander", function (Request $request) use ($app) {
+        $api->post("image/brander/top", function (Request $request) use ($app) {
 
             $controller = new Controller\ImageController($request, $app);
             $ret = $controller->getTopBrands($app['upload.image.host']);
