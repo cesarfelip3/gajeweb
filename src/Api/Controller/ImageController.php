@@ -81,7 +81,7 @@ class ImageController extends BaseController
         $data["user_uuid"] = $user_uuid;
 
         $image = new Image();
-        $imageArray = $image->getLatestImages($data);
+        $imageArray = $image->getMostBrandedImage($data);
 
         if (empty ($imageArray)) {
 
