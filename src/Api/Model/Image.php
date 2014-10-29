@@ -255,6 +255,7 @@ class Image extends BaseModel
             FROM view_image_latest_collection
             WHERE user_uuid NOT IN (SELECT user_block_uuid FROM user_block WHERE user_uuid='{$data[user_uuid]}') AND
              image_uuid NOT IN (SELECT image_uuid FROM user_exclude_image WHERE user_uuid='{$data[user_uuid]}')
+            AND brander_count != 0
             ORDER BY brander_count DESC
             LIMIT {$limit}";
 
