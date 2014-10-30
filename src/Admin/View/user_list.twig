@@ -63,5 +63,25 @@
         {{ pagination|raw }}
     </ul>
 
+    <script type="text/javascript">
+
+        function del(id) {
+            jQuery.ajax({
+                        url: "{{ enableUrl|raw }}" + id,
+                        beforeSend: function (xhr) {
+
+                        }
+                    }
+            )
+                    .done(function (data) {
+
+                        if (data == "ok") {
+                            window.location.href = "";
+                        }
+
+                    });
+
+        }
+    </script>
 
 {% endblock %}

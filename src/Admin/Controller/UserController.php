@@ -118,7 +118,8 @@ class UserController extends BaseController
     function enableUser ($id)
     {
 
-
+        $user = new User();
+        $user->enableUser(array ("user_uuid" => $id));
 
     }
 

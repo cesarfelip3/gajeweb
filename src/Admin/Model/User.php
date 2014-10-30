@@ -102,6 +102,19 @@ class User extends BaseModel
         return $result;
     }
 
+    public function enableUser($data)
+    {
+        $uuid = $data['user_uuid'];
+        $status = $this->db->fetchColumn("SELECT status FROM {$this->table}
+            WHERE user_uuid='$uuid'");
+
+        $status = 1 - $status;
+
+        $this->db->update ($this->table, array ('status' => $status), array (
+            "user_uuid" => $uuid
+        ));
+
+    }
     public static function table()
     {
         return "user";
