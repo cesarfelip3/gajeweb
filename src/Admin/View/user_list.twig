@@ -45,7 +45,7 @@
                     {% for user in userArray %}
                         <tr>
                             {% for key in headerArray | keys %}
-                                {% if key == '#' %}
+                                {% if key == 'status' %}
                                     <td>{{ user[key]|raw }}</td>
                                 {% else %}
                                     <td>{{ user[key] }}</td>

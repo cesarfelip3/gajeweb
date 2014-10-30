@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/Admin/Controller/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/user_list.twig" afterPath="$PROJECT_DIR$/src/Admin/View/user_list.twig" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,21 +49,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="UserController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/Controller/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="102" selection-start="1867" selection-end="1867" vertical-scroll-proportion="0.43042073" vertical-offset="993" max-vertical-offset="3072">
+            <state line="58" column="24" selection-start="1622" selection-end="1622" vertical-scroll-proportion="-8.454545" vertical-offset="993" max-vertical-offset="3072">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_list.twig" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="user_list.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Admin/View/user_list.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="42" selection-start="2792" selection-end="2792" vertical-scroll-proportion="-15.030303" vertical-offset="1160" max-vertical-offset="2208">
+            <state line="48" column="52" selection-start="2212" selection-end="2212" vertical-scroll-proportion="0.22437972" vertical-offset="944" max-vertical-offset="2208">
               <folding>
-                <element signature="e#2599#2618#0" expanded="true" />
+                <element signature="e#2604#2623#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -198,10 +198,10 @@
         <option value="$PROJECT_DIR$/src/Api/Api.php" />
         <option value="$PROJECT_DIR$/src/Api/Model/Image.php" />
         <option value="$PROJECT_DIR$/data/database2.sql" />
-        <option value="$PROJECT_DIR$/src/Admin/View/user_list.twig" />
         <option value="$PROJECT_DIR$/src/Admin/Admin.php" />
         <option value="$PROJECT_DIR$/src/Admin/Model/User.php" />
         <option value="$PROJECT_DIR$/src/Admin/Controller/UserController.php" />
+        <option value="$PROJECT_DIR$/src/Admin/View/user_list.twig" />
       </list>
     </option>
   </component>
@@ -797,15 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/View/user_list.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="42" selection-start="2792" selection-end="2792" vertical-scroll-proportion="-15.030303" vertical-offset="1160" max-vertical-offset="2208">
-          <folding>
-            <element signature="e#2599#2618#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="17" selection-start="1033" selection-end="1033" vertical-scroll-proportion="-8.0" vertical-offset="816" max-vertical-offset="2232">
@@ -857,8 +848,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="102" selection-start="1867" selection-end="1867" vertical-scroll-proportion="0.43042073" vertical-offset="993" max-vertical-offset="3072">
+        <state line="58" column="24" selection-start="1622" selection-end="1622" vertical-scroll-proportion="-8.454545" vertical-offset="993" max-vertical-offset="3072">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/View/user_list.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="52" selection-start="2212" selection-end="2212" vertical-scroll-proportion="0.22437972" vertical-offset="944" max-vertical-offset="2208">
+          <folding>
+            <element signature="e#2604#2623#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
