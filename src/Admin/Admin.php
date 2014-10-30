@@ -42,6 +42,13 @@ class Admin
             return $controller->userList();
         });
 
+        $admin->get("/user/enable/{id}", function (Request $request, $id) use ($app) {
+
+            $controller = new \Admin\Controller\UserController($request, $app);
+            return $controller->enableUser($id);
+            
+        });
+
         $admin->get("/image", function (Request $request) use ($app) {
 
             $controller = new \Admin\Controller\ImageController($request, $app);
