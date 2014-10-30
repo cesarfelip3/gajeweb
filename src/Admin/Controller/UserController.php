@@ -55,12 +55,12 @@ class UserController extends BaseController
 
             if ($user['status'] == 1) {
 
-                $user["#"] = '<a href="javascript:del(\'' . $user["image_uuid"] . '\');"> Disable </a>';
+                $user["#"] = '<a href="javascript:del(\'' . $user["user_uuid"] . '\');"> Disable </a>';
                 $user['status'] = 'enabled';
 
             } else {
 
-                $user["#"] = '<a href="javascript:del(\'' . $user["image_uuid"] . '\');"> Enable </a>';
+                $user["#"] = '<a href="javascript:del(\'' . $user["user_uuid"] . '\');"> Enable </a>';
                 $user['status'] = 'disabled';
             }
 

@@ -46,7 +46,7 @@ class Admin
 
             $controller = new \Admin\Controller\UserController($request, $app);
             return $controller->enableUser($id);
-            
+
         });
 
         $admin->get("/image", function (Request $request) use ($app) {
