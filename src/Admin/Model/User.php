@@ -77,6 +77,7 @@ class User extends BaseModel
             "location" => "location",
             "create_date" => "create date",
             "modified_date" => "modified date",
+            "status" => "status"
         );
     }
 

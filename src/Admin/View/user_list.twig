@@ -46,7 +46,7 @@
                         <tr>
                             {% for key in headerArray | keys %}
                                 {% if key == '#' %}
-                                    <td>{{ '' }}</td>
+                                    <td>{{ image[key]|raw }}</td>
                                 {% else %}
                                     <td>{{ user[key] }}</td>
                                 {% endif %}

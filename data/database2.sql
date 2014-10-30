@@ -203,6 +203,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `comment_count` int(20) NOT NULL DEFAULT '0',
   `brander_count` int(20) NOT NULL DEFAULT '0',
   `follower_count` int(20) NOT NULL DEFAULT '0',
+  `status` int(20) NOT NULL DEFAULT '1'
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 

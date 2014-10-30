@@ -53,6 +53,18 @@ class UserController extends BaseController
 
         foreach ($userArray as &$user) {
 
+            if ($user['status'] == 1) {
+
+                $user["#"] = '<a href="javascript:del(\'' . $user["image_uuid"] . '\');"> Disable </a>';
+                $user['status'] = 'enabled';
+
+            } else {
+
+                $user["#"] = '<a href="javascript:del(\'' . $user["image_uuid"] . '\');"> Enable </a>';
+                $user['status'] = 'disabled';
+            }
+
+
             $user["create_date"] = date("Y-m-d", $user["create_date"]);
             $user["modified_date"] = date("Y-m-d", $user["modified_date"]);
         }
@@ -96,10 +108,18 @@ class UserController extends BaseController
             "pageSize" => $pageSize,
             "totalPages" => $totalPage,
             "pagination" => $pagination,
-            "totalUsers" => $total
+            "totalUsers" => $total,
+            "enableUrl" => 'http://' . $this->request->getHost() . "/gajeweb/admin/user/enable/"
         )));
 
         return $response;
+    }
+
+    function enableUser ($id)
+    {
+
+
+
     }
 
 
