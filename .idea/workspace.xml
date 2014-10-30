@@ -52,7 +52,7 @@
       <file leaf-file-name="UserController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Admin/Controller/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="19" selection-start="3526" selection-end="3526" vertical-scroll-proportion="0.7411003" vertical-offset="2121" max-vertical-offset="3072">
+            <state line="63" column="102" selection-start="1867" selection-end="1867" vertical-scroll-proportion="0.43042073" vertical-offset="993" max-vertical-offset="3072">
               <folding />
             </state>
           </provider>
@@ -90,13 +90,13 @@
       <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/Model/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="22" selection-start="2514" selection-end="2524" vertical-scroll-proportion="-13.575758" vertical-offset="2048" max-vertical-offset="3072">
+            <state line="79" column="12" selection-start="1902" selection-end="1902" vertical-scroll-proportion="-11.393939" vertical-offset="1520" max-vertical-offset="3072">
               <folding>
-                <marker date="1414664396000" expanded="true" signature="992:1051" placeholder="SELECT user_..." />
-                <marker date="1414664396000" expanded="true" signature="1253:1307" placeholder="SELECT user_..." />
-                <marker date="1414664396000" expanded="true" signature="2019:2054" placeholder="SELECT COUNT..." />
-                <marker date="1414664396000" expanded="true" signature="2387:2458" placeholder="SELECT * FRO..." />
-                <marker date="1414664396000" expanded="true" signature="2616:2685" placeholder="SELECT statu..." />
+                <marker date="1414664742000" expanded="true" signature="992:1051" placeholder="SELECT user_..." />
+                <marker date="1414664742000" expanded="true" signature="1253:1307" placeholder="SELECT user_..." />
+                <marker date="1414664742000" expanded="true" signature="2019:2054" placeholder="SELECT COUNT..." />
+                <marker date="1414664742000" expanded="true" signature="2387:2458" placeholder="SELECT * FRO..." />
+                <marker date="1414664742000" expanded="true" signature="2616:2685" placeholder="SELECT statu..." />
               </folding>
             </state>
           </provider>
@@ -199,8 +199,8 @@
         <option value="$PROJECT_DIR$/src/Api/Model/Image.php" />
         <option value="$PROJECT_DIR$/data/database2.sql" />
         <option value="$PROJECT_DIR$/src/Admin/View/user_list.twig" />
-        <option value="$PROJECT_DIR$/src/Admin/Model/User.php" />
         <option value="$PROJECT_DIR$/src/Admin/Admin.php" />
+        <option value="$PROJECT_DIR$/src/Admin/Model/User.php" />
         <option value="$PROJECT_DIR$/src/Admin/Controller/UserController.php" />
       </list>
     </option>
@@ -530,7 +530,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17826553" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17826553" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -806,19 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Model/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="22" selection-start="2514" selection-end="2524" vertical-scroll-proportion="-13.575758" vertical-offset="2048" max-vertical-offset="3072">
-          <folding>
-            <marker date="1414664396000" expanded="true" signature="992:1051" placeholder="SELECT user_..." />
-            <marker date="1414664396000" expanded="true" signature="1253:1307" placeholder="SELECT user_..." />
-            <marker date="1414664396000" expanded="true" signature="2019:2054" placeholder="SELECT COUNT..." />
-            <marker date="1414664396000" expanded="true" signature="2387:2458" placeholder="SELECT * FRO..." />
-            <marker date="1414664396000" expanded="true" signature="2616:2685" placeholder="SELECT statu..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="17" selection-start="1033" selection-end="1033" vertical-scroll-proportion="-8.0" vertical-offset="816" max-vertical-offset="2232">
@@ -855,9 +842,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/Model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="12" selection-start="1902" selection-end="1902" vertical-scroll-proportion="-11.393939" vertical-offset="1520" max-vertical-offset="3072">
+          <folding>
+            <marker date="1414664742000" expanded="true" signature="992:1051" placeholder="SELECT user_..." />
+            <marker date="1414664742000" expanded="true" signature="1253:1307" placeholder="SELECT user_..." />
+            <marker date="1414664742000" expanded="true" signature="2019:2054" placeholder="SELECT COUNT..." />
+            <marker date="1414664742000" expanded="true" signature="2387:2458" placeholder="SELECT * FRO..." />
+            <marker date="1414664742000" expanded="true" signature="2616:2685" placeholder="SELECT statu..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="19" selection-start="3526" selection-end="3526" vertical-scroll-proportion="0.7411003" vertical-offset="2121" max-vertical-offset="3072">
+        <state line="63" column="102" selection-start="1867" selection-end="1867" vertical-scroll-proportion="0.43042073" vertical-offset="993" max-vertical-offset="3072">
           <folding />
         </state>
       </provider>
