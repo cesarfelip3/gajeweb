@@ -120,6 +120,7 @@ class UserController extends BaseController
 
         $user = new User();
         $user->enableUser(array ("user_uuid" => $id));
+        exit("ok");
 
     }
 
