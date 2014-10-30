@@ -46,9 +46,9 @@
                         <tr>
                             {% for key in headerArray | keys %}
                                 {% if key == 'status' %}
-                                    <td>{{ user[key]|raw }}</td>
+                                    <td id="{{ key }}">{{ user[key]|raw }}</td>
                                 {% else %}
-                                    <td>{{ user[key] }}</td>
+                                    <td id="{{ key }}">{{ user[key] }}</td>
                                 {% endif %}
                             {% endfor %}
                         </tr>
@@ -75,9 +75,16 @@
             )
                     .done(function (data) {
 
-                        if (data == "ok") {
-                            window.location.href = "";
+                        var el = document.getElementById('status');
+                        if (data == "1") {
+                            el.innerHTML = el.innerHTML.replace(/Enabled/, 'Disabled');
                         }
+
+                        if (data == "0") {
+
+                            el.innerHTML = el.innerHTML.replace(/Disabled/, 'Enabled');
+                        }
+                        window.location.href = "";
 
                     });
 

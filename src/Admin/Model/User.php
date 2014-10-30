@@ -114,6 +114,8 @@ class User extends BaseModel
             "user_uuid" => $uuid
         ));
 
+        return $status;
+
     }
     public static function table()
     {
