@@ -56,6 +56,13 @@ class UserController extends BaseController
                 return $this->setFailed("add user wrong");
             }
         } else {
+
+            if (!$user->isEnabled($uuid)) {
+
+                return $this->setFailed("Your account is disabled now");
+
+            }
+
             $user->updateUser($data);
         }
 

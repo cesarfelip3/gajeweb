@@ -117,6 +117,7 @@ class User extends BaseModel
         return $status;
 
     }
+
     public static function table()
     {
         return "user";

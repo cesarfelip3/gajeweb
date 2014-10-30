@@ -356,6 +356,15 @@ class User extends BaseModel
         return $total + count($branders) + count($followers);
     }
 
+    public function isEnabled($uuid)
+    {
+        $status = $this->db->fetchColumn("SELECT status FROM {$this->table}
+            WHERE user_uuid='$uuid'");
+
+        return $status;
+
+    }
+
     public static function table()
     {
         return "user";
