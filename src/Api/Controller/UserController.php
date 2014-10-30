@@ -59,7 +59,9 @@ class UserController extends BaseController
 
             if (!$user->isEnabled($uuid)) {
 
-                return $this->setFailed("Your account is disabled now");
+                return $this->setFailed("Your account is disabled now", array (
+                    "disabled" => 1
+                ));
 
             }
 

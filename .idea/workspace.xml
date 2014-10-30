@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Model/User.php" afterPath="$PROJECT_DIR$/src/Admin/Model/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Model/User.php" afterPath="$PROJECT_DIR$/src/Api/Model/User.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/Api/Controller/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,7 +73,7 @@
       <file leaf-file-name="UserController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Api/Controller/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="72" selection-start="1763" selection-end="1763" vertical-scroll-proportion="0.5840708" vertical-offset="792" max-vertical-offset="11352">
+            <state line="62" column="23" selection-start="1792" selection-end="1800" vertical-scroll-proportion="0.6106195" vertical-offset="792" max-vertical-offset="11400">
               <folding />
             </state>
           </provider>
@@ -961,7 +960,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="72" selection-start="1763" selection-end="1763" vertical-scroll-proportion="0.5840708" vertical-offset="792" max-vertical-offset="11352">
+        <state line="62" column="23" selection-start="1792" selection-end="1800" vertical-scroll-proportion="0.6106195" vertical-offset="792" max-vertical-offset="11400">
           <folding />
         </state>
       </provider>
