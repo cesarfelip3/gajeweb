@@ -365,6 +365,16 @@ class User extends BaseModel
 
     }
 
+    /**
+     * @param $data
+     */
+    public function addAPNToken ($data)
+    {
+        $uuid = $data["user_uuid"];
+        unset ($data["user_uuid"]);
+        $this->db->update($this->table, $data, array('user_uuid' => $uuid));
+    }
+
     public static function table()
     {
         return "user";

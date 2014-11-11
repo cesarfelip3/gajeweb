@@ -20,6 +20,10 @@ class UserController extends BaseController
         $this->response = new Response();
     }
 
+    /**
+     * Add user data from the client/iOS app, when the app start and login with
+     * FB successfully, it will call this action to add user or update user
+     */
     public function addUser()
     {
 
@@ -59,7 +63,7 @@ class UserController extends BaseController
 
             if (!$user->isEnabled($uuid)) {
 
-                return $this->setFailed("Your account is disabled now", array (
+                return $this->setFailed("Your account is disabled now", array(
                     "disabled" => 1
                 ));
 
@@ -73,11 +77,13 @@ class UserController extends BaseController
         $theme = new Theme();
         $theme_uuid = $theme->getTheme();
 
-        return $this->setSuccess("", array ("user_uuid"=>$uuid, "theme_uuid"=>$theme_uuid));
-        return true;
+        return $this->setSuccess("", array("user_uuid" => $uuid, "theme_uuid" => $theme_uuid));
 
     }
 
+    /**
+     * Searching the user from user database, and return the list of all users
+     */
     public function searchUser()
     {
         $name = $this->request->get("name", "");
@@ -99,19 +105,17 @@ class UserController extends BaseController
         if (empty ($userArray)) {
 
             $this->setSuccess("empty result from db", array("users" => array()));
-        } else {
-
-            $this->setSuccess("", array("users" => $userArray));
         }
 
-        return true;
+        return $this->setSuccess("", array("users" => $userArray));
+
     }
 
-    //
-    // exclude image
-    //
-
-    public function addExcludeImage ()
+    /**
+     * Adding excluded image from the current user image list, so when the image
+     * displayed on user device, it won't include any of those images
+     */
+    public function addExcludeImage()
     {
         $user_uuid = $this->request->get("user_uuid", "");
         $image_uuid = $this->request->get("image_uuid", "");
@@ -128,17 +132,17 @@ class UserController extends BaseController
             $user->addExImage($data);
             return $this->setSuccess("success");
 
-        } else {
-
-            return $this->setSuccess("exists");
         }
 
-        return true;
+        return $this->setSuccess("exists");
+
     }
 
-    //
-    // block
-    //
+    /**
+     * Adding block user identifier to current user image list, if one user is
+     * blocked, and then all images from this user will be blocked for current
+     * user
+     */
     public function addBlock()
     {
         $user_uuid = $this->request->get("user_uuid", "");
@@ -155,18 +159,15 @@ class UserController extends BaseController
             $user->addBlock($data);
             return $this->setSuccess("success");
 
-        } else {
-
-            return $this->setSuccess("exists");
         }
 
-        return true;
+        return $this->setSuccess("exists");
+
     }
 
-    //======================================
-    //
-    //======================================
-
+    /**
+     * Adding following/followed relationship for current user
+     */
     public function addFollow()
     {
         $user_uuid = $this->request->get("user_followed_uuid", "");
@@ -183,14 +184,15 @@ class UserController extends BaseController
             $user->addFollow($data);
             return $this->setSuccess("success");
 
-        } else {
-
-            return $this->setSuccess("exists");
         }
 
-        return true;
+        return $this->setSuccess("exists");
+
     }
 
+    /**
+     * Get the list of follower for current user
+     */
     public function getFollowerListByUser()
     {
         $user_uuid = $this->request->get("user_uuid", "");
@@ -209,10 +211,7 @@ class UserController extends BaseController
         $user = new User();
         $userArray = $user->getFollowerList($data);
 
-        if (empty ($userArray)) {
-
-            $this->setSuccess("empty result from db", array("followers" => array()));
-        } else {
+        if (!empty ($userArray)) {
 
             $data = array();
             $data["page"] = 0;
@@ -236,9 +235,12 @@ class UserController extends BaseController
             $this->setSuccess("", array("followers" => $userArray));
         }
 
-        return true;
+        $this->setSuccess("empty result from db", array("followers" => array()));
     }
 
+    /**
+     * Get list of following user for current user
+     */
     public function getFollowingListByUser()
     {
         $user_uuid = $this->request->get("user_uuid", "");
@@ -257,10 +259,7 @@ class UserController extends BaseController
         $user = new User();
         $userArray = $user->getFollowingList($data);
 
-        if (empty ($userArray)) {
-
-            $this->setSuccess("empty result from db", array("followings" => array()));
-        } else {
+        if (!empty ($userArray)) {
 
             $data = array();
             $data["page"] = 0;
@@ -285,9 +284,12 @@ class UserController extends BaseController
             $this->setSuccess("", array("followings" => $userArray));
         }
 
-        return true;
+        $this->setSuccess("empty result from db", array("followings" => array()));
     }
 
+    /**
+     * Remove the follow of the current user
+     */
     public function removeFollow()
     {
         $user_uuid = $this->request->get("user_followed_uuid", "");
@@ -304,19 +306,18 @@ class UserController extends BaseController
             $user->deleteFollow($data);
             return $this->setSuccess("success");
 
-        } else {
-
-            return $this->setSuccess("not exists");
         }
-
-        return true;
+        return $this->setSuccess("not exists");
     }
 
-    //=========================================
-    // Notification ::
-    //=========================================
-
-    function markItRead ()
+    /**
+     * When the iOS app running, it will load the data of latest notification
+     * of comments, brands and follows, from this notification, user can get to
+     * know who commented his image lately and so on, and when one of items has
+     * read, it will be removed from the list, this method will mark which item
+     * is read at server side
+     */
+    function markItRead()
     {
 
         $type = $this->request->get("type", "");
@@ -335,7 +336,7 @@ class UserController extends BaseController
             $user_uuid = $this->request->get("user_uuid", "");
             $follower_uuid = $this->request->get("follower_uuid", "");
 
-            $data = array (
+            $data = array(
                 "user_following_uuid" => $follower_uuid,
                 "user_followed_uuid" => $user_uuid,
                 "is_read" => 1
@@ -345,7 +346,7 @@ class UserController extends BaseController
             $user->updateFollower($data);
 
         }
-        
+
         if ($type == "comments") {
 
             // mark it read
@@ -371,12 +372,14 @@ class UserController extends BaseController
 
             $image = new Image();
             $image->updateBrander($data);
-            return $this->setSuccess("success to change read status of brander");
         }
 
-        $this->setSuccess("");
+        return $this->setSuccess("success to change read status of brander");
     }
 
+    /**
+     * Will get all updated information from comments, brands and follows
+     */
     function getUpdateInfo()
     {
         $userUUID = $this->request->get("user_uuid", "");
@@ -385,9 +388,7 @@ class UserController extends BaseController
         $uuid = "";
         $uuid = $user->userExists($userUUID);
 
-        if (!$uuid) {
-
-        } else {
+        if ($uuid) {
 
             $data["page"] = 0;
             $data["page_size"] = 50;
@@ -442,13 +443,16 @@ class UserController extends BaseController
                 $result["branders"] = $branders;
             }
 
-            $this->setSuccess("", $result);
+            return $this->setSuccess("", $result);
 
         }
 
-        return true;
+        return $this->setSuccess("");
     }
 
+    /**
+     * Will get the number of update (comment, brand and follow)
+     */
     function getNumberOfUpdateInfo()
     {
         $userUUID = $this->request->get("user_uuid", "");
@@ -457,9 +461,7 @@ class UserController extends BaseController
         $uuid = "";
         $uuid = $user->userExists($userUUID);
 
-        if (!$uuid) {
-
-        } else {
+        if ($uuid) {
 
             $data["page"] = 0;
             $data["page_size"] = 50;
@@ -467,10 +469,40 @@ class UserController extends BaseController
 
             $result = $user->getNumberOfUpdateInfo($data);
 
-            $this->setSuccess("", array ("total"=>$result));
+            $this->setSuccess("", array("total" => $result));
         }
 
-        return true;
+        return $this->setSuccess("", array("total" => 0));
+    }
+
+    /**
+     * Register APN IOS token from device for each user, and for each of them,
+     * they are allowed to have one active device only
+     */
+    function registerAPNToken()
+    {
+
+        $user_uuid = $this->request->get("user_uuid", "");
+        $token = $this->request->get("token", "");
+
+        if (empty ($token) || empty ($user_uuid)) {
+            return $this->setFailed("Invald parameters while registering APN
+            token");
+        }
+
+        $user = new User();
+
+        $data = array(
+            "user_uuid" => $user_uuid,
+            "apn_token" => $token
+        );
+
+        if ($user->userExists($user_uuid)) {
+            $user->addAPNToken($data);
+            return $this->setSuccess("");
+        }
+
+        return $this->setFailed("Your user id isn't valid anymore");
     }
 
 }
