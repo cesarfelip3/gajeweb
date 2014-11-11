@@ -505,4 +505,36 @@ class UserController extends BaseController
         return $this->setFailed("Your user id isn't valid anymore");
     }
 
+    /**
+     * Enable APN for current user or not, here we limited when user can get
+     * remote notification, only if the app is running background or not running,
+     * it can accept the notification, so this time, it will enable that for
+     * current user.
+     *
+     * @return bool
+     */
+    function enableAPN ()
+    {
+        $user_uuid = $this->request->get("user_uuid", "");
+        $enable = $this->request->get("enable", 0);
+
+        if (empty ($enable) || empty ($user_uuid)) {
+            return $this->setFailed("Invald parameters");
+        }
+
+        $user = new User();
+
+        $data = array(
+            "user_uuid" => $user_uuid,
+            "apn_enable" => $enable
+        );
+
+        if ($user->userExists($user_uuid)) {
+            $user->addAPNToken($data);
+            return $this->setSuccess("");
+        }
+
+        return $this->setFailed("Your user id isn't valid anymore");
+    }
+
 }
