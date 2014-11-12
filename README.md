@@ -1,6 +1,8 @@
 gajeweb
 =======
 
+openssl pkcs12 -in pushcert.p12 -out pushcert.pem -nodes -clcerts
+
 Now the question is about how to do with comment notification & brand notification?
 
 1. only the app is running (foreground and background), it will pop up to info the user
