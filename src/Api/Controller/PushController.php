@@ -58,7 +58,7 @@ class PushController extends BaseController
 
         foreach ($result as $notification) {
 
-            $devToken = $notification["dev_token"];
+            $devToken = $notification["apn_token"];
             //$devToken = '111db24975bb6c6b63214a8d268052aa0a965cc1e32110ab06a72b19074c2222';
 
             //$this->debug($devToken);

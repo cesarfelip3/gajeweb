@@ -404,7 +404,7 @@ class User extends BaseModel
             $apn_token = $value['apn_token'];
 
             if (empty (trim($apn_token))) {
-                continue;
+                //continue;
             }
 
             $data = array (
@@ -413,7 +413,33 @@ class User extends BaseModel
                 "user_uuid" => $user_uuid
             );
 
-            $notification[$i] = $this->getNotification($data);
+            $data = $this->getNotification($data);
+
+            if (empty ($data)) {
+                continue;
+            }
+
+            foreach ($data as $key => $item) {
+
+                if (empty ($item)) {
+                    continue;
+                }
+
+                if ($key == "comments") {
+
+
+                }
+
+                if ($key == "branders") {
+
+                }
+
+                if ($key == "followers") {
+
+                }
+
+            }
+
             $notification[$i]['user'] = array (
                 "user_uuid" => $user_uuid,
                 "apn_token" => $apn_token
