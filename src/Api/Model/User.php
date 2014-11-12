@@ -426,28 +426,23 @@ class User extends BaseModel
                 }
 
                 if ($key == "comments") {
-
-
+                    $message = $item[0]['username'] . " dropped you a line";
                 }
 
                 if ($key == "branders") {
-
+                    $message = $item[0]['username'] . " branded your photo";
                 }
 
                 if ($key == "followers") {
-
+                    $message = $item[0]['username'] . "  tracked your photo";
                 }
 
+                $notification[$i]['description'] = $message;
+                $notification[$i]['apn_token'] = $apn_token;
+
+                $i++;
             }
-
-            $notification[$i] = $data;
-            $notification[$i]['user'] = array (
-                "user_uuid" => $user_uuid,
-                "apn_token" => $apn_token
-            );
-
-            $i++;
-
+            
             $data1 = array (
                 "apn_date" => time()
             );
