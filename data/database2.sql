@@ -205,7 +205,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `follower_count` int(20) NOT NULL DEFAULT '0',
   `status` int(20) NOT NULL DEFAULT '1',
   `apn_token` BINARY(255) NOT NULL DEFAULT '',
-  `apn_enable` int(20) NOT NULL DEFAULT '0'
+  `apn_enable` int(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
