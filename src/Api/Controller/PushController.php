@@ -36,6 +36,9 @@ class PushController extends BaseController
 
         $pushManager = new PushManager(PushManager::ENVIRONMENT_DEV);
 
+        print_r ($certificate);
+        exit;
+
         if (!file_exists($certificate)) {
 
             $this->setFailed("pem not exists # $certificate");
