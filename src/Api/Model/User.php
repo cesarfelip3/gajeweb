@@ -404,7 +404,7 @@ class User extends BaseModel
             $apn_token = $value['apn_token'];
 
             if (empty (trim($apn_token))) {
-                //continue;
+                continue;
             }
 
             $data = array (
