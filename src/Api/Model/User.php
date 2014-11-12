@@ -428,7 +428,7 @@ class User extends BaseModel
 
         $limit = "$page, $pageSize";
 
-        $sql = "SELECT DISTINCT modified_date FROM {$this->table} WHERE user_uuid=?";
+        $sql = "SELECT DISTINCT apn_date FROM {$this->table} WHERE user_uuid=?";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue (1, $data["user_uuid"]);
         $stmt->execute();
