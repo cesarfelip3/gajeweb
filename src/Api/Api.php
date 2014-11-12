@@ -308,6 +308,32 @@ class Api
 
         // https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW1
 
+        $api->post("apn/register", function (Request $request) use ($app) {
+
+            $controller = new Controller\UserController($request, $app);
+            $ret = $controller->registerAPNToken();
+
+            $status = 200;
+            if (!$ret) {
+                $status = 400;
+            }
+
+            return $app->json($controller->getError(), $status);
+        });
+
+        $api->post("apn/enable", function (Request $request) use ($app) {
+
+            $controller = new Controller\UserController($request, $app);
+            $ret = $controller->enableAPN();
+
+            $status = 200;
+            if (!$ret) {
+                $status = 400;
+            }
+
+            return $app->json($controller->getError(), $status);
+        });
+
         $api->post("push/apns", function (Request $request) use ($app) {
 
             $controller = new Controller\PushController($request, $app);
