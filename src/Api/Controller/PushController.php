@@ -13,7 +13,7 @@ use Sly\NotificationPusher\PushManager,
     Sly\NotificationPusher\Model\Message,
     Sly\NotificationPusher\Model\Push;
 
-use \Model\User;
+use Api\Model\User;
 
 class PushController extends BaseController
 {
@@ -28,14 +28,6 @@ class PushController extends BaseController
     // https://github.com/Ph3nol/NotificationPusher/blob/master/doc/apns-adapter.md
     public function push($certificate)
     {
-
-        $page = $this->request->get ("page", 0);
-        $pageSize = $this->request->get ("page_size", 25);
-
-        $data = array (
-            "page" => $page,
-            "page_size" => $pageSize
-        );
 
         // First, instantiate the manager
         // Example for production environment:
@@ -56,8 +48,10 @@ class PushController extends BaseController
         ));
 
         $user = new User();
+        $result = $user->getAllNotification();
 
-        $result = $user->getAllNotification($data);
+        print_r ($result);
+        exit;
 
         //$this->debug($certificate, true, false);
         //$this->debug($result);

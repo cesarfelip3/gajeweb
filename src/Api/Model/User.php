@@ -275,7 +275,7 @@ class User extends BaseModel
         $tableImage = Image::table();
 
         // get comments first
-        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username, cmt.user_uuid AS comment_user_uuid, cmt.comment_uuid AS comment_uuid,imgcmt.is_read AS is_read  FROM $tableImage img INNER JOIN $tableImageComment imgcmt ON img.image_uuid=imgcmt.image_uuid INNER JOIN $tableComment AS cmt ON cmt.comment_uuid=imgcmt.comment_uuid INNER JOIN {$this->table} usr ON cmt.user_uuid=usr.user_uuid WHERE cmt.modified_date>=? AND img.user_uuid=? AND imgcmt.is_read=0 ORDER BY cmt.modified_date ASC LIMIT {$limit}";
+        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username, cmt.user_uuid AS comment_user_uuid, cmt.comment_uuid AS comment_uuid,imgcmt.is_read AS is_read  FROM $tableImage img INNER JOIN $tableImageComment imgcmt ON img.image_uuid=imgcmt.image_uuid INNER JOIN $tableComment AS cmt ON cmt.comment_uuid=imgcmt.comment_uuid INNER JOIN {$this->table} usr ON cmt.user_uuid=usr.user_uuid WHERE cmt.modified_date>=? AND img.user_uuid=? AND imgcmt.is_read=0 ORDER BY cmt.modified_date DESC LIMIT {$limit}";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue (1, $modified);
         $stmt->bindValue (2, $data["user_uuid"]);
@@ -283,7 +283,7 @@ class User extends BaseModel
         $comments = $stmt->fetchAll();
 
         // get comments first
-        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username, imgcmt.user_uuid AS brander_user_uuid, imgcmt.is_read AS is_read FROM $tableImage img INNER JOIN $tableImageBrander imgcmt ON img.image_uuid=imgcmt.image_uuid INNER JOIN {$this->table} usr ON imgcmt.user_uuid=usr.user_uuid WHERE imgcmt.create_date>=? AND img.user_uuid=? AND imgcmt.is_read=0 ORDER BY imgcmt.create_date ASC LIMIT {$limit}";
+        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username, imgcmt.user_uuid AS brander_user_uuid, imgcmt.is_read AS is_read FROM $tableImage img INNER JOIN $tableImageBrander imgcmt ON img.image_uuid=imgcmt.image_uuid INNER JOIN {$this->table} usr ON imgcmt.user_uuid=usr.user_uuid WHERE imgcmt.create_date>=? AND img.user_uuid=? AND imgcmt.is_read=0 ORDER BY imgcmt.create_date DESC LIMIT {$limit}";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue (1, $modified);
         $stmt->bindValue (2, $data["user_uuid"]);
@@ -329,7 +329,7 @@ class User extends BaseModel
         $tableImage = Image::table();
 
         // get comments first
-        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username, cmt.user_uuid AS comment_user_uuid FROM $tableImage img INNER JOIN $tableImageComment imgcmt ON img.image_uuid=imgcmt.image_uuid INNER JOIN $tableComment AS cmt ON cmt.comment_uuid=imgcmt.comment_uuid INNER JOIN {$this->table} usr ON cmt.user_uuid=usr.user_uuid WHERE cmt.modified_date>=? AND img.user_uuid=? AND imgcmt.is_read=0 ORDER BY cmt.modified_date ASC LIMIT {$limit}";
+        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username, cmt.user_uuid AS comment_user_uuid FROM $tableImage img INNER JOIN $tableImageComment imgcmt ON img.image_uuid=imgcmt.image_uuid INNER JOIN $tableComment AS cmt ON cmt.comment_uuid=imgcmt.comment_uuid INNER JOIN {$this->table} usr ON cmt.user_uuid=usr.user_uuid WHERE cmt.modified_date>=? AND img.user_uuid=? AND imgcmt.is_read=0 ORDER BY cmt.modified_date DESC LIMIT {$limit}";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue (1, $modified);
         $stmt->bindValue (2, $data["user_uuid"]);
@@ -339,7 +339,7 @@ class User extends BaseModel
         $total = count($comments);
 
         // get comments first
-        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username, imgcmt.user_uuid AS brander_user FROM $tableImage img INNER JOIN $tableImageBrander imgcmt ON img.image_uuid=imgcmt.image_uuid INNER JOIN {$this->table} usr ON imgcmt.user_uuid=usr.user_uuid WHERE imgcmt.create_date>=? AND img.user_uuid=? AND imgcmt.is_read=0 ORDER BY imgcmt.create_date ASC LIMIT {$limit}";
+        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username, imgcmt.user_uuid AS brander_user FROM $tableImage img INNER JOIN $tableImageBrander imgcmt ON img.image_uuid=imgcmt.image_uuid INNER JOIN {$this->table} usr ON imgcmt.user_uuid=usr.user_uuid WHERE imgcmt.create_date>=? AND img.user_uuid=? AND imgcmt.is_read=0 ORDER BY imgcmt.create_date DESC LIMIT {$limit}";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue (1, $modified);
         $stmt->bindValue (2, $data["user_uuid"]);
@@ -381,6 +381,96 @@ class User extends BaseModel
         unset ($data["user_uuid"]);
         $this->db->update($this->table, $data, array('user_uuid' => $uuid));
     }
+
+    /**
+     * well....
+     */
+    public function getAllNotification()
+    {
+        $sql = "SELECT user_uuid FROM {$this->table}";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+
+        $notification = array ();
+
+        foreach ($result as $value) {
+
+            $user_uuid = $value['user_uuid'];
+
+            $data = array (
+                "page" => 0,
+                "page_size" => 1,
+                "user_uuid" => $user_uuid
+            );
+
+            $notification[] = $this->getNotification($data);
+
+            $data1 = array (
+                "apn_date" => time()
+            );
+
+            $this->db->update ($this->table, $data1, array(
+                'user_uuid' => $user_uuid));
+        }
+
+        return $notification;
+    }
+
+    public function getNotification($data)
+    {
+        $page = $data["page"];
+        $pageSize = $data["page_size"];
+
+        $page = intval($page);
+        $pageSize = intval($pageSize);
+        $page = $page * $pageSize;
+
+        $limit = "$page, $pageSize";
+
+        $sql = "SELECT DISTINCT modified_date FROM {$this->table} WHERE user_uuid=?";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue (1, $data["user_uuid"]);
+        $stmt->execute();
+        $result = $stmt->fetchColumn();
+
+        $modified = $result["apn_date"];
+
+        if (empty ($modified)) {
+            return false;
+        }
+
+        $tableComment = Comment::table();
+        $tableImageBrander = "image_brander";
+        $tableImageComment = "image_comment";
+        $tableImage = Image::table();
+
+        // get comments first
+        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username, cmt.user_uuid AS comment_user_uuid, cmt.comment_uuid AS comment_uuid,imgcmt.is_read AS is_read  FROM $tableImage img INNER JOIN $tableImageComment imgcmt ON img.image_uuid=imgcmt.image_uuid INNER JOIN $tableComment AS cmt ON cmt.comment_uuid=imgcmt.comment_uuid INNER JOIN {$this->table} usr ON cmt.user_uuid=usr.user_uuid WHERE cmt.modified_date>=? AND img.user_uuid=? AND imgcmt.is_read=0 ORDER BY cmt.modified_date DESC LIMIT {$limit}";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue (1, $modified);
+        $stmt->bindValue (2, $data["user_uuid"]);
+        $stmt->execute();
+        $comments = $stmt->fetchAll();
+
+        // get comments first
+        $sql = "SELECT img.image_uuid, img.name, img.description, img.width, img.height, img.create_date, img.modified_date, img.file_name, img.thumbnail, usr.facebook_token AS user_token, usr.user_uuid AS user_uuid, usr.fullname AS fullname, usr.username AS username, imgcmt.user_uuid AS brander_user_uuid, imgcmt.is_read AS is_read FROM $tableImage img INNER JOIN $tableImageBrander imgcmt ON img.image_uuid=imgcmt.image_uuid INNER JOIN {$this->table} usr ON imgcmt.user_uuid=usr.user_uuid WHERE imgcmt.create_date>=? AND img.user_uuid=? AND imgcmt.is_read=0 ORDER BY imgcmt.create_date DESC LIMIT {$limit}";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue (1, $modified);
+        $stmt->bindValue (2, $data["user_uuid"]);
+        $stmt->execute();
+        $branders = $stmt->fetchAll();
+
+        $sql = "SELECT DISTINCT usr.*, fol.is_mutual AS is_mutual FROM {$this->table} usr INNER JOIN {$this->table_user_follow} fol ON usr.user_uuid=fol.user_following_uuid WHERE fol.create_date>=? AND fol.user_followed_uuid=? AND fol.is_read=0 ORDER BY fol.create_date DESC LIMIT {$limit}";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue (1, $modified);
+        $stmt->bindValue (2, $data["user_uuid"]);
+        $stmt->execute();
+        $followers = $stmt->fetchAll();
+
+        return array ("comments"=>$comments, "branders"=>$branders, "followers" => $followers);
+    }
+
 
     public static function table()
     {
