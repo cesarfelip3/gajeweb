@@ -264,6 +264,7 @@ class User extends BaseModel
         $result = $stmt->fetchColumn();
 
         $modified = $result;
+        $modified = intval($modified);
 
         if (empty ($modified)) {
             return false;
@@ -318,6 +319,7 @@ class User extends BaseModel
         $result = $stmt->fetchColumn();
 
         $modified = $result;
+        $modified = intval($modified);
 
         if (empty ($modified)) {
             return false;
@@ -435,10 +437,7 @@ class User extends BaseModel
         $result = $stmt->fetchColumn();
 
         $modified = $result;
-
-        if (empty ($modified)) {
-            return false;
-        }
+        $modified = intval($modified);
 
         $tableComment = Comment::table();
         $tableImageBrander = "image_brander";
