@@ -442,7 +442,7 @@ class User extends BaseModel
 
                 $i++;
             }
-            
+
             $data1 = array (
                 "apn_date" => time()
             );
