@@ -440,6 +440,7 @@ class User extends BaseModel
 
             }
 
+            $notification[$i] = $data;
             $notification[$i]['user'] = array (
                 "user_uuid" => $user_uuid,
                 "apn_token" => $apn_token
