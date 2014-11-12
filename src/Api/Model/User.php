@@ -389,16 +389,19 @@ class User extends BaseModel
      */
     public function getAllNotification()
     {
-        $sql = "SELECT user_uuid FROM {$this->table}";
+        $sql = "SELECT user_uuid, apn_enable, apn_token FROM {$this->table} WHERE
+            apn_enable=1";
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll();
 
         $notification = array ();
 
+        $i = 0;
         foreach ($result as $value) {
 
             $user_uuid = $value['user_uuid'];
+            $apn_token = $value['apn_token'];
 
             $data = array (
                 "page" => 0,
@@ -406,7 +409,13 @@ class User extends BaseModel
                 "user_uuid" => $user_uuid
             );
 
-            $notification[] = $this->getNotification($data);
+            $notification[$i] = $this->getNotification($data);
+            $notification[$i]['user'] = array (
+                "user_uuid" => $user_uuid,
+                "apn_token" => $apn_token
+            );
+
+            $i++;
 
             $data1 = array (
                 "apn_date" => time()
