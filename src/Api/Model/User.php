@@ -403,6 +403,10 @@ class User extends BaseModel
             $user_uuid = $value['user_uuid'];
             $apn_token = $value['apn_token'];
 
+            if (empty (trim($apn_token))) {
+                continue;
+            }
+
             $data = array (
                 "page" => 0,
                 "page_size" => 1,
