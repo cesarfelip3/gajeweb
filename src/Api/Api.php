@@ -90,9 +90,7 @@ class Api
             $ret = $controller->addUser();
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -106,9 +104,7 @@ class Api
             $ret = $controller->getLatestByUser($app['upload.image.host']);
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -122,9 +118,7 @@ class Api
             $ret = $controller->removeImage();
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -152,9 +146,7 @@ class Api
             $ret = $controller->addFollow();
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -168,9 +160,7 @@ class Api
             $ret = $controller->removeFollow();
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -184,9 +174,7 @@ class Api
             $ret = $controller->getFollowerListByUser();
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -200,9 +188,7 @@ class Api
             $ret = $controller->getFollowingListByUser();
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -216,9 +202,7 @@ class Api
             $ret = $controller->addBlock();
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -232,9 +216,7 @@ class Api
             $ret = $controller->searchUser();
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -248,9 +230,7 @@ class Api
             $ret = $controller->prepareNotification();
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -264,9 +244,7 @@ class Api
             $ret = $controller->getUpdateInfo();
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -280,9 +258,7 @@ class Api
             $ret = $controller->getNumberOfUpdateInfo();
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -296,9 +272,7 @@ class Api
             $ret = $controller->markItRead();
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -334,15 +308,13 @@ class Api
             return $app->json($controller->getError(), $status);
         });
 
-        $api->post("push/apns", function (Request $request) use ($app) {
+        $api->get("push/apns", function (Request $request) use ($app) {
 
             $controller = new Controller\PushController($request, $app);
             $ret = $controller->push($app["certificates.folder"] . "ri_dev_pns.pem");
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -363,9 +335,7 @@ class Api
             $ret = $controller->upload($app["upload.folder.image"]);
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -379,9 +349,7 @@ class Api
             $ret = $controller->updateInfo();
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -395,9 +363,7 @@ class Api
             $ret = $controller->getLatest($app['upload.image.host']);
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -429,9 +395,7 @@ class Api
             $ret = $controller->addComment();
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -445,9 +409,7 @@ class Api
             $ret = $controller->getCommentList();
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -465,9 +427,7 @@ class Api
             $ret = $controller->addBrander();
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -481,9 +441,7 @@ class Api
             $ret = $controller->getBranderList();
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -505,9 +463,7 @@ class Api
             $ret = $controller->getThemeList();
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
@@ -521,9 +477,7 @@ class Api
             $ret = $controller->getNoteList();
 
             $status = 200;
-            if ($ret) {
-                $status = 200;
-            } else {
+            if (!$ret) {
                 $status = 400;
             }
 
