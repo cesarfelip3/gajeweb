@@ -375,6 +375,13 @@ class User extends BaseModel
         $this->db->update($this->table, $data, array('user_uuid' => $uuid));
     }
 
+    public function enableAPN ($data)
+    {
+        $uuid = $data["user_uuid"];
+        unset ($data["user_uuid"]);
+        $this->db->update($this->table, $data, array('user_uuid' => $uuid));
+    }
+
     public static function table()
     {
         return "user";

@@ -524,13 +524,15 @@ class UserController extends BaseController
 
         $user = new User();
 
+        $enable = intval($enable);
+
         $data = array(
             "user_uuid" => $user_uuid,
             "apn_enable" => $enable
         );
 
         if ($user->userExists($user_uuid)) {
-            $user->addAPNToken($data);
+            $user->enableAPN($data);
             return $this->setSuccess("");
         }
 
