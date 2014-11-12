@@ -435,6 +435,7 @@ class User extends BaseModel
         $result = $stmt->fetchColumn();
 
         $modified = $result["apn_date"];
+        print_r ($result);
         print_r ($modified);
         exit;
 
