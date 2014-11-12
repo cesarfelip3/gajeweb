@@ -36,9 +36,6 @@ class PushController extends BaseController
 
         $pushManager = new PushManager(PushManager::ENVIRONMENT_DEV);
 
-        print_r ($certificate);
-        exit;
-
         if (!file_exists($certificate)) {
 
             $this->setFailed("pem not exists # $certificate");
@@ -68,6 +65,7 @@ class PushController extends BaseController
             }
 
             $devToken = '111db24975bb6c6b63214a8d268052aa0a965cc1e32110ab06a72b19074c2222';
+            $devToken = '83242563def54daf1f78fb56fd9efaffe353240219bbebfdc1ea5e1838cfa2be';
 
             //$this->debug($devToken);
             //$devToken = '72df6b2b4988cf8e5fea115a4814ba40eb9186e4a04e68440be98b18e6fb51bc';
