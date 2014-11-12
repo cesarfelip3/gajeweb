@@ -263,7 +263,7 @@ class User extends BaseModel
         $stmt->execute();
         $result = $stmt->fetchColumn();
 
-        $modified = $result["modified_date"];
+        $modified = $result;
 
         if (empty ($modified)) {
             return false;
@@ -317,7 +317,7 @@ class User extends BaseModel
         $stmt->execute();
         $result = $stmt->fetchColumn();
 
-        $modified = $result["modified_date"];
+        $modified = $result;
 
         if (empty ($modified)) {
             return false;
@@ -434,10 +434,7 @@ class User extends BaseModel
         $stmt->execute();
         $result = $stmt->fetchColumn();
 
-        $modified = $result["apn_date"];
-        print_r ($result);
-        print_r ($modified);
-        exit;
+        $modified = $result;
 
         if (empty ($modified)) {
             return false;
