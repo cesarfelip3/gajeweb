@@ -469,7 +469,7 @@ class UserController extends BaseController
 
             $result = $user->getNumberOfUpdateInfo($data);
 
-            $this->setSuccess("", array("total" => $result));
+            return $this->setSuccess("", array("total" => $result));
         }
 
         return $this->setSuccess("", array("total" => 0));
