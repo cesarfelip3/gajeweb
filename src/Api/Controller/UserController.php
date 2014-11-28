@@ -232,10 +232,10 @@ class UserController extends BaseController
 
             }
 
-            $this->setSuccess("", array("followers" => $userArray));
+            return $this->setSuccess("", array("followers" => $userArray));
         }
 
-        $this->setSuccess("empty result from db", array("followers" => array()));
+        return $this->setSuccess("empty result from db", array("followers" => array()));
     }
 
     /**
@@ -281,10 +281,10 @@ class UserController extends BaseController
 
             }
 
-            $this->setSuccess("", array("followings" => $userArray));
+            return $this->setSuccess("", array("followings" => $userArray));
         }
 
-        $this->setSuccess("empty result from db", array("followings" => array()));
+        return $this->setSuccess("empty result from db", array("followings" => array()));
     }
 
     /**
