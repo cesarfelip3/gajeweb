@@ -104,7 +104,7 @@ class UserController extends BaseController
 
         if (empty ($userArray)) {
 
-            $this->setSuccess("empty result from db", array("users" => array()));
+            return $this->setSuccess("empty result from db", array("users" => array()));
         }
 
         return $this->setSuccess("", array("users" => $userArray));
