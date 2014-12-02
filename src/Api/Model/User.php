@@ -186,7 +186,10 @@ class User extends BaseModel
 
     public function followExist($data)
     {
-        $uuid = $this->db->fetchColumn("SELECT user_followed_uuid FROM {$this->table_user_follow} WHERE user_followed_uuid=? AND user_following_uuid=?", array($data["user_followed_uuid"], $data["user_following_uuid"]));
+        $uuid = $this->db->fetchColumn("SELECT user_followed_uuid FROM
+            {$this->table_user_follow}
+            WHERE user_followed_uuid=? AND user_following_uuid=?",
+            array($data["user_followed_uuid"], $data["user_following_uuid"]));
 
         if (empty ($uuid)) {
             return false;

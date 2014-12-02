@@ -66,6 +66,8 @@ class ImageController extends BaseController
             $data["page"] = 0;
             $data["page_size"] = 512;
 
+            $user = new User();
+
             foreach ($imageArray as &$value) {
 
                 $value["url_thumbnail"] = $host . $value["thumbnail"];
@@ -74,8 +76,14 @@ class ImageController extends BaseController
                 $data["image_uuid"] = $value["image_uuid"];
                 $value["branders"] = $image->getBranderList($data);
                 $value["brander_count"] = count($value["branders"]);
+
                 $data["user_uuid"] = $user_uuid;
                 $value["enable_brander"] = $image->branderExist($data) == true ? 0 : 1;
+
+                $value['is_tracking'] = $user->followExist(array(
+                    "user_followed_uuid" => $value["user_uuid"],
+                    "user_following_uuid" => $user_uuid
+                )) == true ? 1 : 0;
             }
 
             return $this->setSuccess("", array(
