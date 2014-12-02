@@ -79,7 +79,7 @@ class ImageController extends BaseController
             }
 
             return $this->setSuccess("", array(
-                "images" => array(),
+                "images" =>$imageArray,
                 "theme" => $themeArray[0]));
         }
 
