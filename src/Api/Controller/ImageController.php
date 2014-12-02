@@ -40,9 +40,26 @@ class ImageController extends BaseController
         $image = new Image();
         $imageArray = $image->getLatestImages($data);
 
+        $data["page"] = intval($page);
+        $data["page_size"] = intval($pageSize);
+
+        $theme = new Theme();
+        $themeArray = $theme->getThemeList(array (
+            "page" => 0,
+            "page_size" => 1
+        ));
+
+        if (empty ($themeArray)) {
+
+            return $this->setSuccess("empty result from db", array("images" => array(), "theme" => array()));
+        }
+
         if (empty ($imageArray)) {
 
-            $this->setSuccess("empty result from db", array("images" => array()));
+            $this->setSuccess("empty result from db", array("images" => array(), "theme" => $themeArray[0]));
+
+            //$this->setSuccess("empty result from db", array("images" => array()));
+
         } else {
 
             $data = array();
@@ -61,7 +78,9 @@ class ImageController extends BaseController
                 $value["enable_brander"] = $image->branderExist($data) == true ? 0 : 1;
             }
 
-            $this->setSuccess("", array("images" => $imageArray));
+            return $this->setSuccess("", array(
+                "images" => array(),
+                "theme" => $themeArray[0]));
         }
 
         return true;
