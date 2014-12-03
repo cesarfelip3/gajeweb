@@ -34,7 +34,7 @@ class PushController extends BaseController
         // $pushManager = new PushManager(PushManager::ENVIRONMENT_PRODUCTION);
         // Development one by default (without argument).
 
-        $pushManager = new PushManager(PushManager::ENVIRONMENT_DEV);
+        $pushManager = new PushManager(PushManager::ENVIRONMENT_PROD);
 
         if (!file_exists($certificate)) {
 

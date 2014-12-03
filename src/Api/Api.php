@@ -311,7 +311,7 @@ class Api
         $api->get("push/apns", function (Request $request) use ($app) {
 
             $controller = new Controller\PushController($request, $app);
-            $ret = $controller->push($app["certificates.folder"] . "ri_dev_pns.pem");
+            $ret = $controller->push($app["certificates.folder"] . "production.pem");
 
             $status = 200;
             if (!$ret) {

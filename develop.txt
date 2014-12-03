@@ -5,6 +5,7 @@ Development
 1. REST API
 2. Admin web panel ==> manage ......
 
+http://stackoverflow.com/questions/21250510/generate-pem-file-used-to-setup-apple-push-notification
 
 REST API
 =============
