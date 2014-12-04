@@ -51,5 +51,18 @@ class Theme extends BaseModel
         return $uuid;
     }
 
+    public function removeTheme($uuid)
+    {
+        if (empty ($uuid)) {
+            return;
+        }
+
+        $this->db->delete($this->table, array('theme_uuid' => $uuid));
+    }
+
+    public static function table ()
+    {
+        return "theme";
+    }
 
 }

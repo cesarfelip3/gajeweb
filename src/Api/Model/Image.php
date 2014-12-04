@@ -269,6 +269,98 @@ class Image extends BaseModel
         return $result;
     }
 
+    /**
+     * To remove all images which the theme is abandoned, before that, will
+     * save all image files for one theme into one folder, and then zip it
+     * into a downloadable zip file.
+     *
+     * This is a cron job, which it will run every week or somehow
+     *
+     * @param $data
+     */
+    public function removeImagesByTheme()
+    {
+
+        $theme_table = Theme::table();
+        $theme = new Theme();
+        $result = $this->db->fetchAll("SELECT * FROM $theme_table ORDER BY modified_date DESC");
+
+        // skip the first theme
+        if (!empty($result)) {
+            unset($result[0]);
+        }
+
+        foreach ($result as $value) {
+
+            // save all files, copy and delete it
+            $this->saveImageFiles(array (
+                "theme_uuid" => $value['theme_uuid']
+            ));
+
+            // clean database, clean theme, and then clean image related
+
+        }
+    }
+
+    public function saveImageFiles($data)
+    {
+        $total = $this->getTotalInTheme($data);
+
+        for ($i = 0; $i < ceil ($total / 25); ++$i) {
+
+            $data['page'] = $i * 25;
+            $data['page_size'] = 25;
+
+            $images = $this->getImageListByTheme($data);
+            print_r($images);
+
+            //$fromPath = $data['source'];
+            $toPath = $data['dest'];
+
+            foreach ($images as $image) {
+
+                $filename = $image['file_name'];
+                $filepath = $image['file_path'];
+
+                if (file_exists($filepath . $filename)) {
+                    @copy ($filepath . $filename, $toPath . $filename);
+                }
+            }
+        }
+    }
+
+    public function getTotalInTheme($data)
+    {
+        $theme_uuid = $data['theme_uuid'];
+
+        if (empty($theme_uuid)) {
+            return false;
+        }
+
+        $total = $this->db->fetchColumn("SELECT COUNT(*) FROM {$this->table}
+            WHERE theme_uuid='$theme_uuid'");
+        return $total;
+    }
+
+    public function getImageListByTheme($data)
+    {
+        $theme_uuid = $data['theme_uuid'];
+        $page = $data["page"];
+        $pageSize = $data["page_size"];
+
+        $page = intval($page);
+        $pageSize = intval($pageSize);
+        $page = $page * $pageSize;
+
+        $limit = "$page, $pageSize";
+        $result = $this->db->fetchAll("SELECT * FROM {$this->table}
+            WHERE theme_uuid='$theme_uuid'
+            ORDER BY modified_date DESC
+            LIMIT {$limit}");
+
+        return $result;
+    }
+
     public static function table ()
     {
         return "image";
