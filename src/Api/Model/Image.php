@@ -196,7 +196,7 @@ class Image extends BaseModel
             FROM view_image_latest_collection
             WHERE user_uuid NOT IN (SELECT user_block_uuid FROM user_block WHERE user_uuid='{$data[user_uuid]}') AND
              image_uuid NOT IN (SELECT image_uuid FROM user_exclude_image WHERE user_uuid='{$data[user_uuid]}') AND
-             theme_uuid='$theme_uuid' 
+             theme_uuid='$theme_uuid'
             ORDER BY modified_date DESC
             LIMIT {$limit}";
 

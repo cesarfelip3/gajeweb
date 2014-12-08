@@ -48,7 +48,7 @@ class ImageController extends BaseController
             return $this->setSuccess("empty result from db", array("images" => array(), "theme" => array()));
         }
 
-        $data['theme_uuid'] = $themeArray[0];
+        $data['theme_uuid'] = $themeArray[0]['theme_uuid'];
         $image = new Image();
         $imageArray = $image->getLatestImages($data);
 
