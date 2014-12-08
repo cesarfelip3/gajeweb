@@ -37,12 +37,6 @@ class ImageController extends BaseController
         $data["page_size"] = intval($pageSize);
         $data["user_uuid"] = $user_uuid;
 
-        $image = new Image();
-        $imageArray = $image->getLatestImages($data);
-
-        $data["page"] = intval($page);
-        $data["page_size"] = intval($pageSize);
-
         $theme = new Theme();
         $themeArray = $theme->getThemeList(array (
             "page" => 0,
@@ -53,6 +47,13 @@ class ImageController extends BaseController
 
             return $this->setSuccess("empty result from db", array("images" => array(), "theme" => array()));
         }
+
+        $data['theme_uuid'] = $themeArray[0];
+        $image = new Image();
+        $imageArray = $image->getLatestImages($data);
+
+        $data["page"] = intval($page);
+        $data["page_size"] = intval($pageSize);
 
         if (empty ($imageArray)) {
 
