@@ -284,7 +284,7 @@ class Image extends BaseModel
      *
      * @param $data
      */
-    public function removeImagesByTheme()
+    public function removeImagesByTheme($data)
     {
 
         $theme_table = Theme::table();
@@ -299,9 +299,8 @@ class Image extends BaseModel
         foreach ($result as $value) {
 
             // save all files, copy and delete it
-            $this->saveImageFiles(array (
-                "theme_uuid" => $value['theme_uuid']
-            ));
+            $data['theme_uuid'] = $value['theme_uuid'];
+            $this->saveImageFiles($data);
 
             // clean database, clean theme, and then clean image related
 
@@ -321,7 +320,13 @@ class Image extends BaseModel
             print_r($images);
 
             //$fromPath = $data['source'];
-            $toPath = $data['dest'];
+            $toPath = $data['to'];
+            if (!file_exists($toPath . "/" . $data['theme_uuid'])) {
+
+                mkdir($toPath . "/" . $data['theme_uuid']);
+            }
+
+            $toPath = $toPath . "/" . $data['theme_uuid'] . "/";
 
             foreach ($images as $image) {
 
@@ -333,6 +338,20 @@ class Image extends BaseModel
                 }
             }
         }
+
+        $zipname = $data['theme_uuid'] . '.zip';
+        $zip = new ZipArchive;
+        $zip->open($zipname, ZipArchive::CREATE);
+        if ($handle = opendir($toPath)) {
+            while (false !== ($entry = readdir($handle))) {
+                if ($entry != "." && $entry != ".." && !strstr($entry,'.php')) {
+                    $zip->addFile($entry);
+                }
+            }
+            closedir($handle);
+        }
+
+        $zip->close();
     }
 
     public function getTotalInTheme($data)
