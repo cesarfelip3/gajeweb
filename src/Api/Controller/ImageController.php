@@ -107,6 +107,19 @@ class ImageController extends BaseController
         $data["page"] = intval($page);
         $data["page_size"] = intval($pageSize);
         $data["user_uuid"] = $user_uuid;
+        
+        $theme = new Theme();
+        $themeArray = $theme->getThemeList(array (
+            "page" => 0,
+            "page_size" => 1
+        ));
+
+        if (empty ($themeArray)) {
+
+            return $this->setSuccess("empty result from db", array("images" => array(), "theme" => array()));
+        }
+
+        $data['theme_uuid'] = $themeArray[0]['theme_uuid'];
 
         $image = new Image();
         $imageArray = $image->getMostBrandedImage($data);

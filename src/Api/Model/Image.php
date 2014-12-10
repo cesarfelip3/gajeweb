@@ -244,6 +244,7 @@ class Image extends BaseModel
     public function getMostBrandedImage($data)
     {
         $user_uuid = $data["user_uuid"];
+        $theme_uuid = $data["theme_uuid"];
 
         $page = $data["page"];
         $pageSize = $data["page_size"];
@@ -253,13 +254,14 @@ class Image extends BaseModel
         $page = $page * $pageSize;
 
         $limit = "$page, $pageSize";
-        $limit = "0, 50";
+        $limit = "0, 250";
 
         $sql = "SELECT *
             FROM view_image_latest_collection
             WHERE user_uuid NOT IN (SELECT user_block_uuid FROM user_block WHERE user_uuid='{$data[user_uuid]}') AND
              image_uuid NOT IN (SELECT image_uuid FROM user_exclude_image WHERE user_uuid='{$data[user_uuid]}')
-            AND brander_count <> 0
+            AND brander_count <> 0 AND
+             theme_uuid='$theme_uuid'
             ORDER BY brander_count DESC
             LIMIT {$limit}";
 
