@@ -214,6 +214,7 @@ class Image extends BaseModel
     {
 
         $user_uuid = $data["user_uuid"];
+
         $limit = "0, 1";
         $result = $this->db->fetchAll("SELECT `image_uuid`, `name`, `description`, `width`, `height`, `create_date`, `modified_date`, `file_name`, `thumbnail` FROM {$this->table} WHERE user_uuid=? ORDER BY modified_date DESC LIMIT {$limit} ", array($user_uuid));
 
@@ -225,13 +226,14 @@ class Image extends BaseModel
         $page = $data["page"];
         $pageSize = $data["page_size"];
         $user_uuid = $data["user_uuid"];
+        $theme_uuid = $data["theme_uuid"];
 
         $page = intval($page);
         $pageSize = intval($pageSize);
         $page = $page * $pageSize;
 
         $limit = "$page, $pageSize";
-        $result = $this->db->fetchAll("SELECT `image_uuid`, `name`, `description`, `width`, `height`, `create_date`, `modified_date`, `file_name`, `thumbnail` FROM {$this->table} WHERE user_uuid=? ORDER BY modified_date DESC LIMIT {$limit} ", array($user_uuid));
+        $result = $this->db->fetchAll("SELECT `image_uuid`, `name`, `description`, `width`, `height`, `create_date`, `modified_date`, `file_name`, `thumbnail` FROM {$this->table} WHERE user_uuid=? AND theme_uuid=? ORDER BY modified_date DESC LIMIT {$limit} ", array($user_uuid, $theme_uuid));
 
         return $result;
 

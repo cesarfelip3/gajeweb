@@ -440,10 +440,22 @@ class ImageController extends BaseController
         $page = $this->request->get("page", 0);
         $pageSize = $this->request->get("page_size", 25);
 
+        $theme = new Theme();
+        $themeArray = $theme->getThemeList(array (
+            "page" => 0,
+            "page_size" => 1
+        ));
+
+        if (empty ($themeArray)) {
+
+            return $this->setSuccess("empty result from db", array("images" => array()));
+        }
+
         $data = array();
         $data["page"] = intval($page);
         $data["page_size"] = intval($pageSize);
         $data["user_uuid"] = $user_uuid;
+        $data['theme_uuid'] = $themeArray[0]['theme_uuid'];
 
         $image = new Image();
 
