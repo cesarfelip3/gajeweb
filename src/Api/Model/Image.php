@@ -352,7 +352,7 @@ class Image extends BaseModel
         print_r($zipname);
         print_r($data['to'] . $zipname);
 
-        $zip = new ZipArchive;
+        $zip = new ZipArchive();
         pritn_r ($zip);
         exit;
 
