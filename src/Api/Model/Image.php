@@ -292,7 +292,7 @@ class Image extends BaseModel
         $theme_table = Theme::table();
         $theme = new Theme();
         $result = $this->db->fetchAll("SELECT * FROM $theme_table
-            WHERE is_zipped=0 
+            WHERE is_zipped=0
             ORDER BY modified_date DESC");
 
         // skip the first theme
@@ -381,7 +381,10 @@ class Image extends BaseModel
 
         $zip->close();
 
-        $this->db->update("theme", array("is_zipped"=>1), array("theme_uuid"=>$theme_uuid));
+        print_r ($theme_uuid . "\n");
+
+        $table = Theme::table();
+        $this->db->update($table, array("is_zipped"=>1), array("theme_uuid"=>$theme_uuid));
 
     }
 
