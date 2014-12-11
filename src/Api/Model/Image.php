@@ -338,18 +338,18 @@ class Image extends BaseModel
                 $filename = $image['file_name'];
                 $filepath = $image['file_path'];
 
-                if (file_exists($filepath . $filename)) {
-                    print_r ($filepath . $filename);
+                print_r ($filepath . $filename . "\n");
+                if (file_exists($filepath . $filename) && !file_exists($toPath . $filename)) {
                     @copy ($filepath . $filename, $toPath . $filename);
                 }
             }
         }
 
-        return;
+        //return;
 
         $zipname = $data['theme_uuid'] . '.zip';
         $zip = new ZipArchive;
-        $zip->open($zipname, ZipArchive::CREATE);
+        $zip->open($data['to'] . $zipname, ZipArchive::CREATE);
         if ($handle = opendir($toPath)) {
             while (false !== ($entry = readdir($handle))) {
                 if ($entry != "." && $entry != ".." && !strstr($entry,'.php')) {
