@@ -75,7 +75,7 @@ class Theme extends BaseModel
             "create_date" => "Created At",
             "modified_date" => "Modified At",
             "download_link" => "Download Link",
-            "skip_delete" => "Delete All"
+            "action_delete" => "Delete All"
         );
     }
 
