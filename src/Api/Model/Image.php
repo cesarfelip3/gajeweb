@@ -364,7 +364,7 @@ class Image extends BaseModel
         if ($handle = opendir($toPath)) {
             while (false !== ($entry = readdir($handle))) {
                 if ($entry != "." && $entry != ".." && !strstr($entry,'.php')) {
-                    print_r ($entry . "\n");
+                    print_r ($toPath . $entry . "\n");
                     $zip->addFile($entry);
                 }
             }
