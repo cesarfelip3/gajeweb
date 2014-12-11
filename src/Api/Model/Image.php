@@ -311,11 +311,6 @@ class Image extends BaseModel
     {
         $total = $this->getTotalInTheme($data);
 
-        print_r ($total);
-        print_r(ceil ($total / 25));
-        print_r(ceil (121 / 25));
-        exit;
-
         for ($i = 0; $i < ceil ($total / 25); ++$i) {
 
             $data['page'] = $i * 25;
@@ -323,6 +318,7 @@ class Image extends BaseModel
 
             $images = $this->getImageListByTheme($data);
             print_r($images);
+            continue;
 
             //$fromPath = $data['source'];
             $toPath = $data['to'];
