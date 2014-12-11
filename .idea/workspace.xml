@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/index.twig" afterPath="$PROJECT_DIR$/src/Admin/View/index.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/theme_list.twig" afterPath="$PROJECT_DIR$/src/Admin/View/theme_list.twig" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,7 +66,16 @@
       <file leaf-file-name="theme_list.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/View/theme_list.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2232">
+            <state line="7" column="88" selection-start="499" selection-end="499" vertical-scroll-proportion="-5.090909" vertical-offset="0" max-vertical-offset="2256">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index2.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Admin/View/index2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="10560">
               <folding />
             </state>
           </provider>
@@ -93,7 +102,7 @@
       <file leaf-file-name="layout.default.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/View/layout.default.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="64.0" vertical-offset="2112" max-vertical-offset="3336">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="59.636364" vertical-offset="1968" max-vertical-offset="3336">
               <folding />
             </state>
           </provider>
@@ -103,15 +112,6 @@
         <entry file="file://$PROJECT_DIR$/src/Admin/View/index.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state line="7" column="88" selection-start="499" selection-end="499" vertical-scroll-proportion="0.18103448" vertical-offset="0" max-vertical-offset="936">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThemeController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ThemeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="0" selection-end="3457" vertical-scroll-proportion="-4.3636365" vertical-offset="0" max-vertical-offset="3168">
               <folding />
             </state>
           </provider>
@@ -130,7 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Model/Note.php" />
         <option value="$USER_HOME$/Downloads/IndexController.php" />
         <option value="$PROJECT_DIR$/src/Model/User.php" />
         <option value="$PROJECT_DIR$/src/Model/Comment.php" />
@@ -181,6 +180,7 @@
         <option value="$PROJECT_DIR$/src/Admin/View/user_list.twig" />
         <option value="$PROJECT_DIR$/src/Admin/View/image_list.twig" />
         <option value="$PROJECT_DIR$/src/Admin/View/index.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/View/theme_list.twig" />
       </list>
     </option>
   </component>
@@ -573,11 +573,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Model/Device.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="16.212122" vertical-offset="535" max-vertical-offset="1440" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Model/BaseParameteredModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="36.575756" vertical-offset="1207" max-vertical-offset="2112" />
@@ -861,13 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/View/theme_list.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2232">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/View/user_list.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="88" selection-start="499" selection-end="499" vertical-scroll-proportion="-5.090909" vertical-offset="0" max-vertical-offset="2400">
@@ -884,7 +872,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/View/layout.default.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="64.0" vertical-offset="2112" max-vertical-offset="3336">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="59.636364" vertical-offset="1968" max-vertical-offset="3336">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/View/theme_list.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="88" selection-start="499" selection-end="499" vertical-scroll-proportion="-5.090909" vertical-offset="0" max-vertical-offset="2256">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/View/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10560">
           <folding />
         </state>
       </provider>
