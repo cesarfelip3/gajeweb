@@ -351,6 +351,10 @@ class Image extends BaseModel
 
         $zipname = $data['theme_uuid'] . '.zip';
 
+        if (file_exists($path . $zipname)) {
+            return;
+        }
+        
         print_r($zipname . "\n");
         print_r($path . $zipname . "\n");
         $zip = new \ZipArchive();
