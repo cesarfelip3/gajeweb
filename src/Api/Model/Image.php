@@ -317,9 +317,9 @@ class Image extends BaseModel
         $toPath = $data['to'];
         $toPath = $toPath . "/" . $data['theme_uuid'] . "/";
 
-        if (!file_exists($toPath . "/" . $data['theme_uuid'])) {
-            print_r($toPath . "/" . $data['theme_uuid']);
-            mkdir($toPath . "/" . $data['theme_uuid']);
+        if (!file_exists($toPath)) {
+            print_r($toPath);
+            mkdir($toPath);
         }
 
         for ($i = 0; $i < ceil ($total / 25); ++$i) {
