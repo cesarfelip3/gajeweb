@@ -29,7 +29,7 @@ class DownloadController extends BaseController
         ));
     }
 
-    public function themeList()
+    public function themeList($historyPath)
     {
 
 
@@ -52,6 +52,10 @@ class DownloadController extends BaseController
 
             $data["create_date"] = date("Y-m-d", $data["create_date"]);
             $data["modified_date"] = date("Y-m-d", $data["modified_date"]);
+
+            if (file_exists($historyPath . $data['theme_uuid'] . ".zip")) {
+                $data['download_link'] = "<a href='/history/" . $data['theme_uuid'] . ".zip' target='_blank'>" . $data['theme_uuid'] . ".zip" . "</a>";
+            }
         }
 
         $totalPage = ceil($total / $pageSize);
