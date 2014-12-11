@@ -449,6 +449,20 @@ class Api
 
         });
 
+        $api->get("theme/cleaner", function (Request $request) use ($app) {
+
+            $controller = new Controller\CleanController($request, $app);
+            $ret = $controller->cleanObsolatedTheme("", "");
+
+            $status = 200;
+            if (!$ret) {
+                $status = 400;
+            }
+
+            return $app->json($controller->getError(), $status);
+
+        });
+
     }
 
     protected function registerThemeApi (&$api)
