@@ -350,6 +350,10 @@ class Image extends BaseModel
         $zipname = $data['theme_uuid'] . '.zip';
         $zip = new ZipArchive;
         $zip->open($data['to'] . $zipname, ZipArchive::CREATE);
+
+        print_r($data['to'] . $zipname);
+        print_r($zip);
+
         if ($handle = opendir($toPath)) {
             while (false !== ($entry = readdir($handle))) {
                 if ($entry != "." && $entry != ".." && !strstr($entry,'.php')) {
