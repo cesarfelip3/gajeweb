@@ -314,6 +314,8 @@ class Image extends BaseModel
         $total = $this->getTotalInTheme($data);
         print_r ($data);
 
+        $path = $data['to'];
+
         $toPath = $data['to'];
         $toPath = $toPath . $data['theme_uuid'] . "/";
 
@@ -350,7 +352,7 @@ class Image extends BaseModel
         $zipname = $data['theme_uuid'] . '.zip';
 
         print_r($zipname);
-        print_r($data['to'] . $zipname);
+        print_r($path . $zipname);
 
         $zip = new ZipArchive();
         pritn_r ($zip);
