@@ -355,7 +355,7 @@ class Image extends BaseModel
         print_r($path . $zipname);
 
         $zip = new ZipArchive();
-        pritn_r ($zip);
+        print_r ($zip);
         exit;
 
         $zip->open($data['to'] . $zipname, ZipArchive::CREATE);
