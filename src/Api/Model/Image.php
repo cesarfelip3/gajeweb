@@ -354,7 +354,7 @@ class Image extends BaseModel
         if (file_exists($path . $zipname)) {
             return;
         }
-        
+
         print_r($zipname . "\n");
         print_r($path . $zipname . "\n");
         $zip = new \ZipArchive();
@@ -369,7 +369,7 @@ class Image extends BaseModel
             while (false !== ($entry = readdir($handle))) {
                 if ($entry != "." && $entry != ".." && !strstr($entry,'.php')) {
                     print_r ($toPath . $entry . "\n");
-                    $zip->addFile($entry);
+                    $zip->addFile($toPath . $entry);
                 }
             }
             closedir($handle);
