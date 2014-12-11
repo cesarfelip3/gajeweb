@@ -66,5 +66,22 @@ class Theme extends BaseModel
         return $result;
     }
 
+    public function getThemeListZipped($data)
+    {
+        $page = $data["page"];
+        $pageSize = $data["page_size"];
+
+        $page = intval($page);
+        $pageSize = intval($pageSize);
+        $page = $page * $pageSize;
+
+        $limit = "$page, $pageSize";
+        $result = $this->db->fetchAll("SELECT * FROM {$this->table}
+            WHERE is_zipped=1 
+            ORDER BY modified_date DESC LIMIT {$limit}");
+
+        return $result;
+    }
+
 
 }
