@@ -176,6 +176,11 @@ class UserController extends BaseController
         $data["user_followed_uuid"] = $user_uuid;
         $data["user_following_uuid"] = $follow_uuid;
 
+        if ($user_uuid == $follow_uuid) {
+
+            return $this->setFailed("same user");
+        }
+
         $user = new User();
         $uuid = $user->followExist($data);
 
