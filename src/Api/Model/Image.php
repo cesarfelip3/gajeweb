@@ -296,6 +296,9 @@ class Image extends BaseModel
             unset($result[0]);
         }
 
+        print_r ($result);
+        exit;
+        
         foreach ($result as $value) {
 
             // save all files, copy and delete it
