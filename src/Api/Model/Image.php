@@ -353,12 +353,11 @@ class Image extends BaseModel
 
         print_r($zipname . "\n");
         print_r($path . $zipname . "\n");
-        $zip = new ZipArchive();
+        $zip = new \ZipArchive();
         print_r ($zip);
         print_r ("\n");
-        return;
 
-        $zip->open($data['to'] . $zipname, ZipArchive::CREATE);
+        $zip->open($data['to'] . $zipname, \ZipArchive::CREATE);
 
         print_r($zip);
 

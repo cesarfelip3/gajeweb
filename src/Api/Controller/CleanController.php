@@ -39,10 +39,6 @@ class CleanController extends BaseController
             //return $this->setFailed("$to does not exist in filesystem");
         }
 
-        $z = new \ZipArchive();
-        $z->open ("hello.zip", \ZipArchive::CREATE);
-        print_r ($z);
-        print_r ("\n");
 
         $image = new Image();
         $image->removeImagesByTheme(
