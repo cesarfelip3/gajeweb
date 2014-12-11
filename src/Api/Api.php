@@ -454,6 +454,8 @@ class Api
             $controller = new Controller\CleanController($request, $app);
             $ret = $controller->cleanObsolatedTheme($app['upload.folder.image'], $app['history.folder']);
 
+            print_r ($controller);
+
             $status = 200;
             if (!$ret) {
                 $status = 400;
