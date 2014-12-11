@@ -48,6 +48,7 @@ class DownloadController extends BaseController
 
         $total = $theme->getTotal();
 
+        $baseurl = "/gajeweb/admin";
         foreach ($themeArray as &$data) {
 
             $data["create_date"] = date("Y-m-d", $data["create_date"]);
@@ -55,13 +56,14 @@ class DownloadController extends BaseController
 
             if (file_exists($historyPath . $data['theme_uuid'] . ".zip")) {
                 $data['download_link'] = "<a href='/history/" . $data['theme_uuid'] . ".zip' target='_blank'>" . $data['theme_uuid'] . ".zip" . "</a>";
+                $data['action_delete'] = "<a href='javascript:removeAll(\"" . $data['theme_uuid'] . "\")'>Remove All</a>";
             } else {
                 $data['download_link'] = "Not ready yet, please wait";
+                $data['action_delete'] = "";
             }
         }
 
         $totalPage = ceil($total / $pageSize);
-        $baseurl = "/gajeweb/admin";
 
 
         $i = (int)($page / 10) * 10;

@@ -73,6 +73,12 @@ class Admin
             return $controller->themeList($app['history.folder']);
         })->method("GET|POST");
 
+        $admin->match("/downloader/remove", function (Request $request) use ($app) {
+
+            $controller = new \Admin\Controller\DownloadController($request, $app);
+            return $controller->themeList($app['history.folder']);
+        })->method("GET|POST");
+
         $admin->match("/note", function (Request $request) use ($app) {
 
             $controller = new \Admin\Controller\NoteController($request, $app);
