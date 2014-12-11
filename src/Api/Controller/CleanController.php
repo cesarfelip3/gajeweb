@@ -31,12 +31,12 @@ class CleanController extends BaseController
 
         if (!file_exists($from)) {
 
-            //return $this->setFailed("$from does not exist in filesystem");
+            return $this->setFailed("$from does not exist in filesystem");
         }
 
         if (!file_exists($to)) {
 
-            //return $this->setFailed("$to does not exist in filesystem");
+            return $this->setFailed("$to does not exist in filesystem");
         }
 
 

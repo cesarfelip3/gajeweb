@@ -206,6 +206,8 @@ CREATE TABLE IF NOT EXISTS `theme` (
   `theme_id` int(20) NOT NULL AUTO_INCREMENT,
   `theme_uuid` char(50) NOT NULL DEFAULT '',
   `name` varchar(50) NOT NULL DEFAULT '',
+  `is_zipped` int(11) NOT NULL DEFAULT '0',
+  `is_downloaded` int(11) NOT NULL DEFAULT '0',
   `description` text NOT NULL,
   `create_date` int(11) NOT NULL DEFAULT '0',
   `modified_date` int(11) NOT NULL DEFAULT '0',
