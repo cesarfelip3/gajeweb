@@ -318,6 +318,7 @@ class Image extends BaseModel
         $toPath = $toPath . "/" . $data['theme_uuid'] . "/";
 
         if (!file_exists($toPath . "/" . $data['theme_uuid'])) {
+            print_r($toPath . "/" . $data['theme_uuid']);
             mkdir($toPath . "/" . $data['theme_uuid']);
         }
 
@@ -327,7 +328,7 @@ class Image extends BaseModel
             $data['page_size'] = 25;
 
             $images = $this->getImageListByTheme($data);
-            print_r($images);
+            //print_r($images);
             continue;
 
             //$fromPath = $data['source'];
