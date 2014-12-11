@@ -68,6 +68,8 @@ $app['upload.folder'] = $config["upload.folder"];
 $app['upload.folder.image'] = $config["upload.folder.image"];
 $app["certificates.folder"] = $config["certificates.folder"];
 
+$app['history.folder'] = $config['history.folder'];
+
 $app->register(new Silex\Provider\DoctrineServiceProvider(), $config["db"]);
 
 // modules ==> controller ==> model
