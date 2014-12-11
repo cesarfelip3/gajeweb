@@ -82,7 +82,7 @@
       <file leaf-file-name="CleanController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Api/Controller/CleanController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="23" selection-start="994" selection-end="994" vertical-scroll-proportion="0.8028017" vertical-offset="143" max-vertical-offset="1272">
+            <state line="41" column="31" selection-start="897" selection-end="897" vertical-scroll-proportion="0.7252155" vertical-offset="143" max-vertical-offset="1272">
               <folding />
             </state>
           </provider>
@@ -887,7 +887,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Controller/CleanController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="23" selection-start="994" selection-end="994" vertical-scroll-proportion="0.8028017" vertical-offset="143" max-vertical-offset="1272">
+        <state line="41" column="31" selection-start="897" selection-end="897" vertical-scroll-proportion="0.7252155" vertical-offset="143" max-vertical-offset="1272">
           <folding />
         </state>
       </provider>
