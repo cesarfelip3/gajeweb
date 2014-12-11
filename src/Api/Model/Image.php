@@ -329,7 +329,7 @@ class Image extends BaseModel
 
             $images = $this->getImageListByTheme($data);
             //print_r($images);
-            continue;
+            //continue;
 
             //$fromPath = $data['source'];
 
@@ -339,10 +339,14 @@ class Image extends BaseModel
                 $filepath = $image['file_path'];
 
                 if (file_exists($filepath . $filename)) {
-                    @copy ($filepath . $filename, $toPath . $filename);
+                    print_r ($filepath . $filename);
+
+                    //@copy ($filepath . $filename, $toPath . $filename);
                 }
             }
         }
+
+        return;
 
         $zipname = $data['theme_uuid'] . '.zip';
         $zip = new ZipArchive;
