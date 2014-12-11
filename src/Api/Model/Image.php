@@ -351,12 +351,12 @@ class Image extends BaseModel
 
         $zipname = $data['theme_uuid'] . '.zip';
 
-        print_r($zipname);
-        print_r($path . $zipname);
-
+        print_r($zipname . "\n");
+        print_r($path . $zipname . "\n");
         $zip = new ZipArchive();
         print_r ($zip);
-        exit;
+        print_r ("\n");
+        return;
 
         $zip->open($data['to'] . $zipname, ZipArchive::CREATE);
 
