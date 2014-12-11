@@ -32,7 +32,6 @@ class DownloadController extends BaseController
     public function themeList()
     {
 
-        $error = $this->addTheme();
 
         $response = new Response();
         $response->setTtl(5);
