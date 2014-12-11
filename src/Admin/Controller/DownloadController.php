@@ -55,6 +55,8 @@ class DownloadController extends BaseController
 
             if (file_exists($historyPath . $data['theme_uuid'] . ".zip")) {
                 $data['download_link'] = "<a href='/history/" . $data['theme_uuid'] . ".zip' target='_blank'>" . $data['theme_uuid'] . ".zip" . "</a>";
+            } else {
+                $data['download_link'] = "Not ready yet, please wait";
             }
         }
 
