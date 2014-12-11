@@ -77,7 +77,7 @@ class Theme extends BaseModel
 
         $limit = "$page, $pageSize";
         $result = $this->db->fetchAll("SELECT * FROM {$this->table}
-            WHERE is_zipped=1 
+            WHERE is_zipped=1
             ORDER BY modified_date DESC LIMIT {$limit}");
 
         return $result;

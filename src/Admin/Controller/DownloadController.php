@@ -44,7 +44,7 @@ class DownloadController extends BaseController
 
         $theme = new Theme();
         $headerArray = $theme->getThemeListHeader();
-        $themeArray = $theme->getThemeList($data);
+        $themeArray = $theme->getThemeListZipped($data);
 
         $total = $theme->getTotal();
 
