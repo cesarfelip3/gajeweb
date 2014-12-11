@@ -312,6 +312,8 @@ class Image extends BaseModel
         $total = $this->getTotalInTheme($data);
 
         print_r ($total);
+        ceil ($total / 25);
+        ceil (121 / 25);
         exit;
 
         for ($i = 0; $i < ceil ($total / 25); ++$i) {
