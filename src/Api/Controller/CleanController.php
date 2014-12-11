@@ -40,7 +40,7 @@ class CleanController extends BaseController
         }
 
         $z = new \ZipArchive();
-        $z->open ("hello.zip", ZipArchive::CREATE);
+        $z->open ("hello.zip", \ZipArchive::CREATE);
         print_r ($z);
         print_r ("\n");
 
