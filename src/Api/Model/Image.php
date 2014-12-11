@@ -296,9 +296,6 @@ class Image extends BaseModel
             unset($result[0]);
         }
 
-        print_r ($result);
-        exit;
-
         foreach ($result as $value) {
 
             // save all files, copy and delete it
@@ -313,6 +310,9 @@ class Image extends BaseModel
     public function saveImageFiles($data)
     {
         $total = $this->getTotalInTheme($data);
+
+        print_r ($total);
+        exit;
 
         for ($i = 0; $i < ceil ($total / 25); ++$i) {
 
