@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Model/Image.php" afterPath="$PROJECT_DIR$/src/Api/Model/Image.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Controller/CleanController.php" afterPath="$PROJECT_DIR$/src/Api/Controller/CleanController.php" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Image.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Image.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Api/Model/Image.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="358" column="15" selection-start="10726" selection-end="10726" vertical-scroll-proportion="0.5948276" vertical-offset="8232" max-vertical-offset="10248">
+            <state line="384" column="21" selection-start="11332" selection-end="11332" vertical-scroll-proportion="3.878788" vertical-offset="9320" max-vertical-offset="10248">
               <folding>
                 <marker date="1418268416000" expanded="true" signature="1025:1081" placeholder="SELECT image..." />
                 <marker date="1418268416000" expanded="true" signature="2062:2361" placeholder="SELECT cmt.*..." />
@@ -55,7 +55,7 @@
       <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="29" selection-start="444" selection-end="444" vertical-scroll-proportion="-9.212121" vertical-offset="224" max-vertical-offset="1200">
+            <state line="22" column="29" selection-start="444" selection-end="444" vertical-scroll-proportion="-16.0" vertical-offset="0" max-vertical-offset="1200">
               <folding />
             </state>
           </provider>
@@ -79,10 +79,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CleanController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CleanController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Api/Controller/CleanController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="10" selection-start="527" selection-end="560" vertical-scroll-proportion="-10.212121" vertical-offset="143" max-vertical-offset="1152">
+            <state line="44" column="23" selection-start="994" selection-end="994" vertical-scroll-proportion="0.8028017" vertical-offset="143" max-vertical-offset="1272">
               <folding />
             </state>
           </provider>
@@ -150,8 +150,8 @@
         <option value="$PROJECT_DIR$/web/config.php" />
         <option value="$PROJECT_DIR$/web/index.php" />
         <option value="$PROJECT_DIR$/src/Api/Api.php" />
-        <option value="$PROJECT_DIR$/src/Api/Controller/CleanController.php" />
         <option value="$PROJECT_DIR$/src/Api/Model/Image.php" />
+        <option value="$PROJECT_DIR$/src/Api/Controller/CleanController.php" />
       </list>
     </option>
   </component>
@@ -846,13 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Api/Controller/CleanController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="10" selection-start="527" selection-end="560" vertical-scroll-proportion="-10.212121" vertical-offset="143" max-vertical-offset="1152">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="43" selection-start="1553" selection-end="1553" vertical-scroll-proportion="-39.272728" vertical-offset="312" max-vertical-offset="3456">
@@ -862,14 +855,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="29" selection-start="444" selection-end="444" vertical-scroll-proportion="-9.212121" vertical-offset="224" max-vertical-offset="1200">
+        <state line="22" column="29" selection-start="444" selection-end="444" vertical-scroll-proportion="-16.0" vertical-offset="0" max-vertical-offset="1200">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Model/Image.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="358" column="15" selection-start="10726" selection-end="10726" vertical-scroll-proportion="0.5948276" vertical-offset="8232" max-vertical-offset="10248">
+        <state line="384" column="21" selection-start="11332" selection-end="11332" vertical-scroll-proportion="3.878788" vertical-offset="9320" max-vertical-offset="10248">
           <folding>
             <marker date="1418268416000" expanded="true" signature="1025:1081" placeholder="SELECT image..." />
             <marker date="1418268416000" expanded="true" signature="2062:2361" placeholder="SELECT cmt.*..." />
@@ -889,6 +882,13 @@
             <marker date="1418268416000" expanded="true" signature="11352:11430" placeholder="SELECT COUNT..." />
             <marker date="1418268416000" expanded="true" signature="11814:11952" placeholder="SELECT * FRO..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Api/Controller/CleanController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="23" selection-start="994" selection-end="994" vertical-scroll-proportion="0.8028017" vertical-offset="143" max-vertical-offset="1272">
+          <folding />
         </state>
       </provider>
     </entry>
