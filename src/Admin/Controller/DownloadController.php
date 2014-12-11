@@ -43,7 +43,7 @@ class DownloadController extends BaseController
         $data["page_size"] = $pageSize <= 10 ? 10 : intval($pageSize);
 
         $theme = new Theme();
-        $headerArray = $theme->getThemeListHeader();
+        $headerArray = $theme->getThemeListHeaderZipped();
         $themeArray = $theme->getThemeListZipped($data);
 
         $total = $theme->getTotal();

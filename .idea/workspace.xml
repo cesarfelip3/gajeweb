@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Controller/DownloadController.php" afterPath="$PROJECT_DIR$/src/Admin/Controller/DownloadController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Model/Theme.php" afterPath="$PROJECT_DIR$/src/Admin/Model/Theme.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/View/download_list.twig" afterPath="$PROJECT_DIR$/src/Admin/View/download_list.twig" />
     </list>
     <ignored path="gaje.iws" />
@@ -25,10 +27,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DownloadController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Theme.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Admin/Model/Theme.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="68" column="26" selection-start="1517" selection-end="1541" vertical-scroll-proportion="-14.30303" vertical-offset="1160" max-vertical-offset="2520">
+              <folding>
+                <marker date="1418329342000" expanded="true" signature="1021:1056" placeholder="SELECT COUNT..." />
+                <marker date="1418329342000" expanded="true" signature="1390:1461" placeholder="SELECT * FRO..." />
+                <marker date="1418329342000" expanded="true" signature="2173:2286" placeholder="SELECT * FRO..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DownloadController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Admin/Controller/DownloadController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="36" selection-start="1258" selection-end="1258" vertical-scroll-proportion="-7.1694913" vertical-offset="729" max-vertical-offset="2592">
+            <state line="45" column="55" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.37823275" vertical-offset="729" max-vertical-offset="2592">
               <folding>
                 <element signature="e#37#82#0" expanded="true" />
               </folding>
@@ -36,88 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Theme.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/Model/Theme.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="25" selection-start="1517" selection-end="1535" vertical-scroll-proportion="-12.848485" vertical-offset="1208" max-vertical-offset="2208">
-              <folding>
-                <marker date="1418328844000" expanded="true" signature="1021:1056" placeholder="SELECT COUNT..." />
-                <marker date="1418328844000" expanded="true" signature="1390:1461" placeholder="SELECT * FRO..." />
-                <marker date="1418328844000" expanded="true" signature="1803:1916" placeholder="SELECT * FRO..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThemeController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ThemeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="50" selection-start="1247" selection-end="1247" vertical-scroll-proportion="-16.0" vertical-offset="432" max-vertical-offset="3168">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Admin.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="28" selection-start="1860" selection-end="1870" vertical-scroll-proportion="-21.09091" vertical-offset="936" max-vertical-offset="2376">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="download_list.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="download_list.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/View/download_list.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="914" selection-end="914" vertical-scroll-proportion="0.33620688" vertical-offset="168" max-vertical-offset="2256">
-              <folding>
-                <element signature="e#3039#3058#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="note_list.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/View/note_list.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="594" selection-end="594" vertical-scroll-proportion="-7.2727275" vertical-offset="0" max-vertical-offset="2256">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="theme_list.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/View/theme_list.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="21" selection-start="633" selection-end="633" vertical-scroll-proportion="-8.727273" vertical-offset="0" max-vertical-offset="2256">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_list.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/View/user_list.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="78" selection-start="489" selection-end="578" vertical-scroll-proportion="-5.090909" vertical-offset="0" max-vertical-offset="2400">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="image_list.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/View/image_list.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="594" selection-end="594" vertical-scroll-proportion="-7.2727275" vertical-offset="0" max-vertical-offset="2304">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/View/index.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="16" selection-start="611" selection-end="611" vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="936">
+            <state line="75" column="32" selection-start="2944" selection-end="2944" vertical-scroll-proportion="-24.0" vertical-offset="1008" max-vertical-offset="2352">
               <folding />
             </state>
           </provider>
@@ -185,8 +122,8 @@
         <option value="$PROJECT_DIR$/src/Admin/View/note_list.twig" />
         <option value="$PROJECT_DIR$/src/Admin/View/image_list.twig" />
         <option value="$PROJECT_DIR$/src/Admin/Model/Theme.php" />
-        <option value="$PROJECT_DIR$/src/Admin/Controller/DownloadController.php" />
         <option value="$PROJECT_DIR$/src/Admin/View/download_list.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/Controller/DownloadController.php" />
       </list>
     </option>
   </component>
@@ -440,20 +377,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gajeweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gajeweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -851,13 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1032">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/View/user_list.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="78" selection-start="489" selection-end="578" vertical-scroll-proportion="-5.090909" vertical-offset="0" max-vertical-offset="2400">
@@ -886,20 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/View/index.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="16" selection-start="611" selection-end="611" vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="936">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="28" selection-start="1860" selection-end="1870" vertical-scroll-proportion="-21.09091" vertical-offset="936" max-vertical-offset="2376">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Controller/ThemeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="50" selection-start="1247" selection-end="1247" vertical-scroll-proportion="-16.0" vertical-offset="432" max-vertical-offset="3168">
@@ -907,31 +809,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="28" selection-start="1860" selection-end="1870" vertical-scroll-proportion="-36.363636" vertical-offset="432" max-vertical-offset="2376">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1032">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/View/index.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="594" selection-end="594" vertical-scroll-proportion="-7.2727275" vertical-offset="0" max-vertical-offset="936">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/View/download_list.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="32" selection-start="2944" selection-end="2944" vertical-scroll-proportion="-24.0" vertical-offset="1008" max-vertical-offset="2352">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Model/Theme.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="25" selection-start="1517" selection-end="1535" vertical-scroll-proportion="-12.848485" vertical-offset="1208" max-vertical-offset="2208">
+        <state line="68" column="26" selection-start="1517" selection-end="1541" vertical-scroll-proportion="-14.30303" vertical-offset="1160" max-vertical-offset="2520">
           <folding>
-            <marker date="1418328844000" expanded="true" signature="1021:1056" placeholder="SELECT COUNT..." />
-            <marker date="1418328844000" expanded="true" signature="1390:1461" placeholder="SELECT * FRO..." />
-            <marker date="1418328844000" expanded="true" signature="1803:1916" placeholder="SELECT * FRO..." />
+            <marker date="1418329342000" expanded="true" signature="1021:1056" placeholder="SELECT COUNT..." />
+            <marker date="1418329342000" expanded="true" signature="1390:1461" placeholder="SELECT * FRO..." />
+            <marker date="1418329342000" expanded="true" signature="2173:2286" placeholder="SELECT * FRO..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Controller/DownloadController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="36" selection-start="1258" selection-end="1258" vertical-scroll-proportion="-7.1694913" vertical-offset="729" max-vertical-offset="2592">
+        <state line="45" column="55" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.37823275" vertical-offset="729" max-vertical-offset="2592">
           <folding>
             <element signature="e#37#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/View/download_list.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="914" selection-end="914" vertical-scroll-proportion="0.33620688" vertical-offset="168" max-vertical-offset="2256">
-          <folding>
-            <element signature="e#3039#3058#0" expanded="true" />
           </folding>
         </state>
       </provider>

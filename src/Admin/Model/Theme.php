@@ -66,6 +66,19 @@ class Theme extends BaseModel
         return $result;
     }
 
+    public function getThemeListHeaderZipped()
+    {
+        return array(
+            "#" => "#",
+            "name" => "Name",
+            "description" => "Description",
+            "create_date" => "Created At",
+            "modified_date" => "Modified At",
+            "skip_download" => "Download Link",
+            "skip_delete" => "Delete All"
+        );
+    }
+
     public function getThemeListZipped($data)
     {
         $page = $data["page"];

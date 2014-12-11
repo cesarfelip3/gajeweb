@@ -69,6 +69,10 @@
                             {% for key in headerArray | keys %}
                                 {% if key == '#' %}
                                     <td>{{ '' }}</td>
+                                {% elseif key == "skip_download" %}
+                                    <td>{{ '' }}</td>
+                                {% elseif key == "skip_delete" %}
+                                    <td>{{ '' }}</td>
                                 {% else %}
                                     <td>{{ theme[key] }}</td>
                                 {% endif %}
