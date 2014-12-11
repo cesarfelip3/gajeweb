@@ -340,8 +340,7 @@ class Image extends BaseModel
 
                 if (file_exists($filepath . $filename)) {
                     print_r ($filepath . $filename);
-
-                    //@copy ($filepath . $filename, $toPath . $filename);
+                    @copy ($filepath . $filename, $toPath . $filename);
                 }
             }
         }
