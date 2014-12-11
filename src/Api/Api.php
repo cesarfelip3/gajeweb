@@ -452,7 +452,7 @@ class Api
         $api->get("theme/cleaner", function (Request $request) use ($app) {
 
             $controller = new Controller\CleanController($request, $app);
-            $ret = $controller->cleanObsolatedTheme("", "");
+            $ret = $controller->cleanObsolatedTheme($config['upload.folder.image'], $config['history.folder']);
 
             $status = 200;
             if (!$ret) {

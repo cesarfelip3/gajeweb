@@ -41,3 +41,5 @@ $config["certificates.folder"] = __DIR__ . DIRECTORY_SEPARATOR . "certificates" 
 $config['upload.image.host'] = 'http://gajeapp.com/upload/image/';
 $config['upload.folder'] = realpath(__DIR__ . "/../../upload/") . DIRECTORY_SEPARATOR;
 $config['upload.folder.image'] = $config["upload.folder"] . "image" . DIRECTORY_SEPARATOR;
+
+$config['history.folder'] = realpath(__DIR__ . "/../../history/") . DIRECTORY_SEPARATOR;

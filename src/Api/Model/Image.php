@@ -310,6 +310,7 @@ class Image extends BaseModel
     public function saveImageFiles($data)
     {
         $total = $this->getTotalInTheme($data);
+        print_r ($data);
 
         for ($i = 0; $i < ceil ($total / 25); ++$i) {
 
