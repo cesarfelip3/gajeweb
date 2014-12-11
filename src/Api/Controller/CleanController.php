@@ -25,6 +25,10 @@ class CleanController extends BaseController
 
     public function cleanObsolatedTheme($from, $to) {
 
+        print_r("cleanObsolatedTheme\n");
+        print_r($from . "\n");
+        print_r($to . "\n");
+
         if (!file_exists($from)) {
 
             //return $this->setFailed("$from does not exist in filesystem");
