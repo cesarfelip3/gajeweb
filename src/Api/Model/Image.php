@@ -287,6 +287,8 @@ class Image extends BaseModel
     public function removeImagesByTheme($data)
     {
 
+        print_r("removeImagesByTheme\n");
+
         $theme_table = Theme::table();
         $theme = new Theme();
         $result = $this->db->fetchAll("SELECT * FROM $theme_table ORDER BY modified_date DESC");
@@ -312,6 +314,13 @@ class Image extends BaseModel
         $total = $this->getTotalInTheme($data);
         print_r ($data);
 
+        $toPath = $data['to'];
+        $toPath = $toPath . "/" . $data['theme_uuid'] . "/";
+
+        if (!file_exists($toPath . "/" . $data['theme_uuid'])) {
+            mkdir($toPath . "/" . $data['theme_uuid']);
+        }
+
         for ($i = 0; $i < ceil ($total / 25); ++$i) {
 
             $data['page'] = $i * 25;
@@ -322,13 +331,6 @@ class Image extends BaseModel
             continue;
 
             //$fromPath = $data['source'];
-            $toPath = $data['to'];
-            if (!file_exists($toPath . "/" . $data['theme_uuid'])) {
-
-                mkdir($toPath . "/" . $data['theme_uuid']);
-            }
-
-            $toPath = $toPath . "/" . $data['theme_uuid'] . "/";
 
             foreach ($images as $image) {
 

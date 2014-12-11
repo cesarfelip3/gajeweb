@@ -46,8 +46,5 @@ class CleanController extends BaseController
                 "to" => $to
             )
         );
-
-
-
     }
 }
