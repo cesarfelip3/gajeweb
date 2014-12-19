@@ -29,7 +29,7 @@ class ImageController extends BaseController
     public function getLatest($host)
     {
         $page = $this->request->get("page", 0);
-        $pageSize = $this->request->get("page_size", 25);
+        $pageSize = $this->request->get("page_size", 200);
         $user_uuid = $this->request->get("user_uuid", "");
 
         $data = array();
@@ -100,7 +100,7 @@ class ImageController extends BaseController
     public function getTopBrands($host)
     {
         $page = $this->request->get("page", 0);
-        $pageSize = $this->request->get("page_size", 25);
+        $pageSize = $this->request->get("page_size", 200);
         $user_uuid = $this->request->get("user_uuid", "");
 
         $data = array();
@@ -360,7 +360,7 @@ class ImageController extends BaseController
         }
 
         $page = $this->request->get("page", 0);
-        $pageSize = $this->request->get("page_size", 25);
+        $pageSize = $this->request->get("page_size", 200);
 
         $data = array();
         $data["page"] = intval($page);
@@ -420,7 +420,7 @@ class ImageController extends BaseController
         }
 
         $page = $this->request->get("page", 0);
-        $pageSize = $this->request->get("page_size", 25);
+        $pageSize = $this->request->get("page_size", 200);
 
         $data = array();
         $data["page"] = intval($page);
@@ -451,7 +451,7 @@ class ImageController extends BaseController
         }
 
         $page = $this->request->get("page", 0);
-        $pageSize = $this->request->get("page_size", 25);
+        $pageSize = $this->request->get("page_size", 200);
 
         $theme = new Theme();
         $themeArray = $theme->getThemeList(array (
