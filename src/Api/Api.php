@@ -500,6 +500,20 @@ class Api
             return $app->json($controller->getError(), $status);
 
         });
+
+        $api->post("notification/list", function (Request $request) use ($app) {
+
+            $controller = new Controller\NotifyController($request, $app);
+            $ret = $controller->getNotificationList();
+
+            $status = 200;
+            if (!$ret) {
+                $status = 400;
+            }
+
+            return $app->json($controller->getError(), $status);
+
+        });
     }
 
 }
