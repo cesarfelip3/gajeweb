@@ -67,6 +67,12 @@ class Admin
             return $controller->themeList();
         })->method("GET|POST");
 
+        $admin->match("/notification", function (Request $request) use ($app) {
+
+            $controller = new \Admin\Controller\NotifyController($request, $app);
+            return $controller->notificationList();
+        })->method("GET|POST");
+
         $admin->match("/downloader", function (Request $request) use ($app) {
 
             $controller = new \Admin\Controller\DownloadController($request, $app);

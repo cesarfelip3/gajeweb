@@ -158,6 +158,17 @@ INSERT INTO `theme` (`theme_id`, `theme_uuid`, `name`, `description`, `create_da
 	(1, '544ef69da4a6f', 'Falling Autumn', '', 1414461085, 1414461085);
 /*!40000 ALTER TABLE `theme` ENABLE KEYS */;
 
+DROP TABLE IF EXISTS `notification`;
+CREATE TABLE IF NOT EXISTS `notification` (
+  `notification_id` int(20) NOT NULL AUTO_INCREMENT,
+  `notification_uuid` char(50) NOT NULL DEFAULT '',
+  `name` varchar(50) NOT NULL DEFAULT '',
+  `description` text NOT NULL,
+  `create_date` int(11) NOT NULL DEFAULT '0',
+  `modified_date` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`notification_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
 
 -- 导出  表 gajeapp.update 结构
 DROP TABLE IF EXISTS `update`;
