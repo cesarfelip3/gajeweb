@@ -49,7 +49,7 @@ class Api
 
         $api->before(function (Request $request, $app) use ($config) {
 
-            //return null;
+            return null;
 
             $token = $request->headers->get("X-AUTH-KEY");
 
