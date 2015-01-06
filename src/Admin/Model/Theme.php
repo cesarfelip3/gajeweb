@@ -96,5 +96,20 @@ class Theme extends BaseModel
         return $result;
     }
 
+    public function removeAllbyTheme($uuid)
+    {
+        if (empty ($uuid)) {
+            return false;
+        }
+
+        // make sure theme exists
+
+        // remove all images files
+
+        // remove all image info & related info
+
+        // rmeove theme
+    }
+
 
 }
