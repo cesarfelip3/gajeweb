@@ -4,6 +4,7 @@ namespace Admin\Model;
 
 use Admin\Model\BaseModel;
 use Admin\Model\Comment;
+use Admin\Model\Theme;
 
 class Image extends BaseModel
 {
