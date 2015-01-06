@@ -42,7 +42,6 @@ class Image extends BaseModel
     public function getImageList($data)
     {
         $theme_table = "theme";
-        $theme = new Theme();
         $result = $this->db->fetchAll("SELECT * FROM $theme_table
             WHERE is_zipped=0
             ORDER BY modified_date DESC");
