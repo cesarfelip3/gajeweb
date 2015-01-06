@@ -44,7 +44,7 @@ class Image extends BaseModel
         $theme = new Theme();
         $result = $this->db->fetchAll("SELECT * FROM $theme_table
             WHERE is_zipped=0
-            ORDER BY modified_date DESC LIMIT 0, 1");
+            ORDER BY modified_date DESC");
 
         if (empty($result)) {
             return array();
