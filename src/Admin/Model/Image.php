@@ -51,6 +51,9 @@ class Image extends BaseModel
             return array();
         }
 
+        print_r($result);
+        exit;
+
         $theme_uuid = $result[0]['theme_uuid'];
 
         $page = $data["page"];
