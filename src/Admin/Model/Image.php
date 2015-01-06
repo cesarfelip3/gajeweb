@@ -40,6 +40,18 @@ class Image extends BaseModel
 
     public function getImageList($data)
     {
+        $theme_table = Theme::table();
+        $theme = new Theme();
+        $result = $this->db->fetchAll("SELECT * FROM $theme_table
+            WHERE is_zipped=0
+            ORDER BY modified_date DESC LIMIT 0, 1");
+
+        if (empty($result)) {
+            return array();
+        }
+
+        $theme_uuid = $result[0]['theme_uuid'];
+
         $page = $data["page"];
         $pageSize = $data["page_size"];
 
@@ -48,7 +60,7 @@ class Image extends BaseModel
         $page = $page * $pageSize;
 
         $limit = "$page, $pageSize";
-        $result = $this->db->fetchAll("SELECT * FROM {$this->table} ORDER BY modified_date DESC LIMIT {$limit}");
+        $result = $this->db->fetchAll("SELECT * FROM {$this->table} WHERE theme_uuid='$theme_uuid' ORDER BY modified_date DESC LIMIT {$limit}");
 
         return $result;
     }
