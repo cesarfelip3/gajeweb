@@ -35,7 +35,19 @@ class Image extends BaseModel
 
     public function getTotal()
     {
-        $total = $this->db->fetchColumn("SELECT COUNT(*) FROM {$this->table}");
+
+        $theme_table = "theme";
+        $result = $this->db->fetchAll("SELECT * FROM $theme_table
+            WHERE is_zipped=0
+            ORDER BY modified_date DESC");
+
+        if (empty($result)) {
+            return array();
+        }
+
+        $theme_uuid = $result[0]['theme_uuid'];
+
+        $total = $this->db->fetchColumn("SELECT COUNT(*) FROM {$this->table} WHERE theme_uuid='$theme_uuid'");
         return $total;
     }
 
