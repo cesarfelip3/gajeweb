@@ -346,8 +346,8 @@ class Image extends BaseModel
                 $filename = $image['file_name'];
                 $filepath = $image['file_path'];
 
-                print_r ($filepath . $filename . "\n");
                 if (file_exists($filepath . $filename) && !file_exists($toPath . $filename)) {
+                    print_r ($filepath . $filename . "\n");
                     @copy ($filepath . $filename, $toPath . $filename);
                 }
             }
@@ -405,8 +405,8 @@ class Image extends BaseModel
                 $filepath = $image['file_path'];
                 $thumbnail = $image['thumbnail'];
 
-                print_r ($filepath . $filename . "\n");
                 if (file_exists($filepath . $filename)) {
+                    print_r ($filepath . $filename . "\n");
                     @unlink ($filepath . $filename);
                     @unlink ($filepath . $thumbnail);
                 }
