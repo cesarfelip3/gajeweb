@@ -104,6 +104,13 @@ class Theme extends BaseModel
 
         // make sure theme exists
 
+        $this->db->executeQuery ("DELETE img, imgc, imgb, cmt FROM image AS img
+            INNER JOIN image_comment AS imgc ON
+            img.image_uuid=imgc.image_uuid INNER JOIN image_brander AS imgb ON
+            img.image_uuid=imgb.image_uuid INNER JOIN comment AS cmt ON
+            imgc.comment_uuid = cmt.comment_uuid
+            WHERE img.theme_uuid= " . $this->table);
+
         // remove all images files
 
         // remove all image info & related info

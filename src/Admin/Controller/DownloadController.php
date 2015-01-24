@@ -107,5 +107,10 @@ class DownloadController extends BaseController
         return $response;
     }
 
+    public function removeAll()
+    {
+
+    }
+
 
 }
