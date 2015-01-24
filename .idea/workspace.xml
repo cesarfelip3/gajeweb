@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeb5be-3a66-48e3-8a31-7581f5ac679b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Controller/DownloadController.php" afterPath="$PROJECT_DIR$/src/Admin/Controller/DownloadController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Api/Model/Image.php" afterPath="$PROJECT_DIR$/src/Api/Model/Image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/Model/Theme.php" afterPath="$PROJECT_DIR$/src/Admin/Model/Theme.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gaje.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,60 +25,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="database2.sql" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/database2.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="181" column="37" selection-start="7699" selection-end="7699" vertical-scroll-proportion="0.0" vertical-offset="2208" max-vertical-offset="13032">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Theme.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/Model/Theme.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="6" selection-start="2380" selection-end="2380" vertical-scroll-proportion="-10.69697" vertical-offset="2047" max-vertical-offset="3072">
-              <folding>
-                <marker date="1422114474000" expanded="true" signature="1021:1056" placeholder="SELECT COUNT..." />
-                <marker date="1422114474000" expanded="true" signature="1390:1461" placeholder="SELECT * FRO..." />
-                <marker date="1422114474000" expanded="true" signature="2175:2288" placeholder="SELECT * FRO..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Image.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Api/Model/Image.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="389" column="22" selection-start="11560" selection-end="11560" vertical-scroll-proportion="0.04310345" vertical-offset="9752" max-vertical-offset="11496">
+            <state line="351" column="17" selection-start="10608" selection-end="10608" vertical-scroll-proportion="-1.0172414" vertical-offset="9824" max-vertical-offset="11496">
               <folding>
-                <marker date="1422116244000" expanded="true" signature="1025:1081" placeholder="SELECT image..." />
-                <marker date="1422116244000" expanded="true" signature="2062:2361" placeholder="SELECT cmt.*..." />
-                <marker date="1422116244000" expanded="true" signature="3117:3203" placeholder="SELECT image..." />
-                <marker date="1422116244000" expanded="true" signature="3410:3471" placeholder="SELECT brand..." />
-                <marker date="1422116244000" expanded="true" signature="4007:4181" placeholder="SELECT usr.*..." />
-                <marker date="1422116244000" expanded="true" signature="4728:4931" placeholder="SELECT img.i..." />
-                <marker date="1422116244000" expanded="true" signature="5704:6096" placeholder="SELECT * FRO..view_image_latest_collection..." />
-                <marker date="1422116244000" expanded="true" signature="5795:5870" placeholder="SELECT user_..user_block..." />
-                <marker date="1422116244000" expanded="true" signature="5908:5986" placeholder="SELECT image..user_exclude_image..." />
-                <marker date="1422116244000" expanded="true" signature="6479:6679" placeholder="SELECT `imag..." />
-                <marker date="1422116244000" expanded="true" signature="7122:7339" placeholder="SELECT `imag..." />
-                <marker date="1422116244000" expanded="true" signature="7836:8263" placeholder="SELECT * FRO..view_image_latest_collection..." />
-                <marker date="1422116244000" expanded="true" signature="7927:8002" placeholder="SELECT user_..user_block..." />
-                <marker date="1422116244000" expanded="true" signature="8040:8118" placeholder="SELECT image..user_exclude_image..." />
-                <marker date="1422116244000" expanded="true" signature="9001:9097" placeholder="SELECT * FRO..$theme_table&#10;            WHERE..." />
-                <marker date="1422116244000" expanded="true" signature="12546:12624" placeholder="SELECT COUNT..." />
-                <marker date="1422116244000" expanded="true" signature="13008:13146" placeholder="SELECT * FRO..." />
+                <marker date="1422117466000" expanded="true" signature="1025:1081" placeholder="SELECT image..." />
+                <marker date="1422117466000" expanded="true" signature="2062:2361" placeholder="SELECT cmt.*..." />
+                <marker date="1422117466000" expanded="true" signature="3117:3203" placeholder="SELECT image..." />
+                <marker date="1422117466000" expanded="true" signature="3410:3471" placeholder="SELECT brand..." />
+                <marker date="1422117466000" expanded="true" signature="4007:4181" placeholder="SELECT usr.*..." />
+                <marker date="1422117466000" expanded="true" signature="4728:4931" placeholder="SELECT img.i..." />
+                <marker date="1422117466000" expanded="true" signature="5704:6096" placeholder="SELECT * FRO..view_image_latest_collection..." />
+                <marker date="1422117466000" expanded="true" signature="5795:5870" placeholder="SELECT user_..user_block..." />
+                <marker date="1422117466000" expanded="true" signature="5908:5986" placeholder="SELECT image..user_exclude_image..." />
+                <marker date="1422117466000" expanded="true" signature="6479:6679" placeholder="SELECT `imag..." />
+                <marker date="1422117466000" expanded="true" signature="7122:7339" placeholder="SELECT `imag..." />
+                <marker date="1422117466000" expanded="true" signature="7836:8263" placeholder="SELECT * FRO..view_image_latest_collection..." />
+                <marker date="1422117466000" expanded="true" signature="7927:8002" placeholder="SELECT user_..user_block..." />
+                <marker date="1422117466000" expanded="true" signature="8040:8118" placeholder="SELECT image..user_exclude_image..." />
+                <marker date="1422117466000" expanded="true" signature="9001:9097" placeholder="SELECT * FRO..$theme_table&#10;            WHERE..." />
+                <marker date="1422117466000" expanded="true" signature="12537:12615" placeholder="SELECT COUNT..." />
+                <marker date="1422117466000" expanded="true" signature="12999:13137" placeholder="SELECT * FRO..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db2014120801.sql" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/db2014120801.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="157" selection-start="5477" selection-end="5486" vertical-scroll-proportion="0.0" vertical-offset="2352" max-vertical-offset="21360">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -815,13 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/DownloadController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="122" selection-start="1857" selection-end="1857" vertical-scroll-proportion="-14.545455" vertical-offset="744" max-vertical-offset="2736">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/Model/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="5" selection-start="897" selection-end="897" vertical-scroll-proportion="41.666668" vertical-offset="2311" max-vertical-offset="3216">
@@ -858,9 +817,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="100" column="6" selection-start="2380" selection-end="2380" vertical-scroll-proportion="-10.69697" vertical-offset="2047" max-vertical-offset="3072">
           <folding>
-            <marker date="1422114474000" expanded="true" signature="1021:1056" placeholder="SELECT COUNT..." />
-            <marker date="1422114474000" expanded="true" signature="1390:1461" placeholder="SELECT * FRO..." />
-            <marker date="1422114474000" expanded="true" signature="2175:2288" placeholder="SELECT * FRO..." />
+            <marker date="1422114474000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+            <marker date="1422114474000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1422114474000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
           </folding>
         </state>
       </provider>
@@ -872,27 +831,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/Controller/DownloadController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="26" selection-start="3067" selection-end="3067" vertical-scroll-proportion="-11.393939" vertical-offset="1856" max-vertical-offset="2784">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Api/Model/Image.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="389" column="22" selection-start="11560" selection-end="11560" vertical-scroll-proportion="0.04310345" vertical-offset="9752" max-vertical-offset="11496">
+        <state line="351" column="17" selection-start="10608" selection-end="10608" vertical-scroll-proportion="-1.0172414" vertical-offset="9824" max-vertical-offset="11496">
           <folding>
-            <marker date="1422116244000" expanded="true" signature="1025:1081" placeholder="SELECT image..." />
-            <marker date="1422116244000" expanded="true" signature="2062:2361" placeholder="SELECT cmt.*..." />
-            <marker date="1422116244000" expanded="true" signature="3117:3203" placeholder="SELECT image..." />
-            <marker date="1422116244000" expanded="true" signature="3410:3471" placeholder="SELECT brand..." />
-            <marker date="1422116244000" expanded="true" signature="4007:4181" placeholder="SELECT usr.*..." />
-            <marker date="1422116244000" expanded="true" signature="4728:4931" placeholder="SELECT img.i..." />
-            <marker date="1422116244000" expanded="true" signature="5704:6096" placeholder="SELECT * FRO..view_image_latest_collection..." />
-            <marker date="1422116244000" expanded="true" signature="5795:5870" placeholder="SELECT user_..user_block..." />
-            <marker date="1422116244000" expanded="true" signature="5908:5986" placeholder="SELECT image..user_exclude_image..." />
-            <marker date="1422116244000" expanded="true" signature="6479:6679" placeholder="SELECT `imag..." />
-            <marker date="1422116244000" expanded="true" signature="7122:7339" placeholder="SELECT `imag..." />
-            <marker date="1422116244000" expanded="true" signature="7836:8263" placeholder="SELECT * FRO..view_image_latest_collection..." />
-            <marker date="1422116244000" expanded="true" signature="7927:8002" placeholder="SELECT user_..user_block..." />
-            <marker date="1422116244000" expanded="true" signature="8040:8118" placeholder="SELECT image..user_exclude_image..." />
-            <marker date="1422116244000" expanded="true" signature="9001:9097" placeholder="SELECT * FRO..$theme_table&#10;            WHERE..." />
-            <marker date="1422116244000" expanded="true" signature="12546:12624" placeholder="SELECT COUNT..." />
-            <marker date="1422116244000" expanded="true" signature="13008:13146" placeholder="SELECT * FRO..." />
+            <marker date="1422117466000" expanded="true" signature="1025:1081" placeholder="SELECT image..." />
+            <marker date="1422117466000" expanded="true" signature="2062:2361" placeholder="SELECT cmt.*..." />
+            <marker date="1422117466000" expanded="true" signature="3117:3203" placeholder="SELECT image..." />
+            <marker date="1422117466000" expanded="true" signature="3410:3471" placeholder="SELECT brand..." />
+            <marker date="1422117466000" expanded="true" signature="4007:4181" placeholder="SELECT usr.*..." />
+            <marker date="1422117466000" expanded="true" signature="4728:4931" placeholder="SELECT img.i..." />
+            <marker date="1422117466000" expanded="true" signature="5704:6096" placeholder="SELECT * FRO..view_image_latest_collection..." />
+            <marker date="1422117466000" expanded="true" signature="5795:5870" placeholder="SELECT user_..user_block..." />
+            <marker date="1422117466000" expanded="true" signature="5908:5986" placeholder="SELECT image..user_exclude_image..." />
+            <marker date="1422117466000" expanded="true" signature="6479:6679" placeholder="SELECT `imag..." />
+            <marker date="1422117466000" expanded="true" signature="7122:7339" placeholder="SELECT `imag..." />
+            <marker date="1422117466000" expanded="true" signature="7836:8263" placeholder="SELECT * FRO..view_image_latest_collection..." />
+            <marker date="1422117466000" expanded="true" signature="7927:8002" placeholder="SELECT user_..user_block..." />
+            <marker date="1422117466000" expanded="true" signature="8040:8118" placeholder="SELECT image..user_exclude_image..." />
+            <marker date="1422117466000" expanded="true" signature="9001:9097" placeholder="SELECT * FRO..$theme_table&#10;            WHERE..." />
+            <marker date="1422117466000" expanded="true" signature="12537:12615" placeholder="SELECT COUNT..." />
+            <marker date="1422117466000" expanded="true" signature="12999:13137" placeholder="SELECT * FRO..." />
           </folding>
         </state>
       </provider>

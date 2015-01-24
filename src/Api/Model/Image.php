@@ -313,7 +313,9 @@ class Image extends BaseModel
 
     public function saveImageFiles($data)
     {
+        print_r ("=== saving image files...\n");
         $total = $this->getTotalInTheme($data);
+
         print_r ($data);
 
         $theme_uuid = $data['theme_uuid'];
@@ -325,7 +327,7 @@ class Image extends BaseModel
 
         if (!file_exists($toPath)) {
             print_r($toPath);
-            mkdir($toPath, true);
+            @mkdir($toPath, 0777, true);
         }
 
         for ($i = 0; $i < ceil ($total / 25); ++$i) {
@@ -368,6 +370,7 @@ class Image extends BaseModel
         $zip->open($path . $zipname, \ZipArchive::CREATE);
 
         print_r($zip);
+        print_r($toPath . "\n");
 
         if ($handle = opendir($toPath)) {
             while (false !== ($entry = readdir($handle))) {
@@ -386,6 +389,7 @@ class Image extends BaseModel
         $table = Theme::table();
         $this->db->update($table, array("is_zipped"=>1), array("theme_uuid"=>$theme_uuid));
 
+
         //
         $data = array("theme_uuid" => $theme_uuid);
         for ($i = 0; $i < ceil ($total / 25); ++$i) {
@@ -394,10 +398,6 @@ class Image extends BaseModel
             $data['page_size'] = 25;
 
             $images = $this->getImageListByTheme($data);
-            //print_r($images);
-            //continue;
-
-            //$fromPath = $data['source'];
 
             foreach ($images as $image) {
 
